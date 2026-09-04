@@ -11,6 +11,8 @@ r = run(f"{S}/rs-profile/scripts/rs_profile.py", f"{H}/rs-profile/inputs/ledger.
 r = run(f"{S}/award/scripts/citation_check.py", f"{H}/award/inputs/na_citation.txt", "--level", "NA"); res.append(("award na-citation-clean", r.returncode == 0))
 t = tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False); t.write("For professional achievement " + "in the superior performance of duties " * 40 + "Marine Corps Naval Service."); t.close()
 r = run(f"{S}/award/scripts/citation_check.py", t.name, "--level", "NA"); res.append(("award over-limit", r.returncode == 1 and "limit 1200" in r.stdout and "capital" in r.stdout)); os.unlink(t.name)
+r = run(f"{S}/award/scripts/citation_check.py", f"{H}/award/inputs/na_citation_soa.txt", "--level", "NA", "--soa", f"{H}/award/inputs/soa_match.md"); res.append(("award soa-agreement", r.returncode == 0 and "SOA agreement" in r.stdout))
+r = run(f"{S}/award/scripts/citation_check.py", f"{H}/award/inputs/na_citation_mismatch.txt", "--level", "NA", "--soa", f"{H}/award/inputs/soa_match.md"); res.append(("award soa-mismatch-and-fluff", r.returncode == 1 and "45" in r.stdout and "enthusiastically" in r.stdout))
 bad = 0
 for n, ok in res:
     print(f"{'PASS' if ok else 'FAIL'}  {n}"); bad += 0 if ok else 1
