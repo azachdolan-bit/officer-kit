@@ -1,6 +1,6 @@
 # Officer Kit
 
-A starter kit for new Marine officers learning the full Claude toolset. Built for The Basic School, designed to travel to the fleet.
+A suite of tools for the things a Marine officer does every week: orders, awards, fitness reports, planning, teaching, correspondence. Built by an officer, for officers; the plugin holds method only, never your data.
 
 Personal initiative. Not an official TBS or USMC product. Personal accounts and unclassified data only.
 
@@ -10,13 +10,13 @@ Personal account, personal data, personal device. Nothing CUI, PII, FOUO, or fro
 
 ## Start here
 
-Say **"start the field kit."** It picks your first task, then builds your rules file. Your rules file is the one thing in this kit that makes every future task better. Do not skip it.
+Say **"start the officer kit."** It sets up your working folder, then builds your rules file at the depth you choose. Your rules file is the one thing in this kit that makes every future task better. Do not skip it.
 
 ## Skills
 
 | Say this | What happens | Teaches |
 |----------|--------------|---------|
-| "start the field kit" | Orientation and the seven day plan | The whole map |
+| "start the officer kit" | First run walkthrough: install, working folder, connect it, rules file, first task | The whole map |
 | "is this safe to share" / "check this folder" | Green / yellow / red card, folder scan before linking | Security |
 | "build my rules file" | Interview at the depth you choose (Light, Standard, Full), then a CLAUDE.md; Full adds the lines that print on a letter you sign | Rules, memory, privacy |
 | "draft a naval letter" | Letter built on the 13.8 pt grid from your rules file identity, then Gate 2 measured on the rendered PDF | Correspondence |
@@ -29,6 +29,8 @@ Say **"start the field kit."** It picks your first task, then builds your rules 
 | "week ahead" | One screen brief, then make it recurring | Scheduled tasks |
 | "build a skill" | Interview, then a working skill for your repeat task | Skills and plugins |
 | "fleet transition" | Day one and week one checklist for your first unit | Taking it with you |
+
+The full list by module, including what is being built next (awards, fitreps, reporting senior profile, order analysis), is in `MODULES.md` in the repo.
 
 ## Prompt library
 
@@ -78,4 +80,4 @@ Send the `.plugin` file to another Marine. They install it the same way you did.
 
 ## Version
 
-0.2.0. Skeleton of the consolidated kit: v0.1.0 skills plus the five reviewer agents. Roadmap and changelog in the repo. Feedback to the facilitator.
+0.3.1. Correspondence and Verify modules available; Admin (awards, fitreps, profile) building. MODULES.md and CHANGELOG.md in the repo. Feedback to the facilitator.

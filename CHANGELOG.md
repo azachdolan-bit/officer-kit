@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1 (2026-09-04) reframed for officers in general
+
+- README rewritten in plain language: what you are installing, first run in ten minutes, the modules.
+- MODULES.md replaces ROADMAP.md: every tool by module (Correspondence, Admin, Planning, Training and teaching, Verify, Share and improve), what to say, what it does, the governing publication, and status. Admin module specified: award, fitrep, rs-profile, counseling, weekly-update, after-action, training-schedule.
+- `start` replaces `field-kit-start`: install check, working folder structure matched to the user's job, connect the folder, rules file, first real task.
+- No more "sprints" anywhere; build order is listed at the end of MODULES.md.
+
 ## 0.3.0 (2026-09-04) Sprint 0: the core
 
 - `rules-file` v0.2: three depths (Light, Standard, Full), every question optional, skipped fields written as "not recorded (ask me at draft time)", correspondence identity block for letters, update in place.
