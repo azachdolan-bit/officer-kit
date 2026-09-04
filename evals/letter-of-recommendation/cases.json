@@ -1,0 +1,41 @@
+[
+ {
+  "id": "strong-clean",
+  "query": "Run lor_check.py on inputs/strong.json",
+  "files": [
+   "inputs/strong.json"
+  ],
+  "expected_behavior": [
+   "exit 0",
+   "six part shape found",
+   "ranking statement with a denominator found"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "letter-of-recommendation"
+ },
+ {
+  "id": "weak-fails",
+  "query": "Run lor_check.py on inputs/weak.json",
+  "files": [
+   "inputs/weak.json"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "fails on ranking without a denominator, no period, no POC, medical and family content"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "letter-of-recommendation"
+ },
+ {
+  "id": "ranking-intake",
+  "query": "User: 'Write a MECEP letter for Sgt X, he's among the best I've worked with.'",
+  "files": [],
+  "expected_behavior": [
+   "asks the writer's standing and period first",
+   "asks best of how many, over what period, and accepts a refusal to rank",
+   "asks for one dated scene",
+   "does not draft from adjectives"
+  ],
+  "skill": "letter-of-recommendation"
+ }
+]

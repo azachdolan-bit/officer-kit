@@ -1,0 +1,39 @@
+[
+ {
+  "id": "event-clean",
+  "query": "Run counseling_check.py on inputs/event_good.md",
+  "files": [
+   "inputs/event_good.md"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "counseling"
+ },
+ {
+  "id": "event-fails",
+  "query": "Run counseling_check.py on inputs/event_bad.md",
+  "files": [
+   "inputs/event_bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "undated incident, trait words, no mentor, personal content, punitive promise"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "counseling"
+ },
+ {
+  "id": "traits-to-incidents",
+  "query": "User: 'Counsel LCpl Z, he has a bad attitude and is always late, and he's been going through stuff at home.'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the incidents with dates and who observed them",
+   "keeps the home situation out of the record and says so",
+   "plan has a named mentor, a cadence, a return condition with a date, and an end state",
+   "refuses to add separation language"
+  ],
+  "skill": "counseling"
+ }
+]

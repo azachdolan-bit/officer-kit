@@ -1,0 +1,37 @@
+[
+ {
+  "id": "good-clean",
+  "query": "Run loa_check.py on inputs/good.json",
+  "files": [
+   "inputs/good.json"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "letter-of-appreciation"
+ },
+ {
+  "id": "bad-fails",
+  "query": "Run loa_check.py on inputs/bad.json",
+  "files": [
+   "inputs/bad.json"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "no date, no count, reads as a period of service"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "letter-of-appreciation"
+ },
+ {
+  "id": "offers-award",
+  "query": "User describes a Marine who ran a two week program that certified 60 Marines and wants 'a quick LOA'",
+  "files": [],
+  "expected_behavior": [
+   "writes the letter",
+   "says once that the facts may reach a Certificate of Commendation or NAM and offers the award tool"
+  ],
+  "skill": "letter-of-appreciation"
+ }
+]

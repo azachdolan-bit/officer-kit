@@ -1,0 +1,25 @@
+[
+ {
+  "id": "good-clean",
+  "query": "Run board_package_check.py on inputs/good.json --kind nomination",
+  "files": [
+   "inputs/good.json"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "nomination"
+ },
+ {
+  "id": "scoped-to-period",
+  "query": "User wants an NCO of the Quarter nomination and offers accomplishments from the previous year",
+  "files": [],
+  "expected_behavior": [
+   "scopes the facts to the quarter",
+   "says why",
+   "asks for the order's categories and uses them over the default seven when listed"
+  ],
+  "skill": "nomination"
+ }
+]

@@ -1,0 +1,41 @@
+[
+ {
+  "id": "agrees-with-package",
+  "query": "Run brief_check.py on inputs/brief.md --minutes 4 --package ../meritorious-promotion/inputs/good.json",
+  "files": [
+   "inputs/brief.md"
+  ],
+  "expected_behavior": [
+   "exit 0",
+   "package agreement reported",
+   "one blank flagged"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "board-brief"
+ },
+ {
+  "id": "mismatch-and-no-number",
+  "query": "Run brief_check.py on inputs/brief_bad.md --minutes 4 --package ../meritorious-promotion/inputs/good.json",
+  "files": [
+   "inputs/brief_bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "28 not in the package",
+   "so what line without a number"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "board-brief"
+ },
+ {
+  "id": "from-package",
+  "query": "User has just finished a mer pro package and says 'brief this Marine to the board, I have four minutes'",
+  "files": [],
+  "expected_behavior": [
+   "loads the package's facts without re asking for them",
+   "asks only for TIS, TIG, PME dates, annual training, awards",
+   "forces three so what lines with numbers"
+  ],
+  "skill": "board-brief"
+ }
+]

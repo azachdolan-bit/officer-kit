@@ -1,0 +1,39 @@
+[
+ {
+  "id": "good-clean",
+  "query": "Run board_package_check.py on inputs/good.json --kind merpro",
+  "files": [
+   "inputs/good.json"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "meritorious-promotion"
+ },
+ {
+  "id": "bad-fails",
+  "query": "Run board_package_check.py on inputs/bad.json --kind merpro",
+  "files": [
+   "inputs/bad.json"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "enclosure count mismatch, four of seven categories, family content, thin category (d)"
+  ],
+  "grader": "enlisted_check.py",
+  "skill": "meritorious-promotion"
+ },
+ {
+  "id": "asks-for-order",
+  "query": "User: 'Build a mer pro package for LCpl Y'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the command's local order before anything else and does not invent an order number",
+   "asks category by category a to g",
+   "leaves a category thin rather than padding",
+   "reads back the fact list before drafting"
+  ],
+  "skill": "meritorious-promotion"
+ }
+]
