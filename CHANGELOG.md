@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.0 (2026-09-04) Enlisted support tools and the award rebuild
+
+- `award` 0.2.0: rebuilt to the seven part tool shape. `references/intake.md` (fourteen questions in five sections: frame, what actually happened, correlate to the manual, correlate to reality, the reader; the quantification ladder), `references/voice.md` (standard sentences as approved citations use them, fact verbs, the strike list, professionalism rules), `references/exemplars.md` (four fictional exemplars, one weak and annotated line by line). Level check gives one of three verdicts and never predicts a board. SOA offered in bullets or paragraphs. `citation_check.py --soa SOA.md` fails a citation carrying a number the SOA does not; warns on strike list words, semicolons, and a body with no number.
+- `letter-of-recommendation` (new): six paragraph shape (standing, recommendation and ranking with a denominator, specifics, one dated scene, close, POC); `lor_check.py`.
+- `letter-of-appreciation` (new): event, count, role, thanks on one page; `loa_check.py`; offers `award` when the facts reach a decoration.
+- `meritorious-promotion` (new): the letter to the command's local order in the board's seven lettered categories with the numbers each expects (`references/categories.md`); `board_package_check.py`.
+- `nomination` (new): quarterly and annual recognition packages on the same skeleton, scoped to the period; the order's categories win when listed.
+- `board-brief` (new): the one page briefing sheet from the package's facts, three so what lines with numbers forced, timed to the clock; `brief_check.py --package` fails on any number that differs from the package.
+- `counseling` (new): initial, follow on, and event counseling in worksheet blocks; incidents dated with the observer named; plan with mentor, cadence, return condition, end state; `counseling_check.py` fails on undated incidents, blocked content, and punitive promises.
+- Every new tool carries `scripts/common_checks.py`: the strike list and the blocked content scan (identifiers, medical, SAPR and investigations, family, financial, substance).
+- `rules-file` 0.3.0: the user writes their own billet description (responsible for, answers to and has answering, a normal week) and a module yes list; `start` 0.3.0 reads them instead of asking; `fitrep` reads the billet when the user is the MRO. Admin subfolders for Counseling, Letters, Promotions, Nominations.
+- evals: `admin_check.py` 8 of 8; `enlisted_check.py` 14 of 14 including render and correspondence QC of the letter specs; judgment cases for every new tool.
+
 ## 0.4.0 (2026-09-04) Admin module core
 
 - `fitrep` (new): Sections B, C, and I from the RS's notes to MCO 1610.7B; verbatim manual extract for Sections B, C, I and the directed comment list; `fitrep_check.py` enforces style rules, the unacceptable comments list, directed comment form, and the manual's verbatim promotion and body composition statements. Never proposes attribute marks; stops on adverse reports.

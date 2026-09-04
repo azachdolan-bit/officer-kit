@@ -35,7 +35,7 @@ Use the ones that match your job. Ignore the rest.
 | Module | What it does for you | Status |
 |---|---|---|
 | **Correspondence** | Naval letters, memos, requests, endorsements, built to the correspondence manual and measured on the page before they go out | Available |
-| **Admin** | Award recommendations (summary of action and citation to the awards manual), fitness report drafts from your notes (to the PES manual), reporting senior profile management, counselings, weekly updates, after action reports, training schedules | Awards, fitreps, and profile available; the rest planned |
+| **Admin** | Award recommendations (intake that quantifies what the Marine did, level check against the awards manual, summary of action and citation that agree), fitness report drafts from your notes (to the PES manual), reporting senior profile management, counselings, letters of recommendation and appreciation, meritorious promotion and recognition packages with the board briefing sheet, weekly updates, after action reports, training schedules | Awards, fitreps, profile, counseling, letters, mer pro, nominations, and board briefs available; updates, AARs, and schedules planned |
 | **Planning** | Read and analyze an order (METT-TC, contradictions, map and grid checks), critique a five paragraph order, planning playbooks, call for fire | Partly available |
 | **Training and teaching** | Study guides, interactive walkthroughs, quizzes, drills, print cards, and briefs from issued material only | Partly available |
 | **Verify** | The reviewers and the gate stack: significance, evidence, document, visual, source fidelity | Available |
