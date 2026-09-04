@@ -18,10 +18,10 @@ Each tool lists the governing publication it is built to. School handouts outran
 
 | Tool | Say | Does | Governed by | Status |
 |---|---|---|---|---|
-| `award` | "write up an award for...", "NAM citation", "summary of action" | Summary of action and citation from your bullet notes, to the manual's format, word limits, and criteria for the award level; checks that the facts justify the award requested | SECNAV M-1650.1 (Navy and Marine Corps Awards Manual) | Building |
-| `fitrep` | "draft a fitrep for...", "section I from these notes", "billet description" | Section I directed comments, billet description, and duties assigned from your notes; checks every attribute mark has a justifying comment and every prohibited item is absent | MCO 1610.7 (Performance Evaluation System manual); the school fitness report handout where issued | Building |
-| `rs-profile` | "how does this mark affect my profile", "manage my profile", "relative value" | Tracks a reporting senior's profile from the reports written, shows the cumulative average and where a proposed mark lands, flags a report that would compress the profile | MCO 1610.7 | Building |
-| `counseling` | "counseling from these notes", "initial counseling" | Counseling sheet from bullets, scrubbed of other people's personal data | MCO 1500.58 (Marine Leader Development) where applicable | Planned |
+| `award` | "write up an award for...", "NAM citation", "summary of action" | Summary of action and citation from your bullet notes, to the manual's format, word limits, and criteria for the award level; checks that the facts justify the award requested | MCO 1650.19J (processing, SOA and citation format) and SECNAV M-1650.1 (criteria, standard sentences, read from the user's Reference copy) | Available |
+| `fitrep` | "draft a fitrep for...", "section I from these notes", "billet description" | Section I directed comments, billet description, and duties assigned from your notes; checks every attribute mark has a justifying comment and every prohibited item is absent | MCO 1610.7B (Performance Evaluation System); the school fitness report handout where issued | Available |
+| `rs-profile` | "how does this mark affect my profile", "manage my profile", "relative value" | Keeps a private ledger of reports written, computes each report average, the RS average, high, and low per grade, and relative value on the 80 to 100 scale; shows where a proposed set of marks lands; flags a compressing profile; never proposes marks | MCO 1610.7B chapter 8 | Available |
+| `counseling` | "counseling from these notes", "initial counseling" | Counseling sheet from bullets, scrubbed of other people's personal data | MCO 1500.61 (Marine Leader Development) where applicable | Planned |
 | `weekly-update` | "weekly update to my OIC" | BLUF first update in your boss's format from the rules file | none | Planned |
 | `after-action` | "turn these range notes into an AAR" | What happened, what worked, what to fix, in the unit's format | none | Planned |
 | `training-schedule` | "build the training schedule from this list" | Week view from events with prep items | none | Planned |
@@ -75,8 +75,7 @@ Each tool lists the governing publication it is built to. School handouts outran
 
 ## Build order
 
-1. **Now:** `start` (done), README and this file (done).
-2. **Next:** the Admin module core: `award`, `fitrep`, `rs-profile`, each built from the governing manual with a mechanical check and three test cases.
-3. **Then:** `order-analysis`, `quiz-builder`, `study-guide` v0.2, `walkthrough`.
+1. Done: `start`, `library`, README, GETTING STARTED, this file; the Admin module core (`award`, `fitrep`, `rs-profile`) built from the governing manuals with mechanical checks and tests.
+2. **Next:** `order-analysis`, `quiz-builder`, `study-guide` v0.2, `walkthrough`.
 4. **Then:** `aar` and `inspect`, so the kit improves itself; `share-method`; the remaining Admin and Correspondence tools.
 5. **Then:** a workshop cut with everything verified content free by script.

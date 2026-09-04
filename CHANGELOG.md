@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 (2026-09-04) Admin module core
+
+- `fitrep` (new): Sections B, C, and I from the RS's notes to MCO 1610.7B; verbatim manual extract for Sections B, C, I and the directed comment list; `fitrep_check.py` enforces style rules, the unacceptable comments list, directed comment form, and the manual's verbatim promotion and body composition statements. Never proposes attribute marks; stops on adverse reports.
+- `rs-profile` (new): private ledger of reports written; report average, RS average, high, low, relative value on the 80 to 100 scale with the manual's anchors (RS average 90, RS high 100), thirds, compression note, what if for a proposed set of marks. Chapter 8 extract verbatim.
+- `award` (new): Summary of Action and citation to MCO 1650.19J format and length rules (extract verbatim), criteria and standard sentences read from the user's copy of SECNAV M-1650.1; `citation_check.py` for length, lines, capitalization, opening and closing.
+- evals/admin_check.py: six deterministic cases, all passing.
+
 ## 0.3.2 (2026-09-04) from zero
 
 - GETTING STARTED.md: for someone who has never opened Cowork. What Cowork is, the one idea (Claude only knows what you give it), what is safe to give it, the five things you set up, the thirty minute path, the words you will see, what to do when something goes wrong.

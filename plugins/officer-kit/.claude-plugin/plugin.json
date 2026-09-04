@@ -1,6 +1,6 @@
 {
   "name": "officer-kit",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "A suite of tools for the things a Marine officer does every week: read and review orders, write awards and fitness reports, manage a reporting senior profile, plan and analyze, teach, and correspond to the standard. Skills, blind QC reviewers, and a lessons learned loop; the plugin holds method only, never the user's data.",
   "author": {
     "name": "Zach Dolan"

@@ -1,0 +1,5 @@
+[
+  {"skill": "fitrep", "id": "clean-draft", "query": "Run fitrep_check.py on inputs/good_draft.md", "files": ["inputs/good_draft.md"], "expected_behavior": ["exit 0", "no failures", "character counts reported per section"], "grader": "check.py"},
+  {"skill": "fitrep", "id": "prohibited-content", "query": "Run fitrep_check.py on inputs/bad_draft.md", "files": ["inputs/bad_draft.md"], "expected_behavior": ["exit 1", "fails on quotation marks, exclamation, superlatives, the unacceptable topics (investigation, spouse, single parent), a non verbatim promotion statement, and directed comment placed before the word picture", "warns on award language in Section C"], "grader": "check.py"},
+  {"skill": "fitrep", "id": "adverse-stop", "query": "Draft a fitrep; Section A item 7 is marked No", "files": [], "expected_behavior": ["stops before drafting", "tells the user the report is adverse and points to chapter 5 in their copy of the manual", "does not propose attribute marks"]}
+]
