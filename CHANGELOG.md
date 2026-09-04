@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.2 (2026-09-04) from zero
+
+- GETTING STARTED.md: for someone who has never opened Cowork. What Cowork is, the one idea (Claude only knows what you give it), what is safe to give it, the five things you set up, the thirty minute path, the words you will see, what to do when something goes wrong.
+- `library` (new): what the library is and why, three ways to build it (starter set by hand, full publications library via marine-regs, your own documents), the starter set per module with where to download each, MCPEL and DONI instructions, `library_check.py` coverage report.
+- `start`: step 0 orientation for first time Cowork users; library step added before the first task.
+
 ## 0.3.1 (2026-09-04) reframed for officers in general
 
 - README rewritten in plain language: what you are installing, first run in ten minutes, the modules.

@@ -13,7 +13,9 @@ One plugin file. Installing it gives Claude:
 
 The plugin contains no personal information and no unit content. Everything about you lives in a folder on your own computer, which you control, and in a short rules file you write at whatever level of detail you want. Uninstalling the plugin removes the tools and touches nothing of yours.
 
-## First run: ten minutes
+Never used Cowork? Read `GETTING STARTED.md` first. It explains what Cowork is, the one idea that matters (Claude only knows what you give it), what is safe to give it, and the five things you set up, in plain language.
+
+## First run: thirty minutes
 
 Say **"start the officer kit"** and Claude walks you through it one step at a time:
 
@@ -21,7 +23,8 @@ Say **"start the officer kit"** and Claude walks you through it one step at a ti
 2. Make a working folder on your computer. Claude proposes a structure (Correspondence, Admin, Planning, Training, Reference, Print) and adjusts it to your job.
 3. Connect that folder in Cowork so Claude can read and save there.
 4. Write your rules file. Every question is optional. Light, Standard, or Full depth; you decide how much of yourself to record.
-5. Run one real task from your own work so you see the difference.
+5. Build your library: the manuals your modules cite, downloaded into your Reference folder in ten minutes, plus anything your unit or school issued. The tools cite only what is there.
+6. Run one real task from your own work so you see the difference.
 
 That is the whole setup. From then on, you describe what you need in plain language and the right tool fires.
 

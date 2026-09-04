@@ -18,6 +18,10 @@ Get a new user from install to their first real product in ten minutes, one step
 
 Personal account, personal data, personal device. Nothing CUI, PII, FOUO, or from a .mil system. The `security-check` skill has the full green, yellow, red card. Everything the kit produces is a draft; you read it before it goes anywhere.
 
+## Step 0. If this is their first time in Cowork
+
+Say the one idea in two sentences: Claude only knows what you give it; Cowork is the version that can read and write a folder you connect, and nothing else on your computer. If they have never connected a folder or installed a plugin, point them to `GETTING STARTED.md` in the repo (or read it to them one section at a time) before going on. Do not assume anyone knows what a plugin, a skill, or a rules file is; define each the first time it comes up.
+
 ## Step 1. Confirm the install
 
 This skill running is the proof. Say so in one line and move on. If the user reached you without the kit installed (a shared transcript, a copied prompt), tell them where the plugin file is and stop.
@@ -66,16 +70,20 @@ In Cowork, the folder has to be linked before Claude can read or save there. Say
 
 Run `rules-file`. Say once: every question is optional; Light, Standard, or Full; the file lives on their computer and is never sent anywhere; Full is only needed if they will draft correspondence with the kit. Save as `CLAUDE.md` at the top of the folder.
 
-## Step 6. Run one real task
+## Step 6. Build the library
+
+Run `library`. Say once: the tools only cite what is in your Reference folder, so ten minutes here is what makes the awards tool check the manual and the letter tool cite the standard. Most people take option A (the starter set for their modules, downloaded by hand from marines.mil) and add their own unit documents (option C). Offer the full publications library (option B) only if their job is regulation heavy.
+
+## Step 7. Run one real task
 
 Pick from the first task candidates for their module. Use their own material, not a sample. Save the product to the right subfolder. Then point out, in two lines, where the rules file changed the output and which reviewer ran.
 
-## Step 7. What to do this week
+## Step 8. What to do this week
 
 Present only when asked or at the end of the first session. Keep it to the list.
 
 - Day 1: rules file written, one real task done.
-- Day 2: put the manuals your work cites into Reference (awards manual, PES manual, correspondence manual, the school handouts you were issued). Tools cite what is there.
+- Day 2: finish the library: any starter set manual you skipped, plus every handout or SOP you were issued. Tools cite what is there.
 - Day 3: one product from each module you use.
 - Day 4: build one skill of your own with `build-a-skill` for something you do every week.
 - Day 5: run `qc-gates` on something you are about to sign.

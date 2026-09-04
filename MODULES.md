@@ -63,6 +63,7 @@ Each tool lists the governing publication it is built to. School handouts outran
 | Tool | Say | Does | Status |
 |---|---|---|---|
 | `start` | "start the officer kit" | First run walkthrough: install check, working folder, connect it, rules file, first task | Available |
+| `library` | "build my library", "which pubs do I need" | Explains what the library is, three ways to build it (starter set by hand, the full publications library with one command via the marine-regs plugin, your own unit documents), the starter set per module with where to get each, and a coverage check | Available |
 | `security-check` | "is this safe to share" | Green, yellow, red; folder scan before linking | Available |
 | `rules-file` | "build my rules file" | Interview at Light, Standard, or Full depth; every question optional | Available |
 | `build-a-skill` | "build a skill", "I do this every week" | Interview to a working skill with tests | Available |
