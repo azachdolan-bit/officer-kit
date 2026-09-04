@@ -18,7 +18,10 @@ Say **"start the field kit."** It picks your first task, then builds your rules 
 |----------|--------------|---------|
 | "start the field kit" | Orientation and the seven day plan | The whole map |
 | "is this safe to share" / "check this folder" | Green / yellow / red card, folder scan before linking | Security |
-| "build my rules file" | Interview, then a CLAUDE.md with TBS and fleet sections | Rules and memory |
+| "build my rules file" | Interview at the depth you choose (Light, Standard, Full), then a CLAUDE.md; Full adds the lines that print on a letter you sign | Rules, memory, privacy |
+| "draft a naval letter" | Letter built on the 13.8 pt grid from your rules file identity, then Gate 2 measured on the rendered PDF | Correspondence |
+| "QC this before I sign" | The gate stack by product type, run by blind reviewers until clean | Verification |
+| "capture this lesson" / "transcribe these photos" | Complete capture saved the same session, completeness check, read back gate for photos | Sources first |
 | "triage this folder" | Inventory, structure, move, rollup | Cowork and linked folders |
 | "make a study guide" / "quiz me" | Lesson packet to guide, quiz, flashcards | Files in, files out |
 | "critique my order" | Five paragraph order review | Structured feedback |

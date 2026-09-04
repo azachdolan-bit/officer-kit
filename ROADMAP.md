@@ -8,7 +8,7 @@ Standing rules for every skill: produce from sources only, never from general kn
 
 | Skill | Status | Does | Absorbs | Scripts to port | Gate |
 |---|---|---|---|---|---|
-| `capture-source` | planned | Turn an issued source into clean text on disk: an online lesson, a handout PDF, photos of a card or sheet. Photo protocol: transcribe verbatim, mark illegible, separate printed from handwritten, read back and confirm before building. Save the same session. | capture workflow, save all captures rule, photo safeguards from the builder files | `capture_check.py` (structured text vs full text length compare) | completeness compare |
+| `capture-source` | BUILT (v0.2) | Turn an issued source into clean text on disk: an online lesson, a handout PDF, photos of a card or sheet. Photo protocol: transcribe verbatim, mark illegible, separate printed from handwritten, read back and confirm before building. Save the same session. | capture workflow, save all captures rule, photo safeguards from the builder files | `capture_check.py` (structured text vs full text length compare) | completeness compare |
 | `study-guide` | BUILT (v0.1, lite) | Lesson to guide, quiz, flashcards. v0.2 adds the house docx generator, the skeleton outline first, the condensed handout variant, and the depth rule (knowledge and scenarios, not rubric mechanics). | study guide workflow, depth rule, skeleton outlines, condensing rules, no gap filling | `generate_study_guide.js`, `validate_content.py` | source-fidelity-reviewer |
 | `print-card` | planned | 3x5, 4x6, 5x8, and 8.5x11 duplex laminates from a spec: reference cards, ID cards, skeletons, copy cards. Sourced versus inferred marked on the card. | card projects, duplex and flip rules, sourced vs inferred rule | `render_card.py` (HTML to PDF at page size) | visual-reviewer |
 | `topic-brief` | planned | A brief that stays on the named topic: one paragraph of context, every fact tied back, numbers hygiene, source list, a cue card. Program formats (a timed class, a doctrine element) as references. | topic scoped briefs rule, presentation program format | `render_card.py` (shared) | evidence-reviewer |
@@ -17,7 +17,7 @@ Standing rules for every skill: produce from sources only, never from general kn
 
 | Skill | Status | Does | Absorbs | Scripts to port | Gate |
 |---|---|---|---|---|---|
-| `qc-gates` | planned | The gate stack on demand: "QC this before I sign." Picks the gates by product type (findings: 0, 1, 2, 3; teaching product: fidelity; visual: 3) and runs the reviewer agents blind, in order, until each returns clean. Explains what each gate cut. | the four gate definitions from the correspondence standard | `measure_pdf.py` (line pitch gaps from pdftotext bbox) | itself |
+| `qc-gates` | BUILT (v0.2) | The gate stack on demand: "QC this before I sign." Picks the gates by product type (findings: 0, 1, 2, 3; teaching product: fidelity; visual: 3) and runs the reviewer agents blind, in order, until each returns clean. Explains what each gate cut. | the four gate definitions from the correspondence standard | `measure_pdf.py` (line pitch gaps from pdftotext bbox) | itself |
 
 Agents (BUILT): `significance-reviewer` (Gate 0), `evidence-reviewer` (Gate 1), `visual-reviewer` (Gate 3), `source-fidelity-reviewer` (teaching products), `researcher` (wide read only research). Each keeps its own memory of what it has caught before.
 
@@ -25,7 +25,7 @@ Agents (BUILT): `significance-reviewer` (Gate 0), `evidence-reviewer` (Gate 1), 
 
 | Skill | Status | Does | Absorbs | Scripts to port | Gate |
 |---|---|---|---|---|---|
-| `naval-letter` | planned | A naval letter to the student handout standard over the SECNAV manual: no letterhead, 13.8 pt line pitch, signature on the fourth line, reference integrity both directions, remedy ladders, standing in the first sentence, no dashes. Heading block and POC line come from the user's rules file, never from the plugin. | correspondence standard, substance rules, reference and citation integrity | `qc_letter.py` (Gate 2, mechanical), `measure_pdf.py` | qc_letter.py then rendered PDF read |
+| `naval-letter` | BUILT (v0.2) | A naval letter to the student handout standard over the SECNAV manual: no letterhead, 13.8 pt line pitch, signature on the fourth line, reference integrity both directions, remedy ladders, standing in the first sentence, no dashes. Heading block and POC line come from the user's rules file, never from the plugin. | correspondence standard, substance rules, reference and citation integrity | `qc_letter.py` (Gate 2, mechanical), `measure_pdf.py` | qc_letter.py then rendered PDF read |
 | `discrepancy-report` | planned | The assess and report pipeline, end to end: audit a week's material, Gate 0, Gate 1, build the letter and the cumulative tracker, build the examples deck, Gate 2, Gate 3, deliver docx plus PDF plus enclosure plus deck. First instance: the weekly academic discrepancy report at TBS. | the report SOP, plain numbering, the specificity standard, findings only, held findings protocol | `build_memo.py`, `build_tracker.py`, `fields_equal.py` (abort when letter and tracker text drift) | all four gates |
 | `evidence-deck` | planned | Comparison decks that show every finding against the artifact that proves it: two verbatim cards and a band, black grey white, crops cut by measured coordinates, text budgeted before the picture is sized, describe never direct. Also the order contradictions deck. | deck build note, deck lessons from the STEX contradictions deck, 474 character rule | `build.js`, `crop2.py`, `make_shots.py`, `render_slides.sh` | visual-reviewer until SHIP |
 
@@ -53,7 +53,7 @@ Agents (BUILT): `significance-reviewer` (Gate 0), `evidence-reviewer` (Gate 1), 
 |---|---|---|---|---|---|
 | `field-kit-start` | BUILT | Orientation and the seven day plan. v0.2 updates the skill table to the six functions. | | | |
 | `security-check` | BUILT | Green, yellow, red; folder scan before linking. | | | |
-| `rules-file` | BUILT (v0.1) | Interview to a personal rules file. v0.2 adds the correspondence identity block (rank, name, billet, unit, course, originator code, signature form, POC line) so `naval-letter` can copy it, and path scoped rules for the working folder. | | | |
+| `rules-file` | BUILT (v0.2) | Interview to a personal rules file at a depth the user picks (Light, Standard, Full); every field optional; Full adds the correspondence identity block that `naval-letter` copies from; skipped fields are written as not recorded and asked for at draft time. | | | |
 | `build-a-skill` | BUILT | Interview to a working skill. v0.2 adds the eval requirement (three golden cases) and the skill spec rules. | skill authoring rules | | |
 | `fleet-transition` | BUILT | Day one and week one at the first unit. | | | |
 | `folder-triage`, `inbox-triage`, `week-ahead` | BUILT | Admin. Unchanged. | | | |
@@ -77,7 +77,7 @@ Test in Sprint 0 whether hook commands can reach the user's working folder from 
 
 | Sprint | Ship |
 |---|---|
-| 0 | Repo, marketplace, agents (done), `rules-file` v0.2 with the identity block, `capture-source`, `naval-letter`, `qc-gates`, the five unknowns tested |
+| 0 | DONE 2026-09-04 except the unknowns: repo, marketplace, agents, `rules-file` v0.2, `capture-source`, `naval-letter` (build, Gate 2a, Gate 2b scripts, 3 evals passing), `qc-gates`. Unknowns still to test: rules file honoured in Cowork, hooks reaching the folder, agent memory location, private repo as marketplace |
 | 1 | `quiz-builder`, `study-guide` v0.2, `walkthrough`, evals for all three |
 | 2 | `order-analysis`, `evidence-deck`, `discrepancy-report`, `lo-audit`, `tactical-planning`, `call-for-fire`, `print-card`, `drill-builder`, `topic-brief` |
 | 3 | `aar`, `inspect`, hooks, evals for every skill, memory migration, rules file slimmed |

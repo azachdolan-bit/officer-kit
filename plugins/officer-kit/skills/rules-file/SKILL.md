@@ -1,44 +1,77 @@
 ---
 name: rules-file
 description: >
-  This skill should be used when the user says "build my rules file", "write my CLAUDE.md",
-  "set up my rules", "rules file", "tell you about me", "personalize Claude", "make a project
-  rules file", or wants Claude to remember how they work across tasks.
+  Interviews the user and writes a personal rules file (CLAUDE.md) they keep at the top of
+  their working folder and carry to every future unit, with an optional correspondence identity
+  block that the naval-letter skill copies from. Every question is optional; the user decides
+  how much of themselves to record. Use when the user says "build my rules file", "write my
+  CLAUDE.md", "set up my rules", "rules file", "tell you about me", "personalize Claude",
+  "make a project rules file", "update my rules", or wants Claude to remember how they work.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
-# Rules File Builder
+# Rules file builder
 
-Interview the user and produce a personal rules file (CLAUDE.md) they save at the top of their working folder and carry to every future unit. Load `references/template.md` for the full template and `references/example.md` for a filled in example.
+Interview the user and produce a rules file they save at the top of their working folder. Load `references/template.md` for the file shape and `references/example.md` for a filled in example.
 
-## Why this matters (say it once)
+## Say this once
 
-A rules file is ten minutes that pays back on every task after it. Claude reads it at the start of every session in that folder, so the user never re explains their billet, their tone, or their no go list.
+A rules file is ten minutes that pays back on every task after it. Claude reads it at the start of every session in that folder, so you never re explain your billet, your tone, or your no go list. Every question below is optional: skip anything you would rather not record. The file lives on your computer and is never sent anywhere. The more you give, the less you re explain; a thin file still works, and anything you leave out is simply asked for when a task needs it.
+
+## Pick a depth first
+
+Offer three, and accept the answer without argument:
+
+| Depth | Records | Good for |
+|---|---|---|
+| **Light** | how you want drafts written, what Claude must never do | anyone who wants the behaviour without the biography |
+| **Standard** | Light, plus rank and billet, weekly work, how your boss likes things | most users |
+| **Full** | Standard, plus the correspondence identity block (the exact lines that print on a letter you sign) | anyone who will draft naval letters with the kit |
+
+A user can move up later by running this skill again; it updates the file in place.
 
 ## Interview
 
-Ask one question at a time. Keep each to a line. Accept short answers and do not ask for more than they give. Six questions:
+One question at a time. Keep each to a line. Accept short answers; do not ask for more than they give. If they say "skip," write the field as `not recorded` and move on. Never fill a skipped field from context, a signature in an email, or an earlier document; a value they did not give is a value they did not give.
 
-1. Who are you? Rank, billet, unit or school, MOS if assigned. (For a TBS student: "2ndLt, TBS student, Delta Company, MOS pending.")
-2. What do you handle every week? Three to six items. Push for verbs: "draft counselings, build the training schedule, track EQFs, reply to platoon reps."
-3. How do you want drafts written? Offer: direct and brief, formal Marine Corps correspondence style, conversational. Ask about length and any words to avoid.
-4. Who do you report to and how do they like things? OIC or platoon commander name is optional; what matters is format: BLUF first, bullets, one page, etc.
-5. What should Claude never do? Seed with: never send email without showing the draft, never invent a reference or an order number, never include names in anything that leaves the folder, never touch anything marked CUI.
-6. What is your fleet plan? First unit if known, otherwise "unknown, update on arrival."
+Standard and Full ask 1 to 6. Light asks 3 and 5 only. Full adds 7.
+
+1. **Who are you?** Rank, billet, unit or school, MOS if assigned. Any part may be left out.
+2. **What do you handle every week?** Three to six items, verbs first: "draft counselings, build the training schedule, track exam queries."
+3. **How do you want drafts written?** Offer: direct and brief; formal correspondence style; conversational. Ask about length and words to avoid.
+4. **Who do you report to and how do they like things?** A name is optional; the format is what matters: BLUF first, bullets, one page.
+5. **What should Claude never do?** Seed with: never send anything without showing the draft; never invent a reference or an order number; never include other people's names or personal details in anything that leaves the folder; never touch anything marked CUI.
+6. **What is your fleet plan?** First unit if known, otherwise "unknown, update on arrival."
+7. **Correspondence identity** (Full only). Say once: "These are the lines that print on a letter you sign. Copy them from a letter you have already signed if you have one; the exact printed form matters. Skip any you would rather supply at draft time." Then ask, one at a time:
+   - SSIC you usually use (1500 for training matters is common)
+   - Originator code, as printed on a signed letter
+   - From line, exactly as it prints: rank, full name, billet, unit, course or command
+   - Usual To line
+   - Signature form (initials and surname in caps, for example F. M. LAST)
+   - Point of contact line (phone or email, or both, or neither)
 
 ## Write the file
 
 Fill the template with their answers. Rules for the output:
 
-- Keep it under 300 words. Long rules files get ignored.
+- Keep it under 150 lines. Long rules files get ignored.
 - Every line is a fact or an instruction, not a paragraph.
-- The security block is mandatory and comes first. Never remove or soften it.
-- Include a dated "Fleet" section that is mostly blank with instructions to fill it on arrival.
-- Save as `CLAUDE.md` in the root of their linked folder if Cowork is active. Otherwise deliver the file and tell them to place it at the top of the folder they will work from.
+- The security block is mandatory and comes first. Never remove or soften it. It protects other people's data and controlled material; it does not forbid the user's own name on their own correspondence.
+- Skipped fields are written as `not recorded (ask me at draft time)` so a later session asks instead of guessing.
+- Include the dated Fleet section, mostly blank, with instructions to fill it on arrival.
+- Save as `CLAUDE.md` in the root of the linked folder when one is connected. Otherwise deliver the file and say where to put it: the top of the folder they will work from.
+- If the folder already has a CLAUDE.md, update the sections the interview touched and leave the rest as it was. Show the diff.
 
 ## After writing
 
 Run one real task with the file active so they see the difference. Suggest: "Draft a one paragraph weekly update to my OIC on [topic]." Point out where the rules file changed the output.
 
-Remind them: update it when the billet changes, not before.
+Remind them: update it when the billet changes, not before. The Full block can be added at any time by running this skill again and saying "add my correspondence identity."
+
+## Privacy rules
+
+- Depth is the user's call. Do not sell Full; say what it unlocks and stop.
+- Never record a field the user skipped, even if the value is visible elsewhere in the session.
+- The rules file is the only place personal identity lives. Skills copy from it; they never store it.
+- Never write anything from a `.mil` system, or anything marked CUI, into the file.

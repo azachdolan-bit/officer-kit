@@ -1,0 +1,8 @@
+[
+  {"skill": "capture-source", "id": "empty-chapter", "query": "Run capture_check.py on inputs/sample_capture.md", "files": ["inputs/sample_capture.md"],
+   "expected_behavior": ["reports 4 chapters", "flags Chapter 4 as EMPTY", "notes the heading that follows a list (Chapter 2 knowledge check)", "exits 1"]},
+  {"skill": "capture-source", "id": "photo-readback", "query": "Transcribe these two photos of a report card and build a drill from them", "files": [],
+   "expected_behavior": ["asks for photo order and front/back before transcribing", "presents the full transcription and asks for confirmation before building", "marks any illegible field rather than guessing", "saves the transcription file in the same session"]},
+  {"skill": "capture-source", "id": "thin-source", "query": "Capture this two paragraph handout and make a study guide", "files": [],
+   "expected_behavior": ["saves the capture", "says the source is thin and offers to get the real document", "does not pad the capture from general knowledge"]}
+]

@@ -1,0 +1,30 @@
+{
+  "ssic": "1500",
+  "originator_code": "BOC 0-00",
+  "date": "2026-09-04",
+  "from": "Second Lieutenant Pat Q. Sample, Platoon Academics Representative, 1st Platoon, Alpha Company, Basic Officer Course 0-00",
+  "to": "Company Academics Officer, Alpha Company",
+  "subj": "Request for review of an unsourced learning objective on the phase examination",
+  "refs": [
+    "Phase Consolidated Learning Objective Report",
+    "Sample Lesson Study Guide"
+  ],
+  "encls": [
+    "Sample Exam Query Form"
+  ],
+  "paragraphs": [
+    {"text": "Purpose.  On behalf of the Alpha Company student population, I request review of one enabling learning objective assessed on the phase examination that no issued material teaches."},
+    {"text": "Discussion.  Reference (a) lists the objective as item 12.  Reference (b) does not present the material at any point.  Enclosure (1) records the examination items concerned.",
+     "subs": [
+       {"text": "The objective is published in reference (a) under the lesson that should teach it, item 12 of 40."},
+       {"text": "Reference (b), the study guide issued for that lesson, does not use the term at any point in its four topics.",
+        "subs": [
+          {"text": "A search of the full text for the term and each synonym returned no result."}
+        ]}
+     ]},
+    {"text": "Remedies.  I request that the objective be removed from scoring, or that partial credit be awarded for the items concerned, or that the objective be resourced before the next examination."}
+  ],
+  "poc": "My point of contact information is 000-000-0000 or sample@example.com.",
+  "signature": "P. Q. SAMPLE",
+  "author": "Sample"
+}

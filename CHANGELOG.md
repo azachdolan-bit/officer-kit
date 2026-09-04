@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 (2026-09-04) Sprint 0: the core
+
+- `rules-file` v0.2: three depths (Light, Standard, Full), every question optional, skipped fields written as "not recorded (ask me at draft time)", correspondence identity block for letters, update in place.
+- `naval-letter` (new): the standard as a reference, `build_letter.py` (JSON spec to docx on the 13.8 pt grid), `qc_letter.py` (Gate 2a, now also refuses placeholders), `measure_pdf.py` (Gate 2b, every gap on the page measured). Three evals passing.
+- `qc-gates` (new): picks the gates by product type and runs the blind reviewers until clean; gate report format.
+- `capture-source` (new): capture protocol for online lessons, files, and photos with the read back gate; `capture_check.py`.
+- Evals for naval-letter (deterministic), capture-source, rules-file.
+
 ## 0.2.0 (2026-09-04) skeleton
 
 - Repo created as a marketplace with one plugin, `officer-kit` (renamed from claude-field-kit the same day).

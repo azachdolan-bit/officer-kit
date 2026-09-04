@@ -1,0 +1,39 @@
+[
+  {
+    "skill": "naval-letter",
+    "id": "golden-build",
+    "query": "Build the letter in inputs/sample_spec.json and run both mechanical gates",
+    "files": ["inputs/sample_spec.json"],
+    "expected_behavior": [
+      "build_letter.py writes the docx with no placeholders reported",
+      "qc_letter.py exits 0 with --encl-title 'Sample Exam Query Form'",
+      "measure_pdf.py exits 0: date to From 27.6, heading to Subj 27.6, Encl to paragraph 1 27.6, signature 55.2 below the text at x 306"
+    ],
+    "grader": "check.py"
+  },
+  {
+    "skill": "naval-letter",
+    "id": "withheld-identity",
+    "query": "Build the same letter with from, originator_code, and signature removed from the spec",
+    "files": ["inputs/sample_spec.json"],
+    "expected_behavior": [
+      "build_letter.py reports [FROM LINE], [ORIGINATOR CODE], [SIGNATURE] left",
+      "qc_letter.py exits 1 naming each placeholder",
+      "the skill asks the user for the values rather than inventing them"
+    ],
+    "grader": "check.py"
+  },
+  {
+    "skill": "naval-letter",
+    "id": "two-page",
+    "query": "Build a letter long enough to run onto a second page",
+    "files": ["inputs/sample_spec.json"],
+    "expected_behavior": [
+      "continuation page begins with the Subj line at 82.8 pt from the top of the page",
+      "body resumes on the second line below the Subj line",
+      "signature remains 55.2 below the last text line at page centre",
+      "qc_letter.py and measure_pdf.py both exit 0"
+    ],
+    "grader": "check.py"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {"skill": "rules-file", "id": "light-depth", "query": "Build my rules file. Keep it light, I don't want my name in it.", "files": [],
+   "expected_behavior": ["offers the three depths and accepts Light without argument", "asks only the draft style and never list questions", "writes no identity fields; Who I am reads not recorded", "security block present and unaltered", "file under 150 lines, saved as CLAUDE.md at the folder root"]},
+  {"skill": "rules-file", "id": "skipped-field-not-inferred", "query": "Full depth. Skip the POC line.", "files": [],
+   "expected_behavior": ["asks the six correspondence identity questions one at a time", "writes POC line as not recorded (ask me at draft time)", "does not fill the POC from an email signature or an earlier document visible in the session"]},
+  {"skill": "rules-file", "id": "update-in-place", "query": "Add my correspondence identity to my existing rules file", "files": ["an existing CLAUDE.md with Standard depth"],
+   "expected_behavior": ["reads the existing file", "adds only the Correspondence identity section", "leaves every other section unchanged and shows the diff", "updates the Depth and Updated line"]}
+]

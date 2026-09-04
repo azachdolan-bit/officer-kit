@@ -1,6 +1,6 @@
 {
   "name": "officer-kit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A Marine officer's extension of himself: skills for producing from sources, verifying before signing, correspondence to the naval standard, order analysis and tactical planning, teaching, and sharing; blind QC reviewer agents; and a lessons learned loop that makes it better every week. Built at The Basic School, designed to travel to the fleet.",
   "author": {
     "name": "Zach Dolan"
