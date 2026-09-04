@@ -8,7 +8,7 @@ description: >
   CLAUDE.md", "set up my rules", "rules file", "tell you about me", "personalize Claude",
   "make a project rules file", "update my rules", or wants Claude to remember how they work.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Rules file builder
@@ -35,9 +35,11 @@ A user can move up later by running this skill again; it updates the file in pla
 
 One question at a time. Keep each to a line. Accept short answers; do not ask for more than they give. If they say "skip," write the field as `not recorded` and move on. Never fill a skipped field from context, a signature in an email, or an earlier document; a value they did not give is a value they did not give.
 
-Standard and Full ask 1 to 6. Light asks 3 and 5 only. Full adds 7.
+Standard and Full ask 1 to 6, including 1a and 1b. Light asks 1b, 3, and 5 only (the billet description is skipped, the module list is kept so the kit knows what to offer). Full adds 7.
 
 1. **Who are you?** Rank, billet, unit or school, MOS if assigned. Any part may be left out.
+1a. **Your billet, in your words.** Two to four lines: what the billet is responsible for, who you answer to and who answers to you (by billet, not name), and what a normal week looks like. This is the line the tools use to pick what to offer and to write your own fitness report input later; it is written by you, never guessed from the rank. The user may paste the billet description from their last fitness report or counseling instead.
+1b. **Which of these does your billet make you do?** Read the list and take every yes: awards; fitness reports on others; your own fitrep input and profile; counselings; letters of recommendation or appreciation; meritorious promotion or recognition packages; naval letters and endorsements; orders and planning; teaching, classes, or studying. Record the yes list as the modules line; `start` and `week-ahead` read it.
 2. **What do you handle every week?** Three to six items, verbs first: "draft counselings, build the training schedule, track exam queries."
 3. **How do you want drafts written?** Offer: direct and brief; formal correspondence style; conversational. Ask about length and words to avoid.
 4. **Who do you report to and how do they like things?** A name is optional; the format is what matters: BLUF first, bullets, one page.

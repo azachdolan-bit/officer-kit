@@ -15,6 +15,14 @@ Depth: Full   Updated: 2026-09-04
 - Collateral: platoon academics representative
 - Reports to: company academics officer for the billet; staff platoon commander otherwise
 
+## My billet, in my words (the tools read this; write it yourself)
+- Responsible for: the platoon's academic readiness; carrying exam and quiz discrepancies from the platoon to the company academics officer with the evidence attached
+- Answers to / has answering: answers to the company academics officer for the billet; no one answers to me
+- A normal week: read the week's lessons ahead of the platoon, log every query with the source, draft one review request, build one study product
+
+## Modules my billet needs (yes list; start and week-ahead read this)
+- naval letters; teaching and studying; my own fitrep input and profile
+
 ## What I handle weekly
 - Track exam queries and quiz issues, draft the review requests
 - Summarize the week's online lessons for the platoon

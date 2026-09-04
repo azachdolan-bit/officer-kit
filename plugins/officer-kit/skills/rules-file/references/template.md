@@ -14,6 +14,15 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - [Rank], [billet], [unit or school], MOS [assigned or pending]   (or: not recorded)
 - Reports to: [OIC / platoon commander, optional]
 
+## My billet, in my words (the tools read this; write it yourself)
+- Responsible for: [what the billet owns, one or two lines]
+- Answers to / has answering: [billets above and below, not names]
+- A normal week: [two lines]
+- (or: not recorded; paste the billet description from your last fitrep or counseling if you prefer)
+
+## Modules my billet needs (yes list; start and week-ahead read this)
+- [awards | fitreps on others | my own fitrep input and profile | counselings | letters of recommendation and appreciation | mer pro and recognition packages | naval letters | orders and planning | teaching and studying]
+
 ## What I handle weekly
 - [item 1]
 - [item 2]

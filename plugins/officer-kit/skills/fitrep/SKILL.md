@@ -21,7 +21,7 @@ Attribute marks (Sections D through H) are the RS's judgment and are never propo
 
 ## Inputs
 
-- **Who and what.** The MRO's grade and billet, the reporting occasion and period, and whether the user is the RS or the MRO preparing input.
+- **Who and what.** The MRO's grade and billet, the reporting occasion and period, and whether the user is the RS or the MRO preparing input. When the user is the MRO, the billet description comes from the "My billet, in my words" section of their rules file; read it and confirm it rather than asking again.
 - **The notes.** Counseling notes, the MROW, unit input, the RS's bullets. Anything the RS actually observed. Nothing is invented; a thin set of notes produces a short section, and the draft says so.
 - **Section A facts that trigger directed comments**: occasion code, period length, duty assignment count, special case marks, commendatory or derogatory material, promotion recommendation, PFT/CFT codes, body composition, reserve status, grade relationships between RS, RO, and MRO. Ask for these once as a checklist; each "yes" produces a directed comment.
 - **The user's copy of the manual** in Reference, if present, for the current edition. The extract is from the 5 Jun 2023 edition.

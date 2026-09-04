@@ -7,7 +7,7 @@ description: >
   officer kit", "officer kit start", "set up the kit", "where do I begin", "walk me through
   setup", "what can this do", "which tools do I need", or has just installed the plugin.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Start
@@ -28,12 +28,13 @@ This skill running is the proof. Say so in one line and move on. If the user rea
 
 ## Step 2. What do you do most?
 
-Ask one question: "Which of these is most of your week?" Offer the modules in the user's terms and accept more than one:
+If a rules file already exists in the connected folder with a "Modules my billet needs" line, read it and skip the question; the user's own billet description and yes list decide the modules. Otherwise ask one question: "Which of these is most of your week?" Offer the modules in the user's terms and accept more than one:
 
 | Answer | Module | First task candidates |
 |---|---|---|
 | Letters, requests, endorsements | Correspondence | draft a naval letter from something they need to send this week |
 | Awards, fitreps, counselings, updates | Admin | an award write up from bullet notes, or a fitrep section I draft |
+| Letters of recommendation, mer pro or recognition packages, board briefs | Admin, enlisted support | a mer pro letter from the Marine's record, or a letter of recommendation from what the user saw |
 | Orders, planning, exercises | Planning | critique or analyze an order they have on hand |
 | Teaching, classes, studying | Training and teaching | a study guide or quiz from a handout they have |
 | Not sure yet | Share and improve | the rules file, which forces the question |
@@ -51,6 +52,10 @@ Propose a folder at a location the user names (Documents is a fine default). Str
   Admin/               awards, fitreps, counselings, updates, AARs
     Awards/
     Fitreps/
+    Counseling/
+    Letters/           letters of recommendation and appreciation
+    Promotions/        meritorious promotion packages and board briefs
+    Nominations/       Marine, NCO, and SNCO of the quarter and year packages
   Planning/            orders received, analyses, worksheets, overlays
   Training/            handouts captured, study guides, quizzes, walkthroughs
   Reference/           the manuals and school handouts the tools cite
@@ -68,7 +73,7 @@ In Cowork, the folder has to be linked before Claude can read or save there. Say
 
 ## Step 5. Write the rules file
 
-Run `rules-file`. Say once: every question is optional; Light, Standard, or Full; the file lives on their computer and is never sent anywhere; Full is only needed if they will draft correspondence with the kit. Save as `CLAUDE.md` at the top of the folder.
+Run `rules-file`. Say once: every question is optional; Light, Standard, or Full; the file lives on their computer and is never sent anywhere; Full is only needed if they will draft correspondence with the kit. The billet description question is the one to spend a minute on: the user writes it themselves, and every tool that asks "what is your billet" reads it from there instead of asking again. Save as `CLAUDE.md` at the top of the folder.
 
 ## Step 6. Build the library
 
