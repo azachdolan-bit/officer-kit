@@ -10,6 +10,6 @@ OUT="$ROOT/dist"
 VER="$(python3 -c "import json,sys; print(json.load(open(sys.argv[1]))['version'])" "$SRC/.claude-plugin/plugin.json")"
 mkdir -p "$OUT"
 rm -f "$OUT/$NAME.plugin"
-( cd "$SRC" && zip -qr "$OUT/$NAME.plugin" . -x "*.DS_Store" -x "__pycache__/*" -x "node_modules/*" )
+( cd "$SRC" && zip -qr "$OUT/$NAME.plugin" . -x "*.DS_Store" -x "*__pycache__*" -x "*.pyc" -x "node_modules/*" )
 echo "built $OUT/$NAME.plugin (version $VER)"
 unzip -l "$OUT/$NAME.plugin" | tail -1
