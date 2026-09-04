@@ -1,0 +1,22 @@
+# Build and packaging output
+dist/
+*.plugin
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+.~lock.*
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Never commit course content, captures, findings, or personal identity.
+# Those live in the user's working folder, not in the plugin.
+evals/**/private/
+**/CLAUDE.local.md
