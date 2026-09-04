@@ -25,6 +25,11 @@ Each tool lists the governing publication it is built to. School handouts outran
 | `weekly-update` | "weekly update to my OIC" | BLUF first update in your boss's format from the rules file | none | Planned |
 | `after-action` | "turn these range notes into an AAR" | What happened, what worked, what to fix, in the unit's format | none | Planned |
 | `training-schedule` | "build the training schedule from this list" | Week view from events with prep items | none | Planned |
+| `letter-of-appreciation` | "letter of appreciation for", "LOA" | Letter of appreciation for a Marine or a supporting unit, in correspondence format, from the facts of what they did | SECNAV M-5216.5 | Planned |
+| `letter-of-recommendation` | "letter of recommendation for", "recommend this Marine for" | Recommendation for a program, school, commissioning source, or civilian purpose; intake for what the reader is deciding and what the Marine did that bears on it | SECNAV M-5216.5; the program's own instruction where one exists | Planned |
+| `meritorious-promotion` | "mer pro package", "meritorious promotion for" | The meritorious promotion recommendation: justification to the order's criteria, the Marine's record summarized, the board format the command uses | MCO 1400.32 (Enlisted Promotion Manual) | Planned |
+| `enlisted-program-package` | "package for", "recommend for MECEP", "recruiting duty screening" | Command endorsement and justification for an enlisted Marine's application to a program or special duty, to that program's MARADMIN or order | the program's governing order; SECNAV M-5216.5 | Planned |
+| `brief` | "build a brief", "slides for", "decision brief" | A PowerPoint brief from an intake for audience and the decision sought; one message per slide; every slide read by the visual reviewer | none | Planned |
 
 ## Planning
 
