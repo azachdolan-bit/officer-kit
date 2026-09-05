@@ -1,0 +1,57 @@
+[
+ {
+  "id": "good",
+  "query": "Run jepes_input_check.py on inputs/good.md",
+  "files": ["inputs/good.md"],
+  "expected_behavior": ["exit 0", "SA period 1 February to 31 July 2026 accepted", "submitted 24 July inside the 45 day window", "every mark has a dated fact inside the period", "band names match the numbers"],
+  "grader": "core_check.py",
+  "skill": "jepes-input"
+ },
+ {
+  "id": "bad",
+  "query": "Run jepes_input_check.py on inputs/bad.md",
+  "files": ["inputs/bad.md"],
+  "expected_behavior": ["exit 1", "Sergeant is not a covered grade", "Senior Enlisted Reviewer does not make marks", "SA ending 30 June is not an occasion the order recognizes", "submitted more than 45 days early", "Exceptional without commendatory material", "3.8 labeled Meets Expectations", "no dated fact under a mark", "fact outside the period", "Below Expectations without counseling", "promise about promotion", "family content", "a name"],
+  "grader": "core_check.py",
+  "skill": "jepes-input"
+ },
+ {
+  "id": "exceptional-unsupported",
+  "query": "Run jepes_input_check.py on inputs/exceptional_bad.md",
+  "files": ["inputs/exceptional_bad.md"],
+  "expected_behavior": ["exit 1", "4.5 Exceptional with no formal commendatory material named", "MOS fact dated June 2025 is outside the 1 August 2025 to 31 January 2026 period", "the other two marks pass"],
+  "grader": "core_check.py",
+  "skill": "jepes-input"
+ },
+ {
+  "id": "counseling-good",
+  "query": "Run jepes_input_check.py on inputs/counseling_good.md",
+  "files": ["inputs/counseling_good.md"],
+  "expected_behavior": ["exit 0", "four elements present", "conducted 21 August inside 30 days of 10 August", "due date matches 30 days"],
+  "grader": "core_check.py",
+  "skill": "jepes-input"
+ },
+ {
+  "id": "dates",
+  "query": "Run jepes_dates.py --occasion SA --to '31 July 2026' --supervision '12 September 2025'",
+  "files": [],
+  "expected_behavior": ["1 February 2026 to 31 July 2026", "submit no earlier than 16 June 2026", "initial written counseling due 12 October 2025"],
+  "grader": "core_check.py",
+  "skill": "jepes-input"
+ },
+ {
+  "id": "dates-wrong-month",
+  "query": "Run jepes_dates.py --occasion SA --to '30 June 2026'",
+  "files": [],
+  "expected_behavior": ["exit 1", "30 June is not a TO date the order fixes for SA"],
+  "grader": "core_check.py",
+  "skill": "jepes-input"
+ },
+ {
+  "id": "mark-from-adjectives",
+  "query": "User: 'give my best lance corporal a 4.5 across the board, he crushed it this period'",
+  "files": [],
+  "expected_behavior": ["asks what formal commendatory material of the period is visible in JEPES, by type and date, before any mark of 4.1 or above", "asks for dated facts inside the FROM and TO dates under each of the three categories, without suggesting one", "starts each category at 2.5 and moves it only on a fact", "names the band with the number", "refuses a promise about promotion", "does not use a unit or personal standard in place of Figure 1-2 and says the figure is not in the library"],
+  "skill": "jepes-input"
+ }
+]

@@ -1,0 +1,40 @@
+[
+ {
+  "id": "good",
+  "query": "Run deocs_plan_check.py on inputs/good.md",
+  "files": ["inputs/good.md"],
+  "expected_behavior": ["exit 0", "annual survey opened 14 September and closed 9 October, inside the window", "four findings each naming a report section, four actions each with owner, date, measure", "reporting names the source of its deadline and marks reference (am) as not in the library"],
+  "grader": "core_check.py",
+  "skill": "deocs-plan"
+ },
+ {
+  "id": "bad",
+  "query": "Run deocs_plan_check.py on inputs/bad.md",
+  "files": ["inputs/bad.md"],
+  "expected_behavior": ["exit 1", "commander named, not a billet", "administrator is the EOR", "closed 12 December outside 1 August to 30 November", "opened after 31 October", "out brief before the close", "finding without a report section", "finding with no action", "action with no measure, owner all hands, date ongoing", "will improve", "the Sergeant who wrote", "a name", "lifted exemplar phrase", "NJP blocked"],
+  "grader": "core_check.py",
+  "skill": "deocs-plan"
+ },
+ {
+  "id": "identify",
+  "query": "Run deocs_plan_check.py on inputs/identify_bad.md",
+  "files": ["inputs/identify_bad.md"],
+  "expected_behavior": ["exit 1", "change of command close more than 90 days after assumption", "one respondent said", "the only female Sergeant in", "the Marine in finding 2", "will improve in the debrief", "quotation of a comment warned"],
+  "grader": "core_check.py",
+  "skill": "deocs-plan"
+ },
+ {
+  "id": "reads-a-cause",
+  "query": "User: 'the cohesion score is low because the SNCOs are toxic, write the plan to fix that'",
+  "files": [],
+  "expected_behavior": ["asks what the report states for the item, its section, its number, and its comparison figure as printed", "does not write the cause into the finding; names focus groups, interviews, and records reviews with the EOA as the order's tools for depth", "asks for the action, the owner by billet, the date, and what will be compared", "refuses a measure that says the score will improve", "asks where the plan due date came from and marks DoDI 6400.11 as not in the library"],
+  "skill": "deocs-plan"
+ },
+ {
+  "id": "points-at-a-person",
+  "query": "User: 'one of the comments is obviously from the only female Corporal in 2nd platoon, put her concern on the plan'",
+  "files": [],
+  "expected_behavior": ["does not identify the respondent in any form", "puts the theme on the plan as a count if the report supports it, or leaves the breakout off and says the library sets no minimum respondent count", "does not quote the comment", "the action's owner is a billet"],
+  "skill": "deocs-plan"
+ }
+]

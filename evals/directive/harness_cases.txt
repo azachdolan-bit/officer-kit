@@ -1,0 +1,3 @@
+case("directive good", "directive/scripts/directive_check.py", "directive/inputs/good.md", 0, "clean")
+case("directive bad", "directive/scripts/directive_check.py", "directive/inputs/bad.md", 1, "Type: 'SOP'", "below the battalion or squadron level", "Situation must be the first paragraph", "mandatory paragraph 'Mission' missing", "Coordinating Instructions", "Signal altered", "reference (b) is listed and never cited", "distribution statement A altered", "grade or rank in the signature block", "J. R. HOLLISTER", "lifted from the exemplar")
+case("directive bulletin no canc", "directive/scripts/directive_check.py", "directive/inputs/bulletin_no_canc.md", 1, "self-canceling provision", "1 failures")

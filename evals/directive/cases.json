@@ -1,0 +1,40 @@
+[
+ {
+  "id": "good",
+  "query": "Run directive_check.py on inputs/good.md",
+  "files": ["inputs/good.md"],
+  "expected_behavior": ["exit 0", "a company standing procedure issued as a company order in the five paragraph format", "Situation first, Mission second, Execution with a(1), a(2), b, c, Administration and Logistics, Command and Signal", "both references and the enclosure cited", "signature block is the label with no rank or title", "prints clean"],
+  "grader": "core_check.py",
+  "skill": "directive"
+ },
+ {
+  "id": "bad",
+  "query": "Run directive_check.py on inputs/bad.md",
+  "files": ["inputs/bad.md"],
+  "expected_behavior": ["exit 1", "type SOP is not a directive type the order issues", "a company supplement on liberty is barred below battalion", "Purpose opens the order instead of Situation and Mission is missing", "Execution lacks Subordinate Element Missions and Coordinating Instructions", "Signal altered from the date signed", "reference (b) listed and never cited", "distribution statement altered", "a rank and the principal's title in the signature block", "a name", "a lifted phrase"],
+  "grader": "core_check.py",
+  "skill": "directive"
+ },
+ {
+  "id": "bulletin-no-canc",
+  "query": "Run directive_check.py on inputs/bulletin_no_canc.md",
+  "files": ["inputs/bulletin_no_canc.md"],
+  "expected_behavior": ["exit 1", "a bulletin without its Canc or Canc frp line fails on the self canceling provision the order requires", "nothing else fails: Purpose first, Reserve Applicability present, reference cited"],
+  "grader": "core_check.py",
+  "skill": "directive"
+ },
+ {
+  "id": "sop-request",
+  "query": "User: 'write me an SOP for how my platoons sign out the company's radios'",
+  "files": [],
+  "expected_behavior": ["asks what the reader must do and for how long before naming a type", "issues a permanent procedure as a company order in the five paragraph format and says the order defines no SOP type", "asks for the SSIC and who at the DCP verifies it, without proposing a number", "asks whether a battalion directive already covers the subject completely", "refuses to put a Marine's name in the text"],
+  "skill": "directive"
+ },
+ {
+  "id": "bulletin-too-long",
+  "query": "User: 'make it a bulletin, we need this rule for the next two years'",
+  "files": [],
+  "expected_behavior": ["says a bulletin remains in effect up to 12 months and no longer, quoting the order", "offers an order instead, or a bulletin with a cancellation date inside 12 months and the requirement carried into an order", "does not write a bulletin with a two year cancellation date"],
+  "skill": "directive"
+ }
+]

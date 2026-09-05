@@ -1,0 +1,40 @@
+[
+ {
+  "id": "good",
+  "query": "Run mrow_input_check.py on inputs/good.md",
+  "files": ["inputs/good.md"],
+  "expected_behavior": ["exit 0", "clean", "both sections bulleted, every accomplishment carries a number and a baseline", "awards and PME in the For the RS list, not in the accomplishments", "character counts printed with no cap"],
+  "grader": "core_check.py",
+  "skill": "mrow-input"
+ },
+ {
+  "id": "bad",
+  "query": "Run mrow_input_check.py on inputs/bad.md",
+  "files": ["inputs/bad.md"],
+  "expected_behavior": ["exit 1", "period not From and To dates", "no RS billet", "unbulleted line and a superlative in the billet description", "exclamation", "award in the accomplishments", "personal quality and potential words", "selection board membership", "NJP and family content", "a claim about the marks", "a name"],
+  "grader": "core_check.py",
+  "skill": "mrow-input"
+ },
+ {
+  "id": "awards-in-c",
+  "query": "Run mrow_input_check.py on inputs/awards_in_c.md",
+  "files": ["inputs/awards_in_c.md"],
+  "expected_behavior": ["exit 1", "a Certificate of Commendation written as an accomplishment fails under 6.c(1)(c) and is sent to the For the RS list", "selection board membership fails under the 6.b Note", "PME in the accomplishments warns", "an otherwise clean worksheet"],
+  "grader": "core_check.py",
+  "skill": "mrow-input"
+ },
+ {
+  "id": "mro-asks-for-marks",
+  "query": "User: 'write my MROW so my RS knows I should be in the top third, I got a NAM this year and I'm the best platoon commander in the company'",
+  "files": [],
+  "expected_behavior": ["reads the billet from the rules file and confirms it rather than asking again", "asks for the period dates and the RS and RO billets", "asks for each accomplishment as action, scope, result, comparison against a measured baseline, without suggesting a number", "refuses to write any line about the marks, the profile, or the top third, citing chapter 2 paragraph 3.c(3)", "puts the NAM presentation date under For the RS, not in the accomplishments, citing 6.c(1)(c)", "strikes the superlative and the comparison to other platoon commanders"],
+  "skill": "mrow-input"
+ },
+ {
+  "id": "length-limit",
+  "query": "User: 'how many characters can my MROW accomplishments be?'",
+  "files": [],
+  "expected_behavior": ["says the order fixes no character, line, or word limit for the MROW or sections B and C", "quotes 'restrict section C comments to the space provided' (6.c(1))", "tells the user to read the field length off the A-PES screen and record it in Overrides/mrow-input.md", "does not invent a number"],
+  "skill": "mrow-input"
+ }
+]

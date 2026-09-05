@@ -1,0 +1,48 @@
+[
+ {
+  "id": "good",
+  "query": "Run meritorious_mast_check.py on inputs/good.md",
+  "files": ["inputs/good.md"],
+  "expected_behavior": ["exit 0", "Meritorious Mast whose level check names a Meritorious Mast and quotes 8.g(1)", "held by the commander at battalion echelon on the observer's report", "every number in the text is in the facts", "copy to MMSB, nothing to MMMA, NAVMC 10935 named"],
+  "grader": "core_check.py",
+  "skill": "meritorious-mast"
+ },
+ {
+  "id": "certcom-good",
+  "query": "Run meritorious_mast_check.py on inputs/certcom_good.md",
+  "files": ["inputs/certcom_good.md"],
+  "expected_behavior": ["exit 0", "Certificate of Commendation whose level check names it and says why not a Mast and why not a decoration", "issued by a commander with NA authority, recommended by the company commander", "not via the HQMC APS, NAVMC 10631 and 10631A named, copy to MMSB, nothing to MMMA"],
+  "grader": "core_check.py",
+  "skill": "meritorious-mast"
+ },
+ {
+  "id": "bad",
+  "query": "Run meritorious_mast_check.py on inputs/bad.md",
+  "files": ["inputs/bad.md"],
+  "expected_behavior": ["exit 1", "level check names a Certificate of Commendation on a Meritorious Mast product, 8.g(1) quoted", "awarding officer below battalion echelon", "numbers in the text not in the facts", "promise about promotion", "family content", "routing to MMMA and no MMSB copy", "a unit by name", "a name", "a lifted exemplar phrase", "a dash"],
+  "grader": "core_check.py",
+  "skill": "meritorious-mast"
+ },
+ {
+  "id": "level-decoration",
+  "query": "Run meritorious_mast_check.py on inputs/level_bad.md",
+  "files": ["inputs/level_bad.md"],
+  "expected_behavior": ["exit 1", "an otherwise clean Meritorious Mast whose level check says the facts reach a personal decoration fails on 8.g(1) alone", "exactly one failure"],
+  "grader": "core_check.py",
+  "skill": "meritorious-mast"
+ },
+ {
+  "id": "mast-for-a-nam",
+  "query": "User: 'write a mer mast for my sergeant, the division comm officer already put him in for a NAM but I want him recognized before he transfers'",
+  "files": [],
+  "expected_behavior": ["says that the order does not conduct a Meritorious Mast for service recognized by a personal decoration and quotes 8.g(1)", "asks whether the pending award covers the same service or a different one, without suggesting an answer", "offers the award tool for the decoration, or a Mast only for distinct service with its own facts", "does not draft a Mast text for the same service"],
+  "skill": "meritorious-mast"
+ },
+ {
+  "id": "who-signs",
+  "query": "User: 'I'm a platoon commander, can I give my LCpl a meritorious mast myself?'",
+  "files": [],
+  "expected_behavior": ["says the order has the observer report to the Marine's commander at battalion or equivalent echelon, who decides whether to hold the Mast (8.g)", "offers to draft the report and the Mast text for the commander to sign", "names the Letter of Appreciation as the recognition any senior officer may issue, and that it does not enter the OMPF (8.h)"],
+  "skill": "meritorious-mast"
+ }
+]

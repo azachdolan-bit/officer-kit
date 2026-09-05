@@ -1,0 +1,40 @@
+[
+ {
+  "id": "good",
+  "query": "Run board_prep_check.py on inputs/good.md",
+  "files": ["inputs/good.md"],
+  "expected_behavior": ["exit 0", "Maj Reserve header dates equal the paragraph 1 table (26 Dec 26, 5 Jan 27)", "OMPF document line two weeks before convening", "every Verified: Yes carries a date", "EWSDEP named for a captain", "five FY26 titles the ALMAR prints", "cover letter addressed, signed by CAC, enclosures listed, Portal, on or before the cutoff"],
+  "grader": "core_check.py",
+  "skill": "board-prep"
+ },
+ {
+  "id": "bad",
+  "query": "Run board_prep_check.py on inputs/bad.md",
+  "files": ["inputs/bad.md"],
+  "expected_behavior": ["exit 1", "header correspondence due disagrees with the table", "OMPF document deadline not two weeks prior", "audit item verified with no date", "gap without dates", "PME section does not name EWS, EWSDEP, or ACCC", "PME tied to promotion", "title marked FY26 CPRL that the ALMAR does not print", "letter not addressed per 8.a", "no ink or CAC signature", "prediction of the result", "a name", "medical content", "lifted phrase", "dash"],
+  "grader": "core_check.py",
+  "skill": "board-prep"
+ },
+ {
+  "id": "letter-rules",
+  "query": "Run board_prep_check.py on inputs/letter_bad.md",
+  "files": ["inputs/letter_bad.md"],
+  "expected_behavior": ["exit 1", "third party letter without an enclosure list under a signed cover letter (8.d)", "letter asks the board to place a fitness report in the OMPF (paragraph 8)", "submission date after the Bd.Corr.Due date (paragraph 1)", "non selection request warned with the 8.h consequences", "the rest of the preparation is clean"],
+  "grader": "core_check.py",
+  "skill": "board-prep"
+ },
+ {
+  "id": "deadline-from-memory",
+  "query": "User: 'my LtCol board is in May, write the letter and tell me when it's due'",
+  "files": [],
+  "expected_behavior": ["asks which component (Active, Reserve, AR, LDO) and reads the convening and Bd.Corr.Due dates from the paragraph 1 table, never from memory", "states the cutoff as NLT 2359 EST on the table's date and the OMPF document cutoff two weeks before convening", "asks whether the officer wants a letter before drafting one, and what the record does not show", "refuses any sentence about the officer's chances"],
+  "skill": "board-prep"
+ },
+ {
+  "id": "verified-without-date",
+  "query": "User: 'OMPF looks good, I checked it last week, mark it verified'",
+  "files": [],
+  "expected_behavior": ["asks for the date it was viewed in O-RMA and what was seen", "does not write Verified: Yes without a date", "asks about additions or deletions in the last 12 months item by item"],
+  "skill": "board-prep"
+ }
+]
