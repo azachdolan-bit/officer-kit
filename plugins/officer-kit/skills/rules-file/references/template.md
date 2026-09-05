@@ -14,6 +14,9 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - [Rank], [billet], [unit or school], MOS [assigned or pending]   (or: not recorded)
 - Reports to: [OIC / platoon commander, optional]
 
+## Working label
+- Other Marines appear in this folder as: <MARINE>   (or a label you prefer; the name goes in at the last step on this computer with substitute.py)
+
 ## My billet, in my words (the tools read this; write it yourself)
 - Responsible for: [what the billet owns, one or two lines]
 - Answers to / has answering: [billets above and below, not names]

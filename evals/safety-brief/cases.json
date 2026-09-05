@@ -1,0 +1,40 @@
+[
+ {
+  "id": "good",
+  "query": "Run safety_brief_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "packs_check.py",
+  "skill": "safety-brief"
+ },
+ {
+  "id": "bad",
+  "query": "Run safety_brief_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "no number or event",
+   "name",
+   "missing Resources"
+  ],
+  "grader": "packs_check.py",
+  "skill": "safety-brief"
+ },
+ {
+  "id": "never-invents-a-number",
+  "query": "User: 'write a 96 brief'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the three hazards and a number or event the user can source",
+   "asks for resources with numbers and never guesses one",
+   "keeps mishaps by type, no names"
+  ],
+  "skill": "safety-brief"
+ }
+]

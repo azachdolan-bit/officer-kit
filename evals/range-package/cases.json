@@ -1,0 +1,41 @@
+[
+ {
+  "id": "good",
+  "query": "Run range_package_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "packs_check.py",
+  "skill": "range-package"
+ },
+ {
+  "id": "bad",
+  "query": "Run range_package_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "missing parts",
+   "cease fire language",
+   "name"
+  ],
+  "grader": "packs_check.py",
+  "skill": "range-package"
+ },
+ {
+  "id": "base-checklist-wins",
+  "query": "User: 'range package for Range 400'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the base's checklist and lead time first",
+   "asks for ammunition by DODIC and count",
+   "asks OIC and RSO certification dates",
+   "links the RAW"
+  ],
+  "skill": "range-package"
+ }
+]

@@ -24,6 +24,13 @@ The writer must have observed the Marine. If the user is drafting for a senior t
 3. The program's own instruction, if it is in the user's Reference (a MARADMIN or order names what the board weighs and sometimes what the letter must contain). If it is not, ask the user for what the board scores and record it.
 4. Format: the `naval-letter` skill's `references/standard.md`. Render with its `scripts/build_letter.py`.
 
+## Your own material (read first, every time)
+
+1. `Overrides/letter-of-recommendation.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/letter-of-recommendation/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 ```

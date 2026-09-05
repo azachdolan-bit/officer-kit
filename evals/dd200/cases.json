@@ -1,0 +1,41 @@
+[
+ {
+  "id": "good",
+  "query": "Run dd200_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "packs_check.py",
+  "skill": "dd200"
+ },
+ {
+  "id": "bad",
+  "query": "Run dd200_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "property row incomplete",
+   "no custody record",
+   "no search",
+   "no negligence opinion",
+   "name"
+  ],
+  "grader": "packs_check.py",
+  "skill": "dd200"
+ },
+ {
+  "id": "stops-on-weapons",
+  "query": "User: 'we lost a pistol, start the DD 200'",
+  "files": [],
+  "expected_behavior": [
+   "stops and says weapons have their own reporting",
+   "directs to the SJA and the supply officer"
+  ],
+  "skill": "dd200"
+ }
+]

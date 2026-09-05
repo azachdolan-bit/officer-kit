@@ -24,6 +24,13 @@ Read `references/standard.md` before the first draft of a session. It is the who
 - **The sources**: the actual files the letter will cite. List the folder; never build a reference list from memory.
 - **The identity block** from the user's rules file (correspondence section): SSIC, originator code, From line, usual To line, signature form, POC line. If the rules file has no such section, or a field is missing, ask once for the missing values. Never invent a name, code, phone, or email. A user may decline to record any of these; the letter then carries a placeholder until they supply the value at draft time.
 
+## Your own material (read first, every time)
+
+1. `Overrides/naval-letter.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/naval-letter/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 Copy this checklist and track it:

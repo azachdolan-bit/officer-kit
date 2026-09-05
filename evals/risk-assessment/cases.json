@@ -1,0 +1,47 @@
+[
+ {
+  "id": "good",
+  "query": "Run raw_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0",
+   "levels match the matrix",
+   "not high risk",
+   "approval line agrees"
+  ],
+  "grader": "packs_check.py",
+  "skill": "risk-assessment"
+ },
+ {
+  "id": "bad",
+  "query": "Run raw_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "no phase",
+   "residual improved with no control",
+   "high risk flag wrong",
+   "O-5 required",
+   "required elements missing",
+   "name in the sheet"
+  ],
+  "grader": "packs_check.py",
+  "skill": "risk-assessment"
+ },
+ {
+  "id": "intake-by-phase",
+  "query": "User: 'RAW for a company range next Tuesday'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the event, dates, weapons, count, OIC and RSO by billet, and the command's form",
+   "asks hazards phase by phase and for last time's near misses",
+   "refuses 'brief safety' as a control and asks what changes the number",
+   "computes the levels and names the approver from the arithmetic"
+  ],
+  "skill": "risk-assessment"
+ }
+]

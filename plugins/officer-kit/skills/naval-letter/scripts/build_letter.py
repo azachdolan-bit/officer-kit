@@ -198,6 +198,7 @@ def main():
         d.core_properties.author = spec["author"]
         d.core_properties.last_modified_by = spec["author"]
     d.core_properties.title = subj.title()
+    d.core_properties.comments = "Drafted with AI assistance (Officer Kit). The signer owns the words."
     d.save(out)
 
     missing = re.findall(r"\[[A-Z ]+\]", "\n".join(p.text for p in d.paragraphs))

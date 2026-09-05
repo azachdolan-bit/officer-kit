@@ -51,3 +51,7 @@ Say these when relevant, once, not every turn:
 - Claude has no clearance, no need to know, and no authority. It is a drafting tool.
 - The disclaimer for the workshop and kit: personal initiative, not an official TBS or USMC product.
 - Every rendered product carries an AI assistance line in its file properties. The signer owns the words; the line is there so nobody has to guess.
+
+## Utility script
+
+- `scripts/substitute.py <file.docx|.txt|.md> [--label "<MARINE>"] [--out file]`: asks for the name once on the user's own computer, writes a named copy beside the labeled original, stores nothing. Handles `<MARINE>`, `<MARINE_CAPS>`, `<LAST>`, `<LAST_CAPS>`. The labeled original stays the record; the named copy is submitted and deleted.

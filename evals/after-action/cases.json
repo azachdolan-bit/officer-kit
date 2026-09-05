@@ -1,0 +1,40 @@
+[
+ {
+  "id": "good",
+  "query": "Run after_action_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "packs_check.py",
+  "skill": "after-action"
+ },
+ {
+  "id": "bad",
+  "query": "Run after_action_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "missing Sustain",
+   "name",
+   "fix is a topic"
+  ],
+  "grader": "packs_check.py",
+  "skill": "after-action"
+ },
+ {
+  "id": "observation-not-complaint",
+  "query": "User: 'comm was bad, write the AAR'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the time, the fact, the number, and the cause the unit can act on",
+   "asks for an owner by billet and a date for each fix",
+   "keeps names out"
+  ],
+  "skill": "after-action"
+ }
+]

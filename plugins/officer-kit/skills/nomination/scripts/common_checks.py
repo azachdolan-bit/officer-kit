@@ -14,8 +14,8 @@ BLOCKED = {
     "SSN pattern": r"\b\d{3}-\d{2}-\d{4}\b",
     "EDIPI or ten digit id": r"\b\d{10}\b",
     "medical": r"\b(?:medical|diagnos\w*|injur\w*|surgery|pregnan\w*|mental health|therap\w*|counsel(?:ing|or) center|medication|PTSD|TBI|LIMDU|limited duty)\b",
-    "SAPR or investigation": r"\b(?:SAPR|sexual|assault|harass\w*|NJP|court[- ]martial|investigat\w*|EO complaint|CID|NCIS)\b",
-    "family or personal": r"\b(?:divorce\w*|custody|spouse|wife|husband|girlfriend|boyfriend|marriage|marital|family (?:problem|situation|issue)\w*|personal (?:problem|situation|issue)s?|hardship|single parent)\b",
+    "SAPR or investigation": r"\b(?:SAPR (?:report|case|incident|complaint|referral)|(?:un)?restricted report|sexual (?:assault|harassment|misconduct)|harass(?:ment|ed|ing)|NJP|court[- ]martial|under investigation|investigated for|EO complaint|CID|NCIS)\b",
+    "family or personal": r"\b(?:divorce\w*|child custody|custody (?:battle|dispute|of (?:his|her|their) (?:child|kids|son|daughter))|spouse|wife|husband|girlfriend|boyfriend|marriage|marital|family (?:problem|situation|issue)\w*|personal (?:problem|situation|issue)s?|hardship|single parent)\b",
     "financial": r"\b(?:debt|bankrupt\w*|garnish\w*|credit score|financial (?:trouble|problem|hardship))\b",
     "substance": r"\b(?:alcohol|DUI|DWI|drug|substance)\b",
 }

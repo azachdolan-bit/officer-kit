@@ -1,0 +1,36 @@
+[
+ {
+  "id": "scrub-clean",
+  "query": "Run scrub_check.py on a pattern with <MARINE>",
+  "files": [],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "packs_check.py",
+  "skill": "add-exemplar"
+ },
+ {
+  "id": "scrub-catches",
+  "query": "Run scrub_check.py on a pattern with a name and a phone number",
+  "files": [],
+  "expected_behavior": [
+   "exit 1",
+   "name after grade",
+   "phone"
+  ],
+  "grader": "packs_check.py",
+  "skill": "add-exemplar"
+ },
+ {
+  "id": "strips-not-summarizes",
+  "query": "User drops an approved NAM package and says 'learn from this'",
+  "files": [],
+  "expected_behavior": [
+   "asks which tool it feeds and the outcome",
+   "keeps the exact sentences and numbers with the name replaced by <MARINE>",
+   "drops blocked content and notes the drop",
+   "offers override lines"
+  ],
+  "skill": "add-exemplar"
+ }
+]

@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.6.0 (2026-09-05) Infrastructure: yours, not the author's; the Training pack; the Legal and property pack
+
+Built from the orders with fictional exemplars, because no real exemplars were available, and built so that every tool reads the user's own material first when it exists.
+
+- Names removed by default (Path A): every product tool works on `<MARINE>` (grade and billet stay); `security-check/scripts/substitute.py` puts the name into the finished file on the user's computer and stores nothing; `build_letter.py` writes "Drafted with AI assistance (Officer Kit). The signer owns the words." into the file properties; `rules-file` records a working label.
+- Make it your own: `Overrides/<tool>.md` (the command's way, read first by every tool), `Reference/Exemplars/<tool>/` (the command's approved products as patterns, read before the plugin's), the user's own `LEARNINGS.md` and `Proposals/`. `start/references/conventions.md` states the four conventions; `MAKE IT YOUR OWN.md` in the repo is the guide.
+- `add-exemplar` (new): sanitizes an approved product into a pattern with an annotation; `scrub_check.py` fails on any residual name, identifier, or blocked content.
+- `aar` (new): one lesson at a time into the user's queue, evidence first, fixed format; `lesson_check.py` fails malformed entries and forces any lesson that softens a check to low confidence.
+- `inspect` (new): applies approved lessons one at a time to overrides or exemplars, or writes a proposal for the plugin; never edits the plugin; rejects softening lessons on sight.
+- `build-a-skill`: `new_tool.py` scaffolds a kit tool in the seven part shape with TODO markers and evals; `references/tool-shape.md`; the finish checklist.
+- Training pack (new): `risk-assessment` (MCO 5100.29C Vol 2; `raw_check.py` computes levels from the matrix, flags high risk training at IA, IB, IIA, IIB, names the approver, requires the four elements, fails a residual improvement without a control), `after-action`, `training-schedule` (MCO 1553.3C; conflicts, RAW status, prep list), `safety-brief` (three things with a number or an event by type), `range-package` (the pocket guide's OIC and RSO duties, cease fire language, MEDEVAC route and time).
+- Legal and property pack (new): `investigation` (JAGMAN Chapter II and the NJS handbook; `investigation_check.py` enforces the findings to enclosures to opinions to recommendations chain, enclosure (1) the convening order, the 30 day clock, no signed statements in injury cases), `page-11` (the four 6105 elements, the rebuttal advisory, the not recommended deadline), `dd200` (the same chain engine plus the property table and the negligence opinion), `inspection-prep` (IGMC checklist self assessment with corrective action plan and binder).
+- `common_checks.py` blocked content patterns narrowed so military words ("assault" in an attack, "custody" of property, "SAPR" as a training topic) pass and the personal senses still fail.
+- evals: `packs_check.py` 25 of 25 (nine tools, both directions, plus substitute, scrub, lesson, and scaffold); `admin_check.py` 8 of 8; `enlisted_check.py` 14 of 14; naval letter 3 of 3. 35 skills.
+
 ## 0.5.1 (2026-09-05) The analysis, and corrections from it
 
 - `OFFICER ANALYSIS.md` (new): what a company grade officer does across fifteen functions, the MOS lens, the AI policy constraint, what the research on boards and on AI assisted writing changes in the tool design, the gaps ranked, five paths forward with a recommended sequence, and what to collect before the next build. Sources listed.

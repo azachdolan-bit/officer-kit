@@ -37,6 +37,13 @@ Capt,MRO-07,AN,2026-05-31,D,D,C,D,C,D,C,C,D,C,D,C,D,H
 
 The RS can also view the official profile on the My OMPF tab on MOL; the ledger is a working copy for what if questions, not a substitute.
 
+## Your own material (read first, every time)
+
+1. `Overrides/rs-profile.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/rs-profile/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The ledger carries labels the user picks, never names.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 ```

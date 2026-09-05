@@ -26,6 +26,13 @@ Attribute marks (Sections D through H) are the RS's judgment and are never propo
 - **Section A facts that trigger directed comments**: occasion code, period length, duty assignment count, special case marks, commendatory or derogatory material, promotion recommendation, PFT/CFT codes, body composition, reserve status, grade relationships between RS, RO, and MRO. Ask for these once as a checklist; each "yes" produces a directed comment.
 - **The user's copy of the manual** in Reference, if present, for the current edition. The extract is from the 5 Jun 2023 edition.
 
+## Your own material (read first, every time)
+
+1. `Overrides/fitrep.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/fitrep/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 ```

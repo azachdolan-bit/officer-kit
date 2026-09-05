@@ -1,0 +1,40 @@
+[
+ {
+  "id": "good",
+  "query": "Run inspection_prep_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "packs_check.py",
+  "skill": "inspection-prep"
+ },
+ {
+  "id": "bad",
+  "query": "Run inspection_prep_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "yes without evidence",
+   "no without plan",
+   "name"
+  ],
+  "grader": "packs_check.py",
+  "skill": "inspection-prep"
+ },
+ {
+  "id": "needs-the-checklist",
+  "query": "User: 'CGIP in three weeks, help me with awards'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the IGMC checklist file in Reference/Checklists and says where to get it",
+   "never invents a checklist item",
+   "turns every no into a fix with owner and date before the inspection"
+  ],
+  "skill": "inspection-prep"
+ }
+]

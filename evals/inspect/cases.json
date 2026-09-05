@@ -1,0 +1,15 @@
+[
+ {
+  "id": "one-at-a-time",
+  "query": "User: 'apply what we learned'",
+  "files": [],
+  "expected_behavior": [
+   "runs lesson_check first",
+   "lists pending lessons and asks approve, defer, or reject one at a time",
+   "rejects on sight a lesson that softens a check",
+   "writes approved override lines under the right heading",
+   "never edits the plugin; writes a proposal file instead"
+  ],
+  "skill": "inspect"
+ }
+]

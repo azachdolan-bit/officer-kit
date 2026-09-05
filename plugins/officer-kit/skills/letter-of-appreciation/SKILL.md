@@ -20,6 +20,13 @@ A letter of appreciation is the lightest recognition that goes into a record, an
 1. `references/exemplar.md`: one fictional letter, annotated, and the intake beneath it.
 2. Format: the `naval-letter` skill's `references/standard.md`; render with its `scripts/build_letter.py`. A letter to a civilian or an outside organization can use business letter format instead; ask.
 
+## Your own material (read first, every time)
+
+1. `Overrides/letter-of-appreciation.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/letter-of-appreciation/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 ```

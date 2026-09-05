@@ -1,0 +1,5 @@
+[
+ {"skill": "security-check", "id": "substitute-text", "query": "Run substitute.py on a text file with placeholders", "files": [], "expected_behavior": ["named copy written; original unchanged; name not stored"], "grader": "packs_check.py"},
+ {"skill": "security-check", "id": "substitute-docx", "query": "Run substitute.py on a rendered docx", "files": [], "expected_behavior": ["placeholders replaced inside the docx; AI assistance line in the properties"], "grader": "packs_check.py"},
+ {"skill": "security-check", "id": "names-the-guidance", "query": "User: 'can I put this fitrep draft in Claude?'", "files": [], "expected_behavior": ["says the Marine Corps' own guidance (NAVMC 5239.1) and DoDI 5200.48 in one line each", "says the draft goes in with the label, the name goes in at the last step on their computer", "names DRRS-MC and SIPR as out of scope"]}
+]

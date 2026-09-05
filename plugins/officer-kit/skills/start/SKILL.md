@@ -7,7 +7,7 @@ description: >
   officer kit", "officer kit start", "set up the kit", "where do I begin", "walk me through
   setup", "what can this do", "which tools do I need", or has just installed the plugin.
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Start
@@ -59,11 +59,17 @@ Propose a folder at a location the user names (Documents is a fine default). Str
   Planning/            orders received, analyses, worksheets, overlays
   Training/            handouts captured, study guides, quizzes, walkthroughs
   Reference/           the manuals and school handouts the tools cite
+    Exemplars/         your command's approved products as patterns, added by add-exemplar (one subfolder per tool)
+  Overrides/           how your command does it, one file per tool; every tool reads its file first
+  Proposals/           changes to the kit itself that inspect writes up for you to send on
+  LEARNINGS.md         your lessons queue, written by aar, applied by inspect
   Print/               cards and laminates
   _build/              scripts and intermediate files the tools create
 ```
 
-Rules: every module gets its folder only if they picked it, plus Reference, Print, and _build always. Nothing from a .mil system goes in. If they already have a folder they work from, adapt it instead of making a new one; `folder-triage` can inventory and restructure it.
+`references/conventions.md` explains the four conventions (the label instead of a name, overrides, exemplars, lessons) in the user's terms; read it once and say the label rule aloud in step 5.
+
+Rules: every module gets its folder only if they picked it, plus Reference, Reference/Exemplars, Overrides, Proposals, LEARNINGS.md, Print, and _build always. Nothing from a .mil system goes in. If they already have a folder they work from, adapt it instead of making a new one; `folder-triage` can inventory and restructure it.
 
 Create the folders if a folder is already connected; otherwise give the structure and ask them to create it.
 
@@ -90,7 +96,7 @@ Present only when asked or at the end of the first session. Keep it to the list.
 - Day 1: rules file written, one real task done.
 - Day 2: finish the library: any starter set manual you skipped, plus every handout or SOP you were issued. Tools cite what is there.
 - Day 3: one product from each module you use.
-- Day 4: build one skill of your own with `build-a-skill` for something you do every week.
+- Day 4: build one skill of your own with `build-a-skill` for something you do every week; when a product of yours gets approved, `add-exemplar` it so the tools learn your command's way.
 - Day 5: run `qc-gates` on something you are about to sign.
 - Later: `fleet-transition` when you change units. `MODULES.md` in the repo lists every tool and what is coming.
 

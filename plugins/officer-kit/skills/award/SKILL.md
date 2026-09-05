@@ -26,6 +26,13 @@ The tool's job is three correlations, in order: what the Marine did, quantified;
 4. `references/voice.md`: standard sentences as approved citations use them, fact verbs, the strike list, professionalism rules.
 5. `references/exemplars.md`: four fictional exemplars, three strong and one weak annotated line by line. Read before drafting; never copy text from them.
 
+## Your own material (read first, every time)
+
+1. `Overrides/award.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/award/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 ```

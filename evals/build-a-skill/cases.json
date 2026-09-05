@@ -1,0 +1,12 @@
+[
+ {
+  "id": "scaffold",
+  "query": "Run new_tool.py weekly-update",
+  "files": [],
+  "expected_behavior": [
+   "seven part skeleton created with TODO markers; checker runs"
+  ],
+  "grader": "packs_check.py",
+  "skill": "build-a-skill"
+ }
+]

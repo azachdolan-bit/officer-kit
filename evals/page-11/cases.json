@@ -1,0 +1,56 @@
+[
+ {
+  "id": "good",
+  "query": "Run page_11_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0",
+   "four elements present"
+  ],
+  "grader": "packs_check.py",
+  "skill": "page-11"
+ },
+ {
+  "id": "bad",
+  "query": "Run page_11_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "all four elements missing",
+   "rebuttal missing",
+   "promise",
+   "name"
+  ],
+  "grader": "packs_check.py",
+  "skill": "page-11"
+ },
+ {
+  "id": "notrec-deadline",
+  "query": "Run page_11_check.py on inputs/notrec_bad.md",
+  "files": [
+   "inputs/notrec_bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "unit diary deadline missing"
+  ],
+  "grader": "packs_check.py",
+  "skill": "page-11"
+ },
+ {
+  "id": "facts-not-attitude",
+  "query": "User: '6105 this Marine for his attitude'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the dated occurrences and the standard violated",
+   "asks for prior counselings with dates",
+   "builds all four elements and the rebuttal advisory",
+   "refuses 'will be separated'"
+  ],
+  "skill": "page-11"
+ }
+]

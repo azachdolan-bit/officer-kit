@@ -1,0 +1,25 @@
+[
+ {
+  "id": "softening-flagged",
+  "query": "Run lesson_check.py on a queue with a lesson that disables a checker",
+  "files": [],
+  "expected_behavior": [
+   "exit 1",
+   "softens a check must be low confidence"
+  ],
+  "grader": "packs_check.py",
+  "skill": "aar"
+ },
+ {
+  "id": "one-lesson",
+  "query": "User: 'the CO struck instrumental and asked for paragraphs, remember that'",
+  "files": [],
+  "expected_behavior": [
+   "writes one entry in the four field format with evidence first",
+   "destination overrides",
+   "status pending",
+   "edits nothing else"
+  ],
+  "skill": "aar"
+ }
+]

@@ -23,6 +23,13 @@ Recognition boards score the same categories a meritorious promotion board does,
 4. Format: the `naval-letter` skill; render with its `scripts/build_letter.py`.
 5. `board-brief` builds the briefing sheet from the same facts.
 
+## Your own material (read first, every time)
+
+1. `Overrides/nomination.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/nomination/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 ```

@@ -24,6 +24,13 @@ The governing publication is MCO 1500.61 (Marine Leader Development) and the cou
 2. `references/exemplar.md`: one fictional event counseling and one fictional initial counseling, annotated.
 3. The user's copy of MCO 1500.61 in Reference, if present, for the program's own language on the purpose of counseling and the leader's responsibilities. Reference `Admin/MCO 1500.61 Marine Leader Development.pdf` when the library has it.
 
+## Your own material (read first, every time)
+
+1. `Overrides/counseling.md` in the working folder, if it exists: the command's way wins over the defaults below. Say in one line what it changed.
+2. `Reference/Exemplars/counseling/` in the working folder, if it has files: the user's own command's approved patterns beat the plugin's fictional exemplars.
+3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
+4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
+
 ## Workflow
 
 ```

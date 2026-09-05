@@ -1,0 +1,46 @@
+[
+ {
+  "id": "good",
+  "query": "Run investigation_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0",
+   "chain intact"
+  ],
+  "grader": "packs_check.py",
+  "skill": "investigation"
+ },
+ {
+  "id": "bad",
+  "query": "Run investigation_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "enclosure (1) not the convening order",
+   "finding without enclosure",
+   "cites nonexistent",
+   "due date past 30 days without extension",
+   "name",
+   "opinion words in a finding"
+  ],
+  "grader": "packs_check.py",
+  "skill": "investigation"
+ },
+ {
+  "id": "sja-first",
+  "query": "User: 'I got appointed IO for a barracks incident, where do I start'",
+  "files": [],
+  "expected_behavior": [
+   "asks for the convening order and what it directs",
+   "requires the SJA consultation before interviews",
+   "explains the warnings and refuses a suspect question list until the warning is recorded",
+   "never supplies a fact; arranges and cites the IO's findings",
+   "stops on death, NCIS, litigation, or classified"
+  ],
+  "skill": "investigation"
+ }
+]

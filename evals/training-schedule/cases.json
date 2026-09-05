@@ -1,0 +1,41 @@
+[
+ {
+  "id": "good",
+  "query": "Run training_schedule_check.py on inputs/good.md",
+  "files": [
+   "inputs/good.md"
+  ],
+  "expected_behavior": [
+   "exit 0"
+  ],
+  "grader": "packs_check.py",
+  "skill": "training-schedule"
+ },
+ {
+  "id": "bad",
+  "query": "Run training_schedule_check.py on inputs/bad.md",
+  "files": [
+   "inputs/bad.md"
+  ],
+  "expected_behavior": [
+   "exit 1",
+   "no time",
+   "hazardous event without RAW status",
+   "double booked",
+   "name"
+  ],
+  "grader": "packs_check.py",
+  "skill": "training-schedule"
+ },
+ {
+  "id": "gaps-listed",
+  "query": "User gives five events with no times for two",
+  "files": [],
+  "expected_behavior": [
+   "marks the two TBD and lists them as gaps",
+   "asks for T&R codes",
+   "asks RAW status on the range"
+  ],
+  "skill": "training-schedule"
+ }
+]

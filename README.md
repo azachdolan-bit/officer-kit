@@ -30,7 +30,7 @@ That is the whole setup. From then on, you describe what you need in plain langu
 
 ## Where this is going
 
-`OFFICER ANALYSIS.md` is the analysis behind the build order: what a company grade officer is responsible for, function by function and MOS by MOS, what the kit covers, what it does not, and five ranked paths forward. `MODULES.md` lists every tool and its status.
+`MAKE IT YOUR OWN.md` is how the kit becomes your command's: overrides, your own exemplars, the lessons loop, the label, and building tools of your own. `OFFICER ANALYSIS.md` is the analysis behind the build order: what a company grade officer is responsible for, function by function and MOS by MOS, what the kit covers, what it does not, and five ranked paths forward. `MODULES.md` lists every tool and its status.
 
 ## The modules
 
@@ -39,7 +39,9 @@ Use the ones that match your job. Ignore the rest.
 | Module | What it does for you | Status |
 |---|---|---|
 | **Correspondence** | Naval letters, memos, requests, endorsements, built to the correspondence manual and measured on the page before they go out | Available |
-| **Admin** | Award recommendations (intake that quantifies what the Marine did, level check against the awards manual, summary of action and citation that agree), fitness report drafts from your notes (to the PES manual), reporting senior profile management, counselings, letters of recommendation and appreciation, meritorious promotion and recognition packages with the board briefing sheet, weekly updates, after action reports, training schedules | Awards, fitreps, profile, counseling, letters, mer pro, nominations, and board briefs available; updates, AARs, and schedules planned |
+| **Admin** | Award recommendations (intake that quantifies what the Marine did, level check against the awards manual, summary of action and citation that agree), fitness report drafts from your notes (to the PES manual), reporting senior profile management, counselings, letters of recommendation and appreciation, meritorious promotion and recognition packages with the board briefing sheet, Page 11 entries, weekly updates | Awards, fitreps, profile, counseling, letters, mer pro, nominations, board briefs, and Page 11 available; updates planned |
+| **Training management** | Risk assessment worksheets with the levels computed and the approver named, training schedules, range packages, safety briefs, after action reports | Available |
+| **Legal and property** | Preliminary inquiries and command investigations with the findings chain enforced, DD 200 property loss investigations, inspection self assessments with corrective action plans | Available; NJP package planned |
 | **Planning** | Read and analyze an order (METT-TC, contradictions, map and grid checks), critique a five paragraph order, planning playbooks, call for fire | Partly available |
 | **Training and teaching** | Study guides, interactive walkthroughs, quizzes, drills, print cards, and briefs from issued material only | Partly available |
 | **Verify** | The reviewers and the gate stack: significance, evidence, document, visual, source fidelity | Available |
