@@ -53,8 +53,13 @@ def candidates(path):
     if m:
         rel = m.group(1).replace("\\", "/")
         home = os.path.expanduser("~")
-        out.append(os.path.join(home, "mnt", rel))
-        out.append(os.path.join("/mnt/user-data/uploads", rel))
+        parts = [x for x in rel.split("/") if x]
+        # A connected folder is mounted by its own name, not its full path: C:\A\B\library appears as
+        # $HOME/mnt/B/library when B is the connected folder, so try every suffix of the path.
+        for i in range(len(parts)):
+            sub = "/".join(parts[i:])
+            out.append(os.path.join(home, "mnt", sub))
+            out.append(os.path.join("/mnt/user-data/uploads", sub))
     return out
 
 
@@ -84,8 +89,22 @@ def roots_from_rules(start):
     return roots
 
 
+SERIES = ("SECNAV", "SECNAVINST", "OPNAVINST", "NAVMC", "MARADMIN", "ALMAR", "MCBUL", "JAGINST", "DODI", "DODD")
+
+
+def series(number):
+    """The publication family named in the query, when one is: SECNAV M-1650.1 must never resolve to
+    MCO 1650.19J because the digits happen to line up."""
+    n = norm(number)
+    for s in SERIES:
+        if re.search(r"\b" + s + r"\b", n):
+            return s
+    return None
+
+
 def find(number, roots):
     k = key(number)
+    fam = series(number)
     base = k.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     hits, near = [], []
     for r in roots:
@@ -98,9 +117,11 @@ def find(number, roots):
                 if "/" in k:
                     a, b = k.split("/")
                     fk = fk.replace(f"{a} {b}", k)
-                if k in fk:
+                if fam and not re.search(r"\b" + fam + r"S?\b", fk + " " + norm(dp)):
+                    continue
+                if re.search(r"(?<![0-9.])" + re.escape(k) + r"(?![0-9])", fk):
                     hits.append(os.path.join(dp, f))
-                elif base and re.search(re.escape(base) + r"[A-Z]?\b", fk):
+                elif base and re.search(r"(?<![0-9.])" + re.escape(base) + r"[A-Z]?(?![0-9])", fk):
                     near.append(os.path.join(dp, f))
     return hits, near
 

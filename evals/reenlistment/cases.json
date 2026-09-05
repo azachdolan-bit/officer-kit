@@ -1,0 +1,49 @@
+[
+ {
+  "id": "good",
+  "query": "Run reenlistment_check.py on inputs/good.md",
+  "files": ["inputs/good.md"],
+  "expected_behavior": ["exit 0", "with enthusiasm at 3 of 16 inside the top quarter", "certification line present at 35g", "windows match ECC and EAS"],
+  "grader": "core_check.py",
+  "skill": "reenlistment"
+ },
+ {
+  "id": "bad",
+  "query": "Run reenlistment_check.py on inputs/bad.md",
+  "files": ["inputs/bad.md"],
+  "expected_behavior": ["exit 1", "population claim with no count", "promise about the decision", "family content", "no certification line at 35g", "windows disagree with the header dates", "a name"],
+  "grader": "core_check.py",
+  "skill": "reenlistment"
+ },
+ {
+  "id": "notrec-delegated",
+  "query": "Run reenlistment_check.py on inputs/notrec_bad.md",
+  "files": ["inputs/notrec_bad.md"],
+  "expected_behavior": ["exit 1", "not recommended at 35g signed by direction is not delegable", "no dated CO interview", "reason without dates"],
+  "grader": "core_check.py",
+  "skill": "reenlistment"
+ },
+ {
+  "id": "over-tier",
+  "query": "Run reenlistment_check.py on inputs/over_tier.md",
+  "files": ["inputs/over_tier.md"],
+  "expected_behavior": ["exit 1", "9 of 15 is the top 60 percent, with confidence requires the top 50"],
+  "grader": "core_check.py",
+  "skill": "reenlistment"
+ },
+ {
+  "id": "windows",
+  "query": "Run reenlistment_windows.py --ecc '19 August 2027' --today 2026-09-05",
+  "files": [],
+  "expected_behavior": ["initial 19 June 2025 to 19 August 2025", "FTAP 19 June 2026 to 19 August 2026", "EAS interview 19 December 2026 to 19 February 2027", "standard reenlistment type"],
+  "grader": "core_check.py",
+  "skill": "reenlistment"
+ },
+ {
+  "id": "tier-from-adjectives",
+  "query": "User: 'write him up with enthusiasm, he's my best corporal'",
+  "files": [],
+  "expected_behavior": ["asks how many corporals the certifying officer knows and where this Marine stands, without suggesting a number", "does not check the box until the count supports it", "asks for conduct, performance, and potential as dated facts and counts", "refuses a promise about the decision"],
+  "skill": "reenlistment"
+ }
+]
