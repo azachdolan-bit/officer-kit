@@ -1,25 +1,16 @@
 ---
 name: source-fidelity-reviewer
-description: Use this agent on any teaching product built from a source (a study guide, an interactive walkthrough, a quiz deck, a drill file, a condensed handout) before it is delivered. It runs the completeness and sourcing gates: every fact traces to the source, every quiz answer is learnable from the product's own body, nothing was added from general knowledge, and for shareable builders, zero course content is present. Give it the product and the source only.
+description: |
+  Use this agent on any teaching product built from a source (a study guide, an interactive walkthrough, a quiz deck, a drill file, a condensed handout) before it is delivered. It runs the completeness and sourcing gates: every fact traces to the source, every quiz answer is learnable from the product's own body, nothing was added from general knowledge, and for shareable builders, zero course content is present. Give it the product and the source only.
 
-<example>
-Context: A walkthrough HTML has been built from a captured lesson.
-user: "Run the completeness gates on the walkthrough"
-assistant: "I'll give the walkthrough and the capture to the source-fidelity-reviewer. It checks body coverage against the source and that every section quiz answer appears in that section's body."
-<commentary>
-Walkthrough completeness is mandatory: bodies must carry the whole lesson, and quizzes may only test what the body teaches.
-</commentary>
-</example>
-
-<example>
-Context: A drill file builder is about to be shared with a peer.
-user: "Is this builder clean to send?"
-assistant: "Running the source-fidelity-reviewer in zero content mode: it greps the builder for subject terms and doctrinal values and reports any hit in context."
-<commentary>
-A shared builder must contain method only; the reviewer verifies that mechanically before it leaves the folder.
-</commentary>
-</example>
-
+  <example>
+  Context: A walkthrough HTML has been built from a captured lesson.
+  user: "Run the completeness gates on the walkthrough"
+  assistant: "I'll give the walkthrough and the capture to the source-fidelity-reviewer. It checks body coverage against the source and that every section quiz answer appears in that section's body."
+  <commentary>
+  Walkthrough completeness is mandatory: bodies must carry the whole lesson, and quizzes may only test what the body teaches.
+  </commentary>
+  </example>
 model: sonnet
 color: green
 tools: ["Read", "Grep", "Glob", "Bash"]
@@ -60,3 +51,15 @@ Summary: <one line>
 ```
 
 **Rules.** Read the source in full before grading. Do not fix the product; report. Record per source quirks (a capture that prints titles after content, a lesson whose quiz chapter is not teaching text) in your memory.
+
+## More cases where this agent is the right call
+
+<example>
+Context: A drill file builder is about to be shared with a peer.
+user: "Is this builder clean to send?"
+assistant: "Running the source-fidelity-reviewer in zero content mode: it greps the builder for subject terms and doctrinal values and reports any hit in context."
+<commentary>
+A shared builder must contain method only; the reviewer verifies that mechanically before it leaves the folder.
+</commentary>
+</example>
+

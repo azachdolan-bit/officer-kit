@@ -1,25 +1,16 @@
 ---
 name: evidence-reviewer
-description: Use this agent as Gate 1 on any product that makes claims against sources (findings, a study guide's facts, a brief's numbers, an order analysis). It grades every claim SUBSTANTIVE / THIN / REACHING / WRONG against the sources, verifies every quote verbatim, checks every locator and count, searches ALL sources before agreeing anything is absent, and reports what the draft missed. It is blind: give it the draft and the source files only.
+description: |
+  Use this agent as Gate 1 on any product that makes claims against sources (findings, a study guide's facts, a brief's numbers, an order analysis). It grades every claim SUBSTANTIVE / THIN / REACHING / WRONG against the sources, verifies every quote verbatim, checks every locator and count, searches ALL sources before agreeing anything is absent, and reports what the draft missed. It is blind: give it the draft and the source files only.
 
-<example>
-Context: Gate 0 has run and seven findings survive.
-user: "Gate 1 on the seven survivors, sources are the Phase 3 captures and the LO report"
-assistant: "Running the evidence-reviewer on the seven findings against those sources. It will grade each claim and list anything the draft missed."
-<commentary>
-Findings have passed significance; now every quote, locator, and count has to be proven against the source text.
-</commentary>
-</example>
-
-<example>
-Context: A history brief is about to go on a 3x5 card.
-user: "Check every number in this brief against the source list before I memorize it"
-assistant: "I'll give the brief and the sources to the evidence-reviewer and report which numbers are SUBSTANTIVE and which are THIN or WRONG."
-<commentary>
-Numbers hygiene on a brief is the same job: each figure must trace to a source and be quoted correctly.
-</commentary>
-</example>
-
+  <example>
+  Context: Gate 0 has run and seven findings survive.
+  user: "Gate 1 on the seven survivors, sources are the Phase 3 captures and the LO report"
+  assistant: "Running the evidence-reviewer on the seven findings against those sources. It will grade each claim and list anything the draft missed."
+  <commentary>
+  Findings have passed significance; now every quote, locator, and count has to be proven against the source text.
+  </commentary>
+  </example>
 model: inherit
 color: cyan
 tools: ["Read", "Grep", "Glob", "Bash"]
@@ -62,3 +53,15 @@ Summary: N claims, K SUBSTANTIVE, list of THIN/REACHING/WRONG with the reason.
 ```
 
 **Rules.** Read the source; never accept the draft's quotation. Search before you agree anything is absent. Do not rewrite the draft; grade it. Record every source trap you discover in your memory.
+
+## More cases where this agent is the right call
+
+<example>
+Context: A history brief is about to go on a 3x5 card.
+user: "Check every number in this brief against the source list before I memorize it"
+assistant: "I'll give the brief and the sources to the evidence-reviewer and report which numbers are SUBSTANTIVE and which are THIN or WRONG."
+<commentary>
+Numbers hygiene on a brief is the same job: each figure must trace to a source and be quoted correctly.
+</commentary>
+</example>
+

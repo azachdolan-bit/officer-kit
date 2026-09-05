@@ -2,7 +2,7 @@
 name: inspect
 description: >
   Reviews the user's LEARNINGS.md queue and turns approved lessons into changes where they
-  belong: lines in Overrides/<tool>.md for this command's way, a pattern in Reference/Exemplars,
+  belong: lines in the tool's Overrides file for this command's way, a pattern in Reference/Exemplars,
   or a written change proposal for the plugin itself, with the tool's checks run before anything
   ships. Use when the user says "review the lessons", "apply what we learned", "inspect the
   queue", "update my overrides", or at the end of a week with pending lessons.

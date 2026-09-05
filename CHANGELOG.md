@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.8.1 (2026-09-05) It would not install
+
+The first real install attempt failed with eight errors while all five eval harnesses were green. The kit had no check for whether the package would install.
+
+- All six agents had invalid YAML frontmatter. An `<example>` block starting at column 1 parses as a new YAML key, so the whole block failed. A previous session concluded this was by design and changed the eval to a regex, which hid it for two versions. Every agent description is now a literal block scalar under 1024 characters, with surplus examples moved into the body where nothing is lost.
+- The plugin description was 683 characters against a 500 limit. Rewritten to 478.
+- The `inspect` skill description contained `<tool>`, which is not allowed in a skill description. Reworded.
+- `evals/install_check.py` (new): runs the installer's checks in the repository. Both manifests parse and fit their limits, plugin.json and marketplace.json agree on the version, every skill and agent frontmatter parses with a name and a description that fits, no XML tags in skill descriptions, and every advertised script parses. 94 of 94.
+
 ## 0.8.0 (2026-09-05) Four rules, after the test
 
 0.7.1 fixed the two defects the A/B test found and left the rest of the thinking layer standing. This release removes the rest of it. What the test actually rewarded was small, and what it punished was the apparatus: a template gets filled in instead of thought about.

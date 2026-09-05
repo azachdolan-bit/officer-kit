@@ -17,6 +17,15 @@ A lesson that would soften a gate, reduce sourcing, or suppress a reviewer is re
 
 ---
 
+## 2026-09-05  build-a-skill  high
+Evidence: The first real install attempt of the packaged plugin failed with eight errors at once: the plugin description was 683 characters against a 500 limit, the `inspect` skill description contained an XML tag, and all six agents had invalid YAML frontmatter because an `<example>` block at column 1 parses as a new YAML key. All five eval harnesses were passing at the time. An earlier session had recorded the opposite conclusion, that agent frontmatter is invalid YAML by design and should be checked with a regex; that was wrong and it hid this for two versions.
+Lesson: Agent frontmatter must be valid YAML. Put the description and its `<example>` blocks in a literal block scalar (`description: |`, every line indented two spaces), keep the description under 1024 characters, and move surplus examples into the body. Never validate frontmatter with a regex to work around a parse failure; the parse failure is the finding.
+Status: approved 0.8.1
+
+## 2026-09-05  qc-gates  high
+Evidence: Same install failure. The kit had five harnesses covering its content and none covering whether the package would install. Everything green, nothing installable.
+Lesson: Run the installer's own checks in the repository. `evals/install_check.py` validates both manifests, every skill and agent frontmatter, description limits, XML tags in descriptions, version agreement between plugin.json and marketplace.json, and that every advertised script parses. It runs before any package is delivered.
+
 ## 2026-09-05  think  high
 Evidence: The first end to end test of the deliberate tier (evals/ab-test-2026-09-05/). Two blind drafters, same tasking, one with the thinking layer and one without. A blind reviewer chose the worksheet built WITHOUT it, because the one built with it asserted 25 facts the tasking never supplied while telling the approver in writing that every gap was marked. Three of its five questions came from the worked example in estimate.md rather than from the tasking, and it never asked the question the tasking made obvious.
 Lesson: A worked example in the same domain as the task supplies answers instead of teaching form. Keep every worked example in a different product from the tool it teaches, say in the example itself that its content is not to be taken, and fail an estimate that reuses its phrases.
