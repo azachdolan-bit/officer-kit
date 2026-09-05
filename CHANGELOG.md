@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.1 (2026-09-05) Read from the user's own library
+
+- `risk-assessment`: Figures 3-4 and 4-2 read from the user's copy of MCO 5100.29C and confirmed cell by cell; the caution is gone. Paragraphs 030302, 040203, 040302, 040303, and 040304 verbatim, including the EAP's minimum content, which the checker now warns on.
+- `page-11`: MCO 1900.16 paragraph 6105 read from the user's copy. The order prescribes the entry's wording and requires the commanding officer's signature on adverse Page 11 entries, with a copy to CMC (MMRP-20) within 30 days. The tool, exemplar, and checker now use the order's format word for word; the checker fails an altered fixed sentence or a counselor's signature.
+- `training-schedule`: MCO 1553.3C verbatim on the MCTIMS calendar's required fields, unit documents, and the commander's responsibilities.
+- `dd200`: Volume 17 (FLIPL) and Volume 1 identified as the governing volumes; neither is in the library yet.
+- LEARNINGS: read the order from the user's library first, render figure pages as images.
+
 ## 0.6.0 (2026-09-05) Infrastructure: yours, not the author's; the Training pack; the Legal and property pack
 
 Built from the orders with fictional exemplars, because no real exemplars were available, and built so that every tool reads the user's own material first when it exists.
