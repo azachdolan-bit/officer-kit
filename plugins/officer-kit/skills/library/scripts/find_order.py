@@ -38,8 +38,10 @@ def key(s):
     m = re.search(r"(?:P)?(\d{3,5}\.\d+[A-Z]?)", n)
     if m:
         return m.group(1)
-    m = re.search(r"(\d{3}/\d{2})", n)
-    return m.group(1) if m else n
+    m = re.search(r"(\d{3})[/ -](\d{2})\b", n)
+    if m:
+        return f"{m.group(1)}/{m.group(2)}"
+    return n
 
 
 def candidates(path):
@@ -93,6 +95,9 @@ def find(number, roots):
                 if not f.lower().endswith((".pdf", ".txt", ".md", ".docx")):
                     continue
                 fk = norm(f)
+                if "/" in k:
+                    a, b = k.split("/")
+                    fk = fk.replace(f"{a} {b}", k)
                 if k in fk:
                     hits.append(os.path.join(dp, f))
                 elif base and re.search(re.escape(base) + r"[A-Z]?\b", fk):
@@ -137,6 +142,9 @@ def main():
         print(f"rendered page {n} to {out}-*.png; read it as an image")
     if ("--text" in args or "--grep" in args) and path.lower().endswith(".pdf"):
         text = subprocess.run(["pdftotext", "-layout", path, "-"], capture_output=True, text=True).stdout
+    elif "--text" in args or "--grep" in args:
+        text = open(path, encoding="utf-8", errors="ignore").read()
+    if "--text" in args or "--grep" in args:
         if "--grep" in args:
             pat = re.compile(args[args.index("--grep") + 1], re.I)
             lines = text.splitlines()
