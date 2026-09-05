@@ -31,6 +31,12 @@ The governing publication is MCO 1500.61 (Marine Leader Development) and the cou
 3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
 4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
 
+## Thinking (tier: deliberate)
+
+**Deliberate**, because it enters a record and may support later action. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+The adversarial read on every task in the plan: what does this permit that you did not mean? `think/scripts/precision_check.py counseling.md --directive`.
+
 ## Workflow
 
 ```

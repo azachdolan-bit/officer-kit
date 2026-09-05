@@ -31,6 +31,12 @@ A Risk Assessment Worksheet is the one document where a lieutenant's arithmetic 
 3. No names in the worksheet body; billets only (OIC, RSO, safety corpsman). Names go on the signature block on the user's computer.
 4. When range control or the approver changes something, tell the user `aar` will capture it.
 
+## Thinking (tier: deliberate)
+
+**Deliberate**, because someone can be hurt and the approval level follows from the arithmetic. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+For this product the premortem runs **before** the hazard list, not after the draft: three Marines were hurt on this event, how? Nothing mechanical can find a hazard that is not on the list, and the delivery says so.
+
 ## Workflow
 
 ```

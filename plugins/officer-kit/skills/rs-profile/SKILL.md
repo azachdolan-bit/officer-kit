@@ -44,6 +44,12 @@ The RS can also view the official profile on the My OMPF tab on MOL; the ledger 
 3. The ledger carries labels the user picks, never names.
 4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
 
+## Thinking (tier: rapid)
+
+**Rapid**, because it informs marks that do enter records. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+Quarantine the outcome: compute what the marks do to the profile before considering what marks are wanted.
+
 ## Workflow
 
 ```

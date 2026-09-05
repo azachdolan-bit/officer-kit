@@ -1,6 +1,6 @@
 # Conventions every tool follows
 
-Four conventions make the kit yours instead of the author's. Every product tool reads them at its first step. They live in the user's working folder, never in the plugin, so a plugin update never overwrites them.
+Five conventions make the kit yours instead of the author's, and make its thinking visible. Every product tool reads them at its first step. They live in the user's working folder, never in the plugin, so a plugin update never overwrites them.
 
 ## 1. Names stay out of the session
 
@@ -32,6 +32,14 @@ Format: a heading per topic and short lines under it. No names of other Marines.
 ## 4. Lessons: the kit learns in your folder
 
 `LEARNINGS.md` in the working folder is the user's lessons queue, written by `aar` (or by hand) when a product came back with edits, a board answered differently than the tool expected, or a reviewer caught something. `inspect` turns approved lessons into override lines or, when a lesson belongs in the plugin itself, into a change proposal the user can send to the kit's repository. The plugin's own `LEARNINGS.md` is the author's queue; the user's is theirs.
+
+## 5. Thinking is proportional, and it is written down
+
+Every product tool runs at a consequence tier. **Deliberate** when someone can be hurt, when it enters a record that cannot be removed, when it has legal effect, or when a board decides something irreversible from it. **Rapid** when it goes to a decision maker and is reversible. **Running** for routine work. The tool says which tier it is running and why, in one line, and anyone can raise a tier.
+
+At the deliberate tier the tool writes an estimate before it drafts: the task and the outcome it serves, the standard and whether it is on disk, facts separated from tested assumptions, the questions whose answers change the product, what it will not do, and how it gets checked. Before delivery it runs the check: premortem, expected but absent, adversarial read, reconciliation, single rapid reading, and a plain statement of what was not checked.
+
+This is not a promise of better answers, and the `think` skill says so with the evidence. Structured technique tested on fifty intelligence analysts moved accuracy from 33 to 36 percent, which is nothing. What it moved was whether they considered the diagnosticity of their evidence, from 32 to 80 percent. What the estimate buys is a record the signer can read: what was assumed, what was considered, what would change the answer, and what nothing checked.
 
 ## The line every rendered product carries
 

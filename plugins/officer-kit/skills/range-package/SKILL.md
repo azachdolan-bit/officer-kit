@@ -29,6 +29,12 @@ Range safety is governed by MCO 3570.1 (Range Safety, joint with AR 385-63) and 
 3. Billets, never names, in the package body; names on the signature and roster pages the base requires, added on the user's computer.
 4. When range control returns a package, `aar` captures why.
 
+## Thinking (tier: deliberate)
+
+**Deliberate**, because someone can be hurt. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+The premortem runs before the package is assembled, and the adversarial read applies to every control measure and every timing in the order.
+
 ## Workflow
 
 ```

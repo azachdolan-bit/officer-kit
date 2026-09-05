@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.7.0 (2026-09-05) Thinking as a mechanism
+
+The kit produced documents faster than it thought about them. This release adds the thinking, built from the published evidence on how assistants fail rather than from intuition about what careful looks like, because three of the obvious fixes are measurably harmful.
+
+- `CRITICAL THINKING.md` (new): how an assistant produces confident, plausible, wrong work; which fixes make it worse (self review with no external signal, rigid schemas around reasoning, mandated checklists, "are you sure", asking the model to explain itself as verification); what works; and the honest claim, which is legibility rather than accuracy. Sources throughout.
+- `think` (new skill): the estimate before drafting (task and outcome with the XY check, standard, facts separated from assumptions tested against MCWP 5-10's four questions, the questions whose answers change the product, what this will not do, how it gets checked), the check before delivery (premortem with the failure asserted, expected but absent, adversarial read, reconciliation, single rapid reading, what was not checked), ten named tripwires, and per modality tailoring for risk, planning, writing, investigation, and evaluation.
+- Consequence tiers on all 24 product tools: deliberate when someone can be hurt or it enters a record or has legal effect or a board decides irreversibly; rapid when it goes to a decision maker and is reversible; running for routine work. The tool names its tier and trigger in one line and anyone can raise it.
+- `red-team` (new agent): blind adversarial pass on deliberate products. Premortem, expected but absent, adversarial read of every directive sentence, comparison against the standard and an exemplar. Findings with evidence, never a score.
+- `think/scripts/estimate_check.py`: fails an estimate with no tier, an assumption sitting in the facts, an assumption with no falsifier or no collapse consequence, a question that does not say what it changes, or a question that carries its own answer.
+- `think/scripts/precision_check.py`: center embedding, sentence length against AR 25-50's 15 word target, paragraphs past 10 lines, soft quantifiers, actorless passive directives, hidden verbs, mixed modals, loose sentence initial pronouns, unexpanded acronyms, "and/or", vague deadlines. Advises on style and fails on ambiguity that changes what the reader must do, with `--directive`. Skips text the order prescribes.
+- `start/references/conventions.md`: a fifth convention, thinking is proportional and it is written down.
+- evals: `think_check.py` 9 of 9, including that every product tool carries its tier and that the red team agent refuses to score.
+
 ## 0.6.2 (2026-09-05) Library first, mechanically
 
 - `library/scripts/find_order.py <number>`: finds a publication in the Library path and Reference folder named in the rules file, extracts its text (`--text`, `--grep`), or renders a page as an image (`--page N --png`); exit 1 naming the roots searched when it is not on disk. Every tool reads an order through it before anything else; the web is for publications it reports as not on disk, and the standard file says which those were.

@@ -532,7 +532,7 @@ duty.
 
 3. “RT”: RS must justify the reason for a N/O RT report.
 
-(b) From – To:
+(b) From, To:
 
 1. RS must indicate and explain the submission of an
 observed report for a reporting period covering 89 days or less as an

@@ -30,7 +30,7 @@ That is the whole setup. From then on, you describe what you need in plain langu
 
 ## Where this is going
 
-`MAKE IT YOUR OWN.md` is how the kit becomes your command's: overrides, your own exemplars, the lessons loop, the label, and building tools of your own. `OFFICER ANALYSIS.md` is the analysis behind the build order: what a company grade officer is responsible for, function by function and MOS by MOS, what the kit covers, what it does not, and five ranked paths forward. `MODULES.md` lists every tool and its status.
+`CRITICAL THINKING.md` is why the tools work the way they do: how an assistant produces confident, plausible, wrong work, which of the obvious fixes make it worse, and the mechanisms used instead. `MAKE IT YOUR OWN.md` is how the kit becomes your command's: overrides, your own exemplars, the lessons loop, the label, and building tools of your own. `OFFICER ANALYSIS.md` is the analysis behind the build order: what a company grade officer is responsible for, function by function and MOS by MOS, what the kit covers, what it does not, and five ranked paths forward. `MODULES.md` lists every tool and its status.
 
 ## The modules
 

@@ -36,3 +36,9 @@ Training orders written for a school exercise are green. Anything referencing a 
 - Do not rewrite the whole order unless asked. Never invent unit names, grids, or times; use the ones given or leave a placeholder.
 
 If the user asks for a score, use a simple scale: Complete / Executable / Clear, each pass or fail, with one line each.
+
+## Thinking (tier: deliberate)
+
+**Deliberate**, because the unit acts on what this says. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+MCWP 5-10 Appendix G maps the technique to the step: key assumptions check at problem framing, devil's advocate at the war game and the comparison, competing hypotheses at orders development.

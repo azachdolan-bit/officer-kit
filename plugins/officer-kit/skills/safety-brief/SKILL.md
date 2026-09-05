@@ -28,6 +28,12 @@ Marines have heard a thousand safety briefs and remember none of them. The one t
 3. Mishaps are described by type and unit level ("a lance corporal in the battalion"), never by name.
 4. If the brief lands (or does not), `aar` captures what worked.
 
+## Thinking (tier: rapid)
+
+**Rapid**, because Marines act on it and it is reversible. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+The premortem is the weekend's: someone was hurt doing the thing you did not mention.
+
 ## Workflow
 
 ```

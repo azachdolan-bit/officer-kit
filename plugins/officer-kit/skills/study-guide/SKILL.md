@@ -28,6 +28,12 @@ Accept a file in the linked folder, an attachment, or pasted text. Published doc
 
 If the user says "quiz me," ask one question at a time. Wait for the answer. Grade it in one line, give the correct answer if they missed, then the next question. At the end, list what they missed and offer to drill those.
 
+## Thinking (tier: rapid)
+
+**Rapid**, because a person studies from it. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+The expected but absent pass: what would a student need that the source does not carry, and is that gap named rather than filled?
+
 ## Rules
 
 - Test what the material says, not what Claude knows about the topic. If a number in the packet conflicts with general knowledge, use the packet and flag it.

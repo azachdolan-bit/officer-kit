@@ -34,6 +34,12 @@ Suggested defaults: Sunday 1900 local for the week ahead, and optionally weekday
 
 Tell the user how to edit or stop it. Advise one scheduled task to start, not several.
 
+## Thinking (tier: running)
+
+**Running estimate**, because it is routine, low consequence: one line naming the standard and the assumption that matters, then work. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+
+
 ## Rules
 
 - Do not include content from any .mil calendar or mailbox. Personal accounts only.

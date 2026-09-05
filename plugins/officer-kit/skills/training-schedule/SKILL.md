@@ -28,6 +28,12 @@ MCO 1553.3C (Unit Training Management) makes the training schedule the commander
 3. Instructors and leaders appear by billet, never by name.
 4. When the S-3 returns a schedule, `aar` captures why.
 
+## Thinking (tier: rapid)
+
+**Rapid**, because the unit plans from it and it is reversible. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+The premortem is the week's: it collapsed on Tuesday. Why?
+
 ## Workflow
 
 ```

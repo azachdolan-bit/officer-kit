@@ -30,6 +30,12 @@ Recognition boards score the same categories a meritorious promotion board does,
 3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
 4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
 
+## Thinking (tier: deliberate)
+
+**Deliberate**, because a board decides something irreversible from it. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+Quarantine the outcome: fill each category from the record before considering whether the package looks competitive.
+
 ## Workflow
 
 ```

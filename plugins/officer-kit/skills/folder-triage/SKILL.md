@@ -36,6 +36,12 @@ Adjust names to what is actually in the folder. Show which files go where. Ask f
 
 **4. Rollup.** Write `README.md` at the folder root: what is here, the structure, the naming rule, and a "last triaged" date. Keep it under 150 words.
 
+## Thinking (tier: running)
+
+**Running estimate**, because it is routine, low consequence: one line naming the standard and the assumption that matters, then work. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+
+
 ## Rules
 
 - Originals are never edited during triage. Moves and renames only.

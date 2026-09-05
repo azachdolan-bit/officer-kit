@@ -28,6 +28,12 @@ No order prescribes the AAR's format; the unit's SOP does, and most follow the s
 3. No names of other Marines; billets only. An AAR is read widely.
 4. When the AAR concerns a kit product (a package that came back, a tool that failed), run `aar` afterward so the lesson reaches LEARNINGS.md.
 
+## Thinking (tier: rapid)
+
+**Rapid**, because the next unit plans from it. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+The expected but absent pass carries this product: what would a good AAR of this event contain that this one does not?
+
 ## Workflow
 
 ```

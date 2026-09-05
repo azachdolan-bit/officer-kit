@@ -30,6 +30,12 @@ Lost or damaged government property starts a clock and a form. MCO 4400.201 (Man
 3. `<MARINE>` and `<WITNESS n>` throughout; the custodian's name goes on the form on the user's computer. Serial numbers and NSNs are property data, not personal data, and belong in the report.
 4. When the supply officer or SJA returns it, `aar` captures why.
 
+## Thinking (tier: deliberate)
+
+**Deliberate**, because it has legal and financial effect. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+List the competing explanations for the loss before writing findings. Ask what record would exist under each and is absent.
+
 ## Workflow
 
 ```

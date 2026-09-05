@@ -28,6 +28,12 @@ A connected email account (Gmail in the workshop; Outlook at a unit if the comma
 
 **5. Housekeeping.** Offer labels or archiving for bucket three and unsubscribes for bucket four. Do nothing destructive without a go. Never delete.
 
+## Thinking (tier: running)
+
+**Running estimate**, because it is routine, low consequence: one line naming the standard and the assumption that matters, then work. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+
+
 ## Rules
 
 - Drafts only. State this once at the start: "I'll draft, you send."

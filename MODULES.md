@@ -104,6 +104,8 @@ The task with no training and a clock. Specified by `OFFICER ANALYSIS.md` Path C
 | `library` | "build my library", "which pubs do I need" | Explains what the library is, three ways to build it (starter set by hand, the full publications library with one command via the marine-regs plugin, your own unit documents), the starter set per module with where to get each, and a coverage check | Available |
 | `security-check` | "is this safe to share" | Green, yellow, red; folder scan before linking | Available |
 | `rules-file` | "build my rules file" | Interview at Light, Standard, or Full depth; every question optional | Available |
+| `think` | "think this through", "what am I missing", "red team this", "check my thinking" | The kit's thinking discipline: the estimate before drafting, the check before delivery, the named shortcuts that stop work, and the per modality tailoring; `estimate_check.py` and `precision_check.py`. Every product tool runs it at its consequence tier | Available |
+| `red-team` (agent) | on any deliberate tier product | Blind adversarial pass: premortem with the failure asserted, expected but absent, adversarial read of every directive sentence, comparison against the standard and an exemplar; findings with evidence, never a score | Available |
 | `build-a-skill` | "build a skill", "I do this every week", "new tool for" | Interview to a personal skill; or `new_tool.py` scaffolds a kit tool in the seven part shape with TODO markers and the checklist to finish it | Available |
 | `share-method` | "make this shareable" | A method file with zero content a peer can run on their own material | Planned |
 | `fleet-transition` | "I'm at my first unit" | Day one and week one at a new command; updates the rules file | Available |

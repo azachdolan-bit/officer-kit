@@ -30,6 +30,12 @@ A 6105 entry is the document that decides, months later, whether a Marine can be
 3. `<MARINE>` throughout; the name and EDIPI go on the form on the user's computer. The entry describes deficiencies as dated facts; nothing medical, family, or from an investigation beyond what the commander directs.
 4. When the legal officer returns an entry, `aar` captures why.
 
+## Thinking (tier: deliberate)
+
+**Deliberate**, because it enters a record that cannot be removed and supports a separation. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+The adversarial read is the pass that matters: every directive sentence read for its most inconvenient compliant meaning. `think/scripts/precision_check.py entry.md --directive` on the parts the writer supplies, never on the order's prescribed wording.
+
 ## Workflow
 
 ```

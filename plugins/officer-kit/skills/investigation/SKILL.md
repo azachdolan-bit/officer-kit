@@ -30,6 +30,12 @@ Every officer is handed one of these with no notice and a 30 day clock. The Manu
 3. The label rule is strict here: the subject and witnesses are `<WITNESS 1>`, `<SUBJECT>`, billets only; names go in at the last step on the user's computer. Nothing from the report body ever goes to a commercial model with a name attached.
 4. When the SJA returns the report, `aar` captures why, without the facts of the case.
 
+## Thinking (tier: deliberate)
+
+**Deliberate**, because it has legal effect and enters a record. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+
+List the competing hypotheses before writing findings, including the one where nobody did anything wrong. Work to disconfirm rather than confirm, and ask what evidence each hypothesis predicts that is absent.
+
 ## Workflow
 
 ```
