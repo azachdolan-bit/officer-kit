@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.2 (2026-09-05) Library first, mechanically
+
+- `library/scripts/find_order.py <number>`: finds a publication in the Library path and Reference folder named in the rules file, extracts its text (`--text`, `--grep`), or renders a page as an image (`--page N --png`); exit 1 naming the roots searched when it is not on disk. Every tool reads an order through it before anything else; the web is for publications it reports as not on disk, and the standard file says which those were.
+- `rules-file`: a Library section (Library path, Reference folder, the rule) in the template, the example, and the interview.
+- `build-a-skill/references/tool-shape.md` and `BUILD STRATEGY.md`: the standard is read from the library and cites the file it came from.
+
 ## 0.6.1 (2026-09-05) Read from the user's own library
 
 - `risk-assessment`: Figures 3-4 and 4-2 read from the user's copy of MCO 5100.29C and confirmed cell by cell; the caution is gone. Paragraphs 030302, 040203, 040302, 040303, and 040304 verbatim, including the EAP's minimum content, which the checker now warns on.
