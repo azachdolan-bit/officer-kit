@@ -40,10 +40,14 @@ def main():
         sys.exit(__doc__)
     path = sys.argv[1]
     encl_titles = []
+    kind = "letter"
     a = sys.argv[2:]
     while a:
         if a[0] == "--encl-title" and len(a) > 1:
             encl_titles.append(a[1])
+            a = a[2:]
+        elif a[0] == "--kind" and len(a) > 1:
+            kind = a[1].lower()                       # letter | mfr | endorsement
             a = a[2:]
         else:
             a = a[1:]
@@ -56,9 +60,21 @@ def main():
         fail(f"placeholder {ph} left in the letter; fill it from the rules file or the spec")
 
     # ---- 1. required heading elements ---------------------------------------
-    for tag in ("From:", "To:", "Subj:"):
+    required = ("Subj:",) if kind == "mfr" else ("From:", "To:", "Subj:")
+    for tag in required:
         if not any(p.startswith(tag) for p in P):
             fail(f"missing required heading element {tag}")
+    if kind == "mfr":
+        if not any(p.strip() == "MEMORANDUM FOR THE RECORD" for p in P):
+            fail("memorandum for the record without the caption MEMORANDUM FOR THE RECORD (MCTP 3-30A Appendix D)")
+        if any(p.startswith(("From:", "To:")) for p in P):
+            fail("a memorandum for the record carries no From or To line (MCTP 3-30A Appendix D)")
+    if kind == "endorsement":
+        idl = next((p for p in P if re.match(r"[A-Z]+ ENDORSEMENT on ", p)), None)
+        if not idl:
+            fail("endorsement without the identification line '<ORDINAL> ENDORSEMENT on <originator> ltr <SSIC> <code> of <date>'")
+        elif not re.search(r"\bltr\b.*\b(?:of|dated)\b", idl):
+            fail(f"endorsement identification line does not name the basic letter as 'ltr <SSIC> <code> of <date>': {idl!r}")
     if any(p.strip() == "Via:" for p in P):
         fail("empty Via: line; omit Via entirely when there is no routing requirement")
 

@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Marketplace for the Officer Kit: a Marine officer's extension of himself, built at The Basic School and designed to travel to the fleet.",
-    "version": "0.8.2"
+    "version": "0.9.0"
   },
   "plugins": [
     {
       "name": "officer-kit",
       "source": "./plugins/officer-kit",
       "description": "Skills, blind QC reviewers, and a lessons learned loop for the work a Marine officer does every week: produce from sources, verify before signing, correspond to the standard, plan and assess, teach, share and learn.",
-      "version": "0.8.2",
+      "version": "0.9.0",
       "author": {
         "name": "Zach Dolan"
       },

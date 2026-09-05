@@ -25,7 +25,11 @@ qc_letter.py will refuse to pass, so nothing ships half filled):
   ],
   "poc": "My point of contact information is ...",   optional; becomes the last numbered paragraph
   "signature": "A. Z. DOLAN",
-  "author": "Name for the file properties"          optional
+  "author": "Name for the file properties",         optional
+  "kind": "mfr",                                    optional; memorandum for the record (no From/To, centered caption)
+  "letterhead": ["UNITED STATES MARINE CORPS", "..."],   optional; centered lines above the heading block
+  "signature_lines": ["Billet", "Grade USMC"],      optional; lines under the signature name (MFR)
+  "endorsement": {"ordinal": "FIRST", "on": "CO ltr 1500 BOC 4-26 of 4 Sep 26"}   optional; identification line
 }
 
 Layout rules encoded here (see references/standard.md):
@@ -125,15 +129,35 @@ def main():
         return p
 
     # ---- heading block ----------------------------------------------------
-    for t in (spec.get("ssic") or placeholder("ssic"),
-              spec.get("originator_code") or placeholder("originator code"),
-              fmt_date(spec.get("date"))):
-        para(t, left=SSIC_INDENT)
-    blank()                                            # From: on the second line below the date
-    labelled("From:", spec.get("from") or placeholder("from line"))
-    labelled("To:", spec.get("to") or placeholder("to line"))
-    for v in spec.get("via") or []:
-        labelled("Via:", v)
+    kind = (spec.get("kind") or "letter").lower()      # letter | mfr
+    for line in spec.get("letterhead") or []:          # optional; a student letter carries none
+        para(line, align=WD_ALIGN_PARAGRAPH.CENTER)
+    if spec.get("letterhead"):
+        blank()
+    if kind == "mfr":
+        # Memorandum for the record, to the MCTP 3-30A Appendix D shape: code and date at the right,
+        # the caption centered on the second line below, Subj on the second line below that, no From or To.
+        for t in (spec.get("originator_code") or placeholder("originator code"), fmt_date(spec.get("date"))):
+            para(t, left=SSIC_INDENT)
+        blank()
+        para("MEMORANDUM FOR THE RECORD", align=WD_ALIGN_PARAGRAPH.CENTER)
+    else:
+        for t in (spec.get("ssic") or placeholder("ssic"),
+                  spec.get("originator_code") or placeholder("originator code"),
+                  fmt_date(spec.get("date"))):
+            para(t, left=SSIC_INDENT)
+        if spec.get("endorsement"):
+            # Endorsement identification line on the second line below the date, From on the second line
+            # below it, as the endorsements reproduced in MCO 1900.16 Figures 6-5 and L-10 and NAVMC 4000.5D
+            # enclosure (12) lay it out: "FIRST ENDORSEMENT on <originator> ltr <SSIC> <code> of <date>".
+            e = spec["endorsement"]
+            blank()
+            para(f"{(e.get('ordinal') or placeholder('ordinal')).upper()} ENDORSEMENT on {e.get('on') or placeholder('basic letter')}")
+        blank()                                        # From: on the second line below
+        labelled("From:", spec.get("from") or placeholder("from line"))
+        labelled("To:", spec.get("to") or placeholder("to line"))
+        for v in spec.get("via") or []:
+            labelled("Via:", v)
     blank()                                            # Subj on the second line below
     subj = (spec.get("subj") or placeholder("subject")).upper()
     labelled("Subj:", subj)
@@ -173,6 +197,8 @@ def main():
     # emit() already left one blank line after the last paragraph; two more make three.
     blank(2)
     para(spec.get("signature") or placeholder("signature"), left=3.25)
+    for line in spec.get("signature_lines") or []:     # MFR: billet and grade under the name (MCTP 3-30A App D)
+        para(line, left=3.25)
 
     # ---- continuation page furniture --------------------------------------
     h = sec.header.paragraphs[0]

@@ -1,0 +1,13 @@
+{
+  "ssic": "1050", "originator_code": "C Co", "date": "2026-10-14",
+  "endorsement": {"ordinal": "1st", "on": "the Marine's request"},
+  "from": "Commanding Officer, Company C",
+  "to": "Commanding Officer, 2d Battalion",
+  "subj": "LIBERTY REQUEST",
+  "refs": ["MCO 1050.3J"],
+  "paragraphs": [
+    {"text": "Strongly recommend approval.  Corporal Brandt is an outstanding Marine and truly deserves this, and it will be approved at battalion.  Some family issues at home make this important."},
+    {"text": "Respectfully request favorable consideration at your earliest convenience."}
+  ],
+  "signature": "F. M. LAST"
+}

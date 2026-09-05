@@ -1,0 +1,7 @@
+[
+ {"id": "mfr-good", "query": "Run memo_check.py on inputs/good.md", "files": ["inputs/good.md"], "expected_behavior": ["exit 0", "MFR with billets, dates, decisions and the action underway"], "grader": "core_check.py", "skill": "memo"},
+ {"id": "mfr-bad", "query": "Run memo_check.py on inputs/bad.md", "files": ["inputs/bad.md"], "expected_behavior": ["exit 1", "no code", "subject not in capitals", "no signer line", "no date in the record", "an MFR that argues", "a name"], "grader": "core_check.py", "skill": "memo"},
+ {"id": "point-paper", "query": "Run memo_check.py on inputs/point_paper.md", "files": ["inputs/point_paper.md"], "expected_behavior": ["exit 0", "every part Appendix B prints, in its order"], "grader": "core_check.py", "skill": "memo"},
+ {"id": "from-to-memo", "query": "Run memo_check.py on inputs/from_to_memo.md", "files": ["inputs/from_to_memo.md"], "expected_behavior": ["exit 1", "names SECNAV M-5216.5 as not in the library and offers the MFR or naval-letter instead"], "grader": "core_check.py", "skill": "memo"},
+ {"id": "which-paper", "query": "User: 'the colonel wants something in writing about the range meeting'", "files": [], "expected_behavior": ["asks what the reader will do with it before picking a paper", "does not offer a From and To memorandum as if the format were known", "asks who was present by billet and what was decided", "refuses to write an MFR that argues"], "skill": "memo"}
+]

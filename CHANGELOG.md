@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.9.0 (2026-09-05) Path D: the core is complete
+
+Nine tools, each built from its governing publication in the user's own library, read with `library/scripts/find_order.py`, quoted verbatim with paragraph numbers. The kit now covers the correspondence and record products a company grade officer signs, whatever the MOS.
+
+- `reenlistment` (MCO 1040.31): the tier in the RELM's own words with the population count that makes it true. The order defines "with enthusiasm" as the top 25 percent of the grade known to the certifying officer and "with confidence" as the top 50, so the checker fails a tier the standing does not support and names the tier the numbers do support. Also the 21 prerequisite screen for the CO's certification, the interview windows computed from ECC and EAS (26 to 24, 14 to 12, 8 to 6 months), the mandatory reason for the two lower tiers, and the CO's own signature and personal interview where the order forbids delegation.
+- `mrow-input` (MCO 1610.7B): the Marine's own billet description and summary of accomplishments in the form of sections B and C, with what paragraph 6.c(1)(c) keeps out of section C kept out and awards and PME sent to the list the order sends them to. The order fixes no length limit for the MROW; the tool says so instead of inventing one.
+- `jepes-input` (MCO 1616.1): command input marks with dated facts under each, the band the number falls in, the occasion and TO dates against the order's table, the 45 day window, and the initial counseling a first line supervisor owes within 30 days.
+- `directive` (MCO 5215.1K w/Admin Ch 3): Order or Bulletin picked from the purpose, the order's own paragraph structure and required statements, the five subjects barred below battalion, and a bulletin's self canceling provision inside 12 months.
+- `board-prep` (MARADMIN 622/25, MCO 1553.4B, ALMAR 024/25): the board's dates read from the message's table, the OMPF and MBS audit with what was verified and when, the correspondence cutoff, PME held against the requirement for the grade, reading against the printed list, and the letter to the president inside the message's rules. It never predicts the result.
+- `meritorious-mast` (MCO 1650.19J): the level check on the order's recognition ladder before a word is written, and paragraph 8.g(1) enforced, which forbids a Meritorious Mast for service already recognized by a Letter of Appreciation, a Certificate of Commendation, or a personal decoration.
+- `deocs-plan` (MARADMIN 306/25, MCO 5354.1G): each finding as the report states it, one action per finding with an owner by billet, a date, and a measure, and a checker that fails any line identifying a respondent.
+- `endorsement`: built from the four endorsements the library's own orders reproduce (MCO 1900.16 Figures 6-5 and L-10; NAVMC 4000.5D enclosure (12) pages 119 and 129). The identification line, the basic letter's own Subj, and the endorser's action in the first sentence, rendered and measured on the letter grid.
+- `memo` (MCTP 3-30A chapter 3 and appendices A to E): the five staff papers the publication prints, each in its appendix's parts and words. The memorandum for the record renders on the letter grid.
+
+**Where a publication is not on disk, the tool says so and stops.** Six of the nine name a gap in their opening paragraph and list what the missing publication would settle: SECNAV M-5216.5 (endorsement, memo), DoDI 6400.11 (deocs-plan), MCO P1400.31D and the zone MARADMIN (board-prep), Figure 1-2 as an image (jepes-input), the SSIC manual and the absence of any defined SOP type (directive). Nothing was filled from the web or from memory.
+
+- `naval-letter` gained three spec keys used by the two new correspondence tools and by nothing else: `kind` (`mfr`), `endorsement` (the identification line), and `letterhead` and `signature_lines`. `qc_letter.py --kind mfr|endorsement` checks what each shape requires. The existing letter path is unchanged and its three evals still pass.
+- `find_order.py` fixed twice. A connected folder mounts under its own name, so the rules file path never resolved from a Cowork session and every lookup reported NOT IN THE LIBRARY; it now tries every suffix of the path. And `SECNAV M-1650.1` used to resolve to `MCO 1650.18` by prefix match, so a query now has to match its publication family and the number has to end at a digit boundary. Two false FOUNDs and one false NOT FOUND, both silent.
+- `evals/core_check.py` (new): 36 deterministic cases across the nine tools. All six existing harnesses still pass: install_check 123 of 123, think_check 13, packs_check 25, enlisted_check 14, admin_check 8, naval letter 3.
+
 ## 0.8.2 (2026-09-05) Installed, and one unknown closed in the negative
 
 The plugin installed: 36 skills and 6 agents register. `claude-field-kit` was uninstalled the same day, since 9 skills existed in both namespaces and this kit's are the newer supersets.
