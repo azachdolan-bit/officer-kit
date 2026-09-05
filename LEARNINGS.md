@@ -56,3 +56,8 @@ Status: pending
 Evidence: The academic integrity policy forbids sharing a study guide with anyone who did not help build it; a method file with zero content is shareable.
 Lesson: Share the method, never the product. Grep the shared file for subject terms and doctrinal values and expect zero real hits. Never mention browser automation in a shared document.
 Status: pending
+
+## 2026-09-05  build-a-skill  high  -> plugin
+Evidence: The risk assessment matrix shipped with a caution because the web copy of MCO 5100.29C returned Figure 3-4 as an image; the full order was in the user's publications library the whole time, and rendering the page with pdftoppm and reading it settled the matrix in five minutes. The same library held MCO 1900.16, whose paragraph 6105 prescribes the Page 11 entry's exact wording and requires the CO's signature, which the first draft of `page-11` had not carried.
+Lesson: Before writing any tool's standard.md, look in the user's publications library for the order and read it there, rendering figure pages as images when the text is a picture; only fall back to the web when the order is not on disk. Never ship a caution the library could have removed.
+Status: pending
