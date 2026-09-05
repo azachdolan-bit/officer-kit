@@ -1,6 +1,6 @@
 # What a Marine officer does, and what the kit must become
 
-An analysis of the work a company grade Marine officer is responsible for, function by function and MOS by MOS, measured against what the Officer Kit does today, with ranked paths forward. Written 4 September 2026 from the governing publications, the TBS MOS Assignment Handbook, HQMC messages, board member accounts, and published research on checklists and AI assisted writing. Every order number below was checked against marines.mil or an official copy; anything not confirmed is marked UNVERIFIED. Sources are listed at the end.
+An analysis of the work a company grade Marine officer is responsible for, function by function and MOS by MOS, measured against what the Officer Kit does today, with ranked paths forward. Written 4 September 2026 from the governing publications, the TBS MOS Assignment Handbook, HQMC messages, board member accounts, and published research on checklists and AI assisted writing. Every order number below was checked against marines.mil or an official copy, and the highest stakes numbers (risk decision levels, NJP limits, retention windows and tiers, citation format) were re read from the orders themselves on 5 September 2026; anything not confirmed is marked UNVERIFIED. Sources are listed at the end.
 
 ## Bottom line
 
