@@ -15,7 +15,7 @@ metadata:
 
 A meritorious promotion board scores a fixed set of categories, and the recommendation letter that wins is the one that puts a verifiable number under each category in the order the board scores them. Commands five years and two units apart have used the same seven lettered paragraphs; that is the board's rubric surfacing in the letter, and the tool builds to it explicitly.
 
-The Marine Corps standard is MCO 1400.32 (the Enlisted Promotion Manual); the package itself is governed by the command's local order (a MEF, Wing, or Group order), which sets eligibility, the enclosure list, the data sheet, and the board date. The tool asks for that order first and does not invent one.
+The Marine Corps standard is MCO P1400.32D w/Ch 2 (the Enlisted Promotion Manual, 2012; MARADMIN 667/22 for meritorious quota rules); the package itself is governed by the command's local order (a MEF, Wing, or Group order), which sets eligibility, the enclosure list, the data sheet, and the board date. The tool asks for that order first and does not invent one.
 
 ## Read first
 

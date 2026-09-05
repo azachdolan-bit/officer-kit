@@ -1,3 +1,5 @@
+> Note (4 Sep 2026): this order is dated 2001. Its citation format (9 lines, Times New Roman 9, 1200 or 1250 characters) is superseded by SECNAV M-1650.1 (2019) Appendix 2E Table 20, which current subordinate instructions carry as 8 lines, Times New Roman 10, 1,250 characters, fully justified, one inch margins, no acronyms. Read the table from the user's copy of the manual when it is on disk. The SOA rules below remain the Marine Corps processing standard.
+
 # MCO 1650.19J w/Ch 1, Administrative and Issue Procedures for Decorations, Medals, and Awards, extracts
 
 Verbatim from MCO 1650.19J (5 Feb 2001). This is the Marine Corps processing order; the award criteria and citation standard are in SECNAV M-1650.1 (Navy and Marine Corps Awards Manual, 16 Aug 2019), which the user keeps in the Reference folder. Where the two disagree, the SECNAV manual governs on criteria and the MCO on Marine Corps processing. Note the order itself gives two character limits for the NA and NC citation (1250 in enclosure (5), 1200 in enclosure (4)); use 1200.

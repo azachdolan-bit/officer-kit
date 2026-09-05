@@ -18,7 +18,7 @@ Annotation: the first bullet establishes the billet and period; every following 
 
 FOR PROFESSIONAL ACHIEVEMENT IN THE SUPERIOR PERFORMANCE OF HIS DUTIES WHILE SERVING AS RIFLE PLATOON COMMANDER, COMPANY C, 1ST BATTALION, 3D MARINES, FROM JANUARY 2026 TO JUNE 2026. SECOND LIEUTENANT VANCE LED HIS PLATOON'S RIFLE QUALIFICATION TO 96 PERCENT, THE HIGHEST IN THE BATTALION FOR THE CYCLE, AND WROTE THE COMPANY FIRE SUPPORT PLAN ADOPTED WITHOUT CHANGE FOR THE REGIMENTAL EXERCISE. WHEN THE RANGE EQUIPMENT PROVIDER CANCELLED TWO WEEKS OUT, HE SECURED REPLACEMENT EQUIPMENT AND EXECUTED THE LIVE FIRE PROGRESSION FOR 42 MARINES ON THE ORIGINAL DATES WITHOUT INCIDENT. SECOND LIEUTENANT VANCE'S INITIATIVE, PERSEVERANCE, AND TOTAL DEDICATION TO DUTY REFLECTED CREDIT UPON HIM AND WERE IN KEEPING WITH THE HIGHEST TRADITIONS OF THE MARINE CORPS AND THE UNITED STATES NAVAL SERVICE.
 
-Annotation: standard opening and closing; three sentences between them, each a fact from the SOA with the same numbers (96, 42, two weeks); no adjectives; 9 lines at the required size. Every number here appears in the SOA above.
+Annotation: standard opening and closing; three sentences between them, each a fact from the SOA with the same numbers (96, 42, two weeks); no adjectives; within 8 lines at Times New Roman 10. Every number here appears in the SOA above.
 
 ## Exemplar 2. Achievement Medal, sustained performance (strong)
 

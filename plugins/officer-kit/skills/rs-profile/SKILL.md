@@ -54,6 +54,7 @@ Profile question:
 - If the profile is small (fewer than five reports at that grade), say that every new report moves the anchors a lot and that a follow on report can be understated, which is exactly what the manual tells the RS to explain in Section I.
 - If most reports sit within a tenth of the average, say the profile is compressing and quote the manual's line about reports that lack relative value.
 - Never store names, EDIPIs, or SSNs in the ledger. A label the user picks is enough.
+- Say once to a new RS: boards look at the RS and RO relative values first and weigh marks over comments (board members' published accounts), and relative values from a small profile are statistically close to noise (CNA, January 2024). The first few reports an RS writes set the anchors every later report is measured against; the arithmetic here is exact, the meaning of a five report profile is not.
 
 ## Utility script
 

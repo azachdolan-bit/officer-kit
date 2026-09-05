@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.1 (2026-09-05) The analysis, and corrections from it
+
+- `OFFICER ANALYSIS.md` (new): what a company grade officer does across fifteen functions, the MOS lens, the AI policy constraint, what the research on boards and on AI assisted writing changes in the tool design, the gaps ranked, five paths forward with a recommended sequence, and what to collect before the next build. Sources listed.
+- `award` and `citation_check.py`: NA and NC citation limits corrected to the 2019 awards manual as carried by current subordinate instructions (8 lines, 1,250 characters, Times New Roman 10, fully justified, one inch margins, no acronyms); the 2001 order's 9 lines and 9 point were stale. Extract carries a note.
+- `security-check`: the Marine Corps' own generative AI guidance (NAVMC 5239.1, MARADMIN 056/25) and DoDI 5200.48 stated on the card; DRRS-MC and anything from SIPR named out of scope; the AI assistance line in rendered products.
+- `rs-profile`: the caution to a new RS that boards read relative values first and that a small profile's relative values are close to noise.
+- `meritorious-promotion` and MODULES: MCO P1400.32D w/Ch 2 is the current enlisted promotion manual.
+- MODULES: Training management and Legal and property packs specified; nine more core tools specified; build order rewritten to the analysis's Paths A through E.
+
 ## 0.5.0 (2026-09-04) Enlisted support tools and the award rebuild
 
 - `award` 0.2.0: rebuilt to the seven part tool shape. `references/intake.md` (fourteen questions in five sections: frame, what actually happened, correlate to the manual, correlate to reality, the reader; the quantification ladder), `references/voice.md` (standard sentences as approved citations use them, fact verbs, the strike list, professionalism rules), `references/exemplars.md` (four fictional exemplars, one weak and annotated line by line). Level check gives one of three verdicts and never predicts a board. SOA offered in bullets or paragraphs. `citation_check.py --soa SOA.md` fails a citation carrying a number the SOA does not; warns on strike list words, semicolons, and a body with no number.

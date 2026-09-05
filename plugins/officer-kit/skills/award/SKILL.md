@@ -52,7 +52,7 @@ Format: the 2001 order says NA in bullets on one page, NC bullets or paragraphs 
 
 ## The citation
 
-Opening sentence from the manual's table for the award and type (observed forms in voice.md), two to four sentences of the strongest facts in order of significance with the SOA's numbers unchanged, then the standard closing. All capitals, Times New Roman 9, landscape, nine lines, 1200 characters for NA and NC; MM regular capitalization, 12 point, 24 lines. No abbreviations a reader outside the unit would not know. One claim per sentence, no semicolons.
+Opening sentence from the manual's table for the award and type (observed forms in voice.md), two to four sentences of the strongest facts in order of significance with the SOA's numbers unchanged, then the standard closing. All capitals, Times New Roman 10, landscape, fully justified, one inch margins, 8 lines, 1,250 characters, no acronyms for NA and NC (SECNAV M-1650.1 Appendix 2E Table 20 as carried by current subordinate instructions; the 2001 processing order's 9 lines and 9 point are superseded); MM regular capitalization, 12 point, 24 lines. No abbreviations a reader outside the unit would not know. One claim per sentence, no semicolons.
 
 ## The level check (step 4)
 

@@ -11,6 +11,7 @@ Each tool lists the governing publication it is built to. School handouts outran
 | Tool | Say | Does | Governed by | Status |
 |---|---|---|---|---|
 | `naval-letter` | "draft a naval letter to..." | Builds the letter from your rules file identity on the exact line grid, checks references both ways, measures the rendered page, refuses to ship a placeholder | SECNAV M-5216.5; the school correspondence handout where issued | Available |
+| `directive` | "write the company SOP", "battalion order for" | A unit order or SOP in the directive format (situation, mission, execution, administration and logistics, command and signal) | MCO 5215.1K w/Admin Ch 3 | Planned |
 | `endorsement` | "endorse this request" | First through nth endorsements in the same standard | SECNAV M-5216.5 | Planned |
 | `memo` | "memo for the record", "write a MFR" | Memorandum and memorandum for the record formats | SECNAV M-5216.5 | Planned |
 
@@ -22,16 +23,46 @@ Each tool lists the governing publication it is built to. School handouts outran
 | `fitrep` | "draft a fitrep for...", "section I from these notes", "billet description" | Section I directed comments, billet description, and duties assigned from your notes; checks every attribute mark has a justifying comment and every prohibited item is absent | MCO 1610.7B (Performance Evaluation System); the school fitness report handout where issued | Available |
 | `rs-profile` | "how does this mark affect my profile", "manage my profile", "relative value" | Keeps a private ledger of reports written, computes each report average, the RS average, high, and low per grade, and relative value on the 80 to 100 scale; shows where a proposed set of marks lands; flags a compressing profile; never proposes marks | MCO 1610.7B chapter 8 | Available |
 | `counseling` | "counseling from these notes", "initial counseling", "event counseling" | Initial, follow on, or event counseling in the worksheet's blocks: incidents as dated facts with the observer named, an evaluation that names the cost to the unit, a plan with a mentor, a cadence, a return condition, and an end state; scrubbed of medical, family, and disciplinary content; never punitive | MCO 1500.61 (Marine Leader Development) where applicable | Available |
+| `mrow-input` | "my fitrep input", "MROW for my report" | The officer's own fitness report input, Section C style, reading the billet description from the rules file; checked with the fitrep checker | MCO 1610.7B | Planned |
+| `jepes-input` | "JEPES marks for my Marines" | Command input marks and the initial counseling record for Pvt through Cpl on the semiannual dates | MCO 1616.1 | Planned |
+| `reenlistment` | "reenlistment recommendation for", "career planning interview" | The recommendation and endorsement in the order's four tiers (with enthusiasm is the top 25 percent of the grade, with confidence the top 50, with reservation and not recommended each need a stated reason), the interview record, and the window math | MCO 1040.31 | Planned |
+| `meritorious-mast` | "mer mast for", "certificate of commendation for" | The lightest recognition that goes in a record; NAVMC 10935 text and the CertCom | MCO 1650.19J; iAPS per MARADMIN 024/22 | Planned |
+| `board-prep` | "major board is coming", "audit my OMPF" | The OMPF and Master Brief Sheet audit checklist, the letter to the board, the PME plan, the reading log | MARADMIN 622/25 mechanics; MCO 1553.4B; ALMAR 024/25 | Planned |
+| `deocs-plan` | "DEOCS action plan" | The command climate action plan from the survey's findings | MARADMIN 306/25; MCO 5354.1G | Planned |
 | `weekly-update` | "weekly update to my OIC" | BLUF first update in your boss's format from the rules file | none | Planned |
 | `after-action` | "turn these range notes into an AAR" | What happened, what worked, what to fix, in the unit's format | none | Planned |
 | `training-schedule` | "build the training schedule from this list" | Week view from events with prep items | none | Planned |
 | `letter-of-appreciation` | "letter of appreciation for", "LOA" | Letter of appreciation for a Marine or a supporting unit, in correspondence format, from the facts of what they did | SECNAV M-5216.5 | Available |
 | `letter-of-recommendation` | "letter of recommendation for", "recommend this Marine for" | Recommendation for a program, school, commissioning source, or civilian purpose; intake for what the reader is deciding and what the Marine did that bears on it | SECNAV M-5216.5; the program's own instruction where one exists | Available |
-| `meritorious-promotion` | "mer pro package", "meritorious promotion for" | The meritorious promotion recommendation as the boards read it: letter to the local order, lettered paragraphs in the board's scoring categories with the numbers each expects, the data sheet and enclosure list, and the board briefing sheet | MCO 1400.32 (Enlisted Promotion Manual); the command's local order (MEF, Wing, or Group) | Available |
+| `meritorious-promotion` | "mer pro package", "meritorious promotion for" | The meritorious promotion recommendation as the boards read it: letter to the local order, lettered paragraphs in the board's scoring categories with the numbers each expects, the data sheet and enclosure list, and the board briefing sheet | MCO P1400.32D w/Ch 2 (Enlisted Promotion Manual, 2012); the command's local order (MEF, Wing, or Group) | Available |
 | `enlisted-program-package` | "package for", "recommend for MECEP", "recruiting duty screening" | Command endorsement and justification for an enlisted Marine's application to a program or special duty, to that program's MARADMIN or order | the program's governing order; SECNAV M-5216.5 | Planned |
 | `nomination` | "NCO of the quarter package", "Marine of the year nomination" | The quarterly and annual recognition nomination: letter to the local order with the lettered categories the board scores (appearance and fitness, MOS competence, deployments, maturity, leadership, growth, influence on the command), the data sheet, and the enclosure list the order requires | the command's recognition order (a Wing or MEF order); SECNAV M-5216.5 | Available |
 | `board-brief` | "brief this Marine to the board", "briefing sheet" | The one page board briefing sheet generated from the same facts as the package: billet, duties, TIS and TIG, PME, PFT, CFT, rifle, pistol, swim, MCMAP, reading, education, community service, awards, and the "so what" lines, timed to the board's clock | the command's board instructions | Available |
 | `brief` | "build a brief", "slides for", "decision brief" | A PowerPoint brief from an intake for audience and the decision sought; one message per slide; every slide read by the visual reviewer | none | Planned |
+
+## Training management
+
+The platoon commander's week. Specified by `OFFICER ANALYSIS.md` Path B.
+
+| Tool | Say | Does | Governed by | Status |
+|---|---|---|---|---|
+| `risk-assessment` | "RAW for this range", "risk assessment for" | The Risk Assessment Worksheet: hazards, initial RAC, controls, residual RAC, the approval level that follows from the RAC, the supervision plan; checker computes the RAC and names the approver | MCO 5100.29C Vol 2 (Risk Management) | Planned |
+| `safety-brief` | "safety brief for the 96", "liberty brief" | Liberty, holiday, and event safety briefs from the unit's format and the season's hazards | MCO 5100.29C Vols 3 and 5 | Planned |
+| `range-package` | "range package", "range order for" | Range request, range order or LOI, OIC and RSO duty checklist, the safety brief, tied to the RAW | MCO 3570.1 series and AR 385-63; the Range Safety Pocket Guide; the base range control SOP | Planned |
+| `training-schedule` | "build the training schedule from this list" | Week view from the T&R events the user names, with prep items, the RAW status, and the submission to higher | MCO 1553.3C (Unit Training Management); NAVMC 3500 series T&R manuals | Planned |
+| `after-action` | "turn these range notes into an AAR" | What happened, what worked, what to fix, in the unit's format; when the AAR is about a kit product, feeds LEARNINGS.md | none (unit SOP) | Planned |
+
+## Legal and property
+
+The task with no training and a clock. Specified by `OFFICER ANALYSIS.md` Path C. These tools prepare documents to the format; they never advise on guilt, liability, or punishment, and every product goes to the SJA or the legal officer before it goes anywhere else.
+
+| Tool | Say | Does | Governed by | Status |
+|---|---|---|---|---|
+| `investigation` | "I was appointed investigating officer", "preliminary inquiry into" | Appointment letter, the preliminary inquiry, and the command investigation report: preliminary statement, findings of fact each tied to an enclosure, opinions each tied to findings, recommendations each tied to opinions; the checker enforces the chain and the 30 day clock | JAGINST 5800.7G Chapter II; NJS JAGMAN Investigations Handbook (Oct 2024) | Planned |
+| `page-11` | "6105 for", "not recommended for promotion letter" | 6105 counseling entries and the not recommended letter with the unit diary deadline math | MCO 1900.16 w/Ch 3; MCO P1070.12K (IRAM); MCO P1400.32D w/Ch 2 | Planned |
+| `njp-package` | "prep the NJP package" | NAVMC 10132 fields, the rights the Marine must be read, the company grade limits; prepares, never advises | MCO 5800.16 Vol 14; MARADMIN 427/23 | Planned |
+| `dd200` | "we lost gear", "DD 200 for" | The financial liability investigation of property loss on the same findings of fact engine as `investigation`; NAVMC 6 where it applies | MCO 4400.201 w/Ch 3; the TECOM DD 200 guide | Planned |
+| `inspection-prep` | "CGIP is coming", "self assess against the checklist" | Self assessment against the IGMC functional area checklist for a program, the corrective action plan, the program binder list | MCO 5040.6K; IGMC functional area checklists | Planned |
 
 ## Planning
 
@@ -83,6 +114,8 @@ Each tool lists the governing publication it is built to. School handouts outran
 ## Build order
 
 1. Done: `start`, `library`, README, GETTING STARTED, this file; the Admin module core (`award`, `fitrep`, `rs-profile`) built from the governing manuals with mechanical checks and tests; the enlisted support tools (`letter-of-recommendation`, `letter-of-appreciation`, `meritorious-promotion`, `nomination`, `board-brief`, `counseling`) built to the seven part shape from annotated real packages, with fictional exemplars, intake, checkers, and evals; billet self reporting in `rules-file`.
-2. **Next:** `order-analysis`, `quiz-builder`, `study-guide` v0.2, `walkthrough`.
-4. **Then:** `aar` and `inspect`, so the kit improves itself; `share-method`; the remaining Admin and Correspondence tools.
-5. **Then:** a workshop cut with everything verified content free by script.
+2. **Next (Path A in `OFFICER ANALYSIS.md`):** names removed by default across every Admin tool: a label in place of the name, local substitution at render time, the AI assistance line in every rendered product.
+3. **Then (Paths B and C, in parallel):** the Training management pack (`risk-assessment`, `safety-brief`, `range-package`, `training-schedule`, `after-action`) and the Legal and property pack (`investigation`, `page-11`, `njp-package`, `dd200`, `inspection-prep`).
+4. **Then (Path D):** the rest of the core: `mrow-input`, `board-prep`, `endorsement`, `memo`, `directive`, `reenlistment`, `jepes-input`, `meritorious-mast`, `deocs-plan`.
+5. **Then (Path E):** `aar` and `inspect`; checkers as blocking hooks; pack selection from the rules file; the blind test in a fresh session; `share-method` and the marketplace question.
+6. **After:** `order-analysis`, `tactical-planning`, `call-for-fire`; `quiz-builder`, `study-guide` v0.2, `walkthrough`; a workshop cut verified content free by script.

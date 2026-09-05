@@ -28,6 +28,10 @@ Say **"start the officer kit"** and Claude walks you through it one step at a ti
 
 That is the whole setup. From then on, you describe what you need in plain language and the right tool fires.
 
+## Where this is going
+
+`OFFICER ANALYSIS.md` is the analysis behind the build order: what a company grade officer is responsible for, function by function and MOS by MOS, what the kit covers, what it does not, and five ranked paths forward. `MODULES.md` lists every tool and its status.
+
 ## The modules
 
 Use the ones that match your job. Ignore the rest.

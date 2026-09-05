@@ -5,8 +5,10 @@ and of the citation against the Summary of Action it must agree with.
 Usage:  python3 citation_check.py citation.txt --level NA|NC|MM [--soa SOA.md]
 Exit 0 = within limits (warnings allowed), 1 = a limit, capitalization, or SOA agreement failure.
 
-NA and NC: all capital letters, Times New Roman 9 point, landscape, nine lines, 1200 characters
-           (the order also states 1250 in enclosure (5); 1200 is used here).
+NA and NC: all capital letters, Times New Roman 10, landscape, fully justified, one inch margins,
+           8 lines, 1,250 characters, no acronyms. Source: SECNAV M-1650.1 (2019) Appendix 2E Table 20 as
+           carried by HQBN TECOM's personal awards guide, USNAINST 1650.5D (2020), and CNLSCINST 1650.2B (2024).
+           MCO 1650.19J (2001) said 9 lines and Times New Roman 9; the 2019 manual superseded that.
 MM:        regular capitalization, Times New Roman 12 point, portrait, 24 lines.
 Also checks for an opening sentence ("For ...") and a closing sentence naming the Marine Corps
 and the Naval Service, warns on abbreviations and on words that do the work facts should do,
@@ -16,8 +18,8 @@ and with --soa fails if a number in the citation does not appear in the SOA
 import re
 import sys
 
-LIMITS = {"NA": (1200, 9, True), "NC": (1200, 9, True), "MM": (None, 24, False)}
-CHARS_PER_LINE_LANDSCAPE_9PT = 150   # rough estimate for Times New Roman 9 on a landscape line; the printed certificate is the authority
+LIMITS = {"NA": (1250, 8, True), "NC": (1250, 8, True), "MM": (None, 24, False)}
+CHARS_PER_LINE_LANDSCAPE_9PT = 160   # rough estimate for Times New Roman 10 justified on a 9 inch landscape line; the printed certificate is the authority
 
 FLUFF = [
     "enthusiastically", "exceptional", "exceptionally", "outstanding", "superb", "phenomenal",
