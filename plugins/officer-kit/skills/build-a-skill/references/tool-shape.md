@@ -1,6 +1,6 @@
 # The seven part tool shape, short form
 
-1. **Standard.** The governing publication's own words, verbatim, with paragraph numbers, in `references/standard.md`. If the order is not on disk, the tool says so and marks what it could not verify.
+1. **Standard.** The governing publication's own words, verbatim, with paragraph numbers, in `references/standard.md`, read from the user's library (`library/scripts/find_order.py <number>`; render figure pages as images) and citing the file it was read from. The web only after find_order.py reports NOT IN THE LIBRARY, and then the file says which text came from the web.
 2. **Exemplars.** Fictional, annotated, one strong and one weak, in `references/exemplar.md`. The user's own approved products go in their folder via `add-exemplar` and beat these.
 3. **Intake.** The questions in the order a good reviewer asks them, one at a time, in `references/intake.md`. "I do not know" is a gap, never filled.
 4. **The ladder.** Action, scope, result, comparison, consequence. Climb every vague note; stop where the user can defend.

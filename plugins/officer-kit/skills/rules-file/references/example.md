@@ -15,6 +15,11 @@ Depth: Full   Updated: 2026-09-04
 - Collateral: platoon academics representative
 - Reports to: company academics officer for the billet; staff platoon commander otherwise
 
+## Library
+- Library path: C:\Claude Working Folder\Marine Coprs Publications Library\library
+- Reference folder: Reference
+- Rule: read any order from the library or Reference first; the web only when it is not there, and say so.
+
 ## My billet, in my words (the tools read this; write it yourself)
 - Responsible for: the platoon's academic readiness; carrying exam and quiz discrepancies from the platoon to the company academics officer with the evidence attached
 - Answers to / has answering: answers to the company academics officer for the billet; no one answers to me

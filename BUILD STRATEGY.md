@@ -2,6 +2,10 @@
 
 Written 4 Sep 2026 after the Admin module core shipped. This is the method for building every remaining tool, and for rebuilding the ones that exist, so that each one carries the critical thinking a good officer brings to the task rather than just a format.
 
+## The first rule of every build
+
+Read the order from the user's library before anything else: `library/scripts/find_order.py <number>` finds it, extracts it, or renders a figure page. The web is for publications the script reports as not on disk, and the standard file says which those were. This rule exists because two tools shipped with web copies and a caution while the full orders sat in the library.
+
 ## 1. Where the kit stands
 
 Version 0.4.0, five commits, private repo `azachdolan-bit/officer-kit`, clone on Zach's machine, installable plugin file built. Not yet installed by anyone.

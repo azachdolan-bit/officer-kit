@@ -14,6 +14,11 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - [Rank], [billet], [unit or school], MOS [assigned or pending]   (or: not recorded)
 - Reports to: [OIC / platoon commander, optional]
 
+## Library
+- Library path: [the folder that holds the full publications library, if you built one with option B; e.g. C:\...\library]   (or: not recorded)
+- Reference folder: [Reference, inside this working folder]
+- Rule: read any order from the library or Reference first; the web only when it is not there, and say so.
+
 ## Working label
 - Other Marines appear in this folder as: <MARINE>   (or a label you prefer; the name goes in at the last step on this computer with substitute.py)
 
