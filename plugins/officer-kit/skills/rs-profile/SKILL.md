@@ -22,7 +22,7 @@ Read `references/pes-manual-chapter-8-extract.md` once per session for the manua
 - Fitness report average: each observed attribute A=1 through G=7; H (not observed) excluded; sum divided by the number of observed attributes, rounded to the nearest hundredth.
 - The profile is per grade and excludes academic, EN, and N/O reports.
 - The RS average of all reports on Marines of that grade is a relative value of 90. The RS high is a relative value of 100. Relative value is shown on an 80 to 100 scale: 93.34 to 100 upper third, 86.67 to 93.33 middle third, 80 to 86.66 bottom third; anything below 80 shows as 80.
-- The manual states the two anchors and the scale, not a formula. This tool interpolates linearly between the anchors (relative value = 90 + 10 × (report average minus RS average) divided by (RS high minus RS average)) and says so in every output. Relative value is a boardroom metric; the authoritative number is the one on the Marine's MBS.
+- The manual states the two anchors and the scale, not a formula. This tool interpolates linearly between the anchors (relative value = 90 + 10 times (report average minus RS average) divided by (RS high minus RS average)) and says so in every output. Relative value is a boardroom metric; the authoritative number is the one on the Marine's MBS.
 
 ## The ledger
 
