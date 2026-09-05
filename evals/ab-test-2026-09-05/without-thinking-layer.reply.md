@@ -1,0 +1,21 @@
+Worksheet is drafted and saved to raw.md. Thirteen hazards across movement, setup, both execution days, and recovery. It passes the checker clean, no failures and no warnings.
+
+The short version of the arithmetic: highest residual is ID, which is HIGH on the joint matrix. That is **not** high risk training. High risk training is a fact of the pair, not a judgment: the order (MCO 5100.29C Vol 2, para 040302) defines it as a residual of IA, IB, IIA, or IIB after controls, and nothing on this sheet lands there. So no O-5 signature is required *by the high risk rule*. It still goes to your battalion commander, because the default approval table in this kit sends any residual at HIGH to the O-5, and hazard 6 (negligent discharge during the movement between firing positions) stays at ID after controls. That is honest and I would not move it. A company doing Table 2 movement drills with loaded weapons is not a "seldom" proposition at severity I unless you have line safeties at one per four firers, and even then D is the right call, not E. If I dropped it to IE the sheet would say company commander approves, and I am not going to write that.
+
+I want to flag one thing you told me and one thing you did not. Last year's dehydration case is the single most useful line in your tasking, and it is doing real work on the sheet: it is why heat sits at IIC initially and only comes down to IID after controls, not IIE. Anyone can write "heat, unlikely." You have a data point that says otherwise, in this company, on day two, at this range. The sheet says so.
+
+What you did not give me, and what I have assumed:
+
+1. **Table 2 of what?** I read it as the second table of the annual rifle qualification, short range with movement between firing positions, and I built hazards 5, 6, 9, and 10 on that. If you mean pistol, or a different program's Table 2, four rows change.
+2. **Dates.** "Next month" got written as two consecutive days in October 2026. Give me the actual dates.
+3. **Personnel count.** I put 180 as a rifle company placeholder. Relay math, water, and the ammunition point all scale off that number.
+4. **How do you get there?** I assumed troop carrying vehicles on a route with washouts, day movement, no bivouac. If the company walks, or stages the night prior, hazards 1 and 2 change and I need to add a phase.
+5. **Any night fire?** I assumed none. If a relay runs past EENT, the sheet needs illumination, night limit marking, and night driving added before it goes in.
+6. **Any other near misses last year?** The dehydration case is on the sheet. If anything else happened or nearly happened, that belongs there too, and it is the cheapest hazard identification you will ever do.
+7. **Does the battalion have its own RAW form, its own matrix, or its own published risk decision echelons?** I could not find an Overrides file or any approved worksheets from your command on this machine, so this sheet uses its own format, the joint matrix at Figure 3-4, and the kit's default approval table. If battalion or regiment has published any of the three, theirs governs and I will rebuild against it. Worth one phone call before Friday, because if their matrix or their echelons differ, the approval line on this sheet is wrong.
+
+Two mechanical things before you route it. The range packet fills in the placeholders: range control's phone number, the radio channels and call signs, and the landing zone grid. Those are in angle brackets in the emergency action plan and they need to be real before anyone signs. And no names appear anywhere in the body, only billets, which is deliberate. Names go on the signature block when you transfer this to whatever form battalion wants.
+
+On the friction with your timeline: the emergency action plan is supposed to be validated by a walk through, and the lane marking and the numbers come off that walk. If the range safety walk happens the day prior rather than before Friday, you can still route the sheet on Friday, but the pre execution checklist is where those blanks get confirmed, and that is the honest place for them.
+
+Last thing. If range control or the battalion changes anything at signature, tell me and `aar` will capture it after the event, along with any hazard that shows up on the range that this sheet did not carry.

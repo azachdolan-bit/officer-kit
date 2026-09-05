@@ -63,20 +63,22 @@ Which mechanical check runs, which reviewer, and what cannot be checked mechanic
 
 ## A deliberate estimate, worked
 
-The user asks for a risk assessment worksheet for a company live fire range next Tuesday.
+**Read this for its shape and take none of its content.** A worked example in the same domain as the task is not a help, it is a source of answers. Measured on this kit: an estimate written with a live fire range example in front of it reproduced that example's load bearing assumption and two of its three questions, and never asked the one question the actual tasking made obvious. So the example below is deliberately a different product from the one most often run at this tier. If a phrase from it turns up in a real estimate, that estimate was copied rather than written, and `estimate_check.py` fails it.
 
-> **Tier: deliberate.** People can be hurt and the approval level follows from the arithmetic.
+The user asks for a 6105 entry on a Marine who has missed formation three times.
+
+> **Tier: deliberate.** It enters a record that cannot be removed and a separation board may rely on it.
 >
-> **Task and outcome.** A Risk Assessment Worksheet for the 12 August platoon live fire attack, to get the event approved at the right level and to give the OIC and RSO something to supervise from. The worksheet is the right product; if the aim were only approval, the shortest path would be to reuse last quarter's sheet, and the order allows that for a repeated event only once every assessment is re verified.
+> **Task and outcome.** A 6105 entry documenting unexcused absence, to give the Marine formal notice and a chance to correct, and to stand up if a package is built later. The entry is the right product only if counseling has already happened and failed; if it has not, the product is a counseling and the entry comes after.
 >
-> **Standard.** MCO 5100.29C Volume 2, paragraphs 030302 and 040302 to 040304, read from the library. Figures 3-4 and 4-2 confirmed from the order. The base range SOP is not on disk and is not verified here.
+> **Standard.** MCO 1900.16 paragraph 6105, read from the library. The entry text is prescribed and is not the drafter's to reword. The CO signs an adverse entry; a copy goes to CMC within 30 days; the Marine has 5 working days to rebut.
 >
-> **Facts.** 44 Marines, three serials, Range 400, August, unimproved access road, night movement (from the user). 6,400 rounds 5.56 and 800 of 7.62 (from the user's ammunition request).
+> **Facts.** Three absences, on the dates the user supplied from the duty log. Two prior informal counselings, dated, from the user.
 >
-> **Assumptions.** One is load bearing: the corpsman is TCCC current and will be present for all three serials. Becomes a fact from the training record and the platoon sergeant's roster. If false, the medical plan and the residual level for two heat hazards both change, so the sheet cannot be signed. That makes it a blocking question, not an assumption. Second: the flag condition in August will require a work rest cycle. Becomes a fact on the morning of; if false, nothing changes, because the control is a check performed either way.
+> **Assumptions.** One is load bearing: the two prior counselings were documented rather than verbal. Becomes a fact from the Marine's record book. If false, the entry has no counseling history to rest on, and a board will read it as a first offense escalated straight to a permanent entry, so the entry is premature. That makes it a blocking question. Second: the CO intends this as adverse rather than administrative. Becomes a fact by asking the CO; if false, the signature block and the CMC routing both change.
 >
-> **Questions that change the answer.** (1) Is the corpsman confirmed with a certification date? Changes whether the medical plan stands and whether two residual levels hold. Blocking. (2) What went wrong or nearly wrong the last time this range was run? Changes the hazard list, which nothing mechanical can check for completeness. (3) Does the battalion publish its own matrix or worksheet form? Changes the levels and the approval line.
+> **Questions that change the answer.** (1) Are the prior counselings in the record book with dates? Changes whether this entry is supportable at all. Blocking. (2) What did the Marine say about the absences? Changes the entry's statement of facts, which the rebuttal will contest first. (3) Does the CO intend this as adverse? Changes the routing and the rebuttal clock.
 >
-> **Will not do.** This does not decide what risk the commander accepts, and it does not certify the OIC or RSO. It computes the levels from the order's matrix and names the approval authority that follows.
+> **Will not do.** This does not decide whether to separate, and it does not judge the Marine. It records the facts in the order's prescribed form and names what has to be true for the entry to stand.
 >
-> **Checked by.** `raw_check.py` for the arithmetic, the flags, the approval line, and the four required elements; the red team agent for the hazard list; nothing mechanical can tell you the hazard list is complete, which is why question 2 is asked.
+> **Checked by.** `page11_check.py` for the prescribed wording, the four required elements, the signature block, and the 5 day rebuttal line; the red team agent against the standard. Nothing mechanical can tell you the facts are right or that the counseling actually happened, which is why question 1 blocks.

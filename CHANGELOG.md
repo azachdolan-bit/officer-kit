@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.7.1 (2026-09-05) The thinking layer, tested against itself
+
+0.7.0 shipped an estimate and a check onto 24 tools without ever running one end to end. This release is that test and what it found. The test is in `evals/ab-test-2026-09-05/` with every artifact, because the result went against the feature.
+
+Two blind drafters built a risk assessment worksheet from the same tasking, one with the thinking layer and one with it deleted. A blind reviewer, given both with provenance stripped and told nothing about how either was made, chose the worksheet built **without** it. Both passed `raw_check.py` clean, both reached the same residual level and the same approval authority, and both left ten blanks open. The difference was that the thinking layer's product asserted 25 facts the tasking never supplied while telling the approving officer in writing that every gap was marked.
+
+- `think/references/estimate.md`: the worked example was a live fire range worksheet, the same product as the tool most often run at this tier, and it supplied three of the five questions the test's drafter asked while displacing the one question the tasking actually raised. It is now a 6105 entry, and it opens by saying its content is not to be taken. `estimate_check.py` fails an estimate that lifts its phrases.
+- `think/references/check.md`: pass 6 now forbids the coverage claim and carries the test as its evidence. "What was not checked" says what was not checked; it never says that everything else was.
+- `think/scripts/precision_check.py`: a coverage claim in a delivered product fails at every tier. Also, risk levels (IE, IID, IIB) no longer read as undefined acronyms, which had been adding about twenty junk warnings to every worksheet.
+- evals: `think_check.py` 14 of 14, with an assertion for each of the three defects.
+
+Not changed, pending a decision: the deliberate tier still runs on all 12 tools. One test cannot separate the mechanism from run to run variance, and the thinking layer's product did find four hazards the other missed, including operator fatigue on the return movement, which the other sheet left as a named phase with no hazard in it.
+
 ## 0.7.0 (2026-09-05) Thinking as a mechanism
 
 The kit produced documents faster than it thought about them. This release adds the thinking, built from the published evidence on how assistants fail rather than from intuition about what careful looks like, because three of the obvious fixes are measurably harmful.

@@ -38,6 +38,27 @@ SECTIONS = {
 }
 FALSIFIER = r"\b(?:becomes a fact|confirmed by|verified by|resolved by|turns into a fact|would make it a fact|fact when|from the (?:roster|record|order|log|training record))\b"
 CONSEQUENCE = r"\b(?:if false|if it is false|if that is wrong|if this fails|breaks|collapses|nothing changes|the (?:sheet|product|package|draft) cannot|changes the)\b"
+# A claim about the whole product that no pass in the check establishes. Measured failure: an
+# estimate asserting every gap was marked shipped with 25 unsupported facts, and the blind
+# reviewer routed the competing product for exactly that reason.
+COVERAGE_CLAIM = [
+    (r"\beach (?:missing item|gap|blank) is\b", "claims every gap is marked"),
+    (r"\bevery (?:gap|blank|assumption|missing item) is (?:marked|bracketed|listed|noted|captured)\b", "claims every gap is marked"),
+    (r"\bthe one assumption (?:this|the) \w+ cannot carry\b", "claims to have enumerated the assumptions"),
+    (r"\ball (?:other )?(?:gaps|assumptions|facts) (?:are|have been) (?:marked|verified|confirmed|checked)\b", "claims coverage"),
+    (r"\b(?:otherwise|else) (?:complete|verified|confirmed|checked)\b", "claims coverage"),
+    (r"\bnothing else is (?:assumed|missing|unmarked)\b", "claims coverage"),
+    (r"\bI (?:have )?verified the (?:numbers|facts)\b", "says verified without saying which, against what"),
+]
+# Phrases from the worked example in references/estimate.md. Their presence means the estimate was
+# copied from the example rather than written from the tasking.
+LIFTED = [
+    r"\bthe two prior counselings were documented rather than verbal\b",
+    r"\bare the prior counselings in the record book with dates\b",
+    r"\bdoes the CO intend this as adverse\b",
+    r"\bthe corpsman is TCCC current\b",
+    r"\bwhat went wrong or nearly wrong the last time this range was run\b",
+]
 LEADING = [
     (r"\b(?:right|correct|yes)\?\s*$", "ends by inviting agreement"),
     (r"\b(?:don't you|doesn't it|isn't it|wouldn't it|shouldn't it|didn't you)\b", "tag question"),
@@ -123,6 +144,15 @@ def main():
     checked = section(text, "checked")
     if checked and not re.search(r"\bcannot\b|\bnothing\b|\bnot check\w*\b|\bno (?:check|way)\b", checked, re.I):
         warns.append("the checked by section does not say what cannot be checked mechanically, which is the half the signer needs")
+
+    for pat, why in COVERAGE_CLAIM:
+        m2 = re.search(pat, text, re.I)
+        if m2:
+            fails.append(f"coverage claim ({why}): \"{m2.group(0)}\"; the check says what was not checked and never that everything else was")
+    for pat in LIFTED:
+        m2 = re.search(pat, text, re.I)
+        if m2:
+            fails.append(f"lifted from the worked example, not written from the tasking: \"{m2.group(0)}\"")
 
     for b in blocked_hits(text, allow=("medical", "SAPR or investigation", "substance", "financial")):
         fails.append(f"blocked content: {b}")

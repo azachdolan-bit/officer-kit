@@ -64,7 +64,13 @@ So: read it once, at speed, as the reader who has twenty of these. What does it 
 
 Stated in the delivery, in one or two sentences. Not a disclaimer, a map of where the signer's own attention is required.
 
-"The arithmetic and the required elements are checked mechanically. Nothing here can tell you the hazard list is complete or that the corpsman will be there, which are the two things that would actually hurt someone."
+"The prescribed wording and the required elements are checked mechanically. Nothing here can tell you the facts are right or that the counseling actually happened, and those are what a board would test."
+
+**Never claim coverage.** This pass says what was not checked. It does not say, in any wording, that everything else was. Sentences like "each missing item is bracketed," "every gap is marked," "this is the one assumption the product cannot carry," and "otherwise complete" are claims about the whole product, and no pass in this check establishes them.
+
+The failure is measured, on this kit's own output. A worksheet whose notes to the approver stated that each missing item was bracketed carried twenty five facts the tasking never supplied and that nothing marked as gaps: a start time, a road condition, a movement in darkness, a manned tower, an overnight on the range, and the entire content of the table being fired. A second worksheet for the same tasking, produced without this check, made no coverage claim and carried sixteen. A blind reviewer given both, told nothing about how either was made, routed the one that claimed nothing, for exactly this reason: the approving officer can only weigh what he is told, and a false assurance is worse than silence because he stops looking.
+
+So the honest form names its own basis: "checked against the matrix and the required elements" rather than "everything not listed is confirmed." Where the product carries assumptions, say "the assumptions I noticed," never "the assumptions."
 
 ## At each tier
 

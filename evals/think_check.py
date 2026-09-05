@@ -55,6 +55,34 @@ res.append(("think skill and red-team agent well formed", bool(ok)))
 # the red team agent never scores
 rt = open(os.path.join(S, "..", "agents", "red-team.md")).read()
 res.append(("red team refuses to score", "You do not score" in rt and "never scores" in rt))
+# the three defects the 5 Sep A/B test found, each with the artifact that exposed it
+sys.path.insert(0, f"{S}/think/scripts")
+import subprocess, tempfile  # noqa: E402
+def run(script, body, *args):
+    with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as f:
+        f.write(body); p = f.name
+    return subprocess.run([sys.executable, f"{S}/think/scripts/{script}", p, *args],
+                          capture_output=True, text=True)
+
+# 1. a risk level is not an undefined acronym
+r = run("precision_check.py", "# Sheet\n\nThe residual is IID and the initial was IIB. Hazard two sits at IE.\n", "--directive")
+res.append(("risk levels do not read as undefined acronyms", "acronym" not in r.stdout))
+
+# 2. a coverage claim in a delivered product fails, at every tier
+r = run("precision_check.py", "# Sheet\n\nThe head count is not filled in. Each missing item is a gap rather than an omission.\n")
+res.append(("coverage claim in a product fails", r.returncode == 1 and "coverage claim" in r.stdout))
+r = run("precision_check.py", "# Sheet\n\nChecked against the matrix and the required elements. Nothing here confirms the hazard list is complete.\n")
+res.append(("naming what was not checked still passes", r.returncode == 0))
+
+# 3. content lifted from the worked example fails
+r = run("estimate_check.py", "# E\n\nTier: deliberate, it enters a permanent record.\n\n## Task\nx\n\n## Standard\nfrom the order\n\n## Facts\nthree dates from the duty log\n\n## Assumptions\n- The two prior counselings were documented rather than verbal. Becomes a fact from the record. If false, the entry breaks.\n\n## Questions\n- Are the prior counselings in the record book with dates? Changes whether the entry stands.\n\n## Will not do\nx\n\n## Checked by\nnothing mechanical can check the facts\n")
+res.append(("estimate lifted from the worked example fails", r.returncode == 1 and "lifted from the worked example" in r.stdout))
+
+# the example itself is not in the same domain as the tool most often run at this tier
+ex = open(f"{S}/think/references/estimate.md").read()
+res.append(("worked example is not a risk worksheet", "Read this for its shape and take none of its content" in ex
+            and "6105" in ex and "corpsman is TCCC current" not in ex))
+
 bad = 0
 for n, k in res:
     print(f"{'PASS' if k else 'FAIL'}  {n}"); bad += 0 if k else 1

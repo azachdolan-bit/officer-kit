@@ -35,6 +35,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from estimate_check import COVERAGE_CLAIM  # noqa: E402
 
 SOFT = [
     "several", "many", "numerous", "various", "a number of", "significant", "significantly",
@@ -46,6 +47,9 @@ VAGUE_DEADLINE = r"\b(?:as soon as possible|asap|at the earliest|expeditiously|i
 MODALS = ("must", "shall", "will", "should", "may")
 HIDDEN_VERB = r"\b(?:conduct|performance|perform|provide|provision|make|give|take|carry out|effect|undertake)\s+(?:of\s+)?(?:an?\s+|the\s+)?(\w+(?:tion|ment|ance|ence|sion|ing))\b"
 ACRONYM = r"\b([A-Z]{2,6}(?:-[A-Z0-9]{1,4})?)\b"
+# A risk level is a severity (I to IV) beside a probability (A to E). It is not an acronym, and
+# flagging all fourteen rows of a worksheet as undefined acronyms is how a check becomes noise.
+RISK_LEVEL = re.compile(r"^(?:I|II|III|IV)[A-E]$")
 KNOWN = {
     "USMC", "MOS", "NCO", "SNCO", "OIC", "RSO", "PFT", "CFT", "UCMJ", "CO", "XO", "SOP", "MCO",
     "NAVMC", "SECNAV", "OPORD", "FRAGO", "AAR", "RAW", "RAC", "EAP", "ECP", "TCCC", "MEDEVAC",
@@ -136,12 +140,19 @@ def main():
     seen = set()
     for m in (re.finditer(ACRONYM, text) if directive else []):
         a = m.group(1)
-        if a in KNOWN or a in seen or a.isdigit():
+        if a in KNOWN or a in seen or a.isdigit() or RISK_LEVEL.match(a):
             continue
         seen.add(a)
         expanded = re.search(r"\(\s*" + re.escape(a) + r"\s*\)", text) or re.search(re.escape(a) + r"\s*\([A-Za-z][^)]{6,}\)", text)
         if not expanded:
             warn("acronym", f"acronym '{a}' never expanded")
+
+    # A coverage claim is not a style defect, it is a false statement to the approving officer, and
+    # it lands in the delivered product rather than in the estimate. It fails at every tier.
+    for pat, why in COVERAGE_CLAIM:
+        m = re.search(pat, text, re.I)
+        if m:
+            fails.append(f"coverage claim ({why}): \"{m.group(0)}\"; say what was checked, never that everything else was")
 
     for i, para in enumerate(text.split("\n\n")):
         lines = [l for l in para.splitlines() if l.strip()]

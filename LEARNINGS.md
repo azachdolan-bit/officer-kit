@@ -17,6 +17,20 @@ A lesson that would soften a gate, reduce sourcing, or suppress a reviewer is re
 
 ---
 
+## 2026-09-05  think  high
+Evidence: The first end to end test of the deliberate tier (evals/ab-test-2026-09-05/). Two blind drafters, same tasking, one with the thinking layer and one without. A blind reviewer chose the worksheet built WITHOUT it, because the one built with it asserted 25 facts the tasking never supplied while telling the approver in writing that every gap was marked. Three of its five questions came from the worked example in estimate.md rather than from the tasking, and it never asked the question the tasking made obvious.
+Lesson: A worked example in the same domain as the task supplies answers instead of teaching form. Keep every worked example in a different product from the tool it teaches, say in the example itself that its content is not to be taken, and fail an estimate that reuses its phrases.
+Status: approved 0.7.1
+
+## 2026-09-05  think  high
+Evidence: Same test. The check's sixth pass, "what was not checked," was inverted into "each missing item is a gap rather than an omission, and each one is bracketed above." That sentence is a claim about the whole product that no pass in the check establishes, and it was false. The competing product made no such claim and was preferred for that reason alone.
+Lesson: Never write that everything missing is marked, that every gap is bracketed, or that something is the one assumption a product cannot carry. Say what was checked and against what. A false assurance is worse than silence, because the signer stops looking.
+Status: approved 0.7.1
+
+## 2026-09-05  think  medium
+Evidence: Same test. precision_check.py read every risk level (IE, IID, IIB) as an undefined acronym, adding about twenty junk warnings to a risk worksheet, which is the document type it had just been wired into. Second time in two days that a checker was shipped without being run on its own target document.
+Lesson: Before wiring a checker into a tool, run it on that tool's own exemplar and read every line of the output. A check whose output nobody will read is worth less than no check, because the record then says it ran.
+
 ## 2026-09-04  naval-letter  high
 Evidence: The signed 1501c letter took nine revision passes; every rule in the correspondence standard exists because something looked finished and was wrong.
 Lesson: Measure the rendered PDF with pdftotext bbox; never eyeball line pitch. Copy the heading block from the user's rules file, never reconstruct it.

@@ -1,0 +1,25 @@
+Worksheet is drafted and the checker passes clean. Read the estimate first if you have two minutes, because it is where you can redirect this cheaply; the sheet itself is `raw.md`.
+
+**Tier: deliberate.** Someone can be hurt on this range and the approval level falls out of the arithmetic, so I ran the full estimate before drafting and the full check before handing it over. Nothing lowers that. You can raise it.
+
+**Where it landed.** Fourteen hazards across six phases. Highest residual is ID, which is HIGH on Figure 3-4. **Not** High Risk Training: nothing sits at IA, IB, IIA or IIB after controls, and Table 2 is not one of the order's examples at 040303. That routes to your battalion commanding officer as the first O-5, which lines up with battalion expecting to sign it. But do not read "not high risk" as "not dangerous": hazards 2 and 5 hold a residual severity of I, meaning the worst credible outcome is still a death, and your CO can elect to treat the event as high risk. I wrote the emergency action plan, the cease training procedure, the communications plan and the pre execution checklist into the sheet either way, because that is what you and your platoon sergeant will actually run off on the day.
+
+**Five questions. The second one blocks a signature.**
+
+1. What are the two dates, and what is the head count off the company roster? Sets the header and sizes the water, the transport and the response.
+2. What is the corpsman's trauma certification and its date, and who is the second corpsman if that one gets pulled? Two residual levels rest on a corpsman being present and current for every serial on both days. This is the assumption the sheet cannot carry by itself, and I would not send it to battalion with this one open.
+3. Beyond the heat casualty, what else went wrong or nearly went wrong out there last year, and what does range control's own mishap history for Range 7 hold? This changes the hazard list, which is the one part of the sheet no script can check.
+4. Which installation owns Range 7, and what do its range regulations and range control require for evacuation, radio watch and dud rounds? Every bracket in the emergency action plan closes with this answer.
+5. Does the battalion publish its own worksheet form, matrix or approval table? If it does, it governs over the order's figure and I rebuild the levels and the approval line on it.
+
+**What I assumed, so you can overrule it.** That you move to the range by vehicle in the dark rather than on foot (hazards 6, 7 and 14 come off if you do not). That October at your location still produces a flag condition worth a work rest cycle. That battalion has no form of its own. I rated last year's heat casualty as an initial probability of B rather than C, and I did that deliberately: it happened, on this range, on day two. The residual is D, not E, because the same two day pattern repeats and I am not going to pretend a work rest cycle makes heat unlikely.
+
+**Two things I did not do.** I did not name anybody. Billets only in the body; your name and your platoon sergeant's go on the signature block when you transfer this to the command's form. And I did not fill the gaps: head count, dates, installation, frequencies, telephone numbers, evacuation route and receiving facility are all bracketed. An invented control on a risk worksheet and an invented number are the same act, so they stay as brackets until you close them.
+
+**What was not checked.** `raw_check.py` verified the arithmetic in all fourteen rows against Figure 3-4, the high risk flag against the residual pairs, the approval line, the required sections, and that no name or blocked content is in the body. Exit code 0, no warnings. Nothing mechanical can tell you the hazard list is complete, that the corpsman will be there, or that the safeties will do what the control column says they will. Those are the three things that would actually hurt a Marine, and they are exactly where your own attention has to go before you sign.
+
+**Two shortcuts, named.** The order is not on this machine, so I worked from the skill's verified extracts of paragraphs 030302 and 040302 to 040304 and of Figures 3-4 and 4-2 rather than from the publication itself. I did not go to the web for it. Second, I have no `Overrides/risk-assessment.md` and no folder of your command's approved worksheets in this environment, so nothing here reflects your battalion's own form, standing controls or signature routing; put those in the override file and this gets better every time you run it.
+
+One more, and it is the fastest route to Friday: the order lets a repeated event reuse last year's worksheet once it is updated and every assessment is re verified (040304.B). If last year's sheet still exists, send it over. Reconciling this one against it will find hazards neither of us thought of, and it will show your CO the update rather than a new document.
+
+When range control or the approver changes something, tell me and `aar` will capture it after the event.
