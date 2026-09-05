@@ -17,6 +17,11 @@ A lesson that would soften a gate, reduce sourcing, or suppress a reviewer is re
 
 ---
 
+## 2026-09-05  qc-gates  high
+Evidence: Checked where a Cowork session's project root actually is. It is the cloud container (`/home/claude`), not the user's connected folder. The container's own `~/.claude/` holds the platform's hook scripts and no settings.json, and the connected folder has no `.claude` directory at all. A hook configured at `<working folder>\.claude\settings.json` is therefore never read by a Cowork session. The kit had been planning blocking hooks as the next infrastructure step, and OFFICER ANALYSIS.md recommended them in three places.
+Lesson: Do not plan on blocking hooks in Cowork. A checker runs because a skill's workflow runs it and because a reviewer would catch a product that skipped it, not because a hook forces it. Blocking hooks are available only to Claude Code run locally with the working folder as its root, and any tool that depends on one must say so.
+Status: approved 0.8.2
+
 ## 2026-09-05  build-a-skill  high
 Evidence: The first real install attempt of the packaged plugin failed with eight errors at once: the plugin description was 683 characters against a 500 limit, the `inspect` skill description contained an XML tag, and all six agents had invalid YAML frontmatter because an `<example>` block at column 1 parses as a new YAML key. All five eval harnesses were passing at the time. An earlier session had recorded the opposite conclusion, that agent frontmatter is invalid YAML by design and should be checked with a regex; that was wrong and it hid this for two versions.
 Lesson: Agent frontmatter must be valid YAML. Put the description and its `<example>` blocks in a literal block scalar (`description: |`, every line indented two spaces), keep the description under 1024 characters, and move surplus examples into the body. Never validate frontmatter with a regex to work around a parse failure; the parse failure is the finding.

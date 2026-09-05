@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.8.2 (2026-09-05) Installed, and one unknown closed in the negative
+
+The plugin installed: 36 skills and 6 agents register. `claude-field-kit` was uninstalled the same day, since 9 skills existed in both namespaces and this kit's are the newer supersets.
+
+- **Blocking hooks are off the roadmap.** A Cowork session's project root is the cloud container, not the user's connected folder, so a hook configured in that folder is never read. The checkers stay steps the skills run and gates the reviewers enforce; blocking hooks are available only to Claude Code run locally with the working folder as its root. MODULES.md and OFFICER ANALYSIS.md corrected in four places; the recommendation had appeared in three of them.
+- The user's rules file canary was updated to "Officer Kit 0.8.1 installed" with a line stating what the canary is for, so the remaining question (does a fresh session read the rules file at all) is one question away from an answer.
+
+Still open: whether a fresh session reads the working folder's rules file, where an agent's `memory: project` persists, `claude plugin eval` gating, and whether a private repo can serve as a marketplace for other people.
+
 ## 0.8.1 (2026-09-05) It would not install
 
 The first real install attempt failed with eight errors while all five eval harnesses were green. The kit had no check for whether the package would install.
