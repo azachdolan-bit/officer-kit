@@ -100,90 +100,43 @@ The CIA's Key Assumptions Check adds the step people skip. Its fourth step is a 
 
 And MCWP 5-10 Appendix G already maps the techniques to the work. Problem framing gets Four Ways of Seeing, Key Assumptions Check, and Frame Audit. Course of action development gets Team A / Team B, premortem, devil's advocate, and stakeholder mapping. The war game and the comparison get devil's advocate; the comparison gets another Key Assumptions Check. Orders development gets Analysis of Competing Hypotheses and divergent/convergent analysis. Transition gets Four Ways of Seeing, outside in thinking, and five whys. The Marine Corps did the mapping. The kit implements it.
 
-## Part 4. The mechanisms
+## Part 4. What was built, what was tested, and what survived
 
-Three, plus a tier rule that governs when each runs.
+Version 0.7.0 built all of Part 3 into the kit: a consequence tier on 24 tools, an estimate written before drafting, a six pass check before delivery, ten named tripwires, and per modality tailoring. None of it had ever been run end to end.
 
-### The tiers
+On 5 September 2026 it was. Two agents drafted the same risk assessment worksheet from the same tasking, one with the thinking layer and one with it deleted, neither knowing the other existed. Both were handed to a blind reviewer with provenance stripped and the order shuffled. Every artifact is in `evals/ab-test-2026-09-05/`.
 
-Named for the planning modes the Marine Corps already uses, and assigned by consequence, not by length.
+**The reviewer chose the worksheet built without the thinking layer.**
 
-**Deliberate.** The full estimate and the full check. Triggered by any one of: someone can be hurt; it enters a person's record and cannot be removed; it has legal effect; a board or approving authority makes an irreversible decision from it. Risk assessments, range packages, investigations, DD 200s, Page 11 entries, fitness reports, awards, meritorious promotion and nomination packages, counseling, board briefs, operation orders.
+Both passed the mechanical checker clean. Both reached the same residual level and the same approval authority. Both left ten blanks open. The difference was that the thinking layer's product asserted twenty five facts the tasking never supplied, and told the approving officer in writing that each missing item was bracketed. Among the unmarked assertions: a start time, a road condition, a movement in darkness, a manned range tower, an overnight on the range, and the entire content of the table being fired.
 
-**Rapid.** Standard, assumptions, one check. Products that go to a decision maker and are reversible: naval letters, letters of recommendation, training schedules, after action reports, safety briefs, inspection self assessments, reporting senior profile work.
+Two causes, both properties of the documents rather than run to run luck.
 
-**Running estimate.** One line naming the standard and the single assumption that matters, then work. Letters of appreciation, weekly updates, folder and inbox work.
+**A worked example in the same domain supplies answers instead of teaching form.** The estimate template carried a worked live fire range estimate. Three of the five questions the drafter asked came out of it. The one question the tasking obviously raised, which was what "Table 2" referred to, was never asked, because the example did not ask it; five of fourteen hazards were then built on a guess. The drafter with no example asked it first.
 
-The tool states which tier it is running and why, in one line, so the user can raise it. Anyone can raise a tier; nobody can lower a deliberate product below deliberate.
+**A pass that names limits can be inverted into an assurance.** "What was not checked" became "everything else was." That claim is worse than silence, because the signer stops looking.
 
-### The estimate, before work
+This is the section's real lesson, and it generalizes past this kit: a template gets filled in instead of thought about. Structure that is meant to slow reasoning down substitutes for it instead. That is the same finding as the rigid schema result in Part 2, arriving from a different direction, and it should have been predicted.
 
-Six items, written as prose, never as a form to fill. On a rapid product it is three lines. Its purpose is to make the underspecification pass exist as a distinct step.
+### What survived
 
-1. **The task and the outcome it serves.** What is being produced, and what decision or effect it feeds. Then the XY check: is the named product the thing that gets that outcome? If a letter of appreciation is being written because a Marine deserves recognition, the question is whether a letter is the right instrument, and the answer might be an award or a meritorious mast.
-2. **The standard.** Which publication governs, which paragraph, and whether it is on disk. Not on disk means the tool says so and marks what it could not verify.
-3. **Facts and assumptions, separated, with the assumptions tested.** Facts carry sources. Each assumption gets MCWP 5-10's four questions, and the ones that are not essential are deleted rather than kept. Each survivor carries what would turn it into a fact and what breaks if it is false.
-4. **The questions that change the answer.** Only questions whose answer changes the product, each stated with what it changes. Phrased so they do not contain the answer. A question the tool can answer by reading a source is not asked; it is answered.
-5. **What this will not do.** The scope boundary and the judgments the tool does not make.
-6. **How this gets checked.** Which mechanical check runs, which reviewer, and what cannot be checked mechanically.
+Four rules, no template, in `skills/think/SKILL.md`.
 
-### The check, after work and before delivery
+1. **Assume it already failed, before drafting.** Not "what could go wrong," but the failure asserted in this product's terms, with three reasons written before the draft or the list exists. This is the one mechanism the test rewarded: it is why the thinking layer's worksheet caught operator fatigue on the return movement after a two day range, which the other sheet left as a named phase with no hazard in it. It costs three sentences.
+2. **Ask only what changes the product, and never inside the question supply the answer.** A question carrying a candidate answer produces that answer. Ask what this tasking raises, not what a similar product usually raises.
+3. **Say what you assumed; never say the rest is covered.** Mark gaps in the product so it cannot be signed without closing them, then stop. `precision_check.py` fails a coverage claim at every tier.
+4. **Hand anything that gets signed to the blind red team.** The only mechanism that brings a signal from outside the session, and the one that caught everything the others missed.
 
-1. **Premortem.** State the failure as having happened, in the specific terms of this product: the board rejected this package, the staff judge advocate returned this investigation, a Marine was injured on this event. Then three reasons, written before rereading the draft.
-2. **Expected but absent.** What would be in a good version of this that is not here?
-3. **Adversarial read.** Every directive sentence, read for the most inconvenient compliant meaning.
-4. **Reconciliation.** Every number and claim against its source, mechanically wherever a checker exists.
-5. **Single rapid reading.** What does this require of the reader, read once, at speed?
-6. **What was not checked.** Stated plainly, in the delivery.
+### What was removed, and why
 
-### The tripwires, during work
+- **The estimate document.** It produced the false coverage claim and it anchored on its own example. Its stated purpose was to surface unknowns; the drafter without it surfaced more of them.
+- **The six formal passes.** The premortem survived as rule 1. Reconciliation is what the product checkers already do. The rest was ceremony, and Part 2 predicts what ceremony does.
+- **The named tripwires and the per modality tailoring.** Reference material nobody reads at the moment of drafting. The two rules that were doing work, never fill a gap and name the shortcut you took, are inside rules 2 and 3.
+- **The announced tier labels.** A tool telling the user which tier it is running at is output that changes nothing.
 
-Named shortcuts. Each is a stop, not a warning, and the correct response to a tripwire is usually a sentence in the delivery rather than a refusal to proceed.
+The kit is smaller after being tested than it was before. That is the expected result of testing something, and it is the argument for testing the next thing before shipping it to 24 tools.
 
-- About to state a fact not read from a source in this session: cite it or mark it unverified.
-- About to use a web copy of a publication that might be in the library: run the finder first.
-- About to accept the user's framing as the problem: run the XY check.
-- About to produce the deliverable without knowing what decision it feeds: run the estimate.
-- The user pushed back on a fact: their pushback is evidence about their view, not about the fact. Re-derive from the source. If the source still says what it said, say so once with the paragraph, then comply and record the disagreement.
-- About to write "approximately," "several," or "significant" where a number exists: get the number.
-- About to fill a gap because the draft looks unfinished: a gap is reported, never filled.
-- Took a shortcut and it is defensible: name the shortcut and why, in the delivery. This is the one that keeps the others honest.
-
-## Part 5. By modality
-
-The general mechanisms above, tailored to the five kinds of work in this kit.
-
-### Risk
-
-Hazard identification is a failure of imagination, so the premortem runs **before** the hazard list, not after it. Three Marines were hurt on this event: how? The list that comes out of that question is longer and less generic than the list that comes out of "what are the hazards."
-
-Then the expected but absent question applied to hazards: what hazard appears on every worksheet for an event like this that is not on mine? Then MCWP 5-10's fourth assumption question, generalized: does this control assume away the thing most likely to fail? A control that depends on the one person who is also doing three other jobs assumes away the thing most likely to fail.
-
-The arithmetic is mechanical and already checked. The judgment is whether the hazard list is complete, and nothing mechanical can check that, which the tool says.
-
-### Planning and orders
-
-MCWP 5-10 Appendix G is the map, and the kit follows it rather than inventing one. Key assumptions check at problem framing and again at comparison. Four Ways of Seeing whenever another unit, a partner, or an adversary is involved. Premortem and devil's advocate at course of action development. Analysis of competing hypotheses at orders development. The tool names which technique it is running and why.
-
-### Writing that goes in a record
-
-This is where precision is the whole job. Three passes.
-
-The **tagging pass**, from the intelligence community's analytic standards: every sentence is information the user supplied, an assumption, or a judgment. In an award summary, "trained 550 personnel" is information, "which closed the section's shortfall" may be a judgment, and anything that is neither is a gap to ask about rather than fill.
-
-The **adversarial pass**: every directive sentence read for its most inconvenient compliant meaning. "Report to the duty noncommissioned officer daily" permits reporting at 2359. "Report to the duty noncommissioned officer not later than 0740 on every duty day" does not.
-
-The **structure pass**, mechanically checkable: center embedded clauses, sentences past 25 words against the 15 word target, paragraphs past 10 lines, unquantified quantifiers, passive directive sentences with no actor, mixed modals in a requirements document, ambiguous sentence initial pronouns, undefined acronyms.
-
-### Investigation and inquiry
-
-Analysis of Competing Hypotheses belongs here and only here, because the JAGMAN's structure already demands it and because the failure mode is committing to one explanation early. The kit's version: list the hypotheses before the findings are written, focus on what disconfirms rather than what confirms, ask what evidence would be expected under each hypothesis and is absent, and check the quality of each source before the finding rests on it. The tool never selects the hypothesis; the investigating officer does.
-
-### Evaluation
-
-Awards level checks, fitness report marks, promotion recommendations. The requester's desired outcome is quarantined: the criteria assessment runs against the facts and the manual without the requested level in view, and only then is the request compared to the assessment. This is the anchoring fix applied where anchoring does the most damage, because an award package written to a level rather than to the facts is the thing the awards order specifically warns about.
-
-## Part 6. What this does not fix
+## Part 5. What this does not fix
 
 Stated plainly, because a document about critical thinking that oversells itself has failed on its own terms.
 

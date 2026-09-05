@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.8.0 (2026-09-05) Four rules, after the test
+
+0.7.1 fixed the two defects the A/B test found and left the rest of the thinking layer standing. This release removes the rest of it. What the test actually rewarded was small, and what it punished was the apparatus: a template gets filled in instead of thought about.
+
+Four rules survive, in `skills/think/SKILL.md`, and they are the whole skill:
+
+1. Assume it already failed and write three reasons before drafting anything.
+2. Ask only the questions whose answers change the product, and never put a candidate answer inside the question.
+3. Say what you assumed and mark it in the product. Never write that the rest is covered.
+4. Hand anything that gets signed to the blind `red-team` agent.
+
+Removed:
+
+- `think/references/estimate.md`, `check.md`, `tripwires.md`, `by-modality.md`, and `think/scripts/estimate_check.py`. The estimate produced the false coverage claim and anchored on its own example; its purpose was to surface unknowns and the drafter without it surfaced more of them. The premortem survives as rule 1, reconciliation is what the product checkers already do, and the rest was ceremony.
+- The announced consequence tier. A tool telling the user which tier it is running at is output that changes nothing.
+- The tier block on the four routine tools, entirely.
+
+Changed:
+
+- The 20 tools that produce something someone signs carry the four rules in a `## Before you draft` block, with each tool's own tailoring kept: the premortem before the hazard list on a risk worksheet, competing hypotheses on an investigation, MCWP 5-10 Appendix G on an order.
+- `precision_check.py` absorbs the coverage claim patterns and is now the skill's only script.
+- `CRITICAL THINKING.md` Part 4 is now what was built, what was tested, and what survived, and it says the kit got smaller after being tested. Parts 1 through 3 are unchanged, because the evidence in them is what predicted this result.
+- `start/references/conventions.md` convention 5, MODULES.md, `evals/think_check.py` (13 of 13).
+
 ## 0.7.1 (2026-09-05) The thinking layer, tested against itself
 
 0.7.0 shipped an estimate and a check onto 24 tools without ever running one end to end. This release is that test and what it found. The test is in `evals/ab-test-2026-09-05/` with every artifact, because the result went against the feature.

@@ -35,7 +35,6 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from estimate_check import COVERAGE_CLAIM  # noqa: E402
 
 SOFT = [
     "several", "many", "numerous", "various", "a number of", "significant", "significantly",
@@ -46,6 +45,18 @@ SOFT = [
 VAGUE_DEADLINE = r"\b(?:as soon as possible|asap|at the earliest|expeditiously|in the near future|shortly|in due course)\b"
 MODALS = ("must", "shall", "will", "should", "may")
 HIDDEN_VERB = r"\b(?:conduct|performance|perform|provide|provision|make|give|take|carry out|effect|undertake)\s+(?:of\s+)?(?:an?\s+|the\s+)?(\w+(?:tion|ment|ance|ence|sion|ing))\b"
+# A claim about the whole product that no pass in the check establishes. Measured failure: an
+# estimate asserting every gap was marked shipped with 25 unsupported facts, and the blind
+# reviewer routed the competing product for exactly that reason.
+COVERAGE_CLAIM = [
+    (r"\beach (?:missing item|gap|blank) is\b", "claims every gap is marked"),
+    (r"\bevery (?:gap|blank|assumption|missing item) is (?:marked|bracketed|listed|noted|captured)\b", "claims every gap is marked"),
+    (r"\bthe one assumption (?:this|the) \w+ cannot carry\b", "claims to have enumerated the assumptions"),
+    (r"\ball (?:other )?(?:gaps|assumptions|facts) (?:are|have been) (?:marked|verified|confirmed|checked)\b", "claims coverage"),
+    (r"\b(?:otherwise|else) (?:complete|verified|confirmed|checked)\b", "claims coverage"),
+    (r"\bnothing else is (?:assumed|missing|unmarked)\b", "claims coverage"),
+    (r"\bI (?:have )?verified the (?:numbers|facts)\b", "says verified without saying which, against what"),
+]
 ACRONYM = r"\b([A-Z]{2,6}(?:-[A-Z0-9]{1,4})?)\b"
 # A risk level is a severity (I to IV) beside a probability (A to E). It is not an acronym, and
 # flagging all fourteen rows of a worksheet as undefined acronyms is how a check becomes noise.

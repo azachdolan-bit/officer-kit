@@ -30,9 +30,12 @@ Every officer is handed one of these with no notice and a 30 day clock. The Manu
 3. The label rule is strict here: the subject and witnesses are `<WITNESS 1>`, `<SUBJECT>`, billets only; names go in at the last step on the user's computer. Nothing from the report body ever goes to a commercial model with a name attached.
 4. When the SJA returns the report, `aar` captures why, without the facts of the case.
 
-## Thinking (tier: deliberate)
+## Before you draft
 
-**Deliberate**, because it has legal effect and enters a record. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+1. **Assume it already failed** and write three reasons before you build anything, then check each against the draft. Reasons written after rereading a draft are a list of what the draft already covers.
+2. **Ask only what changes the product,** and never put a candidate answer inside the question.
+3. **Say what you assumed** and mark it in the product so it cannot be signed without being closed. Never write that the rest is covered; `think/scripts/precision_check.py` fails a product that claims it.
+4. **Before it is signed:** the `red-team` agent, blind, with the standard and an exemplar.
 
 List the competing hypotheses before writing findings, including the one where nobody did anything wrong. Work to disconfirm rather than confirm, and ask what evidence each hypothesis predicts that is absent.
 

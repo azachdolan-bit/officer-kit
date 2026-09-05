@@ -33,13 +33,16 @@ Format: a heading per topic and short lines under it. No names of other Marines.
 
 `LEARNINGS.md` in the working folder is the user's lessons queue, written by `aar` (or by hand) when a product came back with edits, a board answered differently than the tool expected, or a reviewer caught something. `inspect` turns approved lessons into override lines or, when a lesson belongs in the plugin itself, into a change proposal the user can send to the kit's repository. The plugin's own `LEARNINGS.md` is the author's queue; the user's is theirs.
 
-## 5. Thinking is proportional, and it is written down
+## 5. Thinking is four rules, and they were tested
 
-Every product tool runs at a consequence tier. **Deliberate** when someone can be hurt, when it enters a record that cannot be removed, when it has legal effect, or when a board decides something irreversible from it. **Rapid** when it goes to a decision maker and is reversible. **Running** for routine work. The tool says which tier it is running and why, in one line, and anyone can raise a tier.
+Every product that someone signs runs four rules before it is drafted. Assume it already failed and write three reasons before building anything. Ask only the questions whose answers change the product, and never put a candidate answer inside the question. Say what you had to assume and mark it in the product, and never write that the rest is covered. Hand anything that gets signed to the blind `red-team` agent.
 
-At the deliberate tier the tool writes an estimate before it drafts: the task and the outcome it serves, the standard and whether it is on disk, facts separated from tested assumptions, the questions whose answers change the product, what it will not do, and how it gets checked. Before delivery it runs the check: premortem, expected but absent, adversarial read, reconciliation, single rapid reading, and a plain statement of what was not checked.
+That is all of it. There is no estimate to write and no checklist to work through.
 
-This is not a promise of better answers, and the `think` skill says so with the evidence. Structured technique tested on fifty intelligence analysts moved accuracy from 33 to 36 percent, which is nothing. What it moved was whether they considered the diagnosticity of their evidence, from 32 to 80 percent. What the estimate buys is a record the signer can read: what was assumed, what was considered, what would change the answer, and what nothing checked.
+The kit used to carry more. On 5 September 2026 it was tested: two drafters, same tasking, one with the full thinking layer and one with it deleted, judged blind. The reviewer chose the one built without it, because the version with it asserted twenty five facts nobody supplied while stating in writing that every gap was marked. `evals/ab-test-2026-09-05/` holds the artifacts and `CRITICAL THINKING.md` holds the reasoning. What is left is what survived that test.
+
+This buys a legible record rather than a better answer, and the difference matters. Structured technique tested on fifty intelligence analysts moved accuracy from 33 to 36 percent, which is nothing. What the signer gets is a product that says what was assumed and does not pretend to have covered the rest.
+
 
 ## The line every rendered product carries
 

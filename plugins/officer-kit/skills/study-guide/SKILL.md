@@ -28,11 +28,13 @@ Accept a file in the linked folder, an attachment, or pasted text. Published doc
 
 If the user says "quiz me," ask one question at a time. Wait for the answer. Grade it in one line, give the correct answer if they missed, then the next question. At the end, list what they missed and offer to drill those.
 
-## Thinking (tier: rapid)
+## Before you draft
 
-**Rapid**, because a person studies from it. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+Assume this already failed and write three reasons before you build anything, then check each against the draft.
 
-The expected but absent pass: what would a student need that the source does not carry, and is that gap named rather than filled?
+Also ask what a student would need that the source does not carry, and make sure that gap is named rather than filled in.
+
+Say what you had to assume. Never write that the rest is covered.
 
 ## Rules
 

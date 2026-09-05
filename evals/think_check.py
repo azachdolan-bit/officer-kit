@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Deterministic evals for the thinking mechanisms: the estimate checker, the precision checker,
-and the wiring that puts a tier on every product tool. Exit 0 = all pass."""
+"""Deterministic evals for the four rules that survived the 5 Sep 2026 A/B test: the precision
+checker, the coverage claim ban, and the wiring that puts the rules on every tool that gets signed.
+Exit 0 = all pass."""
 import os, re, subprocess, sys, glob
 H = os.path.dirname(os.path.abspath(__file__)); S = os.path.join(H, "..", "plugins", "officer-kit", "skills")
 def run(*a): return subprocess.run([sys.executable, *a], capture_output=True, text=True)
@@ -9,10 +10,6 @@ def case(name, script, inp, code, *needles, extra=()):
     r = run(f"{S}/{script}", f"{H}/{inp}", *extra)
     res.append((name, r.returncode == code and all(n in r.stdout for n in needles)))
 
-case("estimate good", "think/scripts/estimate_check.py", "think/inputs/estimate_good.md", 0, "clean", "tier deliberate")
-case("estimate bad", "think/scripts/estimate_check.py", "think/inputs/estimate_bad.md", 1,
-     "no 'Tier:' line", "missing section: scope", "assumption is sitting in the facts section",
-     "no falsifier", "no consequence", "leading question", "no statement of what its answer changes")
 case("precision loose", "think/scripts/precision_check.py", "think/inputs/loose.md", 1,
      "center embedded", "soft quantifier", "passive with no actor", "vague deadline", "and/or",
      "hidden verb", "mixed modals", "pronoun and no noun", "never expanded", extra=("--directive",))
@@ -27,18 +24,30 @@ t.write("# X\n\n<!-- prescribed -->\nThe vehicles will be inspected as required 
 r = run(f"{S}/think/scripts/precision_check.py", t.name, "--directive")
 res.append(("prescribed text skipped", r.returncode == 0 and "as required" not in r.stdout)); os.unlink(t.name)
 # every product tool carries a tier, and the tiers are the ones the think skill lists
-TIERS = {"deliberate": ["risk-assessment","range-package","investigation","dd200","page-11","fitrep","award","meritorious-promotion","nomination","counseling","board-brief","order-critique"],
-         "rapid": ["naval-letter","letter-of-recommendation","training-schedule","after-action","safety-brief","inspection-prep","rs-profile","study-guide"],
-         "running": ["letter-of-appreciation","week-ahead","folder-triage","inbox-triage"]}
+SIGNED = ["risk-assessment","range-package","investigation","dd200","page-11","fitrep","award",
+          "meritorious-promotion","nomination","counseling","board-brief","order-critique",
+          "naval-letter","letter-of-recommendation","training-schedule","after-action",
+          "safety-brief","inspection-prep","rs-profile","study-guide"]
+ROUTINE = ["letter-of-appreciation","week-ahead","folder-triage","inbox-triage"]
 missing = []
-for tier, tools in TIERS.items():
-    for t in tools:
-        p = os.path.join(S, t, "SKILL.md")
-        txt = open(p).read() if os.path.exists(p) else ""
-        if f"## Thinking (tier: {tier})" not in txt:
-            missing.append(f"{t} ({tier})")
-res.append(("every product tool carries its tier", not missing))
-if missing: print("  missing tiers:", ", ".join(missing))
+for t in SIGNED:
+    p = os.path.join(S, t, "SKILL.md")
+    txt = open(p).read() if os.path.exists(p) else ""
+    if "## Before you draft" not in txt or "Assume it already failed" not in txt.replace("Assume this already failed","Assume it already failed"):
+        missing.append(t)
+res.append(("every signed product runs the four rules", not missing))
+if missing: print("  missing:", ", ".join(missing))
+extra = [t for t in ROUTINE if "## Before you draft" in (open(os.path.join(S,t,"SKILL.md")).read() if os.path.exists(os.path.join(S,t,"SKILL.md")) else "")]
+res.append(("routine tools carry no ceremony", not extra))
+if extra: print("  unexpected:", ", ".join(extra))
+th = open(f"{S}/think/SKILL.md").read()
+res.append(("think skill states all four rules",
+            all(x in th for x in ["Assume it already failed, before you draft",
+                                  "Ask what you cannot answer",
+                                  "Never say you covered the rest",
+                                  "Hand anything that gets signed to the red team"])))
+import glob as _g
+res.append(("the deleted templates are gone", not _g.glob(f"{S}/think/references/*") and not os.path.exists(f"{S}/think/scripts/estimate_check.py")))
 # the think skill and the red team agent exist and are well formed
 import yaml
 ok = os.path.exists(f"{S}/think/SKILL.md")
@@ -73,15 +82,6 @@ r = run("precision_check.py", "# Sheet\n\nThe head count is not filled in. Each 
 res.append(("coverage claim in a product fails", r.returncode == 1 and "coverage claim" in r.stdout))
 r = run("precision_check.py", "# Sheet\n\nChecked against the matrix and the required elements. Nothing here confirms the hazard list is complete.\n")
 res.append(("naming what was not checked still passes", r.returncode == 0))
-
-# 3. content lifted from the worked example fails
-r = run("estimate_check.py", "# E\n\nTier: deliberate, it enters a permanent record.\n\n## Task\nx\n\n## Standard\nfrom the order\n\n## Facts\nthree dates from the duty log\n\n## Assumptions\n- The two prior counselings were documented rather than verbal. Becomes a fact from the record. If false, the entry breaks.\n\n## Questions\n- Are the prior counselings in the record book with dates? Changes whether the entry stands.\n\n## Will not do\nx\n\n## Checked by\nnothing mechanical can check the facts\n")
-res.append(("estimate lifted from the worked example fails", r.returncode == 1 and "lifted from the worked example" in r.stdout))
-
-# the example itself is not in the same domain as the tool most often run at this tier
-ex = open(f"{S}/think/references/estimate.md").read()
-res.append(("worked example is not a risk worksheet", "Read this for its shape and take none of its content" in ex
-            and "6105" in ex and "corpsman is TCCC current" not in ex))
 
 bad = 0
 for n, k in res:

@@ -29,11 +29,13 @@ MCO 5040.6K (May 2026) runs the Inspector General's inspection program, and the 
 3. `Reference/Checklists/<program>.md`: the current IGMC checklist for the program, saved by the user from the IGMC site (the tool never invents a checklist item; it asks for the file).
 4. Appointment letters and rosters carry names on the user's computer; the assessment refers to billets.
 
-## Thinking (tier: rapid)
+## Before you draft
 
-**Rapid**, because an inspector reads it and it is reversible. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+Assume this already failed and write three reasons before you build anything, then check each against the draft.
 
 The adversarial read applies to every yes: what does this evidence actually prove, read by an inspector who is not inclined to help?
+
+Say what you had to assume. Never write that the rest is covered.
 
 ## Workflow
 

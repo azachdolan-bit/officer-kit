@@ -1,75 +1,101 @@
 ---
 name: think
 description: >
-  The kit's thinking discipline: the estimate that runs before a product is drafted (the task and
-  the outcome it serves, the standard, facts separated from tested assumptions, the questions whose
-  answers change the product, what this will not do, how it gets checked), the check that runs
-  before delivery (premortem, expected but absent, adversarial read, reconciliation, single rapid
-  reading), and the named shortcuts that stop work. Every product tool runs this at its consequence
-  tier. Use when the user says "think this through", "what am I missing", "red team this", "is this
-  the right approach", "check my thinking", or before any product that can hurt someone, enter a
-  record, or decide something irreversible.
+  Four rules that survived being tested: assume the product already failed and write the reasons
+  before drafting, ask the questions whose answers change the product, never claim to have covered
+  what was not checked, and hand anything that gets signed to a blind reviewer. Use when the user
+  says "think this through", "what am I missing", "red team this", "check my thinking", or before
+  any product that can hurt someone, enter a permanent record, or decide something irreversible.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Think
 
-The kit's tools produce documents that people sign. A document that reads well and was never thought through is the failure this skill exists to prevent, and it is a specific, measured failure rather than a vague one: assistants recognize that a task is underspecified 60 to 80 percent of the time and ask about it around 5 percent of the time; they are far better at recognizing a good answer than producing one; and their own account of their reasoning is not a reliable account of it. `CRITICAL THINKING.md` in the repository carries the evidence and the sources.
+This skill used to be larger. It carried an estimate written before drafting, six formal passes
+before delivery, ten named tripwires, and per modality tailoring. It was tested against itself on 5
+September 2026 and most of it lost. `evals/ab-test-2026-09-05/` holds the artifacts.
 
-Two conclusions from that evidence govern the design, and both are counterintuitive enough to state up front. **Self review supplies no signal.** Asking for a second look at one's own work, with nothing external to check against, measurably degrades accuracy; so every mechanism here either produces an artifact a person reads or checks the product against something outside the session. **A step that always runs becomes a step that is ticked.** When Ontario mandated the surgical checklist across 101 hospitals and 200,000 procedures, mortality did not move. So the estimate is proportional to consequence, and its output is prose a person reads rather than boxes a tool checks.
+What the test found, in one line: a template gets filled in instead of thought about. The drafter
+working from a worked example reproduced the example's questions, never asked the obvious question
+the tasking raised, invented twenty five details, and then told the approving officer that every gap
+was marked. The drafter with no template asked better questions and claimed less. A blind reviewer
+chose the second one.
 
-The honest promise: this does not make the answer more likely to be right. Tested on fifty intelligence analysts, structured technique moved accuracy from 33 to 36 percent, which is nothing, while moving whether analysts considered evidence diagnosticity from 32 to 80 percent, which is everything for a product someone else has to sign. What this buys is a legible record of what was assumed, what was considered, what would change the answer, and what was not checked.
+So what is left is four rules and no template. Each one either produces something a person reads or
+checks the product against something outside this session. Nothing here is a box to tick, and
+nothing here asks the model to review its own work, which supplies no signal.
 
-## Read first
+## 1. Assume it already failed, before you draft
 
-1. `references/estimate.md`: the six items, the tier rule, and what a good one looks like at each tier.
-2. `references/check.md`: the six passes before delivery.
-3. `references/tripwires.md`: the named shortcuts, and what to do at each.
-4. `references/by-modality.md`: how this changes for risk, planning, writing, investigation, and evaluation.
+Not "what could go wrong." The thing has failed, in this product's specific terms, and you are
+writing the reasons.
 
-## The tiers
+- Risk assessment: a Marine was hurt on this event and this sheet is now an enclosure to the investigation.
+- Award: the board downgraded it, or approved it and the Marine's peers could see it was inflated.
+- Page 11: the separation board threw out the package because this entry did not support it.
+- Investigation: the staff judge advocate returned it.
+- Schedule: the week collapsed on Tuesday.
+- Recommendation: the board read it and learned nothing about the Marine.
 
-The tool states which tier it is running and why, in one line. Anyone can raise a tier. Nothing lowers a deliberate product below deliberate.
+Three reasons minimum, written **before** you look at the draft or build the list. The ordering is
+the whole mechanism. Reasons written after rereading a draft are a list of what the draft already
+covers. In the test this was the one part that earned its keep: it is why one worksheet caught
+operator fatigue on the drive home after a two day range, which the other left as a named phase with
+no hazard in it.
 
-| Tier | Triggered by | Estimate | Check |
-|---|---|---|---|
-| **Deliberate** | someone can be hurt; it enters a record and cannot be removed; it has legal effect; a board or approver decides something irreversible from it | all six items | all six passes |
-| **Rapid** | goes to a decision maker, reversible | standard, assumptions, the questions that change the answer | premortem, reconciliation, what was not checked |
-| **Running** | routine, low consequence | one line: the standard and the assumption that matters | the mechanical checker for that product |
+## 2. Ask what you cannot answer, and only that
 
-Deliberate: risk assessment, range package, investigation, DD 200, Page 11, fitness report, award, meritorious promotion, nomination, counseling, board brief, operation order, order analysis.
+A question earns its place by changing the product. If the answer would not change what you write,
+do not ask it.
 
-Rapid: naval letter, letter of recommendation, training schedule, after action report, safety brief, inspection self assessment, reporting senior profile, study guide, walkthrough.
+Never supply the answer inside the question. "Roughly forty Marines?" gets forty. "How many Marines,
+from the roster?" gets the number. A question that carries a candidate answer produces that answer,
+and that is measured, not a style preference.
 
-Running: letter of appreciation, weekly update, folder and inbox work, week ahead.
+Ask the question the tasking actually raises, not the question a similar product usually raises.
+The test's clearest failure was a drafter that asked three questions borrowed from an example and
+never asked what "Table 2" meant, then built five of fourteen hazards on its own guess.
 
-## Workflow
+## 3. Say what you assumed. Never say you covered the rest.
 
-```
-Think:
-- [ ] 1. Tier named, in one line, with the trigger that set it
-- [ ] 2. Estimate written to the tier (references/estimate.md); shown to the user before drafting, not after
-- [ ] 3. Questions asked: only those whose answer changes the product, each with what it changes; phrased so they carry no candidate answer; a question a source can answer is answered, not asked
-- [ ] 4. Blocking questions separated from the rest: a missing fact that cannot be assumed stops work; everything else proceeds with the assumption recorded
-- [ ] 5. Draft (the tool's own workflow)
-- [ ] 6. Check to the tier (references/check.md)
-- [ ] 7. python3 scripts/estimate_check.py estimate.md exits 0 on deliberate products
-- [ ] 8. Delivery states: what was assumed, what was not checked, and any shortcut taken and why
-```
+State what you did not know and had to fill in, and mark it in the product itself so it cannot be
+signed without being closed.
 
-## Rules
+Then stop. Do not write that every gap is marked, that all assumptions are listed, that this is the
+one assumption the product cannot carry, or that anything is otherwise complete. No pass anywhere
+establishes that, and the claim is worse than silence, because the signer stops looking. This is the
+finding that decided the test, and `scripts/precision_check.py` fails a product that makes the
+claim, at every tier.
 
-- **Never fill a gap.** A gap is reported. This is the rule the other rules protect.
-- **A question that carries its answer is contaminated.** "The count was around forty, right?" produces forty. "How many attended, and from what roster?" produces a number and a source.
-- **Do not ask what a source can answer.** Reading the order is the tool's job; asking the user to recall the order is the tool avoiding its job.
-- **Pushback is evidence about a view, not about a fact.** When the user says a fact is wrong, re-derive it from the source. If the source still says it, say so once with the paragraph, then do what the user directs and record the disagreement in the fact list or the file's notes so the signer sees both.
-- **Never verify by self explanation.** "I checked and it is correct" is not a check. Name the artifact that was compared to what.
-- **State the shortcut.** Taking a shortcut is often right. Taking one silently is not. One sentence in the delivery: what was skipped and why it is acceptable.
-- **Abstention is an output.** "I need X before this is worth drafting" is a complete and correct answer.
-- **The tool does not decide.** It does not choose the award level, the mark, the hypothesis, the liability, or the risk the commander accepts. It puts the argument and the gaps on the page for the person who does.
+The honest form names its own basis. "Checked against the matrix and the required elements" rather
+than "everything not listed is confirmed." "The assumptions I noticed" rather than "the assumptions."
 
-## Utility scripts
+## 4. Hand anything that gets signed to the red team
 
-- `scripts/estimate_check.py estimate.md`: facts and assumptions present and separate; every assumption tested and carrying a falsifier and a collapse consequence; every question carrying what it changes and free of embedded answers; the scope line and the checked by line present. Exit 1 on a missing element.
-- `scripts/precision_check.py <draft> [--directive]`: the structure pass. Center embedded clauses, sentences over the length target, paragraphs over ten lines, unquantified quantifiers where a number belongs, directive sentences in the passive with no actor, mixed modals, ambiguous sentence initial pronouns, undefined acronyms, "and/or". Advises on style; fails on ambiguity that changes what the reader must do.
+The `red-team` agent, blind: the draft, the standard, an exemplar if one exists, and nothing about
+how the draft was made. It reports findings with evidence and never scores.
+
+This is the only mechanism here that brings in a signal from outside the session, and it is the one
+that caught everything the other mechanisms missed. Use it on any product that can hurt someone,
+enter a permanent record, have legal effect, or decide something irreversible. It costs one agent.
+
+## The scripts
+
+- `scripts/precision_check.py <draft> [--directive]`: coverage claims (fails, every tier); center
+  embedding, sentence length against a 15 word target, paragraphs past 10 lines, soft quantifiers,
+  actorless passive directives, hidden verbs, mixed modals, loose pronouns, undefined acronyms,
+  "and/or", vague deadlines. With `--directive`, ambiguity that changes what the reader must do
+  fails instead of warning. Skips text an order prescribes, between `<!-- prescribed -->` markers.
+- Each product tool's own checker does the arithmetic and the required elements. Those are fast,
+  dumb, and reliable, and they run first.
+
+## What this does not do
+
+It does not make the answer more likely to be right. Structured technique tested on fifty
+intelligence analysts moved accuracy from 33 to 36 percent, which is nothing. It does not supply a
+fact, decide anything, or know what the commander wants. And an account of reasoning is a claim
+about a product, checkable against the product, not a confession: where a shortcut was taken, name
+it in the delivery rather than describing the reasoning that led to it.
+
+`CRITICAL THINKING.md` in the repository carries the evidence, the sources, and the test.

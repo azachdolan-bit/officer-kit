@@ -37,8 +37,11 @@ Training orders written for a school exercise are green. Anything referencing a 
 
 If the user asks for a score, use a simple scale: Complete / Executable / Clear, each pass or fail, with one line each.
 
-## Thinking (tier: deliberate)
+## Before you draft
 
-**Deliberate**, because the unit acts on what this says. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+1. **Assume it already failed** and write three reasons before you build anything, then check each against the draft. Reasons written after rereading a draft are a list of what the draft already covers.
+2. **Ask only what changes the product,** and never put a candidate answer inside the question.
+3. **Say what you assumed** and mark it in the product so it cannot be signed without being closed. Never write that the rest is covered; `think/scripts/precision_check.py` fails a product that claims it.
+4. **Before it is signed:** the `red-team` agent, blind, with the standard and an exemplar.
 
 MCWP 5-10 Appendix G maps the technique to the step: key assumptions check at problem framing, devil's advocate at the war game and the comparison, competing hypotheses at orders development.

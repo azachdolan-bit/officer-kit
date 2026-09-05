@@ -30,9 +30,12 @@ A 6105 entry is the document that decides, months later, whether a Marine can be
 3. `<MARINE>` throughout; the name and EDIPI go on the form on the user's computer. The entry describes deficiencies as dated facts; nothing medical, family, or from an investigation beyond what the commander directs.
 4. When the legal officer returns an entry, `aar` captures why.
 
-## Thinking (tier: deliberate)
+## Before you draft
 
-**Deliberate**, because it enters a record that cannot be removed and supports a separation. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+1. **Assume it already failed** and write three reasons before you build anything, then check each against the draft. Reasons written after rereading a draft are a list of what the draft already covers.
+2. **Ask only what changes the product,** and never put a candidate answer inside the question.
+3. **Say what you assumed** and mark it in the product so it cannot be signed without being closed. Never write that the rest is covered; `think/scripts/precision_check.py` fails a product that claims it.
+4. **Before it is signed:** the `red-team` agent, blind, with the standard and an exemplar.
 
 The adversarial read is the pass that matters: every directive sentence read for its most inconvenient compliant meaning. `think/scripts/precision_check.py entry.md --directive` on the parts the writer supplies, never on the order's prescribed wording.
 

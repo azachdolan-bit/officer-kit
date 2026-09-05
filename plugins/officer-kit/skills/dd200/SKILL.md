@@ -30,9 +30,12 @@ Lost or damaged government property starts a clock and a form. MCO 4400.201 (Man
 3. `<MARINE>` and `<WITNESS n>` throughout; the custodian's name goes on the form on the user's computer. Serial numbers and NSNs are property data, not personal data, and belong in the report.
 4. When the supply officer or SJA returns it, `aar` captures why.
 
-## Thinking (tier: deliberate)
+## Before you draft
 
-**Deliberate**, because it has legal and financial effect. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+1. **Assume it already failed** and write three reasons before you build anything, then check each against the draft. Reasons written after rereading a draft are a list of what the draft already covers.
+2. **Ask only what changes the product,** and never put a candidate answer inside the question.
+3. **Say what you assumed** and mark it in the product so it cannot be signed without being closed. Never write that the rest is covered; `think/scripts/precision_check.py` fails a product that claims it.
+4. **Before it is signed:** the `red-team` agent, blind, with the standard and an exemplar.
 
 List the competing explanations for the loss before writing findings. Ask what record would exist under each and is absent.
 

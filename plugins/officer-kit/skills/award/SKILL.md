@@ -33,9 +33,12 @@ The tool's job is three correlations, in order: what the Marine did, quantified;
 3. The label. Another Marine's name never enters the session. Work on `<MARINE>` (grade and billet stay); the user runs `security-check/scripts/substitute.py` on the finished file on their own computer. If the rules file records a working label, use that instead.
 4. When something comes back with edits, or a board answers differently than expected, tell the user `aar` will capture it.
 
-## Thinking (tier: deliberate)
+## Before you draft
 
-**Deliberate**, because a board decides something irreversible from it. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+1. **Assume it already failed** and write three reasons before you build anything, then check each against the draft. Reasons written after rereading a draft are a list of what the draft already covers.
+2. **Ask only what changes the product,** and never put a candidate answer inside the question.
+3. **Say what you assumed** and mark it in the product so it cannot be signed without being closed. Never write that the rest is covered; `think/scripts/precision_check.py` fails a product that claims it.
+4. **Before it is signed:** the `red-team` agent, blind, with the standard and an exemplar.
 
 Quarantine the requested level: weigh the facts against the criteria before the requested level is in view, then compare the two and say where they differ.
 

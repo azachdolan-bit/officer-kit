@@ -31,9 +31,12 @@ A Risk Assessment Worksheet is the one document where a lieutenant's arithmetic 
 3. No names in the worksheet body; billets only (OIC, RSO, safety corpsman). Names go on the signature block on the user's computer.
 4. When range control or the approver changes something, tell the user `aar` will capture it.
 
-## Thinking (tier: deliberate)
+## Before you draft
 
-**Deliberate**, because someone can be hurt and the approval level follows from the arithmetic. Run the estimate before drafting and the check before delivery: the `think` skill, `references/estimate.md` and `references/check.md`, `references/tripwires.md` for the named shortcuts. State the tier and its trigger in one line so the user can raise it.
+1. **Assume it already failed** and write three reasons before you build anything, then check each against the draft. Reasons written after rereading a draft are a list of what the draft already covers.
+2. **Ask only what changes the product,** and never put a candidate answer inside the question.
+3. **Say what you assumed** and mark it in the product so it cannot be signed without being closed. Never write that the rest is covered; `think/scripts/precision_check.py` fails a product that claims it.
+4. **Before it is signed:** the `red-team` agent, blind, with the standard and an exemplar.
 
 For this product the premortem runs **before** the hazard list, not after the draft: three Marines were hurt on this event, how? Nothing mechanical can find a hazard that is not on the list, and the delivery says so.
 
