@@ -42,6 +42,20 @@ def key(s):
     return m.group(1) if m else n
 
 
+def candidates(path):
+    """A Windows path from the rules file, and where the same folder appears when the session runs
+    somewhere else: the Cowork device shell mounts connected folders under $HOME/mnt/<folder name>,
+    and the cloud container stages them under /mnt/user-data/uploads/<folder name>."""
+    out = [path]
+    m = re.match(r"^[A-Za-z]:[\\/](.*)$", path)
+    if m:
+        rel = m.group(1).replace("\\", "/")
+        home = os.path.expanduser("~")
+        out.append(os.path.join(home, "mnt", rel))
+        out.append(os.path.join("/mnt/user-data/uploads", rel))
+    return out
+
+
 def roots_from_rules(start):
     roots = []
     d = os.path.abspath(start)
@@ -52,8 +66,11 @@ def roots_from_rules(start):
                 m = re.search(r"(?:Library path|Publications library|Reference folder)\s*:\s*(.+)", line, re.I)
                 if m:
                     v = m.group(1).strip().strip("`").strip()
-                    if v and "not recorded" not in v.lower() and os.path.isdir(v):
-                        roots.append(v)
+                    if v and "not recorded" not in v.lower():
+                        for cand in candidates(v):
+                            if os.path.isdir(cand):
+                                roots.append(cand)
+                                break
             break
         nd = os.path.dirname(d)
         if nd == d:
