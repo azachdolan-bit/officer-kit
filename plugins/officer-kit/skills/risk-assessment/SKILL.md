@@ -65,7 +65,7 @@ OIC: <billet>   RSO: <billet>   Prepared: <date>   Worksheet form: <command form
 ## Approval authority: <from the residual level and the command's matrix; first O-5 in writing if high risk>
 
 ## Emergency action plan
-<who does what if the worst hazard happens: nearest medical, evacuation route and time, communications, who calls>
+<the order's minimum (040304.B.1): primary and alternate communications; telephone numbers; radio channels and call signs; locations of emergency response personnel and equipment; equipment shutdown procedures; muster site and control of the scene; non affected personnel; the immediate actions in sequence. A checklist, validated quarterly by a walk through when the event repeats>
 
 ## Cease training and training time out
 <how anyone stops training, the words and the signal, and what happens next>
@@ -88,7 +88,8 @@ Primary: <net>   Secondary: <means>   Check: <when>
 - High risk training is a fact of the residual level, not a judgment. If it is IA, IB, IIA, or IIB after controls, it is high risk, and the sheet says so and goes to the O-5.
 - Nothing in the sheet names a Marine; billets only. The corpsman's certification is stated, not the corpsman's name.
 - The tool never lowers a rating to avoid an approval level. If the user wants a lower level, the sheet shows a control that earns it.
-- The command's form and matrix win when they exist; the checker's matrix is the joint matrix from the order's figure and is replaceable in `references/matrix.md` or the override file.
+- The command's form and matrix win when they exist; the checker's matrix is the order's Figure 3-4, read from the order cell by cell, and is replaceable through the override file if a command publishes its own.
+- A repeated event can reuse its worksheet once it is updated and every assessment re verified (040304.B); the pre execution checklist is where the update is confirmed.
 
 ## Utility script
 

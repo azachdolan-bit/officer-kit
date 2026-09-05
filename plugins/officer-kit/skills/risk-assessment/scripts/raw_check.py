@@ -128,7 +128,12 @@ def main():
             for elem, pat in (("Emergency action plan", r"^## Emergency action plan"), ("Cease training and training time out", r"^## Cease training"), ("Communications", r"^## Communications"), ("Pre execution checklist", r"^## Pre execution checklist")):
                 mm = re.search(pat + r"\s*$(.*?)(?=^## |\Z)", text, re.M | re.S)
                 if not mm or len(mm.group(1).strip()) < 40:
-                    fails.append(f"high risk training requires a {elem} section with content (order paragraph 040304)")
+                    fails.append(f"high risk training requires a {elem} section with content (order paragraph 040304.B)")
+                elif elem == "Emergency action plan":
+                    eap = mm.group(1)
+                    for need, pat in (("primary and alternate communications", r"communicat|net|radio"), ("telephone numbers", r"\d{3}[-. ]\d{4}|number"), ("location of emergency response personnel and equipment", r"location|at the |ECP|corpsman"), ("muster site and control of the scene", r"muster|scene"), ("equipment shutdown", r"shutdown|shut down|cease|stop")):
+                        if not re.search(pat, eap, re.I):
+                            warns.append(f"EAP minimum content (040304.B.1): {need} not found")
     if not re.search(r"^## Supervision", text, re.M):
         warns.append("no Supervision section: who watches each control and the stop trigger (step five of the order)")
 

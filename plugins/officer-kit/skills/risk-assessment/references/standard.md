@@ -1,6 +1,6 @@
 # Standard: MCO 5100.29C Volume 2, Risk Management (15 Oct 2020)
 
-Read from the order on marines.mil, 5 September 2026. Paragraph numbers as given in the order. Read the user's copy when it is in Reference; if the command has issued its own risk management order or worksheet, that order's text governs the sheet's form.
+Read from the full order (MCO_5100.29C.pdf, 759 pages, all nine volumes) in the user's publications library on 5 September 2026; Figures 3-4 and 4-2 read from the rendered pages. Paragraph numbers as given in the order. If the command has issued its own risk management order or worksheet, that order's text governs the sheet's form.
 
 ## The five steps (chapter 3)
 > Identify Hazards; Assess Hazards; Make Risk Decisions; Implement Controls; Supervise (and Evaluate).
@@ -18,22 +18,33 @@ Read from the order on marines.mil, 5 September 2026. Paragraph numbers as given
 > D, Seldom: Seldom may occur in time; Can reasonably be expected to occur at some time to an individual item or person.
 > E, Unlikely: Unlikely it will occur in time; Unlikely to occur, but possible in the service life.
 
-## The matrix (Figure 3-4, paragraph 030302)
-The order presents the Joint Risk Assessment Matrix as a figure. The kit's `references/matrix.md` reproduces the joint matrix (extremely high, high, medium, low) by severity and probability; confirm it against the figure in the user's copy, and replace it with the command's matrix when the command has one.
+## The matrix (Figure 3-4, paragraph 030302.C)
+> The Risk Assessment Level is an expression of risk that combines the elements of hazard severity and probability of mishap occurrence. The Risk Assessment Level is a level of risk for each hazard expressed in the Joint Risk Assessment Matrix in Figure 3-4. Although not required, the matrix is helpful in identifying the Risk Assessment Level and in determining hazard abatement priorities. Additionally, the combination of two or more hazards may increase the overall level of risk. In some cases, the worst credible consequence of a hazard may not correspond to the highest Risk Assessment Level for that hazard. ... it is important to consider less severe consequences of a hazard if they are more likely than the worst credible consequence, since this combination may actually present an equal or greater overall risk.
+The figure's cells are reproduced in `references/matrix.md`, read from the user's copy and confirmed.
 
-## The worksheet (paragraph 040304)
-> There is no required form for the risk assessment worksheet, but it should include the following: An Emergency Action Plan (EAP); Procedures shall be outlined WRT personnel/student Cease Training (CT)/Training Time Out (TTO) requirements; A primary and secondary communications plan for stopping training if anyone observes an unsafe condition; A pre-execution final brief checklist to confirm any changes are accounted for.
-> High Risk Training events should use a risk assessment worksheet.
+## Pitfalls (paragraph 030302.D)
+> Over-optimism, not being totally honest or not looking for root causes. Misrepresentation, individual perspectives may distort the data. Alarmism, worst case scenarios are used regardless of their possibility. Indiscrimination, all data is given equal weight. Prejudice, subjective or hidden agendas are used instead of facts. Inaccuracy, bad or misunderstood data nullify accurate risk assessment. Enumeration, difficulty in assigning a numerical value to human behavior.
+
+## The worksheet (paragraph 040304.B)
+> High Risk Training events should use a risk assessment worksheet. For regularly repeated training events the same worksheet can be used once it is updated with current information, and all risk assessments and assumptions are carefully reviewed and verified. The requirement for High-Risk Training to be approved in writing may take the form of a signature on the risk assessment worksheet. There is no required form for the risk assessment worksheet, but it should include the following:
+> 1. An Emergency Action Plan (EAP) which is an internal plan to be implemented immediately upon advent of a mishap to aid involved persons and to control and safeguard the scene. This plan must include at a minimum: primary and alternate communications; telephone numbers; radio channels; call signs; locations of emergency response personnel; locations of emergency equipment; equipment shutdown procedures; muster site and methods to maintain control of the scene; non-affected personnel; and all immediate emergency procedures. The EAP should be a simple checklist or sequential list of responses of expected and immediate actions by personnel in control of the event to aid and extract mishap victims from the scene. Individual EAPs shall be validated quarterly by a walk-through from the unit HRTSO.
+> 2. Procedures shall be outlined WRT personnel/student Cease Training (CT)/Training Time Out (TTO) requirements, and training will not reconvene until the identified issue is resolved.
+> 3. A primary and secondary communications plan for stopping training if anyone observes an unsafe condition.
+> 4. A pre-execution final brief checklist to confirm any changes are accounted for.
 
 ## High risk training (paragraph 040302)
 > High-Risk Training is defined as training which exposes personnel and trainers to the risk of death, serious injury, or permanent disability despite the presence of proper safety controls.
 > ... any training event that maintains a residual Risk Assessment Level of IA, IB, IIA or IIB even after safety controls have been implemented.
 
-## Approval (paragraph 040304)
-> All High-Risk Training events should be approved in writing by the first O-5 Commander in the training unit's chain of command.
+## Approval (paragraph 040304.A)
+> All High-Risk Training events should be approved in writing by the first O-5 Commander in the training unit's chain of command. For multiple unit training, each unit's commanders should approve.
 
-## Risk decision authority (the order's example, chapter 3)
-The order's example decision authority list runs: RAC 1 base commanding officer; RAC 2 base executive officer; RAC 3 division directors; RAC 4 company grade officers and branch heads; RAC 5 SNCO and first line supervisor. It is an example for an installation; the operating force command's own order sets the authority for each level, and the override file carries it.
+## High risk training examples (paragraph 040303)
+SERE; parachuting (static line and freefall); combatant diver (open and closed circuit); high altitude or severe weather mountaineering; MRZR, ATV, and dirt bike; direct action live fire close quarters battle in urban terrain; helicopter rope suspension techniques; visit, board, search and seizure; special operations and reconnaissance amphibious infiltration and exfiltration; breaching and explosive entry; underwater egress.
 
-## Not verified from the order's text
-The exact cell values of Figure 3-4 (read as an image). The order's mapping between the joint levels (extremely high to low) and RAC 1 to 5. Both are marked in `matrix.md`; the user confirms against their copy once and records the answer in the override file.
+## Risk decision authority (paragraph 040203.A)
+> Designation of Risk Management Authority is determined by the Unit Commander. Examples of designees include the Executive Officer (XO) or civilian equivalent or based on RACs as follows: Risk decision authority in a command has the following echelons: RAC 1, Base Commanding Officer; RAC 2, Base Executive Officer; RAC 3, Division Directors; RAC 4, Company Grade Officers, Branch Heads; RAC 5, SNCO, First-line Supervisor.
+An installation example; the unit commander designates. The override file carries the command's designation.
+
+## Verified from the user's copy, 5 September 2026
+Figures 3-4 and 4-2 cell by cell; paragraphs 030302, 040203, 040302, 040303, 040304 verbatim.

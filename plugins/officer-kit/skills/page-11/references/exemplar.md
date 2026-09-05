@@ -1,16 +1,18 @@
-# Page 11 exemplar, fictional: 6105 counseling entry
+# Page 11 exemplar, fictional: 6105 warning entry in the order's own form
 
-Marine: <MARINE>, Lance Corporal, motor transport operator   Date: 3 August 2026   Signed by: Company commander
-References: MCO 1900.16 paragraph 6105; MCO P1070.12K paragraph 4005
+Marine: <MARINE>, Lance Corporal, motor transport operator   Date: 3 August 2026   Signed by: Commanding officer (the order requires the CO's signature on adverse entries)
+References: MCO 1900.16 paragraph 6105; MCO P1070.12K paragraph 4006.3r
 
 ## Entry
-3 August 2026: Counseled this date concerning the following deficiencies: failure to report at the time posted on the company duty roster on 12, 19, and 26 July 2026, in violation of the company duty standing operating procedure of 1 June 2026 and a lawful order from the platoon sergeant on 11 July 2026. Counseled on the same deficiency on 15 July 2026 (event counseling). <MARINE> is advised that the corrective action is to report to the duty NCO not later than 0740 on every duty day through 3 September 2026 and to submit the weekly inspection sheet by 1500 each Thursday, and that assistance is available from the platoon sergeant as assigned mentor with daily task review, the company first sergeant, and the battalion chaplain. <MARINE> is further advised that failure to take the recommended corrective action and to overcome these deficiencies may result in administrative separation under MCO 1900.16, in addition to nonjudicial punishment, adverse marks in the Junior Enlisted Performance Evaluation System, and a not recommended for promotion entry. <MARINE> will be given 30 days to demonstrate correction, and will be re evaluated on 3 September 2026. <MARINE> is advised that within 5 working days after acknowledging this entry, a written rebuttal may be submitted for inclusion in the service record.
+3 August 2026: Counseled this date concerning the following deficiencies: failure to report at the time posted on the company duty roster on 12, 19, and 26 July 2026, in violation of the company duty standing operating procedure of 1 June 2026 and a lawful order from the platoon sergeant on 11 July 2026; previously counseled on the same deficiency on 15 July 2026 (event counseling). Specific recommendations for corrective action are to report to the duty NCO not later than 0740 on every duty day and to submit the weekly inspection sheet by 1500 each Thursday through 3 September 2026, at which time the commanding officer will re evaluate, and to seek assistance, which is available through the chain of command and the platoon sergeant as assigned mentor with daily task review, the company first sergeant, and the battalion chaplain. Failure to take corrective action and any further violations of the UCMJ, disciplinary action, or incidents requiring formal counseling may result in judicial or adverse administrative action, including but not limited to administrative separation. I understand that failure to complete my enlistment contract with an honorable characterization of service may preclude my eligibility for benefits from the Department of Veterans Affairs or other organizations and have an adverse effect on future civilian employment. I was advised that within 5 working days after acknowledging this entry I may submit a written rebuttal which will be filed in the electronic service record. I choose to ____ /not to ____ make such a statement.
 
 ## Acknowledgment
-<MARINE> (signature line)   Date:
-Counselor (signature line)   Date:
+Signature of Marine: _______________________   Signature of Commanding Officer: _______________________
 
-Annotation: three dated occurrences and the standard by name; a prior counseling with its date; observable corrective action with a period; three real sources of assistance; the consequences name administrative separation under the order and the other true actions; a period and a re evaluation date; the rebuttal advisory.
+## After signature
+Photocopy of the entry and any rebuttal to CMC (MMRP-20) within 30 days (paragraph 6105.3.e).
+
+Annotation: the order's entry format word for word, with the blanks filled by dated facts and the standard violated, observable corrective action with a period and the re evaluation date, and named sources of assistance. The consequences sentence and the rebuttal sentence are the order's, unchanged. The CO signs.
 
 ## Weak
-"Counseled for bad attitude and being late all the time. Needs to fix it or he'll be separated." No dates, no standard, no corrective action, no assistance, a promise instead of a consequence, no opportunity, no rebuttal advisory. None of the four elements.
+"Counseled for bad attitude and being late all the time. Needs to fix it or he'll be separated." No dates, no standard, no corrective action, no assistance, a promise instead of the order's consequences sentence, no rebuttal advisory, and a counselor's signature where the order requires the commanding officer's.

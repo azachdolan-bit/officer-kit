@@ -22,7 +22,7 @@ case("range-package bad", "range-package/scripts/range_package_check.py", "range
 case("investigation good", "investigation/scripts/investigation_check.py", "investigation/inputs/good.md", 0, "6 findings")
 case("investigation bad", "investigation/scripts/investigation_check.py", "investigation/inputs/bad.md", 1, "enclosure (1) must be the convening order", "cites no enclosure", "does not exist", "77 days", "Captain R. Lee", "opinion language")
 case("page-11 good", "page-11/scripts/page_11_check.py", "page-11/inputs/good.md", 0, "clean")
-case("page-11 bad", "page-11/scripts/page_11_check.py", "page-11/inputs/bad.md", 1, "element 1", "element 2", "element 3", "element 4", "rebuttal", "will be separated", "Lance Corporal D. Brandt")
+case("page-11 bad", "page-11/scripts/page_11_check.py", "page-11/inputs/bad.md", 1, "missing or altered", "consequences sentence", "commanding officer signature", "will be separated", "Lance Corporal D. Brandt")
 case("page-11 notrec deadline", "page-11/scripts/page_11_check.py", "page-11/inputs/notrec_bad.md", 1, "unit diary deadline")
 case("dd200 good", "dd200/scripts/dd200_check.py", "dd200/inputs/good.md", 0, "6 findings")
 case("dd200 bad", "dd200/scripts/dd200_check.py", "dd200/inputs/bad.md", 1, "Property row incomplete", "custody record", "search", "negligence", "Sergeant Miller")

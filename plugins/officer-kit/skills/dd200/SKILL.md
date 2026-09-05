@@ -14,7 +14,7 @@ metadata:
 
 # DD 200
 
-Lost or damaged government property starts a clock and a form. MCO 4400.201 w/Ch 3 (Management of Property in the Possession of the Marine Corps, 17 volumes, May 2025) governs accountability and financial liability; the TECOM headquarters battalion guide walks the DD 200 and the NAVMC 6 block by block. The investigation is a findings of fact investigation with a narrow question: what was lost, how, who had custody, and whether negligence or willful misconduct caused it. The tool builds it on the same chain the `investigation` tool enforces, prepares the blocks, and never decides liability; the appointing authority and the SJA do.
+Lost or damaged government property starts a clock and a form. MCO 4400.201 (Management of Property in the Possession of the Marine Corps, 17 volumes) governs accountability (Volume 1) and financial liability (Volume 17, Financial Liability Investigation of Property Loss); the TECOM headquarters battalion guide walks the DD 200 and the NAVMC 6 block by block. The investigation is a findings of fact investigation with a narrow question: what was lost, how, who had custody, and whether negligence or willful misconduct caused it. The tool builds it on the same chain the `investigation` tool enforces, prepares the blocks, and never decides liability; the appointing authority and the SJA do.
 
 ## Read first
 
