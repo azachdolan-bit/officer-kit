@@ -89,6 +89,8 @@ def main():
     raw = open(path, encoding="utf-8").read()
     text = strip_prescribed(raw)
     fails, warns = [], []
+    def warn(kind, msg):
+        warns.append((kind, msg))
     sents = sentences(text)
     if not sents:
         print(f"PRECISION CHECK: {path}\n  no prose sentences found")
@@ -101,54 +103,62 @@ def main():
         short = s[:64] + ("..." if len(s) > 64 else "")
         n = len(s.split())
         if n > 40:
-            warns.append(f"{n} words, two or three sentences wearing one coat: {short}")
+            warn("long sentence", f"{n} words, two or three sentences wearing one coat: {short}")
         elif n > 25:
-            warns.append(f"{n} words against a {target} word target: {short}")
+            warn("long sentence", f"{n} words against a {target} word target: {short}")
         ce = center_embedded(s)
         if ce:
-            warns.append(f"center embedded clause ({len(ce.split())} words) splits the subject from its verb: {short}")
+            warn("center embedding", f"center embedded clause ({len(ce.split())} words) splits the subject from its verb: {short}")
         low = s.lower()
         soft = [w for w in SOFT if re.search(r"\b" + re.escape(w) + r"\b", low)]
         if soft:
             has_number = bool(re.search(r"\d", s))
             msg = f"soft quantifier {', '.join(repr(w) for w in soft)}{' beside a number, so say which' if has_number else ''}: {short}"
-            (fails if directive and not has_number else warns).append(msg)
+            (fails.append(msg) if directive and not has_number else warn("soft quantifier", msg))
         if re.search(r"\b(?:will|shall|is to|are to)\s+be\s+\w+(?:ed|en)\b", s) and not re.search(r"\bby\s+(?:the\s+)?[A-Za-z]", s):
-            (fails if directive else warns).append(f"directive in the passive with no actor: {short}")
+            (fails.append(f"directive in the passive with no actor: {short}") if directive else warn("actorless passive", f"passive with no actor: {short}"))
         m = re.search(HIDDEN_VERB, s, re.I)
         if m:
-            warns.append(f"hidden verb '{m.group(0)}': {short}")
+            warn("hidden verb", f"hidden verb '{m.group(0)}': {short}")
         if re.search(VAGUE_DEADLINE, s, re.I):
-            (fails if directive else warns).append(f"vague deadline: {short}")
+            (fails.append(f"vague deadline: {short}") if directive else warn("vague deadline", f"vague deadline: {short}"))
         if re.search(r"\band/or\b", s, re.I):
-            (fails if directive else warns).append(f"'and/or' permits three readings; say which: {short}")
+            (fails.append(f"'and/or' permits three readings; say which: {short}") if directive else warn("and/or", f"'and/or' permits three readings: {short}"))
         if re.match(r"^(This|These|Those|That|It|They)\s+(" + FINITE + r")", s):
-            warns.append(f"opens with a pronoun and no noun; the reader has to guess the antecedent: {short}")
+            warn("loose pronoun", f"opens with a pronoun and no noun: {short}")
 
     if directive:
         used = {m for m in MODALS if re.search(r"\b" + m + r"\b", text, re.I)}
         req = used & {"must", "shall", "will"}
         if len(req) > 1 and "should" in used:
-            warns.append(f"mixed modals for requirements ({', '.join(sorted(used))}); pick one for what is required and use 'may' only for what is optional")
+            warn("mixed modals", f"mixed modals for requirements ({', '.join(sorted(used))}); pick one for what is required and use 'may' only for what is optional")
 
     seen = set()
-    for m in re.finditer(ACRONYM, text):
+    for m in (re.finditer(ACRONYM, text) if directive else []):
         a = m.group(1)
         if a in KNOWN or a in seen or a.isdigit():
             continue
         seen.add(a)
         expanded = re.search(r"\(\s*" + re.escape(a) + r"\s*\)", text) or re.search(re.escape(a) + r"\s*\([A-Za-z][^)]{6,}\)", text)
         if not expanded:
-            warns.append(f"acronym '{a}' never expanded")
+            warn("acronym", f"acronym '{a}' never expanded")
 
     for i, para in enumerate(text.split("\n\n")):
         lines = [l for l in para.splitlines() if l.strip()]
         if len(lines) > 10 and not any(l.strip().startswith(("|", "-", "*", "#")) for l in lines):
-            warns.append(f"paragraph {i + 1} runs {len(lines)} lines against a 10 line limit")
+            warn("long paragraph", f"paragraph {i + 1} runs {len(lines)} lines against a 10 line limit")
 
     print(f"PRECISION CHECK: {path}  {len(sents)} sentences, average {avg:.1f} words (target {target}){', directive' if directive else ''}")
-    for w in warns:
-        print(f"  WARN  {w}")
+    from collections import defaultdict
+    grouped = defaultdict(list)
+    for kind, msg in warns:
+        grouped[kind].append(msg)
+    for kind in sorted(grouped, key=lambda k: -len(grouped[k])):
+        msgs = grouped[kind]
+        for msg in msgs[:3]:
+            print(f"  WARN  {msg}")
+        if len(msgs) > 3:
+            print(f"  WARN  ... and {len(msgs) - 3} more of {kind}")
     for f in fails:
         print(f"  FAIL  {f}")
     if not warns and not fails:
