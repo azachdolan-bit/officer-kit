@@ -66,6 +66,25 @@ import zipfile as _zf
 _xml = _zf.ZipFile(f"{_t}/e.docx").read("word/document.xml").decode() if os.path.exists(f"{_t}/e.docx") else ""
 res.append(("endorsement renders and passes the letter gates", _r1.returncode == 0 and _r2.returncode == 0 and _r3.returncode == 0 and "FIRST ENDORSEMENT on" in _xml))
 
+# find_order.py: a publication saved as bare digits is still that publication, while a file that
+# claims a different family is still rejected. Both halves failed silently once, in opposite
+# directions: the library path never resolved, and SECNAV M-1650.1 matched MCO 1650.19J.
+_FO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
+                   "plugins", "officer-kit", "skills", "library", "scripts")
+sys.path.insert(0, _FO)
+import find_order as _fo  # noqa: E402
+import tempfile as _tf, pathlib as _pl  # noqa: E402
+_d = _tf.mkdtemp()
+_pl.Path(_d, "5216.5  CH-1.pdf").write_text("x")
+_pl.Path(_d, "MCOs").mkdir()
+_pl.Path(_d, "MCOs", "MCO_1650.19J.pdf").write_text("x")
+_h, _ = _fo.find("SECNAV M-5216.5", [_d])
+res.append(("bare number filename resolves for a SECNAV manual", len(_h) == 1 and "5216.5" in _h[0]))
+_h2, _ = _fo.find("SECNAV M-1650.1", [_d])
+res.append(("a file claiming another family is still rejected", not _h2))
+_h3, _ = _fo.find("MCO 1650.19J", [_d])
+res.append(("the MCO still resolves for its own query", len(_h3) == 1))
+
 bad = 0
 for n, ok in res:
     print(f"{'PASS' if ok else 'FAIL'}  {n}"); bad += 0 if ok else 1

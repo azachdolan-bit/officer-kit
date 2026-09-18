@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.9.1 (2026-09-18) The finder sees a publication saved under its bare number
+
+The rules file test passed: a fresh Cowork session reads `C:\TBS\CLAUDE.md`, so every tool reaches the user's overrides, exemplars, and the library rule. That was the last unknown that gated handing the kit to anyone else.
+
+SECNAV M-5216.5 was added to the library as `5216.5  CH-1.pdf`, and `find_order.py` reported NOT IN THE LIBRARY, because the family guard added in 0.9.0 rejects any candidate whose name and path do not carry the family the query names. That guard exists for a reason (SECNAV M-1650.1 used to resolve to MCO 1650.19J on the digits alone), so it stays, narrowed: a candidate is rejected only when it claims a **different** family. A file naming no family at all is judged on its number, which is how a manual saved as bare digits is found.
+
+- `find_order.py`: `ALL_FAMILIES` added; the guard now distinguishes "belongs to another series" from "names no series."
+- `evals/core_check.py`: three cases pinning both directions, since both have now failed silently once. 39 of 39.
+
+**`endorsement` and `memo` can now be completed.** Both were built from the endorsements other orders reproduce and both carry a stated gap for SECNAV M-5216.5. The manual is now readable and neither tool has been rebuilt against it yet; their gap paragraphs still stand and are still accurate until that work is done.
+
 ## 0.9.0 (2026-09-05) Path D: the core is complete
 
 Nine tools, each built from its governing publication in the user's own library, read with `library/scripts/find_order.py`, quoted verbatim with paragraph numbers. The kit now covers the correspondence and record products a company grade officer signs, whatever the MOS.

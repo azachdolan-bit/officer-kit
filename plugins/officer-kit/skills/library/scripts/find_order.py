@@ -90,6 +90,10 @@ def roots_from_rules(start):
 
 
 SERIES = ("SECNAV", "SECNAVINST", "OPNAVINST", "NAVMC", "MARADMIN", "ALMAR", "MCBUL", "JAGINST", "DODI", "DODD")
+# Every family token that can appear on a file, used to tell "this file belongs to a different
+# series" apart from "this file names no series at all". A publication saved as bare digits
+# (5216.5 CH-1.pdf) is still the right publication; a file under MCOs/ is not.
+ALL_FAMILIES = SERIES + ("MCO", "MCRP", "MCWP", "MCTP", "MCDP", "MCIP", "MCRPG", "NAVPERS", "BUPERSINST", "TM")
 
 
 def series(number):
@@ -117,8 +121,14 @@ def find(number, roots):
                 if "/" in k:
                     a, b = k.split("/")
                     fk = fk.replace(f"{a} {b}", k)
-                if fam and not re.search(r"\b" + fam + r"S?\b", fk + " " + norm(dp)):
-                    continue
+                if fam:
+                    where = fk + " " + norm(dp)
+                    if not re.search(r"\b" + fam + r"S?\b", where):
+                        # Reject only when the candidate claims a DIFFERENT family. A file that names
+                        # no family at all is judged on its number, which is how a manual saved as
+                        # "5216.5 CH-1.pdf" is still found by "SECNAV M-5216.5".
+                        if any(re.search(r"\b" + s + r"S?\b", where) for s in ALL_FAMILIES if s != fam):
+                            continue
                 if re.search(r"(?<![0-9.])" + re.escape(k) + r"(?![0-9])", fk):
                     hits.append(os.path.join(dp, f))
                 elif base and re.search(r"(?<![0-9.])" + re.escape(base) + r"[A-Z]?(?![0-9])", fk):
