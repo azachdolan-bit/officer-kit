@@ -49,12 +49,24 @@ case("deocs-plan identify", "deocs-plan/scripts/deocs_plan_check.py", "deocs-pla
 # endorsement
 case("endorsement good", "endorsement/scripts/endorsement_check.py", "endorsement/inputs/good.json", 0, "clean")
 case("endorsement bad", "endorsement/scripts/endorsement_check.py", "endorsement/inputs/bad.json", 1, "is not a written ordinal", "does not carry the basic correspondence's date", "Subj changed", "does not state the endorser's action", "already on the basic letter", "a promise about the decision", "Corporal Brandt", "family or personal", extra=("--basic-subj", "REQUEST FOR SPECIAL LIBERTY", "--basic-refs", "MCO 1050.3J"))
-case("endorsement later ordinal", "endorsement/scripts/endorsement_check.py", "endorsement/inputs/later.json", 0, "settled by SECNAV M-5216.5, not in the library", "no reason")
+case("endorsement later ordinal", "endorsement/scripts/endorsement_check.py", "endorsement/inputs/later.json", 0, "9-2.1.b", "the ordinal counts the endorsements already on it", "no reason")
 # memo
 case("memo mfr good", "memo/scripts/memo_check.py", "memo/inputs/good.md", 0, "clean")
 case("memo mfr bad", "memo/scripts/memo_check.py", "memo/inputs/bad.md", 1, "no originator Code", "not in capitals", "without a Signer line", "no date in the paragraphs", "it does not argue", "Gunny Ostrowski")
 case("memo point paper", "memo/scripts/memo_check.py", "memo/inputs/point_paper.md", 0, "clean")
-case("memo from to", "memo/scripts/memo_check.py", "memo/inputs/from_to_memo.md", 1, "governed by SECNAV M-5216.5, which is not in the library")
+# A bare "Memorandum" is now ambiguous rather than out of scope: chapter 10 prints five and they
+# are not interchangeable, so the checker names them and refuses to guess.
+case("memo kind must be named", "memo/scripts/memo_check.py", "memo/inputs/from_to_memo.md", 1, "does not say which", "10-2.2", "10-2.6")
+# The SECNAV M-5216.5 formats, added 18 September 2026 once the manual reached the library.
+case("memo from to", "memo/scripts/memo_check.py", "memo/inputs/from_to_good.md", 0, "clean")
+case("memo plain paper with decision block", "memo/scripts/memo_check.py", "memo/inputs/plain_paper_decision.md", 0, "clean")
+case("memo agreement", "memo/scripts/memo_check.py", "memo/inputs/moa_good.md", 0, "clean")
+case("memo business letter", "memo/scripts/memo_check.py", "memo/inputs/business_letter_good.md", 0, "clean")
+# The trap this format exists to catch: a Marine writing a business letter the way he writes a
+# naval letter. Every failure below is a habit that carries over and should not.
+case("memo business letter with naval habits", "memo/scripts/memo_check.py", "memo/inputs/business_letter_bad.md", 1,
+     "is not the civilian format", "a '## Ref' block on a business letter", "a '## Encl' block on a business letter",
+     "without calling them references or enclosures", "11-2.8 gives one and only one", "Do not number main paragraphs")
 # the endorsement renders and passes the correspondence gates
 import tempfile, subprocess as _sp
 _t = tempfile.mkdtemp()

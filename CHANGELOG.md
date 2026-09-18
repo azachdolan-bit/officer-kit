@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.10.0 (2026-09-18) The correspondence manual, and the two tools that were waiting on it
+
+SECNAV M-5216.5 reached the library, so the two tools built without it were rebuilt against it. Both had carried a stated gap in their opening paragraph since 0.9.0; neither does now, and each names what its chapters still do not reach instead of claiming to be complete.
+
+**`endorsement`, to Chapter 9.** All six of its named gaps are closed from the manual's own words:
+
+- The ordinal counts endorsements added to the basic letter, not echelons in the chain (9-2.1.b). An activity that adds none takes no number.
+- Same page when it fits entirely on the signature page of the basic letter or the preceding endorsement and is sure to be signed without revision, new page otherwise (9-1, Figure 9-1). A same page endorsement may omit the SSIC, subject, and the basic letter's identification symbols when the whole page is photocopied; a new page endorsement must repeat all three (9-2.1.a, Figure 9-2).
+- Added references and enclosures continue the basic letter's sequence rather than restarting, and nothing already identified is repeated (9-2.3, 9-2.4).
+- The Copy to block turns on a test the manual states outright (9-2.5): a **significant** endorsement ("forwarded, recommending disapproval," "readdressed and forwarded," or substantive comments) copies every prior endorser, the originator, and every prior copy to addressee; a **routine** one ("forwarded," "forwarded for consideration," "forwarded, recommending approval") does not. The checker now applies this test rather than noting that a manual settles it.
+- An endorsement may forward comments, redirect a letter, and alter or add remaining Via addressees; it may not reply to a routine letter or take its own subject (9-1, Figure 9-2).
+
+**`memo`, to Chapters 10 and 11.** The tool used to refuse two formats outright. It now builds six more:
+
+- The From-To memorandum on the OPNAV printed form (10-2.2), the plain-paper memorandum (10-2.3), the letterhead memorandum (10-2.4), the approval and disapproval decision block, which the manual puts on a memorandum only "When only requesting an approval/disapproval decision from a single addressee" (10-2.5), and the memorandum of agreement or understanding with its five titled paragraphs, the senior official's signature at the right, and the senior activity signing last (10-2.6).
+- The business letter (chapter 11), with the four habits that carry over from a naval letter and should not, each now a failure rather than a note: the civilian date format (11-2.1.c), references and enclosures mentioned in the body and never named as such (11-2.7), "Sincerely," as the one complimentary close (11-2.8), and unnumbered main paragraphs (11-2.6).
+- On the memorandum for the record the two publications **agree**. MCTP 3-30A Appendix D and SECNAV M-5216.5 10-2.1 carry the same sentences, near verbatim. The standard says so with both cited side by side rather than silently picking one.
+
+**Still open, and named in each tool:** the wording for returning correspondence without action and any test for "substantive comments" (Chapter 9 reaches neither); the From-To form's number, which the manual gives as OPNAV 5215/144A in 10-2.2 and 5216/144A in Figure 10-2; where a business letter's identification symbols sit, which 11-2.1 puts upper left and every figure in the chapter puts upper right; and a Copy to block on a memorandum, which Chapter 10 never mentions. `build_letter.py` renders the MFR and the endorsement; the chapter 10 and 11 formats are written and checked but not measured on a page, and the skills say so.
+
+- Both skill descriptions were over the 1024 character limit after the rebuild, which `install_check.py` caught before packaging. This is the failure that blocked the install at 0.8.1; the harness added then did its job.
+- `evals/core_check.py`: 44 of 44, with five new cases covering the added formats and a business letter written with naval letter habits. All seven harnesses pass.
+
 ## 0.9.1 (2026-09-18) The finder sees a publication saved under its bare number
 
 The rules file test passed: a fresh Cowork session reads `C:\TBS\CLAUDE.md`, so every tool reaches the user's overrides, exemplars, and the library rule. That was the last unknown that gated handing the kit to anyone else.
