@@ -96,7 +96,7 @@ The kit gets better only if what comes back reaches the tool. Four sources, one 
 
 The repo is public and is a plugin marketplace. People install it in Claude desktop through Customize, Plugins, the plus button under Personal plugins, Add marketplace, Add from a repository, `https://github.com/azachdolan-bit/officer-kit`, then Install on Officer Kit. The Claude GitHub App is installed on the repo with Sync automatically turned on in Manage marketplaces, so a new version reaches every marketplace install without anyone doing anything.
 
-The release drill, every time:
+The release drill, every time (`scripts/release.sh <version>` does steps 1 to 3 and the branch):
 
 1. Bump the version in both `plugins/officer-kit/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` (they must match).
 2. Run `evals/install_check.py` and the harnesses. Build the file with `scripts/package.sh`.
