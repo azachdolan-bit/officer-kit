@@ -91,3 +91,17 @@ The kit gets better only if what comes back reaches the tool. Four sources, one 
 - Two or three real products the user would sign today, in each of awards, fitreps, and letters, with the reader's edits if they exist. They stay in the user's folder as private exemplars; scrubbed fictional versions become the plugin's.
 - The intake questions in the user's own words for one tool, spoken, not written: "if a lieutenant brought me a NAM, I would ask..." That recording is the seed for every intake file.
 - The list of billets the first users hold, so the billet map starts from real people.
+
+## 8. How a release reaches everyone (set up 19 Sep 26)
+
+The repo is public and is a plugin marketplace. People install it in Claude desktop through Customize, Plugins, the plus button under Personal plugins, Add marketplace, Add from a repository, `https://github.com/azachdolan-bit/officer-kit`, then Install on Officer Kit. The Claude GitHub App is installed on the repo with Sync automatically turned on in Manage marketplaces, so a new version reaches every marketplace install without anyone doing anything.
+
+The release drill, every time:
+
+1. Bump the version in both `plugins/officer-kit/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` (they must match).
+2. Run `evals/install_check.py` and the harnesses. Build the file with `scripts/package.sh`.
+3. Merge the change to `main` through a pull request. Automatic sync fires on a merged pull request that carries a version bump; a plain push may not.
+4. On the GitHub releases page, publish a release tagged with the version and attach `dist/officer-kit.plugin` (for people who cannot use the marketplace) and, when it changed, `Officer-Kit-Starter-Library.zip`. `releases/latest` is the link on the slides and in GETTING STARTED, so it must always carry both files.
+5. Anyone who installed from the file has to download the new file; anyone on the marketplace gets it automatically, or can force it with Check for updates in Manage marketplaces.
+
+The starter library is fifteen public publications copied from the maintainer's marine-regs library, built by hand on 19 Sep 26 (list and source pages in the zip's README). Refresh it when a publication in it is superseded.
