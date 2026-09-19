@@ -57,7 +57,9 @@ Every correction you make, and every defect a reviewer catches, is written to a 
 
 **From this repo, so you get updates:** in Cowork, open Customize, then Plugins, then Add marketplace, and enter `azachdolan-bit/officer-kit`. Install Officer Kit. Click Update on the marketplace when a new version is announced.
 
-**From a file:** upload `officer-kit.plugin` on the Plugins page. No automatic updates; reinstall to upgrade.
+**From a file:** download `officer-kit.plugin` from the releases page (https://github.com/azachdolan-bit/officer-kit/releases/latest) and upload it on the Plugins page. No automatic updates; reinstall to upgrade.
+
+**Starter library:** the same releases page carries `Officer-Kit-Starter-Library.zip`, fifteen public Marine Corps publications the tools cite from. Unzip it into your working folder.
 
 ## Contributing a lesson
 

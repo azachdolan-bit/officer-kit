@@ -23,7 +23,7 @@ Read the order from the user's library first. `scripts/find_order.py <number>` s
 
 ## Say this once
 
-"Your library is the set of manuals, orders, and handouts the tools are allowed to cite. It lives in the Reference folder inside your working folder. Nothing outside it is used as an authority. Three ways to build it; most people start with the first and add the second later if they want the whole thing."
+"Your library is the set of manuals, orders, and handouts the tools are allowed to cite. It lives in the Reference folder inside your working folder. Nothing outside it is used as an authority. Four ways to build it; most people take the zip, add their own documents, and never need the rest."
 
 ## Step 1. Which modules do they use?
 
@@ -33,7 +33,8 @@ Read the rules file or ask. The starter set is per module; do not push publicati
 
 | Option | Good for | Time | What happens |
 |---|---|---|---|
-| **A. Starter set by hand** (recommended first) | everyone | 10 minutes | The user downloads the handful of manuals their modules cite from marines.mil into `Reference/`. No code, no install. |
+| **0. Starter library zip** (fastest) | everyone | 2 minutes | Download `Officer-Kit-Starter-Library.zip` from the kit's releases page (https://github.com/azachdolan-bit/officer-kit/releases/latest) and unzip it into the working folder. It drops fifteen public publications into `Reference/`: MCDP 1, 1-0 and 7, MCRP 3-10A.2, 3-10A.3 and 3-10A.4, MCWP 3-01, MCTP 3-30A, MCO 1610.7B, 1650.19J, 5100.29C, 5215.1K, 5354.1G and 1616.1, and NAVMC 5239.1, with a README that names each one's marines.mil source page. |
+| **A. Starter set by hand** | everyone | 10 minutes | The user downloads the handful of manuals their modules cite from marines.mil into `Reference/`. No code, no install. |
 | **B. Full publications library** | anyone who wants "what does the order say about..." answers across every MCO, MCBul, MARADMIN, and doctrine pub | one command, then 30 to 90 minutes unattended | The companion `marine-regs` plugin downloads the whole library from marines.mil and builds a search index. Resumable; re-run to refresh. |
 | **C. Your own documents** | everyone, always | as you go | Unit SOPs, school handouts you were issued, orders you received, your boss's guidance. These go in `Reference/` too and outrank the manual where the unit says so. |
 

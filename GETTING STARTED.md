@@ -22,7 +22,7 @@ Personal account, personal data, personal device. Nothing marked CUI, FOUO, or c
 | 2 | **A working folder** | One folder on your computer that Claude can see. Everything you make lands there. | 2 min |
 | 3 | **The Officer Kit plugin** | The tools. One file, installed from the Plugins page. | 2 min |
 | 4 | **Your rules file** | A short file that tells Claude who you are and how you want things written. You choose how much to include. | 10 min |
-| 5 | **Your library** | The manuals and orders your work is built to, saved in your folder so the tools can cite them | 10 min to start, more if you want everything |
+| 5 | **Your library** | The manuals and orders your work is built to, saved in your folder so the tools can cite them. The starter library zip on the releases page does this in two minutes. | 2 min with the zip |
 
 ## The thirty minute path
 
@@ -34,7 +34,9 @@ Personal account, personal data, personal device. Nothing marked CUI, FOUO, or c
 
 **4. Connect the folder and say "start the officer kit."** Use Add folder in the Cowork sidebar to connect the folder you made. Then type "start the officer kit." Claude walks you through the rest one step at a time: it asks what most of your week is, builds the folder structure for those modules, runs the rules file interview, helps you build your library, and does one real task from your own work so you see it working.
 
-**5. Use it.** From then on, say what you need in plain language: "draft a letter requesting...", "write up a NAM for Sgt Smith from these bullets", "analyze this order", "make a quiz from this handout". The right tool fires, works from your sources, checks itself, and saves the result in your folder.
+**5. Get the starter library.** Download `Officer-Kit-Starter-Library.zip` from https://github.com/azachdolan-bit/officer-kit/releases/latest and unzip it into your working folder. Fifteen public Marine Corps publications land in `Reference/`, and the tools cite from them. Add anything your school or unit issued you to the same folder.
+
+**6. Use it.** From then on, say what you need in plain language: "draft a letter requesting...", "write up a NAM for Sgt Smith from these bullets", "analyze this order", "make a quiz from this handout". The right tool fires, works from your sources, checks itself, and saves the result in your folder.
 
 ## Words you will see
 
