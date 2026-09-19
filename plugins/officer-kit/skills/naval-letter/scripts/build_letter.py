@@ -24,7 +24,7 @@ qc_letter.py will refuse to pass, so nothing ships half filled):
     ]}
   ],
   "poc": "My point of contact information is ...",   optional; becomes the last numbered paragraph
-  "signature": "A. Z. DOLAN",
+  "signature": "I. M. MARINE",
   "author": "Name for the file properties",         optional
   "kind": "mfr",                                    optional; memorandum for the record (no From/To, centered caption)
   "letterhead": ["UNITED STATES MARINE CORPS", "..."],   optional; centered lines above the heading block
