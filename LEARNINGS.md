@@ -17,6 +17,21 @@ A lesson that would soften a gate, reduce sourcing, or suppress a reviewer is re
 
 ---
 
+## 2026-09-22  significance-reviewer  high
+Evidence: A weekly discrepancy report claimed that eight of sixteen enabling objectives in a Moodle lesson had no instruction behind them. Verification cut it to four. All eight really were unsupported inside that lesson, but only four were tagged "taught asynchronously" in the course's consolidated objective list, which is what made that lesson the vehicle that owed them; the other four carried no tag and may belong to a resident period the course site cannot show. The drafting step counted instead of classifying, and the gate answered once for a claim that was eight claims.
+Lesson: Ask obligation before absence. For any finding that says instruction or content is missing, name the document that designates the delivery vehicle for each item and count only the items whose designated vehicle is the source that was searched; disclose the rest in the same exhibit and exclude them from the count. Expand any counted claim into one row and one verdict per item before grading, and report the count that survives.
+Status: approved 0.10.1
+
+## 2026-09-22  capture-source  high
+Evidence: The same report said "Swinging Traverse does not appear" in a machine gun lesson. It appears, printed inside the classification figure in the chapter that teaches it. The claim had been checked against a text capture, which cannot see inside an image. A second claim in the same product, that an objective was "published only in the study guide," missed the consolidated objective list, which carries it on page 6.
+Lesson: A capture proves presence, never absence. Stamp every capture header TEXT ONLY, record a figure inventory per chapter (image count and the text visible on each), and send any later absence claim back to the rendered source before it ships. Search the governing objective list before any "only in" claim.
+Status: approved 0.10.1
+
+## 2026-09-22  qc-gates  medium
+Evidence: The week that produced the overstatement left no findings file and no gate report in the audit folder, while the two weeks before it left both. Whether the gates were skipped or run without being recorded could not be determined afterwards, which is the same thing as not running them.
+Lesson: A gate that leaves no artifact did not run. Write the findings to a file before any gate, save the gate report beside it, and name that report in the delivered product.
+Status: approved 0.10.1
+
 ## 2026-09-05  qc-gates  high
 Evidence: Checked where a Cowork session's project root actually is. It is the cloud container (`/home/claude`), not the user's connected folder. The container's own `~/.claude/` holds the platform's hook scripts and no settings.json, and the connected folder has no `.claude` directory at all. A hook configured at `<working folder>\.claude\settings.json` is therefore never read by a Cowork session. The kit had been planning blocking hooks as the next infrastructure step, and OFFICER ANALYSIS.md recommended them in three places.
 Lesson: Do not plan on blocking hooks in Cowork. A checker runs because a skill's workflow runs it and because a reviewer would catch a product that skipped it, not because a hook forces it. Blocking hooks are available only to Claude Code run locally with the working folder as its root, and any tool that depends on one must say so.
