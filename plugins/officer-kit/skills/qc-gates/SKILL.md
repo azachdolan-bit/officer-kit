@@ -35,7 +35,9 @@ Copy this checklist and track it:
 ```
 Gate run:
 - [ ] Product type named; gates chosen from the table
+- [ ] Findings written to a findings file on disk before any gate runs
 - [ ] Sources collected as file paths (the reviewer reads them itself)
+- [ ] Absence claims listed separately: each names the document that owes the content and whether the source was read rendered or as a capture
 - [ ] Gate 0 significance-reviewer: verdicts recorded, KILL and DEMOTE applied
 - [ ] Gate 1 evidence-reviewer: grades recorded, THIN / REACHING / WRONG cut, "missed" list triaged
 - [ ] Product rebuilt after cuts
@@ -43,6 +45,7 @@ Gate run:
 - [ ] Source fidelity reviewer PASS (teaching products)
 - [ ] Gate 3 visual-reviewer SHIP (rendered products), rerun after every fix
 - [ ] Gate report written: what each gate cut and why
+- [ ] Gate report SAVED beside the findings file, and the delivered product names it
 ```
 
 **Brief a reviewer like this.** Give the agent: the product (path or text), the source file paths, the output shape it must return (each agent's definition carries it), and nothing else. Do not include the draft's justification, the conversation, or your own opinion of which findings are strong. If a reviewer asks why something was written, the answer is "not your concern; grade it."
@@ -70,6 +73,8 @@ Gate 3: SHIP after <n> passes; last pass fixed <defect>
 - Reviewers are blind. Never pass them the drafting reasoning.
 - Never argue a reviewer out of a KILL or a WRONG in the same session. If the user disagrees, the user overrides, and the report says so.
 - Never run a judgment gate on a product with a placeholder or a known mechanical defect; fix the mechanics first so the reviewer's tokens go to substance.
+- **A gate that leaves no artifact did not run.** The findings file and the gate report are saved next to each other before the deliverable is built. A week later a skipped gate and a passed gate look identical unless the report exists.
+- **Never let a counted claim take one verdict.** Before Gate 0, expand any finding carrying a number into one row per item; the reviewers grade rows, and the headline number is recomputed from the survivors.
 - Record what each gate caught. That record feeds `LEARNINGS.md`; a defect the drafting skill should have prevented is a lesson for that skill.
 
 ## Where the pieces live

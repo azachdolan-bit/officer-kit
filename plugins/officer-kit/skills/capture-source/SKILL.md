@@ -22,6 +22,7 @@ Everything downstream (study guides, quizzes, walkthroughs, letters, briefs) is 
 - **Expand everything before you copy.** Tabs, accordions, click to reveal panels, hotspots, and lazy loaded chapters hide text, and the hidden text is usually the objectives and the definitions.
 - **Verbatim over tidy.** Keep the source's numbering, labels, units, and marginalia. Note where the source is wrong; do not fix it in the capture.
 - **Mark uncertainty.** `[illegible]`, `[cut off]`, `[handwritten: ...]`. Never guess at a number.
+- **A capture proves presence, never absence.** Text extraction cannot see what a figure, diagram, or screenshot says. Every capture header carries the line `TEXT ONLY: figures are not captured. Any claim that something is absent from this source must be checked against the rendered source.` Anything built later that says "X appears nowhere in this lesson" goes back to the live lesson first.
 
 ## Choose the path
 
@@ -38,7 +39,8 @@ Everything downstream (study guides, quizzes, walkthroughs, letters, briefs) is 
 3. Paste each chapter under its own heading (`## Chapter N: <title>`). Keep list numbering and table structure.
 4. Embedded knowledge checks and games are captured too, under a `### Knowledge check` heading, because they show what the course tests.
 5. Run `python3 scripts/capture_check.py "<capture>.md"` and read the report: chapter count, words per chapter, empty or thin chapters, repeated blocks, and the title after content pattern (some platforms print a block's title below its body; the report flags headings that follow a list so a "missing heading" is not misread later).
-6. Record source facts at the top of the file: lesson title, where it lives, date captured, chapter count, anything the lesson says about its own objectives.
+6. **Figure inventory.** For each chapter, record how many images it carries and what text is visible on each one (the caption, and any label printed inside the figure, read off the rendered page). Put it under `### Figures` in that chapter. This is the only record that a term lives inside an illustration rather than in the prose, and it is what keeps a later absence claim honest.
+7. Record source facts at the top of the file: lesson title, where it lives, date captured, chapter count, the figure count, the TEXT ONLY line, and anything the lesson says about its own objectives.
 
 If the user has a browser connector and directs its use, the same steps apply; the completeness check is the same.
 
@@ -66,7 +68,7 @@ Photo captures carry the most risk, so they carry a read back gate.
 
 - The capture file, saved.
 - The `capture_check.py` report, in the chat.
-- A one line source facts summary: what, where, when, how many chapters or pages, what was uncertain.
+- A one line source facts summary: what, where, when, how many chapters or pages, how many figures, what was uncertain.
 
 ## Utility script
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.10.1 (2026-09-22) Obligation before absence
+
+A weekly discrepancy report claimed eight of sixteen objectives had no instruction behind them; verification cut it to four. The observation was right and the finding was wrong, because "this lesson does not teach it" is not the same question as "this lesson was supposed to teach it." Four gates already existed and none of them asks the second question. Now one does.
+
+- **`significance-reviewer` gains a fifth attack question, Obligation.** For any finding that says instruction, content, or a step is missing, the reviewer names the document that designates the delivery vehicle for each item and keeps in the count only the items whose designated vehicle is the source that was searched. Everything else is disclosed in the same exhibit and excluded. Its output block gains an `Obligation:` line and a `Scope: counted N, disclosed but not counted M` line, and it now decomposes any counted claim into one verdict per item before answering.
+- **`evidence-reviewer` gains an absence protocol.** The search set is named, document by document, with rendered or capture recorded for each. A text capture proves presence, never absence: figures, labels printed inside images, and collapsed panels are not in the text, so an absence claim checked only against a capture is THIN until someone reads the rendered source. "Only in this document" claims search the governing objective list first. Counted claims are expanded into one graded claim per item. Two source traps were added from the same case.
+- **`capture-source` gains a figure inventory.** Every chapter records how many images it carries and what text is visible on each, and every capture header carries `TEXT ONLY: figures are not captured.` The case that produced this: a term that appears nowhere in a lesson's text and is printed inside its illustration, which shipped as "appears nowhere in the lesson."
+- **`qc-gates` gains the artifact rule.** The findings go to a file before any gate runs, the gate report is saved beside it, and the delivered product names the report it passed. A skipped gate and a passed gate are indistinguishable a week later unless the report exists.
+- `LEARNINGS.md` carries the three lessons behind these changes.
+
 ## 0.10.0 (2026-09-18) The correspondence manual, and the two tools that were waiting on it
 
 SECNAV M-5216.5 reached the library, so the two tools built without it were rebuilt against it. Both had carried a stated gap in their opening paragraph since 0.9.0; neither does now, and each names what its chapters still do not reach instead of claiming to be complete.
