@@ -119,6 +119,24 @@ def is_recall(q):
 def answer_text(q):
     return q["answer"] if is_recall(q) else q["o"][q["a"]]
 
+def pattern_fails(seq):
+    """Every way a player could read the answer order. Empty list means the order gives nothing away."""
+    out = []
+    if any(seq[i] == seq[i - 1] for i in range(1, len(seq))):
+        out.append("adjacent questions share a correct slot")
+    steps = [(seq[i] - seq[i - 1]) % 4 for i in range(1, len(seq))]
+    if any(steps[i] == steps[i - 1] == steps[i - 2] and steps[i] in (1, 3) for i in range(2, len(steps))):
+        out.append("the answer steps to the next tile three times in a row")
+    if any(seq[i] == seq[i - 2] and seq[i - 1] == seq[i - 3] for i in range(3, len(seq))):
+        out.append("the answer swings between two tiles (A B A B)")
+    for per in (3, 4):
+        run = 0
+        for i in range(per, len(seq)):
+            run = run + 1 if seq[i] == seq[i - per] else 0
+            if run >= per + 1:
+                out.append("the answer order repeats a %d question cycle" % per); break
+    return out
+
 def balance(spec):
     """Balanced, de-patterned correct-answer positions across the whole product, distractors shuffled,
     seeded so the result is reproducible. Records the intended answer text first and verifies it after."""
@@ -128,9 +146,9 @@ def balance(spec):
         q["_intended"] = q["o"][q["a"]]
     n = len(qs)
     order = [i % 4 for i in range(n)]
-    for _ in range(2000):
+    for _ in range(5000):
         rng.shuffle(order)
-        if all(order[i] != order[i - 1] for i in range(1, n)):
+        if not pattern_fails(order):
             break
     else:
         raise SystemExit("could not place answers without adjacent repeats")
@@ -178,8 +196,8 @@ def quiz_fails(spec):
         if max(pos.values()) - min(pos.get(i, 0) for i in range(4)) > 1:
             fails.append("answer positions unbalanced: %s" % dict(sorted(pos.items())))
         seq = [q["a"] for _, q in mc]
-        adj = sum(1 for i in range(1, n) if seq[i] == seq[i - 1])
-        if adj: fails.append("%d adjacent questions share a correct position" % adj)
+        for pf in pattern_fails(seq):
+            fails.append("answer order: " + pf)
         n = len(qs)
         d = Counter(q.get("d") for _, q in qs)
         for lvl, lo, hi in (("easy", .10, .30), ("hard", .10, .30)):

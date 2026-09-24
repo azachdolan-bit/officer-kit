@@ -27,6 +27,7 @@ Say **"start the officer kit."** It sets up your working folder, then builds you
 | "critique my order" | Five paragraph order review | Structured feedback |
 | "triage my inbox" | Four buckets, drafted replies, never sends | Connectors |
 | "week ahead" | One screen brief, then make it recurring | Scheduled tasks |
+| "make a Kahoot" | Kahoot decks from your copy of the official template, every answer slot verified, host key for group sessions | Files in, files out |
 | "debrief" | End of chat sweep of every correction you made, sorted to where it belongs, written only on your yes, plus every file the chat produced | Lessons loop |
 | "build a skill" | Interview, then a working skill for your repeat task | Skills and plugins |
 | "fleet transition" | Day one and week one checklist for your first unit | Taking it with you |

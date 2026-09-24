@@ -85,7 +85,7 @@ Status: approved 0.13.0 (study-guide rebuilt; blind A/B in evals/ab-test-2026-09
 ## 2026-09-04  quiz-builder  high  -> plugin
 Evidence: A from scratch quiz workbook silently dropped importer features; a shuffle corrupted the marked answer because the importer stores a slot number, not text.
 Lesson: Always populate the official template. After any shuffle, resolve every slot number to its text and assert it equals the intended verbatim answer; all four cells non empty; print pass or fail.
-Status: pending
+Status: approved 0.14.0 (quiz-builder built; read back verification of every slot)
 
 ## 2026-09-04  topic-brief  high  -> plugin
 Evidence: First Iwo backgrounder rejected as "almost unreadable... not focused."

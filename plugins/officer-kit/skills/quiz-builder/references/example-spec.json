@@ -1,0 +1,24 @@
+{
+  "_note": "Fictional example built from ../study-guide/references/example-source.txt. Its content is not to be taken into a real quiz; copy only its shape.",
+  "title": "Keeping a Sourdough Starter",
+  "seed": 20260924,
+  "time_by_difficulty": {"easy": 20, "medium": 20, "hard": 30},
+  "decks": [
+    {"name": "Sourdough 1 - Starter and feeding", "questions": [
+      {"q": "What produces the gas that raises the bread?", "o": ["The yeast", "The bacteria", "The flour", "The water"], "a": 0, "e": "The yeast makes the gas; the bacteria make the acids.", "d": "easy", "ref": "Chapter 1, What a starter is"},
+      {"q": "What produces the acids that give the bread its sour taste?", "o": ["The bacteria", "The yeast", "The hooch", "The flour"], "a": 0, "e": "Lactic acid bacteria produce the acids.", "d": "medium", "src": "bacteria produce the acids", "ref": "Chapter 1"},
+      {"q": "How many hours after a room temperature feed does a healthy starter start to have doubled, at the earliest?", "o": ["2", "4", "8", "12"], "a": 1, "e": "Four to eight hours.", "d": "medium", "src": "between four and eight hours", "ref": "Chapter 1"},
+      {"q": "A starter has not doubled in twelve hours. What must happen before it is used?", "o": ["Two days of regular feeding", "One stiff feed", "A float test only", "Nothing; use it"], "a": 0, "e": "Sluggish starters get two days of regular feeding.", "d": "hard", "src": "needs two days of regular feeding", "ref": "Chapter 1"},
+      {"q": "What is the standard feed ratio of starter, flour, and water by weight?", "o": ["1:1:1", "1:2:1", "2:1:1"], "a": 0, "e": "One part each by weight.", "d": "easy", "ref": "Chapter 2, Feeding"},
+      {"q": "When is a stiff 1:2:1 feed used?", "o": ["When it will sit more than a day", "When it shows hooch", "When it fails the float test", "When it smells of nail polish"], "a": 0, "e": "A stiff feed slows fermentation for a longer wait.", "d": "medium", "src": "will sit for more than a day", "ref": "Chapter 2"},
+      {"q": "Feed water must stay below what temperature?", "o": ["20 C", "25 C", "30 C", "35 C"], "a": 2, "e": "Hotter than 30 degrees Celsius kills the yeast.", "d": "medium", "src": "below 30 degrees Celsius", "ref": "Chapter 2"},
+      {"q": "How often is a refrigerated starter fed?", "o": ["Once every seven days", "Once every twenty four hours", "Once every three days", "Once every fourteen days"], "a": 0, "e": "Weekly in the refrigerator.", "d": "medium", "ref": "Chapter 2"}
+    ]},
+    {"name": "Sourdough 2 - Reading the signs", "questions": [
+      {"q": "Gray liquid on top of the starter means what?", "o": ["It is hungry and should be fed sooner", "It is contaminated", "It is ready to bake with", "It is sluggish"], "a": 0, "e": "Hooch means hungry.", "d": "medium", "src": "hungry and should be fed sooner", "ref": "Chapter 3, Reading the signs"},
+      {"q": "Which sign means the whole starter must be thrown away?", "o": ["Pink or orange streaks", "Gray liquid on top", "A nail polish remover smell", "Sinking in water"], "a": 0, "e": "Contamination; the others are recoverable.", "d": "medium", "ref": "Chapter 3"},
+      {"q": "The starter smells of nail polish remover. Which is true?", "o": ["Overdue for a feed, still safe", "Contaminated, throw it away", "Ready to bake with", "Needs two days of feeding"], "a": 0, "e": "Overdue but still safe to use.", "d": "hard", "src": "overdue for a feed but is still safe to use", "ref": "Chapter 3"},
+      {"q": "A spoonful floats in water. What does the float test say?", "o": ["Ready to bake with", "Hungry", "Contaminated", "Overdue"], "a": 0, "e": "If it floats, it is ready.", "d": "easy", "src": "ready to bake with", "ref": "Chapter 3"}
+    ]}
+  ]
+}

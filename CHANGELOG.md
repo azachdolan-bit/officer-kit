@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.0 (2026-09-24) Quiz builder
+
+- **New tool: `quiz-builder`.** Kahoot decks built by filling the user's own copy of Kahoot's official import template (the tool stops if there is none), with a host answer and page key for group sessions. The builder places answers, checks the rules, writes each deck, then reads every file back to prove the marked slot holds the intended answer, every answer cell is filled, and every time is one the template allows. Nothing is written when a rule fails.
+- **Rules from the author's corrections and from the item writing literature** (Haladyna, Downing, and Rodriguez, 2002): sourced answers, two to four options (three good beat four with a throwaway), no "of the above" options, positive stems unless the exception is the point, no length cue, no cue from grammar or stem words, no false premise, Kahoot's field limits, the times the user's template allows (Kahoot's published list and the template disagree), numeric options in ascending order.
+- **Answer order that gives nothing away.** A blind red team found a deck that passed the balance and adjacency checks while stepping through the tiles in order. Placement now samples an order with no repeats, stepping runs, two tile swings, or repeating cycles, and the same check now guards `study-guide` quizzes.
+- `evals/quiz_builder_check.py` (27 items) builds a stand in template with the official layout's features and runs in every release. The test record is in `evals/quiz-builder/`.
+
 ## 0.13.0 (2026-09-23) Study guide, rebuilt
 
 `study-guide` 0.1.0 made the product the author rejected on 4 Sep: a one page summary and a twenty question quiz, with nothing to stop a quiz from testing what the summary left out. It is rebuilt from his corrections, his walkthrough engine, and his completeness gates, and it beat the old tool in a blind test (`evals/ab-test-2026-09-23-study-guide/`).
