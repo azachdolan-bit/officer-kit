@@ -8,6 +8,7 @@ The author's working rules lived in his own rules file and memory, so a peer who
 - **Every one of the 46 tools reads it** through a two line Kit standards section, one reference deep from each SKILL.md (Anthropic's skill authoring guidance: nested references get read partially).
 - **The rules file template carries a Kit standards block** with a version line. A user can strike any line; a struck line is recorded so updates never add it back.
 - **`start` and `week-ahead` check the version line** in an existing rules file and offer the new standards as a diff. This is how a rules file written before 0.12.0 gets them.
+- **Lessons queue worked for the first time.** Of six small pending lessons, four were already in the kit and had never been marked; two became checklist lines in `build-a-skill`: write a tool's standard from the user's library first, and run a new checker on its own exemplar and read every line before wiring it in.
 - **`evals/standards_check.py`** fails a skill that does not read the standards, a template out of step with them, or a dash; `scripts/release.sh` runs it.
 
 ## 0.11.0 (2026-09-23) Debrief

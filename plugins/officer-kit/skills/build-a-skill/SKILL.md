@@ -46,11 +46,12 @@ Produce `skills/<skill-name>/SKILL.md` using the template. Rules:
 
 ## Kit tool checklist (after new_tool.py)
 
-- [ ] standard.md carries the order's own words with paragraph numbers, nothing paraphrased
+- [ ] standard.md carries the order's own words with paragraph numbers, nothing paraphrased, read from the user's library or Reference folder first (`library/scripts/find_order.py <number>`), figure pages rendered as images; the web only when the order is not on disk, and the standard says so
 - [ ] intake.md asks in the order a good reviewer asks, and every question that expects a number says so
 - [ ] exemplar.md has one strong and one weak, fictional, annotated
 - [ ] the checker enforces at least three things the standard imposes, plus the strike list and blocked content scan
 - [ ] evals/<tool>/inputs has a good and a bad case and the checker passes one and fails the other
+- [ ] the checker has been run on the tool's own exemplar and every line of its output read; a warning the reader would ignore is fixed or removed before the checker is wired in
 - [ ] SKILL.md description says what and when in third person with the phrases a user would say
 - [ ] a person who did not build it runs it on their own material and it holds
 
