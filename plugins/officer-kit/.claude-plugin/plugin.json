@@ -1,6 +1,6 @@
 {
   "name": "officer-kit",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Tools for what a Marine officer does every week: read and review orders; write awards, fitness reports, recommendations and correspondence; run a reporting senior profile; build promotion and recognition packages and board briefs; counsel; build risk assessments, range packages and training schedules; run investigations and property loss inquiries; prepare for inspections; plan, teach and study. Blind reviewers and a lessons loop make it yours. Method only, never your data.",
   "author": {
     "name": "Zach Dolan"

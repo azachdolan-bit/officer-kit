@@ -26,6 +26,7 @@ PY
 python3 evals/install_check.py
 python3 evals/standards_check.py
 python3 evals/study_guide_check.py
+python3 evals/quiz_builder_check.py
 bash scripts/package.sh
 git checkout -b "release/v$VER"
 git add -A
