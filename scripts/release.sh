@@ -30,4 +30,5 @@ git add -A
 git commit -m "Release $VER"
 echo
 echo "Branch release/v$VER is committed. Now, in GitHub Desktop: Push origin, then Create pull request."
-echo "On GitHub: Merge the pull request. Then publish a release tagged v$VER with dist/officer-kit.plugin attached."
+echo "On GitHub: Merge the pull request. Then publish a release tagged v$VER with dist/officer-kit.plugin AND Officer-Kit-Starter-Library.zip attached."
+echo "releases/latest is where GETTING STARTED and the library skill send new users for the starter library; a release without it breaks their setup."

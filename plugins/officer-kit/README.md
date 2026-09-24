@@ -27,6 +27,7 @@ Say **"start the officer kit."** It sets up your working folder, then builds you
 | "critique my order" | Five paragraph order review | Structured feedback |
 | "triage my inbox" | Four buckets, drafted replies, never sends | Connectors |
 | "week ahead" | One screen brief, then make it recurring | Scheduled tasks |
+| "debrief" | End of chat sweep of every correction you made, sorted to where it belongs, written only on your yes, plus every file the chat produced | Lessons loop |
 | "build a skill" | Interview, then a working skill for your repeat task | Skills and plugins |
 | "fleet transition" | Day one and week one checklist for your first unit | Taking it with you |
 
@@ -80,4 +81,4 @@ Send the `.plugin` file to another Marine. They install it the same way you did.
 
 ## Version
 
-0.3.1. Correspondence and Verify modules available; Admin (awards, fitreps, profile) building. MODULES.md and CHANGELOG.md in the repo. Feedback to the facilitator.
+See plugin.json for the installed version. Every module in MODULES.md marked Available is built. CHANGELOG.md in the repo lists what changed. Lessons and proposals for the kit go to https://github.com/azachdolan-bit/officer-kit/issues.

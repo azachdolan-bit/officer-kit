@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.11.0 (2026-09-23) Debrief
+
+Corrections were landing in the chat, in Claude's automatic memory, or in the user's rules file, and only the few that went through `aar` ever reached the lessons queue. `inspect` works from the queue, so everything else stayed where no tool and no other user could see it.
+
+- **New tool: `debrief`.** Say "debrief" at the end of a chat. It sweeps the whole chat for corrections, rejected or redone work, and instructions the user had to repeat, and turns each into a lesson with the user's own words as evidence. Each lesson is sorted: the kit (`-> plugin`), this command's way (`-> overrides`), a pattern (`-> exemplar`), or the user's own rules file (shown as a diff). A repeat of a recorded lesson is written as an enforcement gap that names the mechanism that would make it fire. Nothing is written until the user approves the table; the queue is checked with `lesson_check.py`; the chat's files are listed with their paths; the queue status says when to run `inspect`. Structured on the four after action review questions.
+- **`rules-file` template gains a Lessons block:** the queue path and the line that has Claude offer the debrief when a chat included a correction.
+- **The repository's LEARNINGS.md now passes its own checker.** Seventeen of its twenty entries used a heading without a destination, so `lesson_check.py` saw three and `inspect` could list none of the rest. Every heading now carries `-> plugin`; two entries without a status were given one.
+- **`scripts/release.sh`** reminds the maintainer that every release must carry the starter library, because `releases/latest` is where new users are sent for it.
+- Plugin README: version line no longer stale; debrief in the table; lessons go to the issues page.
+
 ## 0.10.1 (2026-09-22) Obligation before absence
 
 A weekly discrepancy report claimed eight of sixteen objectives had no instruction behind them; verification cut it to four. The observation was right and the finding was wrong, because "this lesson does not teach it" is not the same question as "this lesson was supposed to teach it." Four gates already existed and none of them asks the second question. Now one does.

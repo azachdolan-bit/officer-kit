@@ -48,6 +48,10 @@ Depth: [Light / Standard / Full]   Updated: [date]
 ## Never
 - [anything else specific to me]
 
+## Lessons
+- Lessons queue: LEARNINGS.md at the top of this folder
+- When a chat included a correction, offer the debrief before the final reply. I say "debrief" to run it.
+
 ## Correspondence identity (Full depth; each line may read "not recorded (ask me at draft time)")
 - SSIC default: [1500]
 - Originator code: [as printed on a signed letter]
