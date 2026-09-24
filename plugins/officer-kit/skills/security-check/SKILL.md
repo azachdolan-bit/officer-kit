@@ -12,6 +12,10 @@ metadata:
 
 Keep the user on the right side of the line. This skill exists because the user is a service member using a personal Claude account. Apply it before any folder link, file upload, or connector task that looks like it touches unit material.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## The card
 
 **Green: go.** Unclassified personal material, published doctrine and open source references, study notes in the user's own words, personal schedules, personal email, receipts, workout plans, anything already public.

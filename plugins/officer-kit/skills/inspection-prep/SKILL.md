@@ -16,6 +16,10 @@ metadata:
 
 MCO 5040.6K (May 2026) runs the Inspector General's inspection program, and the IGMC publishes the functional area checklists it inspects against (awards, career planning, leave and liberty, safety management, SAPR, consumer level supply, and many more). A program passes when the officer responsible can answer every checklist item with a document. The tool turns the checklist into a self assessment with evidence, lists what is missing as discrepancies with a plan, and builds the binder's contents so the inspector finds everything in order.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the order and where the checklists live; what an inspector expects of a program.

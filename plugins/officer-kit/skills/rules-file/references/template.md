@@ -10,6 +10,18 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - Never send email or post anything on my behalf without showing me the draft first.
 - Draft only. I read everything before it goes anywhere.
 
+## Kit standards (from the Officer Kit; strike a line to opt out)
+- Kit standards: 0.12.0
+- 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; list every file at the end of a session that built something.
+- 2 Sources only: build from my notes, captured sources, and cited references; name a gap, never fill it from general knowledge.
+- 3 Do not state what is implied.
+- 4 Build only the deliverable I asked for this time.
+- 5 Library first for any order or publication; the web only when it is not on disk, and say so.
+- 6 Share the method, never the product; never describe browser automation in a document for others.
+- 7 Teaching products are complete; every quiz answer is in the body of its section.
+- 8 Never compress spacing or margins to fit a page; cut words.
+- 9 No em dashes or en dashes.
+
 ## Who I am
 - [Rank], [billet], [unit or school], MOS [assigned or pending]   (or: not recorded)
 - Reports to: [OIC / platoon commander, optional]
@@ -47,6 +59,10 @@ Depth: [Light / Standard / Full]   Updated: [date]
 
 ## Never
 - [anything else specific to me]
+
+## Lessons
+- Lessons queue: LEARNINGS.md at the top of this folder
+- When a chat included a correction, offer the debrief before the final reply. I say "debrief" to run it.
 
 ## Correspondence identity (Full depth; each line may read "not recorded (ask me at draft time)")
 - SSIC default: [1500]

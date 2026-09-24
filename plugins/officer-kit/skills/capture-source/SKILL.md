@@ -15,6 +15,10 @@ metadata:
 
 Everything downstream (study guides, quizzes, walkthroughs, letters, briefs) is only as good as the capture. Capture completely, save immediately, verify mechanically, and mark what is uncertain rather than smoothing it over.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Rules that never bend
 
 - **Save it the same session.** A capture that lives only in the chat is lost when the chat ends. Write it to the user's working folder before doing anything else with it.

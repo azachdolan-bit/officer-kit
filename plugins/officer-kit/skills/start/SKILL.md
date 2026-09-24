@@ -14,6 +14,10 @@ metadata:
 
 Get a new user from install to their first real product in ten minutes, one step at a time. Do not present the whole menu; do the next step, confirm it worked, move on.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Say this once
 
 Personal account, personal data, personal device. Nothing CUI, PII, FOUO, or from a .mil system. The `security-check` skill has the full green, yellow, red card. Everything the kit produces is a draft; you read it before it goes anywhere.
@@ -21,6 +25,10 @@ Personal account, personal data, personal device. Nothing CUI, PII, FOUO, or fro
 ## Step 0. If this is their first time in Cowork
 
 Say the one idea in two sentences: Claude only knows what you give it; Cowork is the version that can read and write a folder you connect, and nothing else on your computer. If they have never connected a folder or installed a plugin, point them to `GETTING STARTED.md` in the repo (or read it to them one section at a time) before going on. Do not assume anyone knows what a plugin, a skill, or a rules file is; define each the first time it comes up.
+
+## Kit standards check (every run)
+
+If the connected folder has a rules file, read its `Kit standards:` line and compare it to the version at the top of `STANDARDS.md`. If the line is missing or older, show the block the template now carries as a diff against what the rules file has, skipping any line recorded as `- struck: <number>`, and add it only on the user's yes. Say what changed in one line per standard. Never touch any other section of the rules file.
 
 ## Step 1. Confirm the install
 

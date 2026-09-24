@@ -20,6 +20,10 @@ metadata:
 
 The RELM goes up seven signature blocks and ends at CMC (MMEA-6), which decides; the order says the recommendation's role is "to initiate dialogue between the command and CMC (MMEA-6)" and that even a not recommended request is still referred there. The order also defines the two top tiers by population: "Recommended w/enthusiasm" is the top 25 percent of Marines in that grade known to the certifying officer, "Recommended w/confidence" the top 50 percent. A with enthusiasm on a Marine outside the top quarter is a false statement in a record. The tool asks for the count before it lets the box be checked, writes the comments the form asks for ("brief comments justifying your recommendations") under the order's three heads, screens the prerequisites for the CO's certification, and computes the interview windows. It prepares; the officer at each block signs, and the Career Planner owns the form.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: chapter 3 (interviews, who conducts them, the windows), chapter 4 paragraphs 3 to 9 (who decides, the recommendation table, the 21 prerequisites, the certification, waivers), chapter 6 (the contact record), Figure 6-7 block 35 as the form prints it, Appendix D codes.

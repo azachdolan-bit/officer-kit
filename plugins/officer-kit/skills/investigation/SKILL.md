@@ -17,6 +17,10 @@ metadata:
 
 Every officer is handed one of these with no notice and a 30 day clock. The Manual of the Judge Advocate General (JAGINST 5800.7G, Chapter II) governs; the Naval Justice School's JAGMAN Investigations Handbook (October 2024) says how a report that survives review is built. The report's power is its chain: every finding of fact cites an enclosure, every opinion cites findings, every recommendation cites opinions. Break the chain and the SJA sends it back. The tool builds the report so the chain cannot break, and it prepares; it never decides what happened, and every product goes to the staff judge advocate before the convening authority.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the handbook's own words on the report's parts, the rules for each, enclosures, the timeline, the appointment, and the warnings before interviews.

@@ -20,6 +20,10 @@ metadata:
 
 The order puts the first move in the evaluation cycle on the Marine being reported on: "Prior to the end of the reporting period, the MRO shall provide a summary of accomplishments to the RS. The CMC directs the use of the MRO Worksheet (MROW) for billet description and summary of accomplishments documentation" (chapter 1 paragraph 6.b). The RS then decides what of it the report carries: the RS must "Assess the information provided by the MRO on the MROW and report that information on the MRO's fitness report as deemed appropriate" (chapter 2 paragraph 3.c(3)). So the MROW is input, not a report: it wins or loses on whether the RS can verify each line and lift it into section B or C with the fewest edits. This tool writes that input in the form the order gives those two sections (chapter 4 paragraphs 5 and 6), keeps out what the order keeps out of section C, and puts awards and PME where the order sends them, in a list for the RS. It prepares; the RS writes the report, marks it, and signs it. The A-PES screen's own field layout and any field length it enforces are not in the order and are unverified; the user reads them off the screen.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: chapter 1 paragraphs 6 and 7 (who starts the MROW, when, what it carries), chapter 2 paragraph 3 (what the RS does with it), chapter 4 paragraph 3 (unique billets), 4.f(1) (what counts as commendatory material), 5 (section B), 6 (section C, with the forbidden list gathered), 13.d (unacceptable comments), 17 (classified duties), and the note that the order fixes no length limit.

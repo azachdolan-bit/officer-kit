@@ -17,6 +17,10 @@ metadata:
 
 A Risk Assessment Worksheet is the one document where a lieutenant's arithmetic decides who has to sign. The order gives five steps, a severity scale, a probability scale, a matrix, and the rule that high risk training is anything left at IA, IB, IIA, or IIB after controls, which the first O-5 in the chain approves in writing. The worksheet that works names real hazards by phase, applies controls that change the probability or the severity (not "be careful"), and shows the number moving. The tool builds it that way and computes the levels so the user never argues with a matrix at 0500.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the order's own words on the five steps, the severity and probability categories, the worksheet's required elements, the definition of high risk training, and the approval rule.

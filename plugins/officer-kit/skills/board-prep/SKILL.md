@@ -21,6 +21,10 @@ metadata:
 
 The message makes the officer, not the unit, responsible: "Each officer is personally responsible for ensuring the accuracy and completeness of their Official Military Personnel File (OMPF) and Master Brief Sheet (MBS) before the date the board convenes," and correspondence to the President of the Board that reaches MMPB-10 after 2359 EST on the Bd.Corr.Due date "will not be accepted under any circumstances." The tool reads the board's two dates from the paragraph 1 table, sets the OMPF document cutoff two weeks before convening as paragraph 7.a says, records what the officer verified and on what date, lays PME held against what MCO 1553.4B requires for the grade, logs reading against the titles ALMAR 024/25 prints, and drafts the letter only if the officer wants one and only inside the message's rules. It prepares the record; the board decides, and nothing in the product speaks to that. Two parts are unverified because their publications are not in the library: the Photo section (MARADMIN 622/25 says nothing about a photograph; MCO P1400.31D and the board's convening MARADMIN would settle it) and the Zone line (the zone MARADMIN for the officer's board, published 30 to 60 days before it). Both are written as "not in the library" or "not yet announced" until the officer supplies the source.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: MARADMIN 622/25 paragraph 1 (the table and its notes), paragraphs 2 to 6 (zones, eligibility, TIG, opt out), paragraph 7 (the audit, fitness reports, PME, civilian education), paragraph 8 (correspondence), paragraphs 9 to 11; MCO 1553.4B enclosure (1) by grade level; ALMAR 024/25 paragraphs 1 to 4; the Not in the library list.

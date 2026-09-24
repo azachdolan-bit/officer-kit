@@ -26,6 +26,10 @@ So what is left is four rules and no template. Each one either produces somethin
 checks the product against something outside this session. Nothing here is a box to tick, and
 nothing here asks the model to review its own work, which supplies no signal.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## 1. Assume it already failed, before you draft
 
 Not "what could go wrong." The thing has failed, in this product's specific terms, and you are

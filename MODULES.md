@@ -111,6 +111,7 @@ The task with no training and a clock. Specified by `OFFICER ANALYSIS.md` Path C
 | `fleet-transition` | "I'm at my first unit" | Day one and week one at a new command; updates the rules file | Available |
 | `folder-triage`, `inbox-triage`, `week-ahead` | "organize this folder", "triage my inbox", "week ahead" | Folder inventory and structure; inbox buckets with drafted replies; weekly brief | Available |
 | `aar` | "capture that", "lesson learned", "it got downgraded" | Writes one lesson at a time to the user's own LEARNINGS.md in the fixed format; never edits a tool | Available |
+| `debrief` | "debrief", "hotwash", "wrap up this chat" | End of chat sweep: every correction, rejection, and repeated instruction in the chat becomes a lesson with the user's words as evidence, sorted to the kit, this command's overrides, or the rules file; writes only what the user approves; lists every file the chat produced | Available |
 | `inspect` | "apply what we learned", "review the lessons" | Applies approved lessons one at a time to Overrides/<tool>.md or Reference/Exemplars, or writes a proposal for the plugin; never edits the plugin | Available |
 | `add-exemplar` | "this one got approved", "learn from this package" | Turns a product the user's command approved into a sanitized pattern in Reference/Exemplars/<tool>/ that the tool reads before its fictional exemplars; scrub checker | Available |
 

@@ -19,6 +19,10 @@ Sections B, C, and I are the words a board reads. The manual is specific about w
 
 Attribute marks (Sections D through H) are the RS's judgment and are never proposed by this tool. If the user wants to see how marks land against their profile, that is `rs-profile`.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Inputs
 
 - **Who and what.** The MRO's grade and billet, the reporting occasion and period, and whether the user is the RS or the MRO preparing input. When the user is the MRO, the billet description comes from the "My billet, in my words" section of their rules file; read it and confirm it rather than asking again.

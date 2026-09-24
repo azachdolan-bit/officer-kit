@@ -15,6 +15,10 @@ metadata:
 
 Interview the user and produce a rules file they save at the top of their working folder. Load `references/template.md` for the file shape and `references/example.md` for a filled in example.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Say this once
 
 A rules file is ten minutes that pays back on every task after it. Claude reads it at the start of every session in that folder, so you never re explain your billet, your tone, or your no go list. Every question below is optional: skip anything you would rather not record. The file lives on your computer and is never sent anywhere. The more you give, the less you re explain; a thin file still works, and anything you leave out is simply asked for when a task needs it.
@@ -62,6 +66,7 @@ Fill the template with their answers. Rules for the output:
 - Keep it under 150 lines. Long rules files get ignored.
 - Every line is a fact or an instruction, not a paragraph.
 - The security block is mandatory and comes first. Never remove or soften it. It protects other people's data and controlled material; it does not forbid the user's own name on their own correspondence.
+- The Kit standards block comes second, copied from the template with its `Kit standards:` version line, which must match `STANDARDS.md`. The user may strike any numbered line; write a struck line as `- struck: <number>` so a later update never adds it back.
 - Skipped fields are written as `not recorded (ask me at draft time)` so a later session asks instead of guessing.
 - Include the dated Fleet section, mostly blank, with instructions to fill it on arrival.
 - Save as `CLAUDE.md` in the root of the linked folder when one is connected. Otherwise deliver the file and say where to put it: the top of the folder they will work from.

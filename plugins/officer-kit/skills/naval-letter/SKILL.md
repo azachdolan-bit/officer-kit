@@ -18,6 +18,10 @@ Produce a letter that is right on substance and right on form, then prove it wit
 
 Read `references/standard.md` before the first draft of a session. It is the whole standard: format, identity, substance, reference integrity, gates, delivery, and the measured targets.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Inputs
 
 - **What the letter must do**, in the user's words: the ask, the audience, the remedy wanted.

@@ -14,6 +14,10 @@ metadata:
 
 Nothing in the kit improves unless the outcome of a product gets written down where a later session will read it. This tool writes one lesson at a time, in a fixed shape, to `LEARNINGS.md` in the user's working folder. It never edits a tool, an override, or an exemplar; that is `inspect`, and it only happens with the user's approval.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Workflow
 
 ```

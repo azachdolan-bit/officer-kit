@@ -15,6 +15,10 @@ metadata:
 
 A letter of appreciation is the lightest recognition that goes into a record, and it is often the right one: the awards order says routine service is not an award, and a letter from someone senior enough says thank you in a way the Marine keeps. It is three paragraphs and one page, and the whole craft is naming the event, the number, and the role.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/exemplar.md`: one fictional letter, annotated, and the intake beneath it.

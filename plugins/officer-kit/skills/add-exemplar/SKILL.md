@@ -17,6 +17,10 @@ The plugin ships fictional exemplars so every tool works on day one. A product t
 
 The source stays where the user keeps it. What this tool writes is a pattern: the structure, the numbers with their context, the sentences that carried the argument, and an annotation. Names, identifiers, and anything from the blocked list never enter the pattern file.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Workflow
 
 ```

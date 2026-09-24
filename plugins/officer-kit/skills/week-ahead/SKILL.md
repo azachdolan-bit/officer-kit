@@ -12,6 +12,10 @@ metadata:
 
 Produce a one screen brief of the coming week, then offer to make it a scheduled task so it shows up without being asked.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Requires
 
 Connected calendar, and optionally email. Personal accounts only. If neither is connected, produce the brief from whatever the user pastes or from the linked folder's schedules.
@@ -25,6 +29,10 @@ Keep it to one screen. Sections, in order, in the user's rules file tone:
 - **Conflicts and gaps.** Overlaps, back to backs with no travel time, days with nothing scheduled that probably should have something.
 - **Owed.** Emails that need a reply this week (pull from `inbox-triage` logic if email is connected), and anything the user said they'd deliver.
 - **Suggested three.** Three tasks to do first thing Monday.
+
+## Kit standards check (once per brief)
+
+If the connected folder has a rules file, read its `Kit standards:` line and compare it to the version at the top of `STANDARDS.md`. If the line is missing or older, add one line to the brief naming the new standards, and on request show the block the template now carries as a diff against what the rules file has, skipping any line recorded as `- struck: <number>`, and add it only on the user's yes. Say what changed in one line per standard. Never touch any other section of the rules file.
 
 ## Make it recurring
 

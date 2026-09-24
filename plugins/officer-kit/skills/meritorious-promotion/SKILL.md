@@ -17,6 +17,10 @@ A meritorious promotion board scores a fixed set of categories, and the recommen
 
 The Marine Corps standard is MCO P1400.32D w/Ch 2 (the Enlisted Promotion Manual, 2012; MARADMIN 667/22 for meritorious quota rules); the package itself is governed by the command's local order (a MEF, Wing, or Group order), which sets eligibility, the enclosure list, the data sheet, and the board date. The tool asks for that order first and does not invent one.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. The command's local order, from the user's Reference or from the user. Record: eligibility window, the enclosures required in order, the data sheet form, routing, and the due date.

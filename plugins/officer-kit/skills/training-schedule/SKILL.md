@@ -15,6 +15,10 @@ metadata:
 
 MCO 1553.3C (Unit Training Management) makes the training schedule the commander's published intent for the week, tied to the T&R events the plan requires, recorded in MCTIMS, and submitted to higher. The schedule that works is the one where every event has an instructor, a place, the gear, and a prep list with dates, so the week does not collapse on Monday.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the order's own words on the schedule, the plan it comes from, MCTIMS, and the annual requirements.

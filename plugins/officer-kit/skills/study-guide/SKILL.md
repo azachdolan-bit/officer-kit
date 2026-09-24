@@ -12,6 +12,10 @@ metadata:
 
 Turn a lesson packet, notes, or a published reference into something the user can study from in twenty minutes and be tested on.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Inputs
 
 Accept a file in the linked folder, an attachment, or pasted text. Published doctrine and the user's own notes are green. If the material carries a CUI or FOUO marking, stop and point to `security-check`.

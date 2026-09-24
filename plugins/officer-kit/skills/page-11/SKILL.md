@@ -17,6 +17,10 @@ metadata:
 
 A 6105 entry is the document that decides, months later, whether a Marine can be separated for the pattern it describes. MCO 1900.16 paragraph 6105 requires four things in it, prescribes the entry's wording, and requires the commanding officer's signature on every adverse Page 11 entry; a copy goes to CMC (MMRP-20) within 30 days. The tool fills the order's own entry format with dated facts, observable corrective action, and named sources of assistance, keeps the order's consequences and rebuttal sentences unchanged, and prepares the not recommended for promotion entry with the deadline the promotion manual sets. It prepares; the commanding officer signs, and the legal officer or SJA reviews before it goes in the record.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the four required elements, the rebuttal language, the IRAM's form, the promotion manual's not recommended rule and deadline.
