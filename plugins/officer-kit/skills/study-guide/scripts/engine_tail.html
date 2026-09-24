@@ -1,0 +1,179 @@
+
+
+
+/* ---------------- mind map ---------------- */
+let mapMode = 0; // 0 full, 1 hide details, 2 hide branches and details
+const revealed = new Set();
+function secIndex(id){ return SECTIONS.findIndex(s=>s.id===id); }
+function blank(txt,key,hide){
+  if(!hide) return txt;
+  const on = revealed.has(key);
+  return `<span class="blank ${on?'shown':''}" data-key="${key}" title="${on?'':'Recall it first, then click to check'}">${txt}</span>`;
+}
+function renderMap(m){
+  let total=0, shown=0;
+  const br = m.branches.map((b,bi)=>{
+    const hideB = mapMode===2, hideL = mapMode>=1;
+    if(hideB){ total++; if(revealed.has('b'+bi)) shown++; }
+    const leaves = b.leaves.map((l,li)=>{
+      if(hideL){ total++; if(revealed.has('b'+bi+'l'+li)) shown++; }
+      return `<li class="mleaf">${blank(l,'b'+bi+'l'+li,hideL)}</li>`;
+    }).join('');
+    const lab = hideB ? `<span class="mblabel blank ${revealed.has('b'+bi)?'shown':''}" data-key="b${bi}">${b.label}</span>` : `<span class="mblabel">${b.label}</span>`;
+    const si = secIndex(b.sec);
+    return `<li class="mbranch"><div class="mbhead"><span class="mbnum">${String(bi+1).padStart(2,'0')}</span>${lab}${si>=0?`<button class="mbgo" data-go="${si}">Study this branch &rarr;</button>`:''}</div><ul class="mleaves">${leaves}</ul></li>`;
+  }).join('');
+  const ctl = `<div class="mapctl" role="group" aria-label="Map mode">
+     <button data-mode="0" class="${mapMode===0?'on':''}">Full map</button>
+     <button data-mode="1" class="${mapMode===1?'on':''}">Recall the details</button>
+     <button data-mode="2" class="${mapMode===2?'on':''}">Recall everything</button>
+     <span class="mcount" style="visibility:${mapMode?'visible':'hidden'}">${shown} of ${total} revealed</span><button data-mode="reset" style="visibility:${mapMode?'visible':'hidden'}">Hide again</button>
+   </div>`;
+  return `${ctl}<div class="mindmap"><span class="mroot">${m.root}</span>${m.note?`<p class="mrootnote">${m.note}</p>`:''}<ul class="mbranches">${br}</ul>
+    <p class="mapnote">${mapMode?'Say each hidden item out loud or write it down first, then click the gray bar to check yourself.':'Read the whole map first. Then switch to a recall mode and rebuild it from memory.'}</p></div>`;
+}
+function wireMap(){
+  const main=$("main");
+  main.querySelectorAll('.mapctl button').forEach(b=>b.onclick=()=>{
+    const m=b.dataset.mode;
+    if(m==='reset'){ revealed.clear(); } else { mapMode=+m; revealed.clear(); }
+    renderSection();
+  });
+  main.querySelectorAll('.blank').forEach(el=>el.onclick=()=>{ revealed.add(el.dataset.key); el.classList.add('shown'); el.removeAttribute('title');
+    const c=main.querySelector('.mcount'); if(c){ const n=main.querySelectorAll('.blank.shown').length, t=main.querySelectorAll('.blank').length; c.textContent=`${n} of ${t} revealed`; } });
+  main.querySelectorAll('.mbgo,.crumb button[data-go]').forEach(b=>b.onclick=()=>go(+b.dataset.go));
+}
+
+/* ---------------- state ---------------- */
+let cur = 0;
+const answers = SECTIONS.map(s => s.quiz.map(() => null)); // index chosen or null
+
+const $ = id => document.getElementById(id);
+const totalQ = SECTIONS.reduce((n,s)=>n+s.quiz.length,0);
+
+function stats(){
+  let answered=0, correct=0;
+  SECTIONS.forEach((s,si)=>s.quiz.forEach((q,qi)=>{
+    const a=answers[si][qi];
+    if(a!==null){answered++; if(a===q.a) correct++;}
+  }));
+  return {answered,correct};
+}
+function sectionDone(si){ return answers[si].every(a=>a!==null); }
+
+function renderNav(){
+  const ul=$("navList");
+  ul.innerHTML = SECTIONS.map((s,i)=>
+    `<li class="${i===cur?'active':''} ${sectionDone(i)?'done':''}">
+       <button data-go="${i}"><span class="num">${String(i+1).padStart(2,'0')}</span><span>${s.title}</span></button>
+     </li>`).join('');
+  ul.querySelectorAll('button').forEach(b=>b.onclick=()=>go(+b.dataset.go));
+}
+
+function renderHeader(){
+  const {answered,correct}=stats();
+  $("rSec").textContent = String(cur+1).padStart(2,'0')+"/"+SECTIONS.length;
+  const pct = answered ? Math.round(correct/answered*100) : null;
+  $("rScore").textContent = pct===null ? "--" : pct+"%";
+  const bars = pct===null?0 : pct>=90?4 : pct>=75?3 : pct>=60?2 : 1;
+  [...$("rBars").children].forEach((b,i)=>b.classList.toggle('on', i<bars));
+  $("rTrack").style.width = (answered/totalQ*100)+"%";
+}
+
+function verdictBand(pct){
+  if(pct>=90) return BANDS[0];
+  if(pct>=75) return BANDS[1];
+  if(pct>=60) return BANDS[2];
+  return BANDS[3];
+}
+function renderResults(){
+  const {correct}=stats();
+  const pct = Math.round(correct/totalQ*100);
+  const [big,sub] = verdictBand(pct);
+  let missed = [];
+  SECTIONS.forEach((s,si)=>s.quiz.forEach((q,qi)=>{
+    if(answers[si][qi]!==null && answers[si][qi]!==q.a)
+      missed.push(`<div class="missed"><div class="mq">${q.q}</div><p class="ma"><span>${s.title.replace(/&amp;/g,'&')}: correct answer</span>${q.o[q.a]}</p></div>`);
+  }));
+  return `<div class="result">
+      <div class="rlabel">Your result</div>
+      <div class="rbig">${big}</div>
+      <p class="rsub">${sub}</p>
+      <div class="rscore">${correct} of ${totalQ} correct · ${pct}%</div>
+    </div>
+    ${missed.length?`<h2>Questions you missed (${missed.length})</h2>${missed.join('')}`:`<h2>Nothing missed</h2><p>Clean sweep across every section.</p>`}`;
+}
+
+function renderSection(){
+  const s=SECTIONS[cur];
+  const isFinal = cur===SECTIONS.length-1;
+  const allDone = answers[cur].every(a=>a!==null);
+
+  const qs = s.quiz.map((q,qi)=>{
+    const chosen = answers[cur][qi];
+    const opts = q.o.map((o,oi)=>{
+      let cls="opt";
+      if(chosen!==null){
+        if(oi===q.a) cls+=" correct";
+        else if(oi===chosen) cls+=" wrong";
+        else cls+=" dim";
+      }
+      return `<button class="${cls}" data-q="${qi}" data-o="${oi}" ${chosen!==null?'disabled':''}>${o}</button>`;
+    }).join('');
+    const fb = chosen===null ? '' :
+      `<div class="verdict ${chosen===q.a?'good':'bad'}">
+         <span class="vt">${chosen===q.a?GOOD:BAD}</span>${q.e}</div>`;
+    return `<div class="q"><p class="qstem"><span class="qn">${String(qi+1).padStart(2,'0')}</span>${q.q}</p>${opts}${fb}</div>`;
+  }).join('');
+
+  const scored = answers[cur].filter((a,i)=>a!==null && a===s.quiz[i].a).length;
+
+  $("main").innerHTML = `
+    ${s.branch?`<div class="crumb"><span class="path">On the map &rsaquo; <b>${s.branch}</b></span><button data-go="0">&uarr; Back to the map</button></div>`:''}
+    <p class="eyebrow">${s.eyebrow}</p>
+    <h1 class="sec">${s.title}</h1>
+    <p class="lede">${s.lede}</p>
+    ${s.map?renderMap(s.map):''}
+    ${s.body}
+    <section class="quiz">
+      <div class="qhead"><h2>${isFinal?'Final check':'Check yourself'}</h2>
+        <span class="qcount">${allDone?`${scored} of ${s.quiz.length} correct`:`${s.quiz.length} question${s.quiz.length===1?'':'s'}`}</span></div>
+      <p class="qsub">Pick an answer to see whether it's right and why. ${COMMIT}</p>
+      ${qs}
+    </section>
+    ${isFinal && allDone ? `<div style="margin-top:40px">${renderResults()}</div>` : ''}
+    <div class="footnav">
+      <button class="btn ghost" id="prev" ${cur===0?'disabled':''}>← Previous</button>
+      ${!isFinal?`<button class="btn" id="next">Next: ${SECTIONS[cur+1].title} →</button>`:''}
+      ${isFinal?`<button class="btn ghost" id="reset">Start over</button>`:''}
+      ${!allDone?`<span class="hint">${answers[cur].filter(a=>a!==null).length}/${s.quiz.length} answered</span>`:''}
+    </div>`;
+
+  $("main").querySelectorAll('.opt').forEach(b=>{
+    b.onclick=()=>{ answers[cur][+b.dataset.q] = +b.dataset.o; renderSection(); renderNav(); renderHeader(); };
+  });
+  wireMap();
+  if($("prev")) $("prev").onclick=()=>go(cur-1);
+  if($("next")) $("next").onclick=()=>go(cur+1);
+  if($("reset")) $("reset").onclick=()=>{
+    answers.forEach(a=>a.fill(null)); go(0);
+  };
+}
+
+function go(i){
+  cur=Math.max(0,Math.min(SECTIONS.length-1,i));
+  renderSection(); renderNav(); renderHeader();
+  $("nav").classList.remove('open');
+  $("navToggle").setAttribute('aria-expanded','false');
+  window.scrollTo({top:0,behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
+
+$("navToggle").onclick=()=>{
+  const n=$("nav"); const open=n.classList.toggle('open');
+  $("navToggle").setAttribute('aria-expanded',String(open));
+};
+
+renderSection(); renderNav(); renderHeader();
+</script>
+</body>
+</html>

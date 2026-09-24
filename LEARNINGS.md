@@ -75,12 +75,12 @@ Status: approved 0.12.0 (gate order already in qc-gates; the priority order is a
 ## 2026-09-04  walkthrough  high  -> plugin
 Evidence: First offense walkthrough draft rejected: "you did not include enough material and are testing me on stuff that's not in this interactive module."
 Lesson: Bodies carry the complete lesson, verbatim where the source is verbatim. Every section quiz answer must be present in that section's body. Run both completeness gates before delivery.
-Status: pending
+Status: approved 0.13.0 (study-guide rebuilt; blind A/B in evals/ab-test-2026-09-23-study-guide)
 
 ## 2026-09-04  study-guide  high  -> plugin
 Evidence: CST1 guide rejected as "too in the weeds" when it led with graded step rubrics.
 Lesson: Knowledge first, then a worked practice scenario with the answer key on its own page. Open with a skeleton outline of the whole lesson.
-Status: pending
+Status: approved 0.13.0 (study-guide rebuilt; blind A/B in evals/ab-test-2026-09-23-study-guide)
 
 ## 2026-09-04  quiz-builder  high  -> plugin
 Evidence: A from scratch quiz workbook silently dropped importer features; a shuffle corrupted the marked answer because the importer stores a slot number, not text.

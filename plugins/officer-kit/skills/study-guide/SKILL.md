@@ -1,48 +1,65 @@
 ---
 name: study-guide
 description: >
-  This skill should be used when the user says "make a study guide", "turn this into flashcards",
-  "quiz me", "study this packet", "summarize this lesson", "practice test", "help me study for",
-  or attaches a lesson packet, class notes, or a doctrinal publication for study.
+  Builds study products from a captured lesson, handout, or publication: a study guide (skeleton,
+  complete knowledge sections, practice scenarios and a quiz with answer keys on their own pages),
+  an interactive walkthrough that replaces reading the lesson, a condensed handout, a whiteboard
+  session plan, or a one question at a time quiz in chat, with gates that prove the product carries
+  the whole source and that every quiz answer is in the body. Use when the user says "make a study
+  guide", "study guide for", "walkthrough", "quiz me", "flashcards", "condense this handout",
+  "whiteboard session", or attaches lesson material to study.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
-# Study Guide
+# Study guide
 
-Turn a lesson packet, notes, or a published reference into something the user can study from in twenty minutes and be tested on.
+The product is a way to learn the lesson and then test yourself on it, built only from the user's own source. The two ways a study product fails are the ones this tool is built against: it summarizes the lesson and then tests on material the summary left out, or it fills a gap from general knowledge. Practice testing and spaced practice are the study methods with the strongest evidence; highlighting, summarizing, and rereading are among the weakest (Dunlosky and others, 2013). So every format is built around recall, and a condensed version is a separate product the user asks for by name.
 
 ## Kit standards
 
 Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
 
-## Inputs
+## Your own material (read first, every time)
 
-Accept a file in the linked folder, an attachment, or pasted text. Published doctrine and the user's own notes are green. If the material carries a CUI or FOUO marking, stop and point to `security-check`.
-
-## Output, in this order
-
-**1. One page guide.** Headline: what this lesson is for. Then the core concepts as short definitions, the process or sequence if there is one, the numbers that get tested (distances, timelines, ratios, counts), and the acronyms. Keep it to one page. Cut anything that is context rather than content.
-
-**2. Twenty question quiz.** Mix: ten recall (define, list, state), five application (given this situation, what do you do), five "which is wrong" (spot the error in a statement). Put the answer key at the bottom, separated, so the user can hide it.
-
-**3. Flashcard set** if asked. Format as `Q | A`, one per line, so it pastes into any flashcard app.
-
-## Quiz me mode
-
-If the user says "quiz me," ask one question at a time. Wait for the answer. Grade it in one line, give the correct answer if they missed, then the next question. At the end, list what they missed and offer to drill those.
+1. `Overrides/study-guide.md` in the working folder, if it exists: the user's way wins. Say in one line what it changed.
+2. `Reference/Exemplars/study-guide/`, if it has files: the user's approved products beat the example here.
+3. The source. Nothing is built before the source is captured to a file in the working folder (`capture-source`). A capture proves presence, never absence; if the lesson has figures, check the rendered lesson before saying something is not in it.
 
 ## Before you draft
 
-Assume this already failed and write three reasons before you build anything, then check each against the draft.
+1. **Assume it already failed** and write three reasons first: the usual ones are a section that summarizes instead of teaching, a quiz answer the body never gives, and a fact from general knowledge.
+2. **Ask only what changes the product:** which format, if the request fits two; which parts get scenarios, if it is not obvious; the priority order, for a whiteboard session.
+3. **Say what you assumed** and mark it. Never write that the guide covers everything; the gate report says what was measured.
 
-Also ask what a student would need that the source does not carry, and make sure that gap is named rather than filled in.
+## Workflow
 
-Say what you had to assume. Never write that the rest is covered.
+```
+Study product:
+- [ ] 1. Source captured to a file; figure inventory noted
+- [ ] 2. Format chosen (references/formats.md)
+- [ ] 3. Spec written from the source (references/spec.md): skeleton, sections in source order, verbatim where testable, quiz per references/quiz-rules.md
+- [ ] 4. python3 scripts/gates.py <spec> <source files> --report <spec name> gates.md exits 0; read every missing sentence and every flag, fix the spec, rerun
+- [ ] 5. Build: scripts/build_guide.py (guide, handout, whiteboard) or scripts/build_walkthrough.py (walkthrough)
+- [ ] 6. source-fidelity-reviewer agent, blind, with the product and the source
+- [ ] 7. Walkthrough: open it, answer one question per section, confirm the map recall modes work
+- [ ] 8. Save the product, the spec, and the gate report together in Training/<topic>/; name the gate report in the reply
+```
 
 ## Rules
 
-- Test what the material says, not what Claude knows about the topic. If a number in the packet conflicts with general knowledge, use the packet and flag it.
-- Never invent a reference or citation. If the packet cites an order, keep the citation as written.
-- Five paragraph order, OSMEAC, BAMCIS, METT-TC, troop leading steps: when these appear, make sure the sequence and every element are in the guide. They get tested every time.
-- Save outputs to `03_Academics` in the linked folder if it exists, named `YYYY-MM-DD_topic_studyguide.md`.
+- The source is the only authority: the user's notes, the captured lesson, and references actually read. When two sources conflict, the school or unit document outranks the general publication, the newer outranks the older, and the conflict goes in the product as a SOURCE CONFLICT callout.
+- Complete means complete. A section body carries its chapter's teaching text, verbatim where the source is verbatim; the walkthrough also carries the full chapter behind "Read it as issued". Gate 1 must pass.
+- Inventing a scenario is expected; inventing a fact inside it is not. Verify every number in a scenario in code.
+- Organizing labels you add (table headers, category names, mnemonic labels) are fine; what a cell or a skeleton line claims comes from the source. Never fill an empty cell by inference; write "not stated". A table sits directly under the sentence that introduces it, with a `Table:` caption.
+- Open every guide and walkthrough with the skeleton: the whole lesson as a memorization outline.
+- A product built from course or unit material stays with the people who built it (kit standard 6). To help a peer, share this tool, not the product.
+- Quiz me mode never pastes the set and never repeats a question.
+
+## Scripts
+
+- `scripts/gates.py`: coverage, traceability, and quiz rules on the spec; writes the gate report.
+- `scripts/build_walkthrough.py`, `scripts/build_guide.py`: balance the answers, check, and build.
+- `scripts/study_lib.py`: shared code. `scripts/engine_head.html`, `engine_tail.html`: the walkthrough engine, content free.
+
+Dependencies: python-docx for the guide.

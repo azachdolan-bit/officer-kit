@@ -1,0 +1,392 @@
+# MCDP 7 Learning, Chapter 3: Study Guide
+
+**Choices made for you (you were not available to ask):**
+
+- **What the test covers.** I assumed the test is on this chapter's text alone, with no particular question format. I built the guide and a 20 question quiz. I did not build flashcards because you did not ask for them. Ask if you want them.
+- **Dashes.** Kit Standard 9 bans em dashes and en dashes. The chapter uses them often, so I quote around them and do not reproduce them.
+- **Review.** Kit Standard 7 calls for a `source-fidelity-reviewer` agent. I could not run it here. Instead, I checked every quiz answer against source.txt myself.
+
+**What the source does not include (confirm these from your course material; I did not fill them in):**
+
+- **Chapter title.** The file starts at "Chapter 3" and the page headers say only "MCDP 7 Learning." I did not guess the title.
+- **Endnotes.** The text has note markers 1 through 12, but the notes are not in the file. That means the sources behind the Rickover and Clausewitz quotes, the "continuous and aggressive reconnaissance" quote (note 4), and the instructor adage (note 11) cannot be checked here.
+- **MAGTF.** The chapter uses MAGTF but never spells it out.
+- **Chapter 1 and MCDP 1.** The chapter points back to chapter 1 (adult learners, vicarious experience) and to MCDP 1 (surfaces and gaps, mission tactics, war as a human enterprise). Neither is in this file. This guide covers only what chapter 3 says about them.
+- **Recognition primed decision making.** The chapter names it (note 3) but does not define it.
+
+---
+
+## Part 1. One Page Guide
+
+**What this chapter is for.** It explains how Marines build learning environments that mirror how they fight. Those environments put the learner first, adapt to threats, allow mistakes, and give quality feedback and repetitions. "Victory does not necessarily go to those who have the largest or most modern forces, but to those who are able to recognize the need to adapt, generate intelligent decisions, and execute them more quickly than their enemy."
+
+**Core concepts**
+
+| Term | What the chapter says |
+|---|---|
+| Learning environment | More than the physical space. It includes every factor that influences instruction: **methods, resources, technologies, culture, instructors, peers, and the social elements of learning.** There is no single correct design. |
+| Surfaces / gaps (learner) | Surfaces: "areas of existing understanding," strongpoints to maintain, build upon, and relate. Gaps: "areas of weaknesses in knowledge, experience, or competencies." In warfighting terms (MCDP 1), surfaces are hard spots (enemy strengths) and gaps are soft spots (enemy weaknesses). |
+| Barriers to learning | **Personal ego, inexperience, and bias**, which can lead to gaps. They are fixed through open discussion and quality after action reviews. |
+| Self-assessment | "Continuous and aggressive reconnaissance" to find your gaps. It takes awareness, honesty, judgment, and intellectual humility. |
+| Main effort | "The organization (unit or task force) assigned responsibility for accomplishing the essential tasks of the overall mission." In learning, **the learner is the main focus of effort**, and leaders and instructors always support the learner. |
+| Learner-centric model | Delivery methods are tailored to the learners, "rather than defaulting to a 'one-size-fits-all' instructional approach." Its goal is to connect prior knowledge to new material. |
+| Self-directed learning | Learners take the initiative to identify needs, set goals, pursue them, and evaluate outcomes. It works like **mission tactics**: "assigning a subordinate a mission without specifying how the mission must be accomplished." |
+| Vicarious experience | Learning from others' experiences. It is critical because even the most realistic training "fall[s] short of the reality of combat." |
+| Mental imagery | "A person's visualizations or mental representations." A leader pictures himself or herself in the operation, visualizes scenarios including **branches and sequels**, and rehearses decisions. This reduces surprise. |
+| Expeditionary mindset | "A readiness to exploit learning opportunities at any time, in any place." Marines are **warrior-scholars**. |
+| Coach-teach-mentor | The approach the most effective instructors use to give constructive feedback. |
+
+**Sequences and lists that get tested**
+
+- **Self-directed learning, in order:** (1) identify learning needs, (2) formulate goals, (3) pursue those goals, (4) evaluate outcomes.
+- **What sets the instructional method:** the intended learning outcomes; the learners' level of expertise and experience; the tools and resources available (including time); and the experience of the instructors and leaders.
+- **Assessments** (examples, not a complete list):
+  - **Diagnostic** comes before the activity and identifies what the learner already knows.
+  - **Formative** comes during the activity, is process oriented, and finds what needs strengthening.
+  - **Summative** comes after the activity and confirms the learner met a standard.
+- **Force-on-force red force options:**
+  - A red force scripted to the enemy's expected tactics, which tests "brilliance in the basics."
+  - A red force that follows enemy strategy and tactics but adapts to what blue does.
+  - Complete free play, in live training or a war game.
+- **Shipboard downtime:** simulation training, professional reading, tactical decision games, rehearsing unit SOPs, and discussing warfighting vignettes.
+- **Echelons of learning:** individual, team, unit, and MAGTF.
+
+**Rules to remember**
+
+- **New methods.** Adopt a new method only on clear evidence that it is better than the current one, not because it is new.
+- **Efficiency.** More efficient does not mean better. Rote memorization is efficient for basic knowledge such as standing orders, but it is "not effective methods for all learning."
+- **Adaptive curriculum.** It "may not be suited for entry-level training and schools" but "can be effective at intermediate and advanced schools."
+- **Errors.** Errors are "never end states." "Marines learn because of their errors, not despite them."
+- **Technology.** Learning is based mainly on human characteristics, not equipment. Simulations give "additional repetitions" when ranges or assets are limited, and can introduce what cannot be replicated easily or safely, such as the effects of supporting arms.
+- **Instructors.** "Those who can, do, and those who have done well, teach."
+- **Conclusion.** "Battle is the ultimate test of military learning." "Marines will fight the way that they learned."
+
+**Numbers and names**
+
+- **Gen Al Gray, 29th Commandant:** walked **20 minutes** every evening to think and reflect.
+- **Gen James Mattis:** said the biggest problem with senior leadership is "a lack of reflection."
+- **Phalanx:** originated by the **ancient Sumerians**. **Philip II of Macedon and Alexander the Great** adapted it by adding light infantry and cavalry in place of heavy infantry.
+- **Iraq and Afghanistan:** the US-led coalition combined ground, maritime, air, electronic warfare, and cyberspace operations.
+- **Opening quotes:** Hyman Rickover ("learn from others' mistakes") and Carl von Clausewitz (the mind "must always be 'under arms'").
+
+**Acronyms:** MCDP (the chapter does not spell it out; this is MCDP 7, and it cites MCDP 1). MAGTF (not spelled out in the chapter). SOP (the chapter writes "standing operating procedures").
+
+---
+
+## Part 2. The Chapter, Section by Section
+
+### Opening (before the first heading)
+
+**Epigraphs**
+
+- **Rickover:** "It is necessary for us to learn from others' mistakes. You will not live long enough to make them all yourself."
+- **Clausewitz:** "Our knowledge of circumstances has increased, but our uncertainty, instead of having diminished, has only increased." Because experience comes "by degrees," "the mind, if we may use the expression, must always be 'under arms.'"
+
+**Why it matters.** "Victory does not necessarily go to those who have the largest or most modern forces, but to those who are able to recognize the need to adapt, generate intelligent decisions, and execute them more quickly than their enemy."
+
+**What learning environments do**
+
+- As "the Nation's naval expeditionary force-in-readiness," Marines create learning environments "that mirror the ways they fight and the threats that they will encounter."
+- These environments must realistically simulate capable adversaries "across the full range of military operations."
+- Learning opportunities range from simple reading assignments to field exercises, wargaming, and simulation training exercises.
+
+**How training builds skill**
+
+- "Training should provide Marines with an opposing will to practice against."
+- Through repetitions, Marines learn to outthink adversaries and overcome friction before real operations.
+- Marines use lessons learned from current and previous conflicts to adapt their learning environments, methods, assessments, and feedback.
+- In these environments, "Marines can make mistakes, learn from them, adapt, and progress."
+- Environments "that are learner-centric, adaptable, and provide Marines quality feedback and repetitions create warfighters that outpace our Nation's adversaries."
+
+### Learning Environments
+
+**What a learning environment is.** "The learning environment is much more than simply the physical space where learning occurs; it encompasses all the factors that influence instruction, such as methods, resources, technologies, culture, instructors, peers, and the social elements of learning."
+
+**Skill takes time and practice.**
+
+- Building skills takes "time, deliberate practice, and repetition in operationally relevant contexts."
+- "There is not a single correct design," because objectives, Marines, teams, and conditions differ.
+- Instructors, learning materials, learners, and delivery methods interact to create the environment.
+
+**Two kinds of thinking.** The environment must foster flexibility of thought and the exploration of alternative courses of action. But "not all learning and decisions are based on analytical reasoning." It must also build "rapid experience-based decision-making such as recognition primed decision-making and other forms of nonanalytical reasoning."
+
+**Purpose.** The environment aids the leader, instructor, mentor, or facilitator "in creating conditions that are favorable to the desired learning outcomes for the learner."
+
+**Choosing a method.** Instructors and leaders pick methods based on four things:
+
+1. The intended learning outcomes
+2. The learners' level of expertise and experience
+3. The available tools and resources (including time)
+4. The instructors' and leaders' experience
+
+They use a variety of methods, because what works for one instructor, schoolhouse, or outcome may not work for another. Environments are regularly assessed and adjusted.
+
+**What an effective environment does**
+
+- It makes doctrine, concepts, tactics, techniques, procedures, and learning outcomes clear.
+- It states what is expected of learners, whether that is critical thinking or immediate obedience and basic skills such as good marksmanship.
+- It provides repetitions under different conditions.
+- "First and foremost, the learning environment focuses on the learners' needs."
+
+**New methods.**
+
+- Leaders "must first seek clear evidence that a new method is, in fact, better than the existing methods."
+- "Marines do not hastily adopt a new method simply because it is new."
+- Marines adopt new methods "when they are demonstrably better, not just because they are new."
+
+**Efficiency.**
+
+- "Improving the learning environment does not necessarily mean making it more efficient."
+- Rote memorization or reciting facts is efficient for basic knowledge such as memorizing standing orders, but these "are not effective methods for all learning."
+- Effective learning means approaching material from different perspectives, applying it in context, and explaining how and why, not only what.
+
+**Why understand doctrine deeply.** Marines understand key doctrine "so that they can better identify when and how to deviate as the situation demands."
+
+### Setting the Conditions for Success
+
+**Surfaces and gaps in MCDP 1 terms.** "Surfaces are hard spots (i.e., enemy strengths) and gaps are soft spots (i.e., enemy weaknesses)." Marines study their own surfaces and gaps, then tailor the environment to accelerate learning.
+
+**Surfaces and gaps for the learner**
+
+- **Surfaces** are "areas of existing understanding": "strongpoints that Marines maintain, build upon, and relate."
+- **Gaps** are "areas of weaknesses in knowledge, experience, or competencies." The instructor and learner fill them with new understanding and practice.
+- The same applies to units.
+- While filling gaps, Marines make sure surfaces "do not deteriorate over time."
+
+**Barriers.** Learning environments reveal "individual barriers to effective learning that can lead to gaps, such as personal ego, inexperience, and bias." Open discussion and quality after action reviews help fill gaps and reinforce surfaces.
+
+**Finding your gaps**
+
+- Recognizing surfaces and gaps "requires awareness, honesty, and judgment."
+- They are unique to the individual or unit: "a surface in one learner or unit may be a gap in another."
+- Leaders, instructors, learners, and peers "actively seek out [these] gaps [through] continuous and aggressive reconnaissance" (self-assessment).
+- Learners do not hide gaps. They "exercise intellectual humility."
+- Marines use their surfaces to fill their gaps. This happens only when learners first acknowledge their weaknesses.
+
+### The Expeditionary Nature of Learning
+
+**Focus.** "Expeditionary warfighting is the primary focus of Marine learning; therefore, learning environments should reflect expeditionary operations."
+
+**Learning never stops.**
+
+- Learning continues throughout a career, often outside formal settings.
+- It is adapted to the individual and unit context, mission, and conditions.
+- Marines "must be warrior-scholars."
+
+**Where Marines learn.** From leaders, mentors, peers, subordinates, professional reading, field exercises, in garrison, and aboard ship. For example, units may discuss tactics while traveling to an operation.
+
+**Shipboard downtime.** Marines can "conduct simulation training, complete professional reading, conduct tactical decision games, rehearse unit standing operating procedures, and discuss warfighting vignettes." Marines learn "in any clime and place."
+
+**Force-on-Force Exercises to Simulate War's Complexity (sidebar)**
+
+These are "purpose-driven learning environments that approximate the complexity of war." There are three options:
+
+1. **Scripted.** A red force "scripted to use the enemy's anticipated tactics to test the Marines' level of 'brilliance in the basics.'"
+2. **Adaptive.** A red force that follows enemy strategy and tactics "but also adapt[s] to blue force actions."
+3. **Free play.** "Complete free play between two opposing forces," in live field training or a war game, to exercise unit tactics and combined arms.
+
+What the sidebar adds:
+
+- All three have a purpose, "from exercising the basics to fighting against a thinking, adaptive peer competitor."
+- Good designs "enhance problem solving and promote decision-forcing events" and help Marines get inside the enemy's decision-making process.
+- "There is no substitute for fighting against a competent, realistic, thinking, adaptive enemy," even one simulated by other Marines.
+
+**Expeditionary mindset.** It means "a readiness to exploit learning opportunities at any time, in any place."
+
+- Marines guard against complacency because adversaries are always watching and adapting.
+- Settling for "good enough" "may result in high casualties in the next fight."
+- Every Marine is a rifleman and "part of an expeditionary learning organization."
+
+**Historical examples.**
+
+- **The phalanx.** Philip II of Macedon and Alexander the Great "adapted the phalanx formation originated by the ancient Sumerians." They used it with light infantry and cavalry, rather than relying on heavy infantry, to be more maneuverable in defense and offense.
+- **Iraq and Afghanistan.** The US-led coalition combined ground, maritime, air, electronic warfare, and cyberspace operations.
+- **The shared principle.** "Improve the force's ability to protect itself while accomplishing the mission." Both examples had adaptive, thinking leaders who found workable solutions "even without perfect information."
+
+### A Learner-Centric Model
+
+**Main effort.** "The main effort is the organization (unit or task force) assigned responsibility for accomplishing the essential tasks of the overall mission." It receives priority for support and "becomes the harmonizing force for all subordinate initiatives."
+
+**The learner is the main effort.** "The learner must be the main focus of effort": individuals, teams, units, and MAGTFs. "Leaders and instructors are always in support of the learner."
+
+**What the model does**
+
+- It tailors delivery "rather than defaulting to a 'one-size-fits-all' instructional approach."
+- The question to ask: "How can I best support the main focus of effort: the learner?"
+- Learners need to work at their own pace and explore what they find useful.
+- Decentralized learning lets learners follow their curiosity.
+- Problem-solving discussions between learners, leaders, and instructors motivate learners and build teams. This active learning works by creating follow-on questions.
+
+**Connecting old and new**
+
+- "The goal of a learner-centric environment is to help learners make connections between prior knowledge and newly presented material."
+- Adult learners build on current knowledge (from chapter 1).
+- Marines learn in different ways and at different speeds, so leaders must know their Marines' strengths, weaknesses, needs, and interests.
+- Learners can help tailor the environment.
+
+**Adaptive curriculum.** It "may not be suited for entry-level training and schools, it can be effective at intermediate and advanced schools."
+
+**Who is responsible.** "Each Marine is individually responsible for learning," but commanders, leaders, mentors, and instructors "establish the conditions for success."
+
+### Self-Directed Learning
+
+**Definition.** "Self-directed learning is the process in which individuals take the initiative in identifying their learning needs, formulating goals, pursuing these goals, and evaluating outcomes."
+
+**Support.** It starts with the learner but "requires support and guidance from commanders, leaders, mentors, and instructors." Holding Marines accountable for it "increases and sustains professional curiosity."
+
+**Link to mission tactics.** It resembles mission tactics: "assigning a subordinate a mission without specifying how the mission must be accomplished."
+
+- In MCDP 1, leaders leave the manner of accomplishing the mission to subordinates. This gives freedom and establishes the duty to decide the steps.
+- Mission tactics rely on initiative "framed by proper guidance and understanding."
+
+**Benefits to leaders.** The learner gets ownership and autonomy, so the leader or instructor can focus on learners who need more help. The leader provides support without "unnecessarily prescribing their actions." The learner devises and executes a plan within the guidance.
+
+**What it develops.** It builds a desire to learn and critical thinking about "content credibility, sources of information, and alternate perspectives." As learners progress, it becomes "both more effective and necessary."
+
+**Vicarious experience**
+
+- It is "learning from others' experiences."
+- It matters more in the profession of arms because Marines cannot practice every variation before combat.
+- It works best when Marines reflect on what they read or observed.
+- It is critical because "even the most realistic training experiences and military education fall short of the reality of combat."
+- More vicarious experience makes a new experience less likely to be "completely unique."
+
+**Mental imagery**
+
+- It is "a person's visualizations or mental representations."
+- Uses: gain confidence before executing a skill, emphasize key points in after action reviews, examine possible outcomes, and explore options. It is also "an effective mission rehearsal technique."
+- The technique: the leader "pictures himself or herself in the operation, vividly visualizes different scenarios, including possible branches and sequels, and rehearses the decisions he or she may make given specific conditions and enemy actions." This "reduces the possibility of surprise."
+
+**Self-reflection**
+
+- "Where continuous learning is seeking new experiences and knowledge, self-reflection puts both in perspective."
+- **Mattis** (former Secretary of Defense, retired General) named senior leaders' biggest problem as "a lack of reflection" and said "Solitude allows you to reflect while others are reacting."
+- **General Al Gray,** 29th Commandant, "walked for 20 minutes every evening to think and reflect."
+- Marines must make time to reflect "to build understanding, exploit lessons, and be ready to adapt."
+
+### The Role of the Instructor
+
+**What instructors are.** Marine instructors "are knowledgeable, skilled, competent, and confident in their abilities." They know their Marines' strengths and weaknesses, empathize with their challenges, and share their own experiences.
+
+**Selecting instructors.** Attracting, rewarding, and retaining qualified instructors is "a crucial factor" and requires senior leaders to recognize the importance of learning. The adage: "those who can, do, and those who have done well, teach."
+
+**Rotation.** The Marine Corps balances its best practitioners across operational, instructional, and educational assignments.
+
+**What expert instructors know.** They know when to apply specific methods, when to move to advanced techniques, how to give constructive feedback, and how to facilitate critical thinking and creative problem solving.
+
+**Why it matters.** "Instructors and leaders are the foundation of Marine learning and, by extension, of Marine readiness."
+
+### Assessments as Tools
+
+**Purpose.** Assessments "determine whether the learner is proficient in required competencies." They give feedback to both the instructor and the learner. "The best assessment method for the situation varies based on the learning objective."
+
+**Three types (examples)**
+
+- **Diagnostic:** "identify the learner's knowledge of a subject before a learning activity." Helpful before an individual or collective event.
+- **Formative:** "provide feedback to the instructor and the learner during the learning activity." They are "more process oriented" and "can identify areas that need to be strengthened."
+- **Summative:** "identify the learning that occurred after the learning activity has completed." They are used at the end of a course or event to ensure learners "meet a specified standard or have developed a competency, such as making effective decisions in tactical environments."
+
+**Feedback**
+
+- Assessments give constructive feedback, "rather than an arbitrary test score that does not capture growth or change."
+- "The most effective instructors use the coach-teach-mentor approach."
+- Assessments are "honest, transparent, and constructive."
+- Feedback is most valuable when learners can apply it quickly.
+
+**Errors.** "Errors, mistakes, and failures are never end states"; they "may occur as a necessary step." "Marines learn because of their errors, not despite them."
+
+### Technology in Support of Learning
+
+**Human first.** As MCDP 1 says of war, "the learning environment is also primarily based on human characteristics rather than equipment."
+
+**What technology does**
+
+- It can "support, expand, and individualize learning."
+- Some of it collects performance data for feedback and after action reviews.
+
+**Simulations**
+
+- Marines train individually and in teams on calling for supporting arms.
+- Simulations give "additional repetitions," valuable when "live-fire ranges, training areas, equipment, or other assets are limited."
+- They can introduce what "cannot be easily or safely replicated in live training, such as the employment and effects of supporting arms."
+
+**Other tools.** Audiobooks or videos can supplement reading. Instructors use technology to monitor, conduct after action reviews, and track progress. Technologies are chosen for the learning purpose, conditions, and needs.
+
+### Conclusion
+
+**The test.** "Battle is the ultimate test of military learning, and training as Marines will fight is a time-honored Marine Corps principle."
+
+**Keep adapting.** Marines continuously assess and adapt learning content, methods, exercises, and environments. They give others freedom to exercise initiative in their own learning.
+
+**Realism.** Commanders, leaders, instructors, mentors, and coaches provide realistic experiences at every level: individual, team, unit, and MAGTF.
+
+**The bottom line.** "During the stresses of combat, Marines will fight the way that they learned." All Marines must engage in "disciplined, career-long continuous learning," including seeking feedback. "Learning and continuous professional development are expectations and opportunities for all Marines."
+
+---
+
+## Part 3. Twenty Question Quiz
+
+### Recall (1 to 10)
+
+1. The learning environment is more than physical space. List the factors that influence instruction, according to the chapter (there are seven).
+2. For the Marine learner, define a **surface** and a **gap**.
+3. Name the three example types of assessment and say when each one occurs relative to the learning activity.
+4. State, in order, the four steps of self-directed learning.
+5. Instructors and leaders choose instructional methods based on four considerations. Name them.
+6. Name the three individual barriers to effective learning that the chapter says can lead to gaps.
+7. Define the **main effort**. In a learning environment, who is the main focus of effort?
+8. What approach do the most effective instructors use to give learners constructive feedback?
+9. Complete the adage for selecting instructors: "Those who can, do, and ..."
+10. Which Commandant walked every evening to think and reflect, which number Commandant was he, and for how long did he walk?
+
+### Application (11 to 15)
+
+11. Your platoon has two weeks of downtime aboard ship. List the learning activities this chapter says you can run.
+12. You are designing a force-on-force exercise. (a) Which red force option tests your Marines' "brilliance in the basics"? (b) Which option best prepares them to fight a thinking, adaptive peer competitor?
+13. Your command is told to replace a proven instructional method with a new app because "it's the latest thing." According to the chapter, what must happen before you adopt it?
+14. Before an operation, you want to reduce the chance of being surprised by the enemy's reaction. Name the technique the chapter describes and state what the leader does in it.
+15. Before a calls for fire package, you want to learn what your Marines already know. Midway through, you want feedback on what needs strengthening. Which assessment type fits each moment?
+
+### Which Is Wrong (16 to 20): identify the error in each statement
+
+16. "Improving the learning environment means making it more efficient, which is why rote memorization is effective for all learning."
+17. "Adaptive curriculum is best suited for entry-level training and schools, where it is most effective."
+18. "Philip II of Macedon and Alexander the Great originated the phalanx and made it more maneuverable by relying on heavy infantry."
+19. "Errors, mistakes, and failures are end states to avoid; Marines learn despite their errors."
+20. "Because simulations are so capable, the learning environment is now based primarily on equipment rather than human characteristics."
+
+---
+---
+
+*(Answer key below. Cover it before you start the quiz.)*
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Answer Key
+
+| # | Answer | Where it is |
+|---|---|---|
+| 1 | Methods, resources, technologies, culture, instructors, peers, and the social elements of learning. | Learning Environments |
+| 2 | Surface: an area of existing understanding, a strongpoint to maintain, build upon, and relate. Gap: an area of weakness in knowledge, experience, or competencies, to be filled with new understanding and practice. | Setting the Conditions for Success |
+| 3 | Diagnostic comes before the activity. Formative comes during it. Summative comes after it. | Assessments as Tools |
+| 4 | (1) Identify learning needs, (2) formulate goals, (3) pursue those goals, (4) evaluate outcomes. | Self-Directed Learning |
+| 5 | The intended learning outcomes; the learners' level of expertise and experience; the available tools and resources, including time; and the instructors' and leaders' experience. | Learning Environments |
+| 6 | Personal ego, inexperience, and bias. | Setting the Conditions for Success |
+| 7 | The organization (unit or task force) assigned responsibility for accomplishing the essential tasks of the overall mission. In learning, the learner is the main focus of effort, and leaders and instructors are always in support. | A Learner-Centric Model |
+| 8 | The coach-teach-mentor approach. | Assessments as Tools |
+| 9 | "...and those who have done well, teach." | The Role of the Instructor |
+| 10 | General Al Gray, the 29th Commandant. He walked 20 minutes every evening. | Self-Directed Learning |
+| 11 | Simulation training, professional reading, tactical decision games, rehearsing unit standing operating procedures, and discussing warfighting vignettes. | The Expeditionary Nature of Learning |
+| 12 | (a) A red force scripted to use the enemy's anticipated tactics. (b) Complete free play between two opposing forces (the adaptive red force also moves toward this). | Force-on-Force sidebar |
+| 13 | First seek clear evidence that the new method is in fact better than existing methods. Adopt it only if it is demonstrably better, not because it is new. | Learning Environments |
+| 14 | Mental imagery. The leader pictures himself or herself in the operation, vividly visualizes different scenarios including branches and sequels, and rehearses the decisions he or she may make given specific conditions and enemy actions. | Self-Directed Learning |
+| 15 | Diagnostic before the event. Formative during it. | Assessments as Tools |
+| 16 | Improving the environment does not necessarily mean making it more efficient. Rote memorization is efficient for basic knowledge such as standing orders but is not effective for all learning. | Learning Environments |
+| 17 | Adaptive curriculum may not be suited for entry-level training and schools. It can be effective at intermediate and advanced schools. | A Learner-Centric Model |
+| 18 | The phalanx was originated by the ancient Sumerians. Philip II and Alexander adapted it by adding light infantry and cavalry, not by relying on heavy infantry. | The Expeditionary Nature of Learning |
+| 19 | Errors, mistakes, and failures are never end states and may be a necessary step in learning. Marines learn because of their errors, not despite them. | Assessments as Tools |
+| 20 | The learning environment is primarily based on human characteristics rather than equipment. Technology is one of many tools that support learning. | Technology in Support of Learning |

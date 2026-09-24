@@ -101,7 +101,7 @@ The release drill, every time (`scripts/release.sh <version>` does steps 1 to 3 
 1. Bump the version in both `plugins/officer-kit/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` (they must match).
 2. Run `evals/install_check.py` and the harnesses. Build the file with `scripts/package.sh`.
 3. Merge the change to `main` through a pull request. Automatic sync fires on a merged pull request that carries a version bump; a plain push may not.
-4. On the GitHub releases page, publish a release tagged with the version and attach `dist/officer-kit.plugin` (for people who cannot use the marketplace) and, when it changed, `Officer-Kit-Starter-Library.zip`. `releases/latest` is the link on the slides and in GETTING STARTED, so it must always carry both files.
+4. On the GitHub releases page, publish a release tagged with the version and attach `dist/officer-kit.plugin` (for people who cannot use the marketplace). The starter library lives on the v0.10.0 release at a fixed download link (https://github.com/azachdolan-bit/officer-kit/releases/download/v0.10.0/Officer-Kit-Starter-Library.zip), which GETTING STARTED and the `library` skill use; every release's notes repeat that link, because `releases/latest` is the link on the slides. When the library changes, attach the new zip to that release's successor and update the link in both places.
 5. Anyone who installed from the file has to download the new file; anyone on the marketplace gets it automatically, or can force it with Check for updates in Manage marketplaces.
 
 The starter library is fifteen public publications copied from the maintainer's marine-regs library, built by hand on 19 Sep 26 (list and source pages in the zip's README). Refresh it when a publication in it is superseded.

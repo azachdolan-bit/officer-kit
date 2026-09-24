@@ -1,0 +1,415 @@
+MCDP 7 Learning, Chapter 3
+ASSUMED (you were not available to ask): a printable study guide (.docx) as the format; practice scenarios on the parts that call for judgment (assessments, force-on-force design, surfaces and gaps, adopting new methods, self-directed learning, expeditionary learning); the chapter title is not printed in the captured text, so it is not given here. Endnote numbers in the source are dropped because the endnotes themselves are not in the capture. Dashes in quoted doctrine are rewritten as commas, parentheses, or semicolons; the wording is otherwise the publication's.
+How to use this guide
+Learn the skeleton first, then read each section in full. Work the scenarios and the quiz without looking, then check the answer keys, which sit on their own pages. Retake the quiz in a few days; spacing the practice is what makes it stick.
+Skeleton
+Opening: victory goes to those who adapt, decide, and execute faster than the enemy, not the largest or most modern force; training gives an opposing will to practice against; environments are learner-centric, adaptable, with quality feedback and repetitions
+Learning environments: all factors that influence instruction (methods, resources, technologies, culture, instructors, peers, social elements); no single correct design; support analytical AND nonanalytical reasoning (recognition primed decision-making); choose method by outcome, learner expertise and experience, tools and resources (including time), instructor experience; new method only with clear evidence it is better; efficient is not the same as effective (rote memorization for standing orders)
+Surfaces and gaps (MCDP 1): surface = hard spot, strength, existing understanding (maintain, build upon, relate; do not let it deteriorate); gap = soft spot, weakness (fill with new understanding and practice); barriers: ego, inexperience, bias; awareness, honesty, judgment; self-assessment = continuous and aggressive reconnaissance; intellectual humility
+Expeditionary learning: expeditionary warfighting is the primary focus; warrior-scholars; learn anywhere (schools, garrison, aboard ship, en route); force-on-force: scripted red force (brilliance in the basics), adaptive red force, complete free play (unit tactics, combined arms); expeditionary mindset = readiness to exploit learning opportunities at any time, in any place; guard against complacency and good enough; phalanx: Sumerians originated, Philip II and Alexander adapted with light infantry and cavalry
+Learner-centric model: learner = main focus of effort; leaders and instructors always in support; no one-size-fits-all; ask how can I best support the learner; goal = connect prior knowledge to new material; introduce, reinforce, sustain, evaluate; adaptive curriculum at intermediate and advanced schools, not entry level
+Self-directed learning: identify needs, formulate goals, pursue goals, evaluate outcomes; like mission tactics; leader gives support and guidance without prescribing, learner devises and executes the plan; vicarious experience; mental imagery (confidence, AAR key points, outcomes, options, mission rehearsal with branches and sequels); self-reflection puts experience and knowledge in perspective; Mattis: lack of reflection; Gray: 20 minutes every evening
+Instructor: knowledgeable, skilled, competent, confident; attract, reward, retain; those who can, do, and those who have done well, teach; rotation among operational, instructional, educational assignments; foundation of learning and readiness
+Assessments: diagnostic (before), formative (during, process oriented), summative (after, meets a standard); feedback not an arbitrary score; coach-teach-mentor; honest, transparent, constructive; learn because of errors, not despite them
+Technology: human characteristics over equipment; support, expand, individualize; simulations for additional repetitions and for supporting arms effects; audiobooks and videos supplement reading
+Conclusion: battle is the ultimate test; Marines fight the way they learned; disciplined, career-long continuous learning
+Chapter opening
+Epigraphs
+“It is necessary for us to learn from others’ mistakes. You will not live long enough to make them all yourself.” Hyman Rickover
+“Our knowledge of circumstances has increased, but our uncertainty, instead of having diminished, has only increased. The reason of this is, that we do not gain all our experience at once, but by degrees; [so] our determinations continue to be assailed incessantly by fresh experience; and the mind, if we may use the expression, must always be ‘under arms.’” Carl von Clausewitz
+Introduction
+Victory does not necessarily go to those who have the largest or most modern forces, but to those who are able to recognize the need to adapt, generate intelligent decisions, and execute them more quickly than their enemy. This has proven true in the past and will assuredly continue into the future. As the Nation’s naval expeditionary force-in-readiness, Marines create and foster learning environments that mirror the ways they fight and the threats that they will encounter. Marines must have many opportunities to learn in environments that realistically simulate the challenges Marines will encounter against capable adversaries across the full range of military operations. Effective learning opportunities, from simple reading assignments to field exercises, wargaming, and simulation training exercises, are critical to ensure that Marines experience realistic warfighting conditions, challenges, and complexity.
+In the progression of learning, training should provide Marines with an opposing will to practice against. Through repetitions in a training environment, Marines learn to outthink adversaries and overcome friction prior to encountering these factors during real-world operations. Therefore, Marines integrate lessons learned from current and previous conflicts to adapt their learning environments, methods, assessments, and feedback to reflect evolving threats. In these learning environments, Marines can make mistakes, learn from them, adapt, and progress along a path to developing increased warfighting knowledge, skills, and competencies. Learning environments that are learner-centric, adaptable, and provide Marines quality feedback and repetitions create warfighters that outpace our Nation’s adversaries.
+KEY: Victory goes to those who recognize the need to adapt, generate intelligent decisions, and execute them more quickly than their enemy. Not necessarily to the largest or most modern forces.
+MEMORY HOOK: Three traits of learning environments that create warfighters who outpace adversaries: learner-centric, adaptable, and provide quality feedback and repetitions.
+Learning environments
+The learning environment is much more than simply the physical space where learning occurs; it encompasses all the factors that influence instruction, such as methods, resources, technologies, culture, instructors, peers, and the social elements of learning. Developing warfighting skills and competencies requires time, deliberate practice, and repetition in operationally relevant contexts. There is not a single correct design for creating the ideal learning environment because each learning objective, Marine, team, and condition will differ. Therefore, Marines modify the learning environment to most effectively meet the learners’ needs and reflect the conditions that they expect to encounter. The interaction of instructors, learning materials, learners, and the learning delivery methods all create an effective and dynamic learning environment.
+Effective learning requires environments that foster flexibility of thought, reasoning, and the creation of potential solutions to problems, and encourages Marines to explore alternative courses of action. At the same time, not all learning and decisions are based on analytical reasoning. Therefore, learning environments must also support Marines to make timely decisions and take action, including developing rapid experience-based decision-making such as recognition primed decision-making and other forms of nonanalytical reasoning. Above all else, the learning environment is intended to aid the leader, instructor, mentor, or facilitator in creating conditions that are favorable to the desired learning outcomes for the learner.
+Instructors and leaders determine the specific instructional methods to use based upon the intended learning outcomes, the learners’ level of expertise and experience, the available tools and resources (including time), and the instructors and leaders experience. Instructors and leaders should select the most effective method in order to achieve the intended learning outcome. They should employ a variety of learning methods, recognizing that methods that are effective for one instructor, leader, schoolhouse, or learning outcome may not be effective for others. Learning environments are regularly assessed and adjusted as needed so that they remain appropriate for the intended learning objectives. An effective learning environment enables Marines to clearly understand the intended warfighting doctrine, concepts, tactics, techniques, procedures, and learning outcomes. It clearly identifies the expectations for the learners, whether exercising Marines’ critical thinking and problem-solving skills or understanding circumstances where immediate obedience to orders or application of specific basic skills (such as good marksmanship) are required. Additionally, effective learning environments provide opportunities for Marines to execute the required repetitions under different conditions to achieve competency. First and foremost, the learning environment focuses on the learners’ needs, enabling Marines to understand, develop, and retain the necessary knowledge and competencies they will use in combat.
+There are many proven and effective traditional instructional methods; however, leaders and instructors must remain open to exploring new evidence-informed methods to improve Marines’ learning environments so that they can have multiple ways to develop competencies. When considering whether to replace or enhance existing instructional methods, instructors and unit leaders must first seek clear evidence that a new method is, in fact, better than the existing methods. Marines do not hastily adopt a new method simply because it is new; rather, Marines assess its value to support learning relative to their existing methods. Marines are open to exploring and adopting new methods when they are demonstrably better, not just because they are new.
+Although Marines strive for learning efficiencies, improving the learning environment does not necessarily mean making it more efficient. For example, although rote memorization or reciting facts can be very efficient and useful for developing basic knowledge, such as memorizing standing orders, they are not effective methods for all learning. Effective learning often requires approaching material from different perspectives, applying information in context, and explaining how and why actions occurred, in addition to what occurred. Mastering a topic or difficult skill requires that Marines spend time questioning and reflecting upon information to obtain deeper understanding, and to determine how principles apply in practice. Marines understand key doctrine, principles, and knowledge so that they can better identify when and how to deviate as the situation demands. Effective learning environments foster a range of learning opportunities and encourage Marines to pursue mastery in the profession of arms.
+The bases for choosing an instructional method
+TRAP: The learning environment is not the physical space. It is all the factors that influence instruction: methods, resources, technologies, culture, instructors, peers, and the social elements of learning.
+DISCRIMINATOR: Analytical reasoning (flexibility of thought, alternative courses of action) versus nonanalytical reasoning (timely decisions, rapid experience-based decision-making such as recognition primed decision-making). The environment must support both.
+KEY: A new method is adopted when it is demonstrably better, not just because it is new. Instructors and unit leaders must first seek clear evidence that a new method is, in fact, better than the existing methods.
+TRAP: Improving the learning environment does not necessarily mean making it more efficient. Rote memorization is efficient and useful for basic knowledge, such as memorizing standing orders, but it is not effective for all learning.
+Setting the conditions for success
+The concepts of surfaces and gaps, from a warfighting perspective, are discussed in MCDP 1. Put simply, surfaces are hard spots (i.e., enemy strengths) and gaps are soft spots (i.e., enemy weaknesses). Just as Marines study the enemy’s surfaces and gaps, Marines must study their own. Having done this, Marines then tailor the learning environment and approach to accelerate learning. For the Marine learner, surfaces are areas of existing understanding (strongpoints that Marines maintain, build upon, and relate), while gaps are areas of weaknesses in knowledge, experience, or competencies (areas that the instructor and the learner need to fill with new understanding and practice). The same is true of Marine Corps units. While focusing on addressing the learning gaps, Marines also ensure that surfaces do not deteriorate over time. Furthermore, learning environments help reveal individual barriers to effective learning that can lead to gaps, such as personal ego, inexperience, and bias. Open discussion and quality after action reviews provide opportunities for Marines to reflect upon their experiences and internalize new concepts to fill these learning gaps and reinforce learning surfaces.
+Recognizing these surfaces and gaps requires awareness, honesty, and judgment because they are often unique to the individual or the specific unit; a surface in one learner or unit may be a gap in another. It is incumbent upon leaders, instructors, learners, and their peers to “actively seek out [these] gaps [through] continuous and aggressive reconnaissance” (i.e., self-assessment). Learners should not hide gaps in their knowledge; instead, they should exercise intellectual humility to identify and fill these gaps in order to improve. Marines mitigate weaknesses by leveraging their strengths (i.e., surfaces) to form new understanding and focus on learning to eliminate the gaps. This can only occur when learners first acknowledge their weaknesses and resolve to leverage their strengths to build meaningful connections.
+KEY: Barriers to effective learning that can lead to gaps: personal ego, inexperience, and bias.
+KEY: Recognizing surfaces and gaps requires awareness, honesty, and judgment. Continuous and aggressive reconnaissance means self-assessment.
+TRAP: A surface in one learner or unit may be a gap in another. Learners should not hide gaps; they exercise intellectual humility and leverage their strengths (surfaces) to eliminate the gaps.
+The expeditionary nature of learning
+Expeditionary warfighting is the primary focus of Marine learning; therefore, learning environments should reflect expeditionary operations. Although much of a Marine’s initial training occurs in schools, learning continues throughout a Marine’s career and often occurs outside of formal settings. Consequently, learning is adapted to the specific individual and unit context, mission, and operational conditions. Marines recognize that to be effective warfighters, they must be warrior-scholars; they must seize the initiative to study the profession of arms whenever and wherever learning opportunities arise.
+Aside from instructors in formal schools, Marines learn from leaders, mentors, peers, subordinates, professional reading, field exercises, in garrison, and aboard ship. Marines learn about warfighting through on-the-job activities, discussions with other Marines, interactions with the members of other Services and allied forces, and all their experiences. For example, Marine units may discuss tactics while traveling to conduct an operation, learning during mission rehearsal and preparation. Additionally, Marines can use downtime while aboard ship to conduct simulation training, complete professional reading, conduct tactical decision games, rehearse unit standing operating procedures, and discuss warfighting vignettes. Marines seek and seize opportunities for learning in any clime and place.
+Force-on-Force Exercises to Simulate War’s Complexity
+Force-on-force exercises are purpose-driven learning environments that approximate the complexity of war. For example, a red force can be scripted to use the enemy’s anticipated tactics to test the Marines’ level of “brilliance in the basics” at applying tactics, techniques, and procedures against an expected foe. Additionally, the red force could follow enemy strategy and tactics, but also adapt to blue force actions. A third option might employ complete free play between two opposing forces (whether in live field training or in other learning activities, such as a war game) to allow both forces to exercise better unit tactics and combined arms operations. All of these approaches have a purpose and application, from exercising the basics to fighting against a thinking, adaptive peer competitor.
+When developing such exercises, Marines focus on designs that enhance problem solving and promote decision-forcing events. This enables Marines to practice and better understand how to get inside the enemy’s decision-making process. The training provides difficult situations that simulate operations as realistically as possible, requiring that Marines confront dilemmas and experience the increased stress that may impact unit cohesion during combat. There is no substitute for fighting against a competent, realistic, thinking, adaptive enemy, even if that enemy is simulated by other Marines. This practice ensures that challenging learning environments provide a place to practice, develop experience, allow errors, adapt, and learn how to fight and win.
+Adapting faster than the enemy
+Throughout history, technology has advanced and tactics have evolved to address increasing complexity. Regardless of technology, Marines need to adapt and deal with complex problems faster than their enemies by exploiting expeditionary learning environments and developing an expeditionary mindset, that is, a readiness to exploit learning opportunities at any time, in any place. Marines guard against complacency because they know that their adversaries are always watching what the Marines are doing and are constantly making changes to adapt in an attempt to defeat us. If Marines settle for what they think is “good enough,” it may result in high casualties in the next fight. Just as every Marine is a rifleman regardless of their duties and military occupational specialty, every Marine is also part of an expeditionary learning organization, ready to recognize changing conditions and adapt accordingly.
+For example, Philip II of Macedon and Alexander the Great adapted the phalanx formation originated by the ancient Sumerians, by employing the phalanx in conjunction with light infantry and cavalry (vice relying upon heavy infantry) to be more maneuverable for both defense and offense. More recently, the coalition led by the United States employed a more modern combination of ground, maritime, air, electronic warfare, and cyberspace operations during operations in both Iraq and Afghanistan. Although these examples are centuries apart, the principles are the same: improve the force’s ability to protect itself while accomplishing the mission. Common to both examples are adaptive, thinking leaders who addressed complex problems and developed workable solutions, even without perfect information.
+KEY: Expeditionary mindset: a readiness to exploit learning opportunities at any time, in any place. Marines must be warrior-scholars.
+MEMORY HOOK: Every Marine is a rifleman; every Marine is also part of an expeditionary learning organization.
+TRAP: The phalanx was originated by the ancient Sumerians. Philip II of Macedon and Alexander the Great adapted it.
+A learner-centric model
+Operationally, the main effort is the organization (unit or task force) assigned responsibility for accomplishing the essential tasks of the overall mission. The main effort receives priority for support and becomes the harmonizing force for all subordinate initiatives. For a learning environment to be effective, the learner must be the main focus of effort. Therefore, whether at the individual or collective level, the learning environment focuses on the learners (individuals, teams, units, and MAGTFs) as the main focus of effort. Leaders and instructors are always in support of the learner.
+Marine leaders and instructors shall recognize the importance of understanding learners’ needs, interests, and abilities in order to inspire, challenge, and motivate their Marines. The learner-centric model tailors the learning delivery methods to be most effective for the learners, rather than defaulting to a “one-size-fits-all” instructional approach. When faced with a decision, ask “how can I best support the main focus of effort: the learner?” Marines will be more engaged and enthusiastic about learning when the methods are adjusted for their aptitudes. Learners need opportunities to work at their own pace, and, when appropriate, to explore areas that they find useful or interesting. Decentralized learning provides learners with multiple opportunities to follow their curiosity to develop professionally. The learner-centric model ensures that content is relevant to learners, actively engaging and challenging Marines in a positive instructional climate. For example, discussions on problem solving between the learners and leaders and instructors are an effective method to motivate learners and build teams as they analyze information, consider alternatives, and work together to develop a solution to the problem posed to them. This method is often characterized by active learning through the creation of follow-on questions that further define and solve the problem. This fosters an engaging learner-centric environment and critical thinking and challenges Marines to develop alternative solutions.
+The goal of a learner-centric environment is to help learners make connections between prior knowledge and newly presented material. As described in the first chapter, adult learners use their current knowledge as a basis when they gain new knowledge. Marines learn differently, in different ways, and/or at different speeds. To facilitate these connections, leaders and instructors must know their Marines and become familiar with their strengths, weaknesses, needs, and interests. This familiarity enables establishing a learning environment that can introduce, reinforce, sustain, and evaluate essential behaviors that are vital to mission success. Additionally, leaders and instructors can involve learners in tailoring the learning environment and content to make learning more engaging. Although adaptive curriculum may not be suited for entry-level training and schools, it can be effective at intermediate and advanced schools. While each Marine is individually responsible for learning, Marine Corps commanders, leaders, mentors, and instructors establish the conditions for success.
+KEY: Main effort (operational): the organization assigned responsibility for accomplishing the essential tasks of the overall mission; it receives priority for support. In learning, the learner must be the main focus of effort, and leaders and instructors are always in support of the learner.
+KEY: The goal of a learner-centric environment is to help learners make connections between prior knowledge and newly presented material.
+MEMORY HOOK: The environment can introduce, reinforce, sustain, and evaluate essential behaviors that are vital to mission success.
+TRAP: Adaptive curriculum may not be suited for entry-level training and schools; it can be effective at intermediate and advanced schools. Each Marine is individually responsible for learning; commanders, leaders, mentors, and instructors establish the conditions for success.
+Self-directed learning
+Self-directed learning is the process in which individuals take the initiative in identifying their learning needs, formulating goals, pursuing these goals, and evaluating outcomes. Although self-directed learning begins with the learner, it requires support and guidance from commanders, leaders, mentors, and instructors. When appropriate, encouraging and holding Marines accountable for self-directed learning increases and sustains professional curiosity. The idea of self-directed learning is similar to mission tactics (assigning a subordinate a mission without specifying how the mission must be accomplished). In MCDP 1, leaders are encouraged to leave the manner of accomplishing the mission to their subordinates, thereby allowing a subordinate to have freedom (and establishing the duty) to determine and take the necessary steps to accomplish the mission based on the specific situation. Mission tactics rely on a subordinate’s exercise of initiative framed by proper guidance and understanding; the same principle applies to self-directed learning.
+Like mission tactics, self-directed learning benefits the leader and instructor by giving the learner more ownership and autonomy, which enables the leader or instructor to focus on learners who need more help or to explore alternate ways to improve the learning environment. The commander, leader, instructor, or mentor agrees to provide the learners with the necessary support and guidance to help them accomplish their missions without unnecessarily prescribing their actions. The learner is then responsible for devising and executing a plan of action that meets the prescribed guidance, exercising proper judgement and initiative.
+Self-directed learning encourages learners to develop a desire to learn, solve problems, and ask questions. Self-directed learning also enables critical thinking and reasoning, encouraging Marines to consider content credibility, sources of information, and alternate perspectives. As learners progress to higher levels, self-directed learning becomes both more effective and necessary for developing the intellectual edge that contributes to team, unit, and MAGTF effectiveness.
+Identify learning needs
+Formulate goals
+Pursue these goals
+Evaluate outcomes
+Vicarious experience and mental imagery
+An effective and simple way to conduct self-directed learning can be through vicarious experience (learning from others’ experiences, as discussed in chapter 1). This method is even more important in our profession than in others because Marines cannot always actually practice every variation prior to combat. For example, vicarious learning can be most effective when Marines reflect upon what they have either read or observed (how others acted and adapted) so they become better prepared for future challenges.
+Vicarious experience is critical because even the most realistic training experiences and military education fall short of the reality of combat. Therefore, the more vicarious experience that a Marine obtains, the less likely that a new experience, in combat or otherwise, will be completely unique. Having many personal and vicarious experiences to draw upon gives Marines a stronger foundation to adjust during unanticipated circumstances. Mental imagery, which is a person’s visualizations or mental representations, can also be helpful for obtaining vicarious experiences. Marines can use mental imagery to gain confidence prior to executing a skill, emphasize key points in after action reviews, examine possible outcomes of decisions, and explore options. Mental imagery also provides an effective mission rehearsal technique. When using mental imagery, a leader pictures himself or herself in the operation, vividly visualizes different scenarios, including possible branches and sequels, and rehearses the decisions he or she may make given specific conditions and enemy actions. In this way, the leader mentally prepares for multiple potential enemy actions and reduces the possibility of surprise when the enemy reacts.
+Self-reflection
+Marines need time to reflect on new learning experiences to exploit their lessons. Self-reflection internalizes experiences and increases mental preparedness for employment across the range of military operations. Where continuous learning is seeking new experiences and knowledge, self-reflection puts both in perspective. Former Secretary of Defense and retired General James Mattis, when asked about the biggest problem with senior leadership, said that, “. . . it’s a lack of reflection[.] . . . Solitude allows you to reflect while others are reacting[.] . . . We need solitude to refocus on prospective decision-making, rather than just reacting to problems as they arise. You have some external stimulus, then you go back to your experience, your education, and you see what needs to be done.” General Al Gray, 29th Commandant of the Marine Corps, walked for 20 minutes every evening to think and reflect. Marines at all levels need time to reflect, absorb, and think about what they have experienced to turn it into what they learned. In a fast-paced world, Marines need to make time to reflect in order to build understanding, exploit lessons, and be ready to adapt as situations change.
+DISCRIMINATOR: Continuous learning is seeking new experiences and knowledge; self-reflection puts both in perspective.
+KEY NUMBER: General Al Gray, 29th Commandant of the Marine Corps, walked for 20 minutes every evening to think and reflect.
+MEMORY HOOK: Four uses of mental imagery: gain confidence prior to executing a skill, emphasize key points in after action reviews, examine possible outcomes of decisions, and explore options. It is also an effective mission rehearsal technique.
+The role of the instructor
+Regardless of location or position, Marine instructors are knowledgeable, skilled, competent, and confident in their abilities. They know their Marines’ strengths and weaknesses and empathize with the learners’ challenges to better understand how they can tailor the learning environment to be more effective. Instructors also inspire learners to want to learn more by sharing their own experiences and explaining why learning is important. Attracting, rewarding, and retaining a highly qualified cadre of effective instructors is a crucial factor in facilitating Marines’ learning and requires senior leaders to recognize the importance of learning. An appropriate focus on the selection processes is essential to select the right Marines as instructors, trainers, and educators. Therefore, the adage should be, “those who can, do, and those who have done well, teach.”
+The Marine Corps balances the rotation of the most knowledgeable and effective practitioners of the profession of arms between operational, instructional, and their own educational assignments so that more Marines can benefit from the experts’ wisdom and skills, while they are afforded the opportunity to sharpen their own. For example, expert instructors know when to apply specific instructional methods, when it is time to transition to more advanced techniques, how to provide constructive feedback, and how to facilitate critical thinking and creative problem solving. Instructors and leaders are the foundation of Marine learning and, by extension, of Marine readiness.
+MEMORY HOOK: Instructors are knowledgeable, skilled, competent, and confident in their abilities.
+KEY: Rotation of the most knowledgeable and effective practitioners is balanced between operational, instructional, and their own educational assignments.
+KEY: Instructors and leaders are the foundation of Marine learning and, by extension, of Marine readiness.
+Assessments as tools
+Learning assessments facilitate and guide the learning process to determine whether the learner is proficient in required competencies. They serve as feedback tools for both the instructor and the learner, assessing the learner’s progress and the instructor’s effectiveness. The best assessment method for the situation varies based on the learning objective. There are many types of assessments; examples include diagnostic, formative, and summative assessments. Diagnostic assessments identify the learner’s knowledge of a subject before a learning activity. Formative assessments provide feedback to the instructor and the learner during the learning activity. Summative assessments identify the learning that occurred after the learning activity has completed. Instructors use a range of assessments matched to the learning objectives. For example, diagnostic assessments may be initially helpful to understand the level of learners’ knowledge or skills before an educational or training event, whether individual or collective. Formative assessments are more process oriented; therefore, they can identify areas that need to be strengthened. At the end of a course or training event, summative assessments may be used to ensure that the learners meet a specified standard or have developed a competency, such as making effective decisions in tactical environments.
+Assessments are employed to provide learners with constructive feedback so that they can further develop professionally, rather than an arbitrary test score that does not capture growth or change. The most effective instructors use the coach-teach-mentor approach to provide learners with constructive feedback. Marine Corps assessments are honest, transparent, and constructive so that learners better understand how they are progressing. Feedback is most valuable when learners can quickly apply the information to develop new understanding, knowledge, and skills. Although errors, mistakes, and failures are never end states, they may occur as a necessary step in the learning development process. Learners and instructors alike should understand that Marines learn because of their errors, not despite them.
+KEY: Assessments serve as feedback tools for both the instructor and the learner, assessing the learner’s progress and the instructor’s effectiveness.
+MEMORY HOOK: Marine Corps assessments are honest, transparent, and constructive.
+TRAP: Errors, mistakes, and failures are never end states. Marines learn because of their errors, not despite them.
+Technology in support of learning
+Just as MCDP 1 confirms that war is a human enterprise and that no amount of technology can reduce the human dimension, the learning environment is also primarily based on human characteristics rather than equipment. Technology can support, expand, and individualize learning; it is one of many tools to support learning objectives. Some technologies also collect data on learner performance to enhance feedback and after action reviews. Technology can facilitate individual and collective skill development, feedback on current performance, and supplemental instruction tailored to individual or unit needs. For example, Marines use simulations, both individually and collectively in teams, to train in calling for supporting arms. By simulating both the operational environment and command and control systems, simulation technologies enable Marines to obtain “additional repetitions” while training. These repetitions are particularly valuable when live-fire ranges, training areas, equipment, or other assets are limited.
+Simulations can also introduce elements that cannot be easily or safely replicated in live training, such as the employment and effects of supporting arms.
+Marines integrate supporting learning technologies seamlessly into the learning environment to educate themselves, learn vicariously, and realistically train as they will fight. For example, Marines can use other technologies, such as audiobooks or videos, to supplement their reading. Likewise, instructors use technologies to monitor, conduct after action reviews, and facilitate individual learner’s progress. Marines also select specific technologies to augment their learning environments based upon the learning purpose, conditions, and their needs. Marines thereby seek and employ a variety of learning methods and technologies, all focused on the desired learning outcomes.
+KEY: Technology can support, expand, and individualize learning; it is one of many tools. The learning environment is primarily based on human characteristics rather than equipment.
+MEMORY HOOK: Two reasons for simulation: additional repetitions when live-fire ranges, training areas, equipment, or other assets are limited; and elements that cannot be easily or safely replicated in live training, such as the employment and effects of supporting arms.
+Conclusion
+Battle is the ultimate test of military learning, and training as Marines will fight is a time-honored Marine Corps principle. In preparing for battle, Marines leverage the art and science of learning along with helpful technologies to enhance learning environments, tailor learning experiences, and provide constructive feedback to accelerate learning. Marines continuously assess and adapt the Marine Corps’ learning content, methods, exercises, and environments to ensure that they are relevant and effective. Additionally, Marines increase their capability by providing other Marines with the freedom to exercise initiative for their own learning, such as in self-directed learning. Marines design, create, and evolve their learning environments to increasingly challenge ourselves. Commanders, leaders, instructors, mentors, and coaches ensure that individual Marines and their units receive realistic learning experiences that closely simulate operational conditions. Marines purposefully design learning environments to ensure proper warfighting skill development at all levels (individual, team, unit, and MAGTF).
+To be successful, Marines must engage in continuous learning and be able to apply the lessons learned. During the stresses of combat, Marines will fight the way that they learned. Therefore, all Marines must engage in disciplined, career-long continuous learning, including seeking opportunities to receive feedback to guide improvement. Marines understand why they are learning and how it will improve their professional competencies as warfighters. Learning and continuous professional development are expectations and opportunities for all Marines.
+KEY: Battle is the ultimate test of military learning. During the stresses of combat, Marines will fight the way that they learned.
+
+Practice scenarios
+Scenario 1. Three checkpoints in a course
+You run a short course on tactical decision-making for a platoon. You want to know three things: what your Marines already know before the first class, where they are struggling while the course is running, and whether they can make effective decisions in tactical environments when it ends.
+Name the type of assessment for each checkpoint and say what the chapter says each one does. Then say what the assessments are for, if not a score.
+Scenario 2. Designing the red force
+Your company is preparing for a field exercise. The commander has two goals on two different days. On the first day, the Marines must show they can apply their tactics, techniques, and procedures against the foe they expect. On the last day, the commander wants them to fight a thinking, adaptive peer competitor, and wants both sides to exercise unit tactics and combined arms operations.
+Which force-on-force option fits each day, and what should the exercise design emphasize?
+Scenario 3. The Marine who hides a gap
+A lance corporal in your squad is strong at land navigation and teaches it to the others. In an after action review you notice he stays quiet whenever calling for supporting arms comes up, and a peer tells you he has avoided the simulator. Range time for supporting arms is scarce this quarter.
+Using the chapter’s terms, describe his surface and his gap, what he and you should each do, and how technology can help.
+Scenario 4. The new training app
+A contractor shows your battalion a new learning app. The presentation is impressive, and a fellow officer wants to replace the current classroom method for the whole course next week because the app is the newest thing available.
+What does the chapter require before the change, and why does efficiency alone not settle it?
+Scenario 5. A reading goal for a sergeant
+A sergeant in your platoon wants to improve his understanding of small unit tactics before a promotion course. You are tempted to hand him a detailed day by day reading schedule with page assignments.
+Apply the chapter’s model of self-directed learning. What is your role, what is his, and what methods can he use?
+Scenario 6. Downtime aboard ship
+Your unit is aboard ship for a long transit with no ranges and little space. A squad leader says learning is on hold until the unit gets back to garrison and the schools.
+Correct him using the chapter.
+
+Scenario answer key
+Scenario 1
+Before the first class: diagnostic. Diagnostic assessments identify the learner’s knowledge of a subject before a learning activity; they may be initially helpful to understand the level of learners’ knowledge or skills before an educational or training event, whether individual or collective.
+While the course runs: formative. Formative assessments provide feedback to the instructor and the learner during the learning activity. They are more process oriented; therefore, they can identify areas that need to be strengthened.
+At the end: summative. Summative assessments identify the learning that occurred after the learning activity has completed, and may be used to ensure that the learners meet a specified standard or have developed a competency, such as making effective decisions in tactical environments.
+Purpose: constructive feedback so that learners can further develop professionally, rather than an arbitrary test score that does not capture growth or change. They also assess the instructor’s effectiveness.
+Scenario 2
+First day: a red force scripted to use the enemy’s anticipated tactics, to test the Marines’ level of “brilliance in the basics” at applying tactics, techniques, and procedures against an expected foe.
+Last day: complete free play between two opposing forces, in live field training or a war game, to allow both forces to exercise better unit tactics and combined arms operations.
+The middle option (a red force that follows enemy strategy and tactics but also adapts to blue force actions) sits between them. All of these approaches have a purpose and application, from exercising the basics to fighting against a thinking, adaptive peer competitor.
+Design emphasis: problem solving and decision-forcing events, so Marines practice getting inside the enemy’s decision-making process; difficult, realistic situations with dilemmas and stress. There is no substitute for fighting against a competent, realistic, thinking, adaptive enemy, even if that enemy is simulated by other Marines.
+Scenario 3
+Land navigation is a surface: an area of existing understanding, a strongpoint to maintain, build upon, and relate. Ensure it does not deteriorate over time while working on the gap.
+Calling for supporting arms is a gap: an area of weakness in knowledge, experience, or competencies that the instructor and the learner need to fill with new understanding and practice.
+Learners should not hide gaps; they should exercise intellectual humility to identify and fill them. Barriers such as personal ego, inexperience, and bias can lead to gaps. He mitigates the weakness by leveraging his strengths to form new understanding, which only occurs when he first acknowledges the weakness.
+Leaders, instructors, learners, and peers actively seek out gaps through continuous and aggressive reconnaissance (self-assessment). Open discussion and quality after action reviews help fill gaps and reinforce surfaces.
+Technology: Marines use simulations, individually and in teams, to train in calling for supporting arms. Simulations give additional repetitions when ranges, training areas, equipment, or other assets are limited, and introduce the employment and effects of supporting arms, which cannot be easily or safely replicated in live training.
+Scenario 4
+When considering whether to replace or enhance existing instructional methods, instructors and unit leaders must first seek clear evidence that a new method is, in fact, better than the existing methods.
+Marines do not hastily adopt a new method simply because it is new; they assess its value to support learning relative to existing methods, and adopt new methods when they are demonstrably better.
+Leaders must still remain open to exploring new evidence-informed methods.
+Improving the learning environment does not necessarily mean making it more efficient. Effective learning often requires approaching material from different perspectives, applying information in context, and explaining how and why actions occurred.
+Technology is one of many tools; the learning environment is primarily based on human characteristics rather than equipment.
+Scenario 5
+Self-directed learning is the process in which individuals take the initiative in identifying their learning needs, formulating goals, pursuing these goals, and evaluating outcomes. It begins with the learner but requires support and guidance from commanders, leaders, mentors, and instructors.
+It is similar to mission tactics: assign the mission without specifying how it must be accomplished. Your role: provide the necessary support and guidance without unnecessarily prescribing his actions, and, when appropriate, encourage and hold him accountable. A day by day schedule prescribes his actions.
+His role: devise and execute a plan of action that meets the prescribed guidance, exercising proper judgement and initiative.
+Benefit to you: his ownership and autonomy let you focus on learners who need more help.
+Methods: vicarious experience (reflect on what he has read or observed, how others acted and adapted); mental imagery; and time for self-reflection to turn what he experienced into what he learned.
+Scenario 6
+Expeditionary warfighting is the primary focus of Marine learning, and learning often occurs outside of formal settings. Marines must be warrior-scholars and seize the initiative to study the profession of arms whenever and wherever learning opportunities arise.
+Marines can use downtime aboard ship to conduct simulation training, complete professional reading, conduct tactical decision games, rehearse unit standing operating procedures, and discuss warfighting vignettes. Units may also discuss tactics while traveling to conduct an operation.
+The expeditionary mindset is a readiness to exploit learning opportunities at any time, in any place. Marines guard against complacency; settling for good enough may result in high casualties in the next fight.
+Marines also need time to reflect on new learning experiences to exploit their lessons.
+
+Practice quiz
+1. In the chapter, what does victory not necessarily go to?
+A. Those who have the largest or most modern forces
+B. Those who recognize the need to adapt
+C. Those who execute more quickly than their enemy
+D. Those who generate intelligent decisions
+2. What does the learning environment encompass?
+A. The lesson plan and the test
+B. The physical space where learning occurs
+C. The classroom, the range, and the training area only
+D. All the factors that influence instruction, such as methods, resources, technologies, culture, instructors, peers, and the social elements of learning
+3. Besides analytical reasoning, what must learning environments also support?
+A. Rote memorization of standing orders
+B. Exploring alternative courses of action
+C. Rapid experience-based decision-making such as recognition primed decision-making
+D. Summative testing at every stage
+4. Which is one of the bases the chapter gives for choosing an instructional method?
+A. The number of Marines in the class
+B. The newest technology available
+C. The method the schoolhouse used last year
+D. The learners’ level of expertise and experience
+5. Before replacing or enhancing an existing instructional method, what must instructors and unit leaders first do?
+A. Test it only for efficiency
+B. Seek clear evidence that a new method is, in fact, better than the existing methods
+C. Adopt the method quickly because it is new
+D. Wait until the method is required by a higher school
+6. What does the chapter say about rote memorization?
+A. It can be efficient and useful for basic knowledge such as standing orders, but it is not effective for all learning
+B. It is the most effective path to mastery
+C. It should never be used in Marine learning
+D. It is suited only to intermediate and advanced schools
+7. Put simply, what are surfaces and gaps?
+A. Surfaces are terrain and gaps are obstacles
+B. Surfaces are soft spots (enemy weaknesses) and gaps are hard spots (enemy strengths)
+C. Surfaces are known facts and gaps are unknown facts
+D. Surfaces are hard spots (enemy strengths) and gaps are soft spots (enemy weaknesses)
+8. For the Marine learner, what is a surface?
+A. An area of weakness the instructor and learner need to fill
+B. An area of existing understanding that Marines maintain, build upon, and relate
+C. A skill that no longer needs practice
+D. An enemy weakness to exploit
+9. While focusing on addressing learning gaps, what must Marines also ensure?
+A. That surfaces do not deteriorate over time
+B. That surfaces are reported in a summative assessment
+C. That every gap is filled before the next exercise
+D. That gaps stay private to the individual
+10. Which individual barriers to effective learning can lead to gaps?
+A. Complacency, technology, and distance
+B. Personal ego, inexperience, and bias
+C. Rank, age, and military occupational specialty
+D. Fatigue, stress, and fear
+11. The chapter says leaders, instructors, learners, and peers should actively seek out gaps through continuous and aggressive reconnaissance. What does it equate that to?
+A. Summative assessment
+B. The after action review
+C. Self-assessment
+D. Mental imagery
+12. What is the primary focus of Marine learning?
+A. Expeditionary warfighting
+B. Technology integration
+C. Formal schools
+D. Garrison training
+13. A red force scripted to use the enemy’s anticipated tactics tests what?
+A. Both forces’ unit tactics and combined arms operations
+B. How well Marines react to a red force that adapts to blue force actions
+C. The Marines’ brilliance in the basics at applying tactics, techniques, and procedures against an expected foe
+D. The instructor’s effectiveness
+14. Which force-on-force option allows both forces to exercise better unit tactics and combined arms operations?
+A. A red force that follows enemy strategy and tactics but adapts to blue force actions
+B. A simulation of command and control systems
+C. A red force scripted to use the enemy’s anticipated tactics
+D. Complete free play between two opposing forces
+15. How does the chapter define the expeditionary mindset?
+A. A readiness to exploit learning opportunities at any time, in any place
+B. A focus on learning only while deployed
+C. A readiness to fight the way Marines were trained in garrison
+D. A preference for formal schools over unit training
+16. How did Philip II of Macedon and Alexander the Great adapt the phalanx?
+A. By combining it with naval forces
+B. By employing it in conjunction with light infantry and cavalry, vice relying upon heavy infantry
+C. By adding heavy infantry to make it more maneuverable
+D. By originating it to replace cavalry
+17. What principle is common to the Macedonian example and the Iraq and Afghanistan example?
+A. Rely on the most modern technology available
+B. Mass heavy forces at the decisive point
+C. Improve the force’s ability to protect itself while accomplishing the mission
+D. Wait for perfect information before acting
+18. In a learner-centric model, what is the main focus of effort?
+A. The learner
+B. The instructor
+C. The commander’s training plan
+D. The curriculum
+19. When faced with a decision, what question does the chapter tell leaders and instructors to ask?
+A. How can I best support the main effort: the unit?
+B. How can I best support the main focus of effort: the learner?
+C. What does the lesson plan require next?
+D. Which method is the most efficient?
+20. Where can adaptive curriculum be effective?
+A. Only in unit-level training
+B. In entry-level training and schools
+C. At intermediate and advanced schools
+D. Only aboard ship
+21. How does the chapter define self-directed learning?
+A. Learning in which the leader prescribes each action
+B. Learning that needs no support or guidance from leaders
+C. Learning from others’ experiences
+D. The process in which individuals take the initiative in identifying their learning needs, formulating goals, pursuing these goals, and evaluating outcomes
+22. Self-directed learning is similar to which concept?
+A. The main effort
+B. Recognition primed decision-making
+C. Mission tactics
+D. Surfaces and gaps
+23. Why is vicarious experience even more important in the profession of arms than in others?
+A. It removes the need for realistic training
+B. It is the only method adults can use
+C. It costs less than field exercises
+D. Marines cannot always actually practice every variation prior to combat
+24. How does the chapter describe mental imagery?
+A. Learning from others’ experiences
+B. A person’s visualizations or mental representations
+C. A simulation of the operational environment
+D. Reflection in solitude after an event
+25. Where continuous learning is seeking new experiences and knowledge, what does self-reflection do?
+A. Replaces the need for new experiences
+B. Produces vicarious experience
+C. Speeds decisions in combat
+D. Puts both in perspective
+26. Which leader walked for 20 minutes every evening to think and reflect?
+A. Admiral Hyman Rickover
+B. General James Mattis
+C. General Al Gray, 29th Commandant of the Marine Corps
+D. Carl von Clausewitz
+27. What adage does the chapter give for selecting instructors?
+A. Those who can, do, and those who have done well, teach
+B. Those who teach, lead
+C. Those who can, do, and those who cannot, teach
+D. Those who have done, teach
+28. Which type of assessment provides feedback to the instructor and the learner during the learning activity?
+A. Summative
+B. Formative
+C. Diagnostic
+D. Vicarious
+29. At the end of a course, an instructor wants to ensure learners meet a specified standard. Which assessment fits, and why?
+A. Summative, to ensure learners meet a specified standard or have developed a competency
+B. Formative, because it gives feedback during the activity
+C. Diagnostic, to understand the level of learners’ knowledge before the event
+D. Formative, because it is process oriented and identifies areas to strengthen
+30. Which approach do the most effective instructors use to provide constructive feedback?
+A. A one-size-fits-all approach
+B. The coach-teach-mentor approach
+C. An arbitrary test score
+D. Rote recitation of standing orders
+31. What does the chapter say about errors, mistakes, and failures?
+A. They are never end states, but may occur as a necessary step in the learning development process
+B. Marines learn despite them
+C. They are end states recorded in the test score
+D. They should be kept out of training
+32. The learning environment is primarily based on what?
+A. Live-fire ranges and training areas
+B. Simulation technology
+C. Equipment rather than human characteristics
+D. Human characteristics rather than equipment
+33. When are the additional repetitions from simulation technologies particularly valuable?
+A. Before a diagnostic assessment
+B. When live-fire ranges, training areas, equipment, or other assets are limited
+C. When Marines are in formal schools
+D. When instructors are unavailable
+34. What is the ultimate test of military learning?
+A. The force-on-force exercise
+B. The promotion course
+C. Battle
+D. The summative assessment
+
+Quiz answer key
+1. A. Those who have the largest or most modern forces
+Victory does not necessarily go to those who have the largest or most modern forces, but to those who adapt, decide, and execute faster.
+2. D. All the factors that influence instruction, such as methods, resources, technologies, culture, instructors, peers, and the social elements of learning
+It is much more than simply the physical space where learning occurs.
+3. C. Rapid experience-based decision-making such as recognition primed decision-making
+Not all learning and decisions are based on analytical reasoning; environments must support timely decisions and nonanalytical reasoning.
+4. D. The learners’ level of expertise and experience
+Intended outcomes, learners’ expertise and experience, available tools and resources (including time), and the instructors and leaders experience.
+5. B. Seek clear evidence that a new method is, in fact, better than the existing methods
+Marines adopt new methods when they are demonstrably better, not just because they are new.
+6. A. It can be efficient and useful for basic knowledge such as standing orders, but it is not effective for all learning
+Improving the environment does not necessarily mean making it more efficient.
+7. D. Surfaces are hard spots (enemy strengths) and gaps are soft spots (enemy weaknesses)
+The concepts come from MCDP 1.
+8. B. An area of existing understanding that Marines maintain, build upon, and relate
+Surfaces are strongpoints; gaps are areas of weaknesses in knowledge, experience, or competencies.
+9. A. That surfaces do not deteriorate over time
+Marines address gaps and also keep their strengths from eroding.
+10. B. Personal ego, inexperience, and bias
+Learning environments help reveal these barriers.
+11. C. Self-assessment
+The quoted phrase is followed by (i.e., self-assessment).
+12. A. Expeditionary warfighting
+Therefore, learning environments should reflect expeditionary operations.
+13. C. The Marines’ brilliance in the basics at applying tactics, techniques, and procedures against an expected foe
+That is the first of the three force-on-force options.
+14. D. Complete free play between two opposing forces
+Free play may be live field training or a war game.
+15. A. A readiness to exploit learning opportunities at any time, in any place
+Developing it lets Marines deal with complex problems faster than their enemies.
+16. B. By employing it in conjunction with light infantry and cavalry, vice relying upon heavy infantry
+The phalanx was originated by the ancient Sumerians; the adaptation made it more maneuverable for both defense and offense.
+17. C. Improve the force’s ability to protect itself while accomplishing the mission
+Both featured adaptive, thinking leaders who developed workable solutions even without perfect information.
+18. A. The learner
+Leaders and instructors are always in support of the learner.
+19. B. How can I best support the main focus of effort: the learner?
+The learner-centric model avoids a one-size-fits-all approach.
+20. C. At intermediate and advanced schools
+Adaptive curriculum may not be suited for entry-level training and schools.
+21. D. The process in which individuals take the initiative in identifying their learning needs, formulating goals, pursuing these goals, and evaluating outcomes
+It begins with the learner but requires support and guidance from commanders, leaders, mentors, and instructors.
+22. C. Mission tactics
+Mission tactics assign a subordinate a mission without specifying how it must be accomplished.
+23. D. Marines cannot always actually practice every variation prior to combat
+Even the most realistic training and military education fall short of the reality of combat.
+24. B. A person’s visualizations or mental representations
+It can help obtain vicarious experiences and is an effective mission rehearsal technique.
+25. D. Puts both in perspective
+Self-reflection internalizes experiences and increases mental preparedness.
+26. C. General Al Gray, 29th Commandant of the Marine Corps
+Mattis is quoted on the lack of reflection; Gray is the evening walk.
+27. A. Those who can, do, and those who have done well, teach
+An appropriate focus on the selection processes is essential to select the right Marines as instructors.
+28. B. Formative
+Formative assessments are more process oriented and can identify areas that need to be strengthened.
+29. A. Summative, to ensure learners meet a specified standard or have developed a competency
+Summative assessments identify the learning that occurred after the learning activity has completed.
+30. B. The coach-teach-mentor approach
+Assessments give constructive feedback rather than an arbitrary test score that does not capture growth or change.
+31. A. They are never end states, but may occur as a necessary step in the learning development process
+Marines learn because of their errors, not despite them.
+32. D. Human characteristics rather than equipment
+Just as war is a human enterprise, no amount of technology can reduce the human dimension.
+33. B. When live-fire ranges, training areas, equipment, or other assets are limited
+Simulations also introduce elements that cannot be easily or safely replicated in live training.
+34. C. Battle
+During the stresses of combat, Marines will fight the way that they learned.
+| Basis | Source wording |
+| Outcome | the intended learning outcomes |
+| Learner | the learners’ level of expertise and experience |
+| Means | the available tools and resources (including time) |
+| Teacher | the instructors and leaders experience |
+| Term | Warfighting (MCDP 1) | Marine learner | What to do |
+| Surface | Hard spot; enemy strength | Area of existing understanding; a strongpoint | Maintain, build upon, and relate; ensure it does not deteriorate over time |
+| Gap | Soft spot; enemy weakness | Area of weakness in knowledge, experience, or competencies | Fill with new understanding and practice |
+| Option | Red force | Purpose |
+| First | Scripted to use the enemy’s anticipated tactics | Test “brilliance in the basics” at applying tactics, techniques, and procedures against an expected foe |
+| Second | Follows enemy strategy and tactics, but also adapts to blue force actions | Between the basics and a free play fight |
+| Third | Complete free play between two opposing forces (live field training or a war game) | Allow both forces to exercise better unit tactics and combined arms operations |
+| Who | Role in self-directed learning |
+| Commander, leader, instructor, or mentor | Provides the necessary support and guidance without unnecessarily prescribing actions; encourages and holds Marines accountable when appropriate |
+| Learner | Devises and executes a plan of action that meets the prescribed guidance, exercising proper judgement and initiative |
+| Type | When | What it does | Example use |
+| Diagnostic | Before a learning activity | Identifies the learner’s knowledge of a subject | Understand the level of learners’ knowledge or skills before an educational or training event |
+| Formative | During the learning activity | Provides feedback to the instructor and the learner; more process oriented | Identify areas that need to be strengthened |
+| Summative | After the learning activity has completed | Identifies the learning that occurred | Ensure that the learners meet a specified standard or have developed a competency |
