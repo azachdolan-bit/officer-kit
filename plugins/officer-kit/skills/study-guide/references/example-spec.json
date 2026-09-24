@@ -1,0 +1,48 @@
+{
+  "_note": "Fictional example in a domain unrelated to any kit tool. Its content is not to be taken into a real product; copy only its shape.",
+  "mode": "walkthrough",
+  "title": "Keeping a Sourdough Starter",
+  "subtitle": "Fictional example",
+  "score_label": "SCORE",
+  "good": "Correct",
+  "bad": "Not quite",
+  "seed": 20260923,
+  "skeleton": "1. What a starter is: yeast (gas) and bacteria (acid) in flour and water; doubles in 4 to 8 hours\n2. Feeding: discard and refresh; 1:1:1 standard; 1:2:1 stiff; water below 30 C; room temp every 24 hours, fridge every 7 days\n3. Signs: hooch = hungry; pink or orange = throw away; nail polish smell = overdue but safe; float test = ready",
+  "excluded": [{"text": "fictional handout written for this example", "reason": "document title line, not teaching text"}],
+  "sections": [
+    {"id": "map", "title": "The map", "eyebrow": "Start here", "lede": "Three branches carry the whole lesson.",
+     "map": {"root": "Sourdough starter", "note": "Learn the three branches first.",
+       "branches": [
+         {"label": "What it is", "sec": "what", "leaves": ["Wild yeast makes the gas", "Bacteria make the acid", "Doubles in four to eight hours"]},
+         {"label": "Feeding", "sec": "feed", "leaves": ["1:1:1 standard", "1:2:1 stiff, for more than a day", "Water below 30 degrees Celsius"]},
+         {"label": "Signs", "sec": "signs", "leaves": ["Hooch: hungry", "Pink or orange: throw it away", "Float test: ready"]}]},
+     "quiz": [
+       {"q": "How many branches carry the lesson?", "o": ["Three", "Two", "Four", "Five"], "a": 0, "e": "What it is, feeding, and signs.", "d": "easy", "src": "What it is"}]},
+    {"id": "what", "title": "What a starter is", "branch": "What it is", "eyebrow": "Chapter 1", "lede": "Two organisms, two jobs.",
+     "body": "A sourdough starter is a culture of wild yeast and lactic acid bacteria living in a paste of flour and water.\n\nThe yeast produces the gas that raises the bread, and the bacteria produce the acids that give it a sour taste.\n\n> KEY NUMBER: A healthy starter doubles in volume between four and eight hours after it is fed at room temperature.\n\nA starter that does not double within twelve hours is called sluggish and needs two days of regular feeding before it is used.",
+     "quiz": [
+       {"q": "What produces the gas that raises the bread?", "o": ["The yeast", "The bacteria", "The flour", "The water"], "a": 0, "e": "The yeast produces the gas; the bacteria produce the acids.", "d": "easy"},
+       {"q": "Within what window does a healthy starter double after a room temperature feed?", "o": ["Between four and eight hours", "Between one and two hours", "Between eight and twelve hours", "Within twenty four hours"], "a": 0, "e": "Four to eight hours at room temperature.", "d": "medium"},
+       {"q": "A starter has not doubled after twelve hours. What does the handout call it and require?", "o": ["Sluggish; two days of regular feeding before use", "Hungry; feed it sooner", "Contaminated; throw it away", "Overdue; still safe to use"], "a": 0, "e": "Sluggish, and it needs two days of regular feeding before it is used.", "d": "hard", "src": "called sluggish and needs two days of regular feeding"}]},
+    {"id": "feed", "title": "Feeding", "branch": "Feeding", "eyebrow": "Chapter 2", "lede": "Ratios by weight, and a clock.",
+     "body": "Feeding means discarding most of the starter and mixing the rest with fresh flour and water.\n\n| Feed | Ratio (starter : flour : water, by weight) | Use |\n|---|---|---|\n| Standard | 1:1:1 | The standard feed |\n| Stiff | 1:2:1 | Slows fermentation; when the starter will sit for more than a day |\n\nThe standard feed is one part starter, one part flour, and one part water by weight, written as 1:1:1. A stiff feed of 1:2:1 slows fermentation and is used when the starter will sit for more than a day.\n\n> TRAP: Always use water below 30 degrees Celsius, because hotter water kills the yeast.\n\n- Feed a starter kept at room temperature once every twenty four hours.\n- Feed a starter kept in the refrigerator once every seven days.",
+     "quiz": [
+       {"q": "What is the standard feed ratio?", "o": ["1:1:1", "1:2:1", "2:1:1", "1:1:2"], "a": 0, "e": "One part each, by weight.", "d": "medium"},
+       {"q": "When is a 1:2:1 feed used?", "o": ["When the starter will sit for more than a day", "When the starter is contaminated", "When hooch appears", "Before the float test"], "a": 0, "e": "A stiff feed slows fermentation for a longer wait.", "d": "medium"},
+       {"q": "Why must the water be below 30 degrees Celsius?", "o": ["Hotter water kills the yeast", "Hotter water feeds the bacteria", "Hotter water makes hooch", "Hotter water stiffens the paste"], "a": 0, "e": "The handout gives one reason: hotter water kills the yeast.", "d": "medium", "src": "hotter water kills the yeast"},
+       {"q": "How often is a refrigerated starter fed?", "o": ["Once every seven days", "Once every twenty four hours", "Once every three days", "Once every fourteen days"], "a": 0, "e": "Room temperature daily; refrigerator weekly.", "d": "medium"}]},
+    {"id": "signs", "title": "Reading the signs", "branch": "Signs", "eyebrow": "Chapter 3", "lede": "Four signs, four actions.",
+     "body": "| Sign | Meaning | Action |\n|---|---|---|\n| Gray liquid on top (hooch) | Hungry | Feed sooner |\n| Pink or orange streaks | Contaminated | Throw the whole starter away |\n| Nail polish remover smell | Overdue for a feed | Still safe to use |\n| Floats in water | Ready | Bake with it |\n\nA layer of gray liquid on top, called hooch, means the starter is hungry and should be fed sooner. Pink or orange streaks mean the culture is contaminated and the whole starter must be thrown away. A smell of nail polish remover means the starter is overdue for a feed but is still safe to use. The float test drops a spoonful of starter into water; if it floats, the starter is ready to bake with.",
+     "quiz": [
+       {"q": "What does hooch mean?", "o": ["The starter is hungry and should be fed sooner", "The starter is contaminated", "The starter is ready to bake with", "The starter is sluggish"], "a": 0, "e": "Gray liquid on top means hungry.", "d": "medium"},
+       {"q": "Which sign means the whole starter must be thrown away?", "o": ["Pink or orange streaks", "Gray liquid on top", "A nail polish remover smell", "Sinking in water"], "a": 0, "e": "Contamination; the other signs are recoverable.", "d": "medium"},
+       {"q": "The starter smells of nail polish remover. Which is true?", "o": ["It is overdue for a feed but still safe to use", "It must be thrown away", "It is ready to bake with", "It needs two days of regular feeding"], "a": 0, "e": "Overdue, still safe.", "d": "hard", "src": "overdue for a feed but is still safe to use"}]},
+    {"id": "final", "title": "Final check", "eyebrow": "Everything", "lede": "Mixed questions from every branch.", "final": true,
+     "body": "Answer without looking back.",
+     "quiz": [
+       {"q": "A starter will wait two days before baking. Which feed fits?", "o": ["1:2:1", "1:1:1", "2:1:1", "No feed"], "a": 0, "e": "Stiff feed for more than a day.", "d": "medium", "src": "1:2:1"},
+       {"q": "What produces the sour taste?", "o": ["The bacteria", "The yeast", "The water temperature", "The hooch"], "a": 0, "e": "The bacteria produce the acids.", "d": "medium", "src": "bacteria produce the acids"}]}
+  ],
+  "quiz": [],
+  "scenarios": []
+}

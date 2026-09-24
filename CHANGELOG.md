@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.13.0 (2026-09-23) Study guide, rebuilt
+
+`study-guide` 0.1.0 made the product the author rejected on 4 Sep: a one page summary and a twenty question quiz, with nothing to stop a quiz from testing what the summary left out. It is rebuilt from his corrections, his walkthrough engine, and his completeness gates, and it beat the old tool in a blind test (`evals/ab-test-2026-09-23-study-guide/`).
+
+- **Five formats from one spec:** study guide (skeleton, complete knowledge sections, scenarios and quiz with keys on their own pages), interactive walkthrough (mind map with recall modes, one section per chapter with its own check, the full chapter behind "Read it as issued", a final check), condensed handout, whiteboard session (write, talk, board play), and quiz me in chat.
+- **Three gates before anything is built** (`scripts/gates.py`): coverage of the source sentence by sentence (calibrated at 97 to 99 percent on four real walkthroughs), every quiz answer traceable to its own section, and the quiz rules. The gate report is saved beside the product.
+- **Quiz rules made mechanical:** a seeded, balanced, unpatterned answer order with distractors shuffled, the marked answer verified against the intended text after the shuffle, four filled distinct options, a difficulty on every question, no duplicates, at least a quarter free recall in a guide, and an answer key that says where each answer is taught.
+- **The walkthrough engine is content free**; the harness fails it if a course term appears.
+- **The starter library has a fixed link** (the v0.10.0 release asset) in GETTING STARTED and `library`, so no release has to carry the 137 MB zip; `release.sh` prints the line for the release notes.
+- `evals/study_guide_check.py` (30 items) runs in every release.
+
 ## 0.12.0 (2026-09-23) Kit standards
 
 The author's working rules lived in his own rules file and memory, so a peer who installed the kit got the tools without the rules that made them work. Nine of those rules were sorted as true for any officer and now ship with the plugin.

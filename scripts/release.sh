@@ -25,11 +25,12 @@ print("versions set to",v)
 PY
 python3 evals/install_check.py
 python3 evals/standards_check.py
+python3 evals/study_guide_check.py
 bash scripts/package.sh
 git checkout -b "release/v$VER"
 git add -A
 git commit -m "Release $VER"
 echo
 echo "Branch release/v$VER is committed. Now, in GitHub Desktop: Push origin, then Create pull request."
-echo "On GitHub: Merge the pull request. Then publish a release tagged v$VER with dist/officer-kit.plugin AND Officer-Kit-Starter-Library.zip attached."
-echo "releases/latest is where GETTING STARTED and the library skill send new users for the starter library; a release without it breaks their setup."
+echo "On GitHub: Merge the pull request. Then publish a release tagged v$VER with dist/officer-kit.plugin attached,"
+echo "and put this line in its notes: Starter library: https://github.com/azachdolan-bit/officer-kit/releases/download/v0.10.0/Officer-Kit-Starter-Library.zip"

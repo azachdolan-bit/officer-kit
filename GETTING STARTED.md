@@ -34,7 +34,7 @@ Personal account, personal data, personal device. Nothing marked CUI, FOUO, or c
 
 **4. Connect the folder and say "start the officer kit."** Use Add folder in the Cowork sidebar to connect the folder you made. Then type "start the officer kit." Claude walks you through the rest one step at a time: it asks what most of your week is, builds the folder structure for those modules, runs the rules file interview, helps you build your library, and does one real task from your own work so you see it working.
 
-**5. Get the starter library.** Download `Officer-Kit-Starter-Library.zip` from https://github.com/azachdolan-bit/officer-kit/releases/latest and unzip it into your working folder. Fifteen public Marine Corps publications land in `Reference/`, and the tools cite from them. Add anything your school or unit issued you to the same folder.
+**5. Get the starter library.** Download `Officer-Kit-Starter-Library.zip` from https://github.com/azachdolan-bit/officer-kit/releases/download/v0.10.0/Officer-Kit-Starter-Library.zip and unzip it into your working folder. Fifteen public Marine Corps publications land in `Reference/`, and the tools cite from them. Add anything your school or unit issued you to the same folder.
 
 **6. Use it.** From then on, say what you need in plain language: "draft a letter requesting...", "write up a NAM for Sgt Smith from these bullets", "analyze this order", "make a quiz from this handout". The right tool fires, works from your sources, checks itself, and saves the result in your folder.
 
