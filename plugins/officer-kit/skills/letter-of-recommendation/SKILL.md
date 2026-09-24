@@ -17,6 +17,10 @@ A selection board reads a hundred of these. What survives is a ranking statement
 
 The writer must have observed the Marine. If the user is drafting for a senior to sign, the intake asks what that senior actually saw; a letter written from a data sheet reads like one.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/intake.md`: the questions in order, and the ranking statement rule.

@@ -21,6 +21,10 @@ metadata:
 
 The order says the point of the assessment is that "understanding the sources of those concerns helps leaders craft an action plan to directly address them," and that "Survey results are the only hard facts collected during the command climate assessment"; everything else is perception. The report is evaluated at IGMCIP inspections, and a commander who does not conduct the assessment has that annotated on their fitness report. The tool takes the report as the commander received it and writes down what it says, where, then one action per finding that a billet can start on a date and the commander can check on a date. It never reads a cause into a number, never quotes a comment, and never points at a person. It prepares; the commander signs, and the EOA or EOC administers. Unverified: the out brief deadline, the action plan deadline, to whom the plan goes, whether the unit must be debriefed, and what a new commander receives are governed by DoDI 6400.11 (the order's reference (am)), which is not in the library; the tool checks those dates for presence and ordering only and marks the gap in the product.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: MARADMIN 306/25 paragraphs 1 to 3 (who, when, who administers); MCO 5354.1G basic order 4.b(5) (the commander's duties) and 5.f (the EOA); enclosure (2) chapter 1 paragraph 8 (the EOC, which replaced the EOR), chapter 2 paragraph 2 (the command team brief), chapter 9 in full (the CCA), Appendix B definition 24; the dates table and "## Not in the library".

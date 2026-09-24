@@ -13,6 +13,10 @@ A staff paper exists so a senior can decide or act without going back to the per
 
 **What this tool does not do.** It does not render the chapter 10 memorandums or the business letter on the page: `build_letter.py` renders the memorandum for the record only, so the others are written to `memo.md` in the manual's parts, checked, and handed to a typist with the paragraph numbers. Four things chapters 10 and 11 leave unsettled are named in `references/standard.md`, "Still not settled", and are not filled in from anywhere else: the From-To form's OPNAV number, which the manual gives two ways; where a business letter's identification symbols go, which the text and every figure give differently; whether and how a "Copy to" block goes on a memorandum, which chapter 10 never mentions; and classification markings on any of these, which chapters 10 and 11 do not address.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: MCTP 3-30A chapter 3 on each paper and appendices A to E with the parts and headings verbatim; SECNAV M-5216.5 chapter 10 paragraph by paragraph with figures 10-1 to 10-7, chapter 11 in the manual's own order with figures 11-1 to 11-6, and chapter 2 paragraph 16 on the three date formats; MCO 5216.20B chapter 13 on the memorandum's signature placement; the comparison of the two sources on the memorandum for the record; and what is still not settled.

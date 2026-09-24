@@ -15,6 +15,10 @@ metadata:
 
 No order prescribes the AAR's format; the unit's SOP does, and most follow the same shape: what was supposed to happen, what happened, why the difference, and what to do about it with a name and a date. The AAR that gets read next year is the one where every fix traces to an observation and every observation has a fact in it.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the shape as the doctrine and common unit SOPs carry it, and what a sustain or improve item must contain.

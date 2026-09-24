@@ -15,6 +15,10 @@ metadata:
 
 A correction made in a chat dies in that chat unless it is written where the next session reads it. `aar` writes one lesson when the user asks for it; `debrief` sweeps the whole chat once, at the end, while the evidence is still on the screen. It follows the four questions of an after action review: what was supposed to happen, what happened, why, and what to sustain or change. It never edits a tool.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Workflow
 
 ```

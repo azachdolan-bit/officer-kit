@@ -17,6 +17,10 @@ The profile is a record of the RS's marking philosophy, and the manual is blunt 
 
 Read `references/pes-manual-chapter-8-extract.md` once per session for the manual's own words on the profile, the averaging rule, and relative value.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## What the manual gives, and what this tool computes
 
 - Fitness report average: each observed attribute A=1 through G=7; H (not observed) excluded; sum divided by the number of observed attributes, rounded to the nearest hundredth.

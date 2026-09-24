@@ -12,6 +12,10 @@ metadata:
 
 Interview the user about one repeat task and write a working skill file for it. No coding. The output is a folder with a `SKILL.md` they can drop into their own plugin or keep in their working folder. Load `references/skill-template.md` for the format.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Two kinds of skill
 
 A **personal skill** is a prompt with the rules decided: the five question interview below produces it in minutes. A **kit tool** is a product with a standard behind it (an order, a manual, a board's rubric) and needs the seven part shape the rest of the kit uses: the standard verbatim, fictional exemplars, an intake, the quantification ladder, a voice file, a mechanical checker, and a learning hook. For a kit tool, run `scripts/new_tool.py <tool-name> "<what it produces>"` to scaffold all seven with TODO markers, then fill them from the governing publication and the user's own exemplars (`add-exemplar`). `BUILD STRATEGY.md` in the repository is the long form of the shape; `references/tool-shape.md` here is the short form.

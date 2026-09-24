@@ -12,6 +12,10 @@ metadata:
 
 Find what matters in the mailbox, draft the replies, and never send anything.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Requires
 
 A connected email account (Gmail in the workshop; Outlook at a unit if the command allows it). Personal accounts only. If the connector is not present, say what to connect and stop.

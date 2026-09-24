@@ -15,6 +15,10 @@ metadata:
 
 Range safety is governed by MCO 3570.1 (Range Safety, joint with AR 385-63) and by each base's range control SOP, and the package is what range control reads before it lets the unit on the range. The tool builds the package as a set of parts and tracks which the base requires; the base's checklist wins, and the tool's list is the common one.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the order and the Range Safety Pocket Guide (February 2024) on OIC and RSO duties, the briefs and checks before, during, and after firing, cease fire, and medical evacuation.

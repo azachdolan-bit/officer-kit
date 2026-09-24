@@ -15,6 +15,10 @@ metadata:
 
 Recognition boards score the same categories a meritorious promotion board does, and the nomination letters that win are built on the same skeleton: a naval letter to the local recognition order, the Marine eligible and nominated in one sentence, the enclosures, then billets and lettered accomplishments a through g with a number under each. A quarter's nomination is scoped to the quarter; the annual to the year; the next echelon (Group to Wing to MEF) reuses the winning package with the dates and the addressee changed and, usually, a longer enclosure list.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. The command's recognition order, from the user's Reference or from the user: eligibility, the period covered, categories if the order lists them (the order's categories win over the default seven), the data sheet, the enclosures in order, routing, and the due date.

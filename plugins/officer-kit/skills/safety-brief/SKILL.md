@@ -15,6 +15,10 @@ metadata:
 
 Marines have heard a thousand safety briefs and remember none of them. The one they remember named a real thing that happened to a unit like theirs, gave a number, and told them what to do about it in one sentence. MCO 5100.29C (Volume 3 traffic and motorcycle, Volume 5 recreation and off duty) is the program behind the brief; the brief itself is the leader's voice for five minutes.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: what the safety program expects a brief to cover, by season and event type.

@@ -12,6 +12,10 @@ metadata:
 
 Get the kit working at the first unit in the first week. Walk the checklist with the user, one item at a time, and update their rules file as they go.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Day one
 
 1. **Re read the security card.** Run `security-check` and say the card out loud. The line does not move because the work got real. If anything, it gets stricter: a unit has real names, real locations, and real readiness data. All of that stays off the personal account.

@@ -18,6 +18,10 @@ A counseling record is read later, by people who were not there: the next leader
 
 The governing publication is MCO 1500.61 (Marine Leader Development) and the counseling worksheet the user's command uses (a NAVMC form or a local sheet). The tool asks which sheet and writes to its blocks; the default blocks below match the common worksheet.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/intake.md`: the questions, by block, and the standard for an incident line.

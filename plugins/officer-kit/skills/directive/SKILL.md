@@ -21,6 +21,10 @@ metadata:
 
 A directive is read for years by Marines who were not there when it was written, and the Directives Control Point rejects it before the commander sees it if the format is wrong. The order is strict on both counts: "Marine Corps directives shall be issued as an 'Order' or 'Bulletin'", an order is "a directive of continuing authority or information, meant to be a permanent reference", a bulletin "must have a self-canceling provision" and "normally remains in effect up to 12 months, but no longer", Situation "must be the first paragraph", Cancellation "is always the second paragraph, if needed", and "All references must be used in the text." The tool asks what the reader must do and for how long, picks the type from the answer, writes the paragraphs in the order's structure and words, and checks them. It drafts; the commander signs, and the DCP verifies the SSIC and assigns the point number. Two parts are unverified against a source: the order defines no "standing operating procedure" type, so an SOP is issued here as an order on the order's own definition and the command's local practice may differ; and the SSIC itself comes from SECNAV M-5210.2, which is not in the library, so the tool records the number the user gives and who verifies it. See `references/standard.md`, "Not in the library".
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: chapter 1 paragraphs 3 (definitions), 5 (supplements and the five barred subjects below battalion), 6 and 7 (authority and signature), 21 to 27 (identification, references, enclosures), 32 and 33 (paragraphs), 37 (signature block); chapter 2 with figure 2-2 (the field command order); chapter 3 with figures 3-1 and 3-2 (bulletins); the basic order's review rules; and the section on what applies to a battalion or company as against HQMC.

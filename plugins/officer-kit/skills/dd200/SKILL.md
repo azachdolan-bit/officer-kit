@@ -16,6 +16,10 @@ metadata:
 
 Lost or damaged government property starts a clock and a form. MCO 4400.201 (Management of Property in the Possession of the Marine Corps, 17 volumes) governs accountability (Volume 1) and financial liability (Volume 17, Financial Liability Investigation of Property Loss); the TECOM headquarters battalion guide walks the DD 200 and the NAVMC 6 block by block. The investigation is a findings of fact investigation with a narrow question: what was lost, how, who had custody, and whether negligence or willful misconduct caused it. The tool builds it on the same chain the `investigation` tool enforces, prepares the blocks, and never decides liability; the appointing authority and the SJA do.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/standard.md`: the order's volumes and the guide's block by block instructions, and the responsible officer's duties.

@@ -18,6 +18,10 @@ An award package is two documents that must agree: a Summary of Action that prov
 
 The tool's job is three correlations, in order: what the Marine did, quantified; whether that reaches the manual's criteria for the level requested; and whether the write up says exactly that. Fluff is a failure, not a style. An accurate, professional page that reaches a lower level is a success; an inflated page is not.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/mco-1650-19j-extract.md`: the Marine Corps processing order, verbatim. SOA length and format by award, citation format, criteria guide, the level of award rule.

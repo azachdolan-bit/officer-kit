@@ -24,6 +24,7 @@ for p,keys in (("plugins/officer-kit/.claude-plugin/plugin.json",[["version"]]),
 print("versions set to",v)
 PY
 python3 evals/install_check.py
+python3 evals/standards_check.py
 bash scripts/package.sh
 git checkout -b "release/v$VER"
 git add -A

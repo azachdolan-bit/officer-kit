@@ -15,6 +15,10 @@ metadata:
 
 Verification is a separate job from drafting, done by someone who did not draft. Each reviewer agent is blind: it gets the product and the sources, never the reasoning that produced them. Accuracy is not significance, a clean document is not a true one, and a true finding can still be laid out wrong; the gates catch different things and none substitutes for another.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Pick the gates
 
 | Product | Gates, in order |

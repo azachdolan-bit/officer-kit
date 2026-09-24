@@ -16,6 +16,10 @@ metadata:
 
 The person who briefs a Marine to a board gets a few minutes and a sheet. The sheet that works has every number the board scores in a fixed order, so the briefer never hunts, and ends with the three lines that answer the board's only real question: so what. The tool generates the sheet from the package's fact list and forces the so what lines to be written.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Read first
 
 1. `references/template.md`: the sheet, field by field, and the reading order.

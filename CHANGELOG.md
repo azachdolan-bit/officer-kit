@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.12.0 (2026-09-23) Kit standards
+
+The author's working rules lived in his own rules file and memory, so a peer who installed the kit got the tools without the rules that made them work. Nine of those rules were sorted as true for any officer and now ship with the plugin.
+
+- **`STANDARDS.md` at the plugin root:** save gate, sources only, do not state what is implied, build only what was asked, library first, share the method and never the product, teaching products are complete, never compress to fit, no em or en dashes. Where a user's rules file or override disagrees, the tool says so once and does it the user's way.
+- **Every one of the 46 tools reads it** through a two line Kit standards section, one reference deep from each SKILL.md (Anthropic's skill authoring guidance: nested references get read partially).
+- **The rules file template carries a Kit standards block** with a version line. A user can strike any line; a struck line is recorded so updates never add it back.
+- **`start` and `week-ahead` check the version line** in an existing rules file and offer the new standards as a diff. This is how a rules file written before 0.12.0 gets them.
+- **`evals/standards_check.py`** fails a skill that does not read the standards, a template out of step with them, or a dash; `scripts/release.sh` runs it.
+
 ## 0.11.0 (2026-09-23) Debrief
 
 Corrections were landing in the chat, in Claude's automatic memory, or in the user's rules file, and only the few that went through `aar` ever reached the lessons queue. `inspect` works from the queue, so everything else stayed where no tool and no other user could see it.

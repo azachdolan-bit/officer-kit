@@ -17,6 +17,10 @@ metadata:
 
 Claude only knows what the user gives it. Every tool in this kit works from sources in the user's folder and cites them; none of them fill gaps from general knowledge. So a user with no library has tools that can format a letter but cannot check it against the manual, and an awards tool that cannot verify the criteria. This skill fixes that in ten minutes for most people.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## The rule every tool follows
 
 Read the order from the user's library first. `scripts/find_order.py <number>` searches the Library path and Reference folder named in the rules file and reports FOUND with the file, or NOT IN THE LIBRARY with the roots searched. Only after a NOT IN THE LIBRARY does any tool read a publication from the web, and then it says which publication came from the web. When the text of a page is a figure, `find_order.py <number> --page N --png out` renders it so it can be read as an image. `--grep <regex>` finds a paragraph. No tool cites a web copy of an order that is on disk, and no tool ships a caution about a figure that the library could settle.

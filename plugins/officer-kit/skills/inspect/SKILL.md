@@ -14,6 +14,10 @@ metadata:
 
 `aar` writes lessons; this tool applies them, one at a time, with the user's approval on each, to the place the lesson named. Nothing changes without a yes. Nothing in the plugin changes at all from here; plugin lessons become a proposal file the user can send to the kit's repository, because the installed plugin is replaced on update and any edit to it would be lost.
 
+## Kit standards
+
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+
 ## Workflow
 
 ```
