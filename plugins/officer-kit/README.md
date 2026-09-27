@@ -29,6 +29,7 @@ Say **"start the officer kit."** It sets up your working folder, then builds you
 | "triage my inbox" | Four buckets, drafted replies, never sends | Connectors |
 | "week ahead" | One screen brief, then make it recurring | Scheduled tasks |
 | "make a Kahoot" | Kahoot decks from your copy of the official template, every answer slot verified, host key for group sessions | Files in, files out |
+| "make this shareable" | A builder with zero content your peer runs on their own material, leak scanned against every source, instead of the product itself | Sharing the method |
 | "debrief" | End of chat sweep of every correction you made, sorted to where it belongs, written only on your yes, plus every file the chat produced | Lessons loop |
 | "build a skill" | Interview, then a working skill for your repeat task | Skills and plugins |
 | "fleet transition" | Day one and week one checklist for your first unit | Taking it with you |
@@ -79,7 +80,7 @@ Five subagents the skills call for verification. They are blind: each gets the d
 
 ## Sharing
 
-Send the `.plugin` file to another Marine. They install it the same way you did. Encourage them to run `build-a-skill` and send you what they made.
+A study product built from course or unit material stays with the people who built it; say "make this shareable" to hand a peer the method instead. Send the `.plugin` file to another Marine. They install it the same way you did. Encourage them to run `build-a-skill` and send you what they made.
 
 ## Version
 

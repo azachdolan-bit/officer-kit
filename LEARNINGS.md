@@ -100,7 +100,7 @@ Status: approved 0.15.0 (order-analysis built: legend before sequence, grid_tool
 ## 2026-09-04  share-method  high  -> plugin
 Evidence: The academic integrity policy forbids sharing a study guide with anyone who did not help build it; a method file with zero content is shareable.
 Lesson: Share the method, never the product. Grep the shared file for subject terms and doctrinal values and expect zero real hits. Never mention browser automation in a shared document.
-Status: pending
+Status: approved 0.16.0 (share-method built: policy quoted with its arbiter, leak_scan.py with whole word terms, values, copied runs, and mechanism, builder_check.py for the safeguards, blind peer run)
 
 ## 2026-09-05  build-a-skill  high  -> plugin
 Evidence: The risk assessment matrix shipped with a caution because the web copy of MCO 5100.29C returned Figure 3-4 as an image; the full order was in the user's publications library the whole time, and rendering the page with pdftoppm and reading it settled the matrix in five minutes. The same library held MCO 1900.16, whose paragraph 6105 prescribes the Page 11 entry's exact wording and requires the CO's signature, which the first draft of `page-11` had not carried.
