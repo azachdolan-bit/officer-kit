@@ -10,7 +10,7 @@ The order format is the user's own first: their school or unit skeleton and draf
 | 1.C Attachments and detachments | dist attach (defense) or oto (offense, machine guns) |
 | 2 Mission | mission (statement); specified and implied |
 | 3.A Commander's intent | cgcv (exploitation); parts (the last part's ends with as the end state); mission purpose |
-| 3.B.1 Scheme of manoeuvre | defense: type, ea, dist, orient, occ, tcm, sec, obst, then parts; offense: oform, oto, otcm, oseq, then parts; every object and route from the map with its grid |
+| 3.B.1 Scheme of maneuver | defense: type, ea, dist, orient, occ, tcm, sec, obst, then parts; offense: oform, oto, otcm, oseq, then parts; every object and route from the map with its grid |
 | 3.B.2 Fire support plan | fsp (EFST, targets with trigger, location, observer, delivery; FPF); troops fires |
 | 3.C Tasks | tasks (t1 to t3, the MG statement in its four elements: relationship, condition, task, purpose); each object's task and purpose props |
 | 3.D Coordinating instructions | coord (timeline, engagement criteria, other); oseq signals (offense); time (one third line) |

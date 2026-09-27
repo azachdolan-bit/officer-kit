@@ -10,7 +10,7 @@ Area of operations SW TH 8600 7700, NE TH 8800 7800. Key terrain KT 1 at TH 8710
 
 ### A. Enemy
 
-Composition, disposition and strength: suspected motorised rifle platoon, small arms, one medium MG, EN last known (platoon) at TH 8680 7750, seen 24 h ago, recon patrols toward the crossroads. Capable of attack with a platoon within 2 hours; limited by no indirect fires. Avenues of approach EN AA 1 (TH 8670 7740 to TH 8690 7755 to TH 8710 7765) and EN AA 2 (TH 8660 7770 to TH 8690 7768 to TH 8710 7766). EMLCOA: his mission is to seize the crossroads IOT open the road east; he is reconnoitring the approaches now; on contact he will deploy on line and assault the nearest position, along EN EMLCOA, the EN most likely route (avenue 1, platoon), to EN OBJ at TH 8715 7765. Centre of gravity the massed platoon assault; critical vulnerability that the platoon must cross 300 m of open ground; exploitation: kill him in the open with massed fires from the BP, combined arms.
+Composition, disposition and strength: suspected motorised rifle platoon, small arms, one medium MG, EN last known (platoon) at TH 8680 7750, seen 24 h ago, recon patrols toward the crossroads. Capable of attack with a platoon within 2 hours; limited by no indirect fires. Avenues of approach EN AA 1 (TH 8670 7740 to TH 8690 7755 to TH 8710 7765) and EN AA 2 (TH 8660 7770 to TH 8690 7768 to TH 8710 7766). EMLCOA: his mission is to seize the crossroads IOT open the road east; he is reconnoitering the approaches now; on contact he will deploy on line and assault the nearest position, along EN EMLCOA, the EN most likely route (avenue 1, platoon), to EN OBJ at TH 8715 7765. Center of gravity the massed platoon assault; critical vulnerability that the platoon must cross 300 m of open ground; exploitation: kill him in the open with massed fires from the BP, combined arms.
 
 ### B. Friendly
 
@@ -32,17 +32,17 @@ Purpose: prevent enemy use of the crossroads. Method: kill him in the open with 
 
 ### B. Concept of operations
 
-Scheme of manoeuvre. O/O 2d Plt conducts an area defense using a Plt BP IVO TH 8720 7774 (BP centre; PLT BP drawn 350 m across, ORIENT 227, SW, blocking the W avenue into the crossroads). Engagement area EA (corners TH 8690 7775, TH 8714 7775, TH 8714 7740, TH 8690 7740) on avenue 1: open ground 300 m wide he must cross in column. Trigger lines TL GREY (TH 8690 7742 to TH 8690 7773, far) and TL AMBER (TH 8700 7742 to TH 8700 7773, near); TRP 1 at TH 8700 7758. Distribution: 1st Sqd (SE1) at TH 8726 7770 (1st Sqd BP), 2nd Sqd (ME) at TH 8720 7774 (2nd Sqd BP), 3rd Sqd (SE2) at TH 8716 7780 (3rd Sqd BP); PLT CP at TH 8723 7784; MG 1 at TH 8729 7766 and MG 2 at TH 8713 7782 with FPLs across the front; 1st Sqd SUPP at TH 8730 7772. Occupation by crows foot: from the SRP squads split via crows foot; 1st left, 2nd centre, 3rd right; ORP at TH 8747 7764, SRP (MACO) at TH 8721 7778, route ORP to SRP to BP. LZ at TH 8742 7748 with the CCP. Security: LP/OP at TH 8724 7756; stand to 30 min on occupation, 25 percent after, 100 percent at EENT and BMNT. Obstacles: WIRE from TH 8700 7745 to TH 8700 7770, Eng team, 400 m of C wire, NLT 1400.
+Scheme of maneuver. O/O 2d Plt conducts an area defense using a Plt BP IVO TH 8720 7774 (BP center; PLT BP drawn 350 m across, ORIENT 227, SW, blocking the W avenue into the crossroads). Engagement area EA (corners TH 8690 7775, TH 8714 7775, TH 8714 7740, TH 8690 7740) on avenue 1: open ground 300 m wide he must cross in column. Trigger lines TL GREY (TH 8690 7742 to TH 8690 7773, far) and TL AMBER (TH 8700 7742 to TH 8700 7773, near); TRP 1 at TH 8700 7758. Distribution: 1st Sqd (SE1) at TH 8726 7770 (1st Sqd BP), 2nd Sqd (ME) at TH 8720 7774 (2nd Sqd BP), 3rd Sqd (SE2) at TH 8716 7780 (3rd Sqd BP); PLT CP at TH 8723 7784; MG 1 at TH 8729 7766 and MG 2 at TH 8713 7782 with FPLs across the front; 1st Sqd SUPP at TH 8730 7772. Occupation by crows foot: from the SRP squads split via crows foot; 1st left, 2nd center, 3rd right; ORP at TH 8747 7764, SRP (MACO) at TH 8721 7778, route ORP to SRP to BP. LZ at TH 8742 7748 with the CCP. Security: LP/OP at TH 8724 7756; stand to 30 min on occupation, 25 percent after, 100 percent at EENT and BMNT. Obstacles: WIRE from TH 8700 7745 to TH 8700 7770, Eng team, 400 m of C wire, NLT 1400.
 
 Part 1: Occupation. Begins with Plt crosses the LD. Critical events: Occupy ORP, Leaders recon, Occupy positions. Ends with All squads occupy primary positions. Conditions set: Defense established.
 
 Part 2: Block West. Begins with Enemy crosses TL GREY. Critical events: LP/OP reports, Initiate IDF, FPF. Ends with Enemy attack defeated forward of the BP. Conditions set: SAFE and ACE reported.
 
-Fire support plan. EFST 1 disrupt the enemy at TL GREY IOT break his formation. AB1001 (81mm) at TH 8690 7757, trigger enemy crosses TL GREY, observer LP/OP, task disrupt. FPF 60mm centre TH 8704 7759, attitude 2400, length 90, trigger enemy crosses TL AMBER.
+Fire support plan. EFST 1 disrupt the enemy at TL GREY IOT break his formation. AB1001 (81mm) at TH 8690 7757, trigger enemy crosses TL GREY, observer LP/OP, task disrupt. FPF 60mm center TH 8704 7759, attitude 2400, length 90, trigger enemy crosses TL AMBER.
 
 ### C. Tasks
 
-1st Sqd: occupy the left position and block west. 2nd Sqd: occupy the centre position, ME, block west. 3rd Sqd: occupy the right position and block west. MG: attached to 2d Sqd, upon enemy crossing TL AMBER, suppress enemy in the EA, to allow the platoon to destroy him forward of the BP, gun at TH 8729 7766.
+1st Sqd: occupy the left position and block west. 2nd Sqd: occupy the center position, ME, block west. 3rd Sqd: occupy the right position and block west. MG: attached to 2d Sqd, upon enemy crossing TL AMBER, suppress enemy in the EA, to allow the platoon to destroy him forward of the BP, gun at TH 8729 7766.
 
 ### D. Coordinating instructions
 

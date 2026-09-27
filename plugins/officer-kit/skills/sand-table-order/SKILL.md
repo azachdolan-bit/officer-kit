@@ -9,12 +9,12 @@ description: >
   or .sandtable-brief.md, or says "write my order from the sand table", "build the order from this plan file",
   "sand table export", "turn my plan into an order".
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Sand table order
 
-The planner did the tactical work on the sand table: METT-TC, EMLCOA, the engagement area or the objective, the positions, the routes, the fires, the parts. This tool turns that export into the order they will brief, in their own format, with nothing added. Its failure modes are specific: a grid retyped wrong, a placed position left out, a paragraph filled from doctrine instead of the plan, a warning the sand table raised written over. Each has a mechanism here. `order-critique` reviews an order the user wrote; `order-analysis` analyzes one they received; this one writes from a plan they built.
+The planner did the tactical work on the sand table: METT-TC, EMLCOA, the engagement area or the objective, the positions, the routes, the fires, the parts. This tool turns that export into the order they will brief, in their own format, with nothing added. Its failure modes are specific: a grid retyped wrong, a placed position left out, a paragraph filled from doctrine instead of the plan, a warning the sand table raised written over. Each has a mechanism here. `order-critique` reviews an order the user wrote; `order-analysis` analyzes one they received; this one writes from a plan they built. `sand-table-intake` is the other half of the loop: it turns the base order into the file the sand table starts from, so the export this tool reads carries higher's paragraphs with their sources and the planner's decisions from the page.
 
 ## Kit standards
 
@@ -38,7 +38,7 @@ Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this s
 Sand table order:
 - [ ] 1. Save the attached files beside the product (kit standard 1); read references/plan-format.md once
 - [ ] 2. python3 scripts/plan_reader.py <plan.sandtable.json> [<plan.sandtable-brief.md>] --json facts.json --md facts.md; read facts.md end to end. It carries every field, every typed but unapplied line, every object with its grid and sector, every route with computed legs, the parts, and the brief's checks
-- [ ] 3. Operation type from facts (platoon defense, platoon offense, squad offense) decides the scheme of manoeuvre shape: defense in the user's defense format (TDOOTS where their school uses it) with the engagement area first; offense as type of attack, form of manoeuvre, task organisation, control measures, sequence and signals; then the parts as the planner wrote them
+- [ ] 3. Operation type from facts (platoon defense, platoon offense, squad offense) decides the scheme of maneuver shape: defense in the user's defense format (TDOOTS where their school uses it) with the engagement area first; offense as type of attack, form of maneuver, task organization, control measures, sequence and signals; then the parts as the planner wrote them
 - [ ] 4. Write the order to the user's format, paragraph by paragraph from references/order-map.md, copying grids from facts.md (never retyped from memory), every route with its legs, every task in its four elements, every warn check verbatim under "Warnings carried", every missing element under "NOT IN THE PLAN"
 - [ ] 5. python3 scripts/order_check.py order.md facts.json exits 0 (every grid in the order is in the plan; every object, route, part and field in the plan is in the order or listed as not in the plan; warnings carried; the five headings; no dashes). Fix and rerun until clean
 - [ ] 6. red-team agent, blind, with the order, the user's format, and facts.md as the source
@@ -49,7 +49,7 @@ Sand table order:
 
 - **The plan is the only source.** No unit name, grid, time, frequency, number, task, or phrase comes from anywhere else. Where the plan is silent the paragraph heading stands with "NOT IN THE PLAN: <what is missing>".
 - **Grids from the reader.** Every grid in the order is copied from facts.md, which derives it from the map in code. Distances and azimuths likewise: grid azimuths from the reader, magnetic only when the brief gives them.
-- **Everything on the map appears.** Every placed position, control measure, sector of fire, FPL or PDF, obstacle and route is in the scheme of manoeuvre with its grid, and every route leg with its distance and azimuth.
+- **Everything on the map appears.** Every placed position, control measure, sector of fire, FPL or PDF, obstacle and route is in the scheme of maneuver with its grid, and every route leg with its distance and azimuth.
 - **Typed but not applied is still theirs.** Lines the planner typed and never applied are used and marked "(typed, not applied)" so they can confirm them.
 - **Warnings carried, never buried.** Every warn check the sand table raised is quoted under "Warnings carried" at the end, so the planner fixes the plan rather than briefs around it.
 - Plain, direct order language: short sentences, the planner's own task verbs, no filler. Plain numbering in the two closing lists.

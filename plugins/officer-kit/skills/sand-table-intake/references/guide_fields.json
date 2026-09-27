@@ -1,0 +1,1342 @@
+[
+ {
+  "id": "name",
+  "mode": "both",
+  "title": "Name your plan",
+  "fields": [
+   {
+    "k": "optype",
+    "t": "select",
+    "label": "Operation (this sets the steps that follow)",
+    "opts": [
+     "platoon defense",
+     "platoon offense",
+     "squad offense"
+    ]
+   },
+   {
+    "k": "name",
+    "t": "text",
+    "label": "Plan title",
+    "opts": null
+   },
+   {
+    "k": "notes",
+    "t": "textarea",
+    "label": "Notes",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "ao",
+  "mode": "both",
+  "title": "Area of operations",
+  "fields": [
+   {
+    "k": "squares",
+    "t": "squares",
+    "label": "Grid squares",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "mission",
+  "mode": "both",
+  "title": "Mission",
+  "fields": [
+   {
+    "k": "mission",
+    "t": "textarea",
+    "label": "Mission statement",
+    "opts": null
+   },
+   {
+    "k": "higher",
+    "t": "textarea",
+    "label": "Higher mission and commander's intent",
+    "opts": null
+   },
+   {
+    "k": "specified",
+    "t": "textarea",
+    "label": "Specified and implied tasks",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "enemy",
+  "mode": "both",
+  "title": "E: Enemy",
+  "fields": [
+   {
+    "k": "known",
+    "t": "select",
+    "label": "How sure is the location",
+    "opts": [
+     "known",
+     "suspected",
+     "likely"
+    ]
+   },
+   {
+    "k": "size",
+    "t": "select",
+    "label": "Size",
+    "opts": [
+     "team",
+     "squad",
+     "squad (+)",
+     "platoon",
+     "platoon (+)",
+     "company"
+    ]
+   },
+   {
+    "k": "lkl",
+    "t": "place",
+    "label": "Last known location: place him on the map",
+    "opts": null
+   },
+   {
+    "k": "activity",
+    "t": "text",
+    "label": "Activity",
+    "opts": null
+   },
+   {
+    "k": "unit",
+    "t": "text",
+    "label": "Unit",
+    "opts": null
+   },
+   {
+    "k": "time",
+    "t": "text",
+    "label": "Time last seen",
+    "opts": null
+   },
+   {
+    "k": "equipment",
+    "t": "textarea",
+    "label": "Equipment",
+    "opts": null
+   },
+   {
+    "k": "capable",
+    "t": "textarea",
+    "label": "Looking at the map, he is capable of (defend, reinforce, attack, withdraw, delay: how, with what)",
+    "opts": null
+   },
+   {
+    "k": "limited",
+    "t": "textarea",
+    "label": "He is limited by",
+    "opts": null
+   },
+   {
+    "k": "hemlcoa",
+    "t": "textarea",
+    "label": "Higher's EMLCOA",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "terrain",
+  "mode": "both",
+  "title": "T: Terrain and weather",
+  "fields": [
+   {
+    "k": "obs",
+    "t": "textarea",
+    "label": "Observation and fields of fire",
+    "opts": null
+   },
+   {
+    "k": "cover",
+    "t": "textarea",
+    "label": "Cover and concealment",
+    "opts": null
+   },
+   {
+    "k": "obst",
+    "t": "textarea",
+    "label": "Obstacles (existing and reinforcing)",
+    "opts": null
+   },
+   {
+    "k": "kt",
+    "t": "points",
+    "label": "Key terrain: add each point on the map (KT 1, KT 2 ...)",
+    "opts": null
+   },
+   {
+    "k": "ktnote",
+    "t": "text",
+    "label": "Why it is key",
+    "opts": null
+   },
+   {
+    "k": "aa1",
+    "t": "draw",
+    "label": "Enemy avenue of approach 1 (grids along it)",
+    "opts": null
+   },
+   {
+    "k": "aa2",
+    "t": "draw",
+    "label": "Enemy avenue of approach 2",
+    "opts": null
+   },
+   {
+    "k": "aa3",
+    "t": "draw",
+    "label": "Enemy avenue of approach 3",
+    "opts": null
+   },
+   {
+    "k": "weather",
+    "t": "textarea",
+    "label": "Weather and light: BMNT, sunrise, sunset, EENT, illumination, forecast",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "troops",
+  "mode": "both",
+  "title": "T: Troops and fire support",
+  "fields": [
+   {
+    "k": "organic",
+    "t": "textarea",
+    "label": "Organic units and their state",
+    "opts": null
+   },
+   {
+    "k": "attach",
+    "t": "textarea",
+    "label": "Attachments and detachments",
+    "opts": null
+   },
+   {
+    "k": "m60",
+    "t": "place",
+    "label": "60mm position (grid)",
+    "opts": null
+   },
+   {
+    "k": "m81",
+    "t": "place",
+    "label": "81mm position (grid)",
+    "opts": null
+   },
+   {
+    "k": "pof",
+    "t": "text",
+    "label": "Priority of fires",
+    "opts": null
+   },
+   {
+    "k": "adjln",
+    "t": "text",
+    "label": "Adjacent unit left: name",
+    "opts": null
+   },
+   {
+    "k": "adjl",
+    "t": "place",
+    "label": "Adjacent unit left: place it",
+    "opts": null
+   },
+   {
+    "k": "adjrn",
+    "t": "text",
+    "label": "Adjacent unit right: name",
+    "opts": null
+   },
+   {
+    "k": "adjr",
+    "t": "place",
+    "label": "Adjacent unit right: place it",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "time",
+  "mode": "both",
+  "title": "T: Time, space, logistics; C: civil",
+  "fields": [
+   {
+    "k": "measure",
+    "t": "measure",
+    "label": "Distances, azimuths and times between what you have placed (planning pace below)",
+    "opts": null
+   },
+   {
+    "k": "pace",
+    "t": "number",
+    "label": "Planning pace, km/h",
+    "opts": null
+   },
+   {
+    "k": "now",
+    "t": "text",
+    "label": "Order received (time)",
+    "opts": null
+   },
+   {
+    "k": "exec",
+    "t": "text",
+    "label": "Execution or NLT (time)",
+    "opts": null
+   },
+   {
+    "k": "timeline",
+    "t": "textarea",
+    "label": "Timeline (one per line, time then event)",
+    "opts": null
+   },
+   {
+    "k": "constraints",
+    "t": "textarea",
+    "label": "Constraints (must do)",
+    "opts": null
+   },
+   {
+    "k": "restraints",
+    "t": "textarea",
+    "label": "Restraints (must not do)",
+    "opts": null
+   },
+   {
+    "k": "log",
+    "t": "textarea",
+    "label": "Logistics: what sustains the force, resupply, CASEVAC capacity",
+    "opts": null
+   },
+   {
+    "k": "civil",
+    "t": "textarea",
+    "label": "Civil considerations (ASCOPE), if any",
+    "opts": null
+   },
+   {
+    "k": "gate",
+    "t": "select",
+    "label": "Initial METT-TC complete (gate before EMLCOA)",
+    "opts": [
+     "not yet",
+     "yes"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "emlcoa",
+  "mode": "both",
+  "title": "EMLCOA",
+  "fields": [
+   {
+    "k": "enmission",
+    "t": "textarea",
+    "label": "Enemy mission (tactical task IOT purpose)",
+    "opts": null
+   },
+   {
+    "k": "current",
+    "t": "textarea",
+    "label": "Current activity",
+    "opts": null
+   },
+   {
+    "k": "contact",
+    "t": "textarea",
+    "label": "Actions on contact (and if they make contact first)",
+    "opts": null
+   },
+   {
+    "k": "useaa",
+    "t": "select",
+    "label": "Most likely avenue (from the ones you drew)",
+    "opts": [
+     "draw a new route",
+     "avenue 1",
+     "avenue 2",
+     "avenue 3"
+    ]
+   },
+   {
+    "k": "route",
+    "t": "draw",
+    "label": "Enemy most likely route: draw it on the map",
+    "opts": null
+   },
+   {
+    "k": "enobj",
+    "t": "place",
+    "label": "Enemy objective (grid)",
+    "opts": null
+   },
+   {
+    "k": "ensize",
+    "t": "select",
+    "label": "Enemy element drawn",
+    "opts": [
+     "inf_squad",
+     "inf_platoon",
+     "inf_team",
+     "inf_company"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cgcv",
+  "mode": "both",
+  "title": "CG, CV and exploitation plan",
+  "fields": [
+   {
+    "k": "cg",
+    "t": "textarea",
+    "label": "Center of gravity",
+    "opts": null
+   },
+   {
+    "k": "cv",
+    "t": "textarea",
+    "label": "Critical vulnerability",
+    "opts": null
+   },
+   {
+    "k": "exp",
+    "t": "textarea",
+    "label": "Exploitation plan",
+    "opts": null
+   },
+   {
+    "k": "form",
+    "t": "select",
+    "label": "Form (5HP examples)",
+    "opts": [
+     "",
+     "frontal attack",
+     "flanking attack",
+     "combined arms",
+     "other"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ea",
+  "mode": "defense",
+  "title": "EA: where to kill him",
+  "fields": [
+   {
+    "k": "ea",
+    "t": "area",
+    "label": "Engagement area (3 or more corners)",
+    "opts": null
+   },
+   {
+    "k": "tlfar",
+    "t": "text",
+    "label": "Far trigger line name",
+    "opts": null
+   },
+   {
+    "k": "tlfarpts",
+    "t": "draw",
+    "label": "Far trigger line (2 or more points)",
+    "opts": null
+   },
+   {
+    "k": "tlnear",
+    "t": "text",
+    "label": "Near trigger line name",
+    "opts": null
+   },
+   {
+    "k": "tlnearpts",
+    "t": "draw",
+    "label": "Near trigger line",
+    "opts": null
+   },
+   {
+    "k": "trp",
+    "t": "place",
+    "label": "TRP in the EA (optional)",
+    "opts": null
+   },
+   {
+    "k": "why",
+    "t": "textarea",
+    "label": "Why here (terrain that canalizes him, fields of fire, his likely formation)",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "type",
+  "mode": "defense",
+  "title": "T: Type and method",
+  "fields": [
+   {
+    "k": "type",
+    "t": "textarea",
+    "label": "Type and method",
+    "opts": null
+   },
+   {
+    "k": "bp",
+    "t": "place",
+    "label": "BP center",
+    "opts": null
+   },
+   {
+    "k": "bpw",
+    "t": "number",
+    "label": "Platoon BP frontage (m)",
+    "opts": null
+   },
+   {
+    "k": "bpd",
+    "t": "number",
+    "label": "Platoon BP depth (m)",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "dist",
+  "mode": "defense",
+  "title": "D: Distribution of forces",
+  "fields": [
+   {
+    "k": "sq1",
+    "t": "unit",
+    "label": "1st Sqd",
+    "opts": null
+   },
+   {
+    "k": "sq2",
+    "t": "unit",
+    "label": "2nd Sqd",
+    "opts": null
+   },
+   {
+    "k": "sq3",
+    "t": "unit",
+    "label": "3rd Sqd",
+    "opts": null
+   },
+   {
+    "k": "cp",
+    "t": "place",
+    "label": "Platoon CP",
+    "opts": null
+   },
+   {
+    "k": "mg1",
+    "t": "place",
+    "label": "Machine gun 1 (left flank)",
+    "opts": null
+   },
+   {
+    "k": "mg2",
+    "t": "place",
+    "label": "Machine gun 2 (right flank)",
+    "opts": null
+   },
+   {
+    "k": "alt1",
+    "t": "place",
+    "label": "1st Sqd alternate position (optional)",
+    "opts": null
+   },
+   {
+    "k": "alt2",
+    "t": "place",
+    "label": "2nd Sqd alternate position",
+    "opts": null
+   },
+   {
+    "k": "alt3",
+    "t": "place",
+    "label": "3rd Sqd alternate position",
+    "opts": null
+   },
+   {
+    "k": "sup1",
+    "t": "place",
+    "label": "1st Sqd supplementary position (optional, a different approach)",
+    "opts": null
+   },
+   {
+    "k": "sup2",
+    "t": "place",
+    "label": "2nd Sqd supplementary position",
+    "opts": null
+   },
+   {
+    "k": "sup3",
+    "t": "place",
+    "label": "3rd Sqd supplementary position",
+    "opts": null
+   },
+   {
+    "k": "attach",
+    "t": "textarea",
+    "label": "Attachments and detachments",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "orient",
+  "mode": "defense",
+  "title": "O: Orientation",
+  "fields": [
+   {
+    "k": "az",
+    "t": "number",
+    "label": "Orientation, grid azimuth (deg)",
+    "opts": null
+   },
+   {
+    "k": "orient",
+    "t": "textarea",
+    "label": "Orientation statement",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "occ",
+  "mode": "defense",
+  "title": "O: Occupation",
+  "fields": [
+   {
+    "k": "orp",
+    "t": "place",
+    "label": "ORP grid",
+    "opts": null
+   },
+   {
+    "k": "srp",
+    "t": "place",
+    "label": "SRP (MACO) grid",
+    "opts": null
+   },
+   {
+    "k": "method",
+    "t": "select",
+    "label": "Occupation method",
+    "opts": [
+     "crows foot into bent L (combination)",
+     "crows foot",
+     "bent L",
+     "trace the lane"
+    ]
+   },
+   {
+    "k": "occ",
+    "t": "textarea",
+    "label": "Occupation statement",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "tcm",
+  "mode": "defense",
+  "title": "T: Tactical control measures",
+  "fields": [
+   {
+    "k": "lz",
+    "t": "place",
+    "label": "LZ (insert, CCP)",
+    "opts": null
+   },
+   {
+    "k": "cps",
+    "t": "points",
+    "label": "Checkpoints on the route in (optional)",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "sec",
+  "mode": "defense",
+  "title": "S: Security plan",
+  "fields": [
+   {
+    "k": "lpop",
+    "t": "place",
+    "label": "LP/OP grid",
+    "opts": null
+   },
+   {
+    "k": "sec",
+    "t": "textarea",
+    "label": "Security statement",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "obst",
+  "mode": "defense",
+  "title": "Obstacles",
+  "fields": [
+   {
+    "k": "wire1",
+    "t": "draw",
+    "label": "Wire 1 (2 or more points)",
+    "opts": null
+   },
+   {
+    "k": "wire2",
+    "t": "draw",
+    "label": "Wire 2",
+    "opts": null
+   },
+   {
+    "k": "mine",
+    "t": "area",
+    "label": "Minefield (3 or more corners, optional)",
+    "opts": null
+   },
+   {
+    "k": "exist",
+    "t": "textarea",
+    "label": "Existing obstacles used (streams, cuts, wood lines)",
+    "opts": null
+   },
+   {
+    "k": "eng",
+    "t": "textarea",
+    "label": "Who emplaces, with what, by when",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "oform",
+  "mode": "offense",
+  "title": "Type of attack and form of maneuver",
+  "fields": [
+   {
+    "k": "atype",
+    "t": "select",
+    "label": "Type of attack",
+    "opts": [
+     "deliberate attack",
+     "hasty attack"
+    ]
+   },
+   {
+    "k": "form",
+    "t": "select",
+    "label": "Form of maneuver",
+    "opts": [
+     "flanking attack",
+     "frontal attack",
+     "envelopment"
+    ]
+   },
+   {
+    "k": "type",
+    "t": "textarea",
+    "label": "Type and method statement",
+    "opts": null
+   },
+   {
+    "k": "obj",
+    "t": "place",
+    "label": "Objective center",
+    "opts": null
+   },
+   {
+    "k": "objpts",
+    "t": "area",
+    "label": "Objective (3 or more corners)",
+    "opts": null
+   },
+   {
+    "k": "enor",
+    "t": "number",
+    "label": "Enemy orientation on the objective, grid azimuth (from the enemy step or the recon)",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "oto",
+  "mode": "offense",
+  "title": "Task organization",
+  "fields": [
+   {
+    "k": "sq1",
+    "t": "unit",
+    "label": "1st Sqd",
+    "opts": null
+   },
+   {
+    "k": "sq2",
+    "t": "unit",
+    "label": "2nd Sqd",
+    "opts": null
+   },
+   {
+    "k": "sq3",
+    "t": "unit",
+    "label": "3rd Sqd",
+    "opts": null
+   },
+   {
+    "k": "mg",
+    "t": "select",
+    "label": "Machine guns",
+    "opts": [
+     "none",
+     "MMG squad attached",
+     "MMG team attached",
+     "MMG squad in direct support"
+    ]
+   },
+   {
+    "k": "to",
+    "t": "textarea",
+    "label": "Task organization statement (assault, support by fire, security, reserve)",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "otcm",
+  "mode": "offense",
+  "title": "Control measures and routes",
+  "fields": [
+   {
+    "k": "aa",
+    "t": "place",
+    "label": "Assembly area (center)",
+    "opts": null
+   },
+   {
+    "k": "ld",
+    "t": "draw",
+    "label": "Line of departure (2 or more points)",
+    "opts": null
+   },
+   {
+    "k": "orp",
+    "t": "place",
+    "label": "ORP",
+    "opts": null
+   },
+   {
+    "k": "sbfc",
+    "t": "place",
+    "label": "SBF cold position",
+    "opts": null
+   },
+   {
+    "k": "sbf",
+    "t": "place",
+    "label": "SBF hot position",
+    "opts": null
+   },
+   {
+    "k": "aslt",
+    "t": "place",
+    "label": "Assault position",
+    "opts": null
+   },
+   {
+    "k": "pld",
+    "t": "draw",
+    "label": "Probable line of deployment (optional)",
+    "opts": null
+   },
+   {
+    "k": "msl1",
+    "t": "draw",
+    "label": "MSL 1 (2 or more points)",
+    "opts": null
+   },
+   {
+    "k": "msl2",
+    "t": "draw",
+    "label": "MSL 2",
+    "opts": null
+   },
+   {
+    "k": "loa",
+    "t": "draw",
+    "label": "Limit of advance",
+    "opts": null
+   },
+   {
+    "k": "trp",
+    "t": "place",
+    "label": "TRP for the SBF (optional)",
+    "opts": null
+   },
+   {
+    "k": "r1",
+    "t": "draw",
+    "label": "Route: LD to ORP (main body)",
+    "opts": null
+   },
+   {
+    "k": "r2",
+    "t": "draw",
+    "label": "Route: ORP to SBF cold (support element)",
+    "opts": null
+   },
+   {
+    "k": "r3",
+    "t": "draw",
+    "label": "Route: ORP to assault position (maneuver element)",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "oseq",
+  "mode": "offense",
+  "title": "Sequence and signals",
+  "fields": [
+   {
+    "k": "init",
+    "t": "select",
+    "label": "The attack is initiated by",
+    "opts": [
+     "IDF suppression of the objective",
+     "the SBF opening fire",
+     "the maneuver element"
+    ]
+   },
+   {
+    "k": "seq",
+    "t": "textarea",
+    "label": "Sequence of events (one per line, tactical task verbs)",
+    "opts": null
+   },
+   {
+    "k": "sigcom",
+    "t": "text",
+    "label": "Signal: commence",
+    "opts": null
+   },
+   {
+    "k": "sigshift",
+    "t": "text",
+    "label": "Signal: shift",
+    "opts": null
+   },
+   {
+    "k": "sigcease",
+    "t": "text",
+    "label": "Signal: cease",
+    "opts": null
+   },
+   {
+    "k": "sigrate",
+    "t": "text",
+    "label": "Signal: increase rates",
+    "opts": null
+   },
+   {
+    "k": "sigdisp",
+    "t": "text",
+    "label": "Signal: displace",
+    "opts": null
+   },
+   {
+    "k": "dispm",
+    "t": "select",
+    "label": "SBF displacement method",
+    "opts": [
+     "by unit",
+     "by echelon"
+    ]
+   },
+   {
+    "k": "dispc",
+    "t": "text",
+    "label": "Displacement criteria (when)",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "parts",
+  "mode": "both",
+  "title": "Parts",
+  "fields": [
+   {
+    "k": "p1name",
+    "t": "text",
+    "label": "Part 1 name",
+    "opts": null
+   },
+   {
+    "k": "p1bw",
+    "t": "text",
+    "label": "Part 1 begins with",
+    "opts": null
+   },
+   {
+    "k": "p1ce",
+    "t": "textarea",
+    "label": "Part 1 critical events (one per line)",
+    "opts": null
+   },
+   {
+    "k": "p1ew",
+    "t": "text",
+    "label": "Part 1 ends with",
+    "opts": null
+   },
+   {
+    "k": "p1cs",
+    "t": "text",
+    "label": "Part 1 conditions set",
+    "opts": null
+   },
+   {
+    "k": "p2name",
+    "t": "text",
+    "label": "Part 2 name",
+    "opts": null
+   },
+   {
+    "k": "p2bw",
+    "t": "text",
+    "label": "Part 2 begins with",
+    "opts": null
+   },
+   {
+    "k": "p2ce",
+    "t": "textarea",
+    "label": "Part 2 critical events (one per line)",
+    "opts": null
+   },
+   {
+    "k": "p2ew",
+    "t": "text",
+    "label": "Part 2 ends with",
+    "opts": null
+   },
+   {
+    "k": "p2cs",
+    "t": "text",
+    "label": "Part 2 conditions set",
+    "opts": null
+   },
+   {
+    "k": "p3name",
+    "t": "text",
+    "label": "Part 3 name (optional)",
+    "opts": null
+   },
+   {
+    "k": "p3bw",
+    "t": "text",
+    "label": "Part 3 begins with",
+    "opts": null
+   },
+   {
+    "k": "p3ce",
+    "t": "textarea",
+    "label": "Part 3 critical events",
+    "opts": null
+   },
+   {
+    "k": "p3ew",
+    "t": "text",
+    "label": "Part 3 ends with",
+    "opts": null
+   },
+   {
+    "k": "p3cs",
+    "t": "text",
+    "label": "Part 3 conditions set",
+    "opts": null
+   },
+   {
+    "k": "p4name",
+    "t": "text",
+    "label": "Part 4 name (optional)",
+    "opts": null
+   },
+   {
+    "k": "p4bw",
+    "t": "text",
+    "label": "Part 4 begins with",
+    "opts": null
+   },
+   {
+    "k": "p4ce",
+    "t": "textarea",
+    "label": "Part 4 critical events",
+    "opts": null
+   },
+   {
+    "k": "p4ew",
+    "t": "text",
+    "label": "Part 4 ends with",
+    "opts": null
+   },
+   {
+    "k": "p4cs",
+    "t": "text",
+    "label": "Part 4 conditions set",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "tasks",
+  "mode": "both",
+  "title": "Tasks",
+  "fields": [
+   {
+    "k": "mgrel",
+    "t": "select",
+    "label": "Machine gun squad: support relationship",
+    "opts": [
+     "",
+     "attached to",
+     "DS of",
+     "GS of"
+    ]
+   },
+   {
+    "k": "mgunit",
+    "t": "text",
+    "label": "Supported unit",
+    "opts": null
+   },
+   {
+    "k": "mgcond",
+    "t": "text",
+    "label": "Condition (when)",
+    "opts": null
+   },
+   {
+    "k": "mgtask",
+    "t": "text",
+    "label": "Tactical task",
+    "opts": null
+   },
+   {
+    "k": "mgtarget",
+    "t": "text",
+    "label": "Target or enemy",
+    "opts": null
+   },
+   {
+    "k": "mgpurpose",
+    "t": "text",
+    "label": "Purpose (IOT)",
+    "opts": null
+   },
+   {
+    "k": "mgbpt",
+    "t": "text",
+    "label": "Be prepared to",
+    "opts": null
+   },
+   {
+    "k": "mggrid",
+    "t": "place",
+    "label": "Machine gun position: place it (optional)",
+    "opts": null
+   },
+   {
+    "k": "t4",
+    "t": "textarea",
+    "label": "Other attachments (eng team ...)",
+    "opts": null
+   },
+   {
+    "k": "t1",
+    "t": "textarea",
+    "label": "1st Sqd",
+    "opts": null
+   },
+   {
+    "k": "t2",
+    "t": "textarea",
+    "label": "2nd Sqd",
+    "opts": null
+   },
+   {
+    "k": "t3",
+    "t": "textarea",
+    "label": "3rd Sqd",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "fsp",
+  "mode": "both",
+  "title": "Fire support plan",
+  "fields": [
+   {
+    "k": "efst",
+    "t": "textarea",
+    "label": "EFST from higher and yours: task, purpose, method, effects",
+    "opts": null
+   },
+   {
+    "k": "tg1",
+    "t": "target",
+    "label": "Target 1",
+    "opts": null
+   },
+   {
+    "k": "tg2",
+    "t": "target",
+    "label": "Target 2",
+    "opts": null
+   },
+   {
+    "k": "tg3",
+    "t": "target",
+    "label": "Target 3",
+    "opts": null
+   },
+   {
+    "k": "tg4",
+    "t": "target",
+    "label": "Target 4",
+    "opts": null
+   },
+   {
+    "k": "fpfc",
+    "t": "place",
+    "label": "FPF center grid",
+    "opts": null
+   },
+   {
+    "k": "fpfatt",
+    "t": "number",
+    "label": "FPF attitude (mils)",
+    "opts": null
+   },
+   {
+    "k": "fpflen",
+    "t": "number",
+    "label": "FPF length (m)",
+    "opts": null
+   },
+   {
+    "k": "fpfwpn",
+    "t": "select",
+    "label": "FPF delivery",
+    "opts": [
+     "60mm",
+     "81mm"
+    ]
+   },
+   {
+    "k": "fpftrig",
+    "t": "text",
+    "label": "FPF trigger",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "coord",
+  "mode": "both",
+  "title": "Coordinating instructions",
+  "fields": [
+   {
+    "k": "timeline",
+    "t": "textarea",
+    "label": "Timeline (one per line, time then event)",
+    "opts": null
+   },
+   {
+    "k": "engfar",
+    "t": "text",
+    "label": "Engagement criteria at the far trigger line",
+    "opts": null
+   },
+   {
+    "k": "engnear",
+    "t": "text",
+    "label": "Engagement criteria at the near trigger line",
+    "opts": null
+   },
+   {
+    "k": "other",
+    "t": "textarea",
+    "label": "Other coordinating instructions",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "admin",
+  "mode": "both",
+  "title": "Admin, logistics, command and signal",
+  "fields": [
+   {
+    "k": "ccp",
+    "t": "place",
+    "label": "Casualty collection point: place it",
+    "opts": null
+   },
+   {
+    "k": "casroute",
+    "t": "draw",
+    "label": "CASEVAC route from the position to the CCP: draw it",
+    "opts": null
+   },
+   {
+    "k": "casevac",
+    "t": "textarea",
+    "label": "CASEVAC by part and precedence",
+    "opts": null
+   },
+   {
+    "k": "epw",
+    "t": "textarea",
+    "label": "EPW",
+    "opts": null
+   },
+   {
+    "k": "resupply",
+    "t": "textarea",
+    "label": "Ammo, chow, water, pioneer gear",
+    "opts": null
+   },
+   {
+    "k": "c2",
+    "t": "textarea",
+    "label": "Command and signal: succession, callsigns, nets, no com plan",
+    "opts": null
+   }
+  ]
+ },
+ {
+  "id": "review",
+  "mode": "both",
+  "title": "Review and rehearse",
+  "fields": []
+ }
+]

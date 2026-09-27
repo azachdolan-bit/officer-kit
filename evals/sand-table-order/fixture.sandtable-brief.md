@@ -1,6 +1,6 @@
 # Sand table plan brief: Fixture defense (fictional)
 
-Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8 digit. Distances in metres, azimuths grid and magnetic (grid plus the sheet declination). Everything below was placed or typed by the planner; nothing is generated.
+Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8 digit. Distances in meters, azimuths grid and magnetic (grid plus the sheet declination). Everything below was placed or typed by the planner; nothing is generated.
 
 ## Name your plan
 - Operation (this sets the steps that follow): platoon defense
@@ -28,7 +28,7 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 - Equipment: small arms, one medium MG
 - Looking at the map, he is capable of (defend, reinforce, attack, withdraw, delay: how, with what): attack with a platoon within 2 hours
 - He is limited by: no indirect fires
-  - check (ok): Enemy last known location placed, 466 m from the BP centre.
+  - check (ok): Enemy last known location placed, 466 m from the BP center.
   - check (ok): Capabilities and limitations stated (suspected location, platoon).
 
 ## T: Terrain and weather
@@ -48,8 +48,8 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 - 81mm position (grid): 87507700
 - Adjacent unit left: place it: 86907800
 - Adjacent unit right: place it: 87507740
-  - check (ok): 60mm position 256 m from the BP centre (no mortar range source on disk, so no verdict).
-  - check (ok): 81mm position 798 m from the BP centre (no mortar range source on disk, so no verdict).
+  - check (ok): 60mm position 256 m from the BP center (no mortar range source on disk, so no verdict).
+  - check (ok): 81mm position 798 m from the BP center (no mortar range source on disk, so no verdict).
   - check (note): Priority of fires empty.
 
 ## T: Time, space, logistics; C: civil
@@ -60,14 +60,14 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 
 ## EMLCOA
 - Enemy mission (tactical task IOT purpose): seize the crossroads IOT open the road east
-- Current activity: reconnoitring the approaches
+- Current activity: reconnoitering the approaches
 - Actions on contact (and if they make contact first): deploy on line and assault the nearest position
 - Most likely avenue (from the ones you drew): avenue 1
 - Enemy objective (grid): 87157765
-  - check (ok): Enemy route passes 110 m from the EA centre.
+  - check (ok): Enemy route passes 110 m from the EA center.
 
 ## CG, CV and exploitation plan
-- Centre of gravity: massed platoon assault
+- Center of gravity: massed platoon assault
 - Critical vulnerability: the platoon must cross 300 m of open ground
 - Exploitation plan: kill him in the open with massed fires from the BP
 - Form: combined arms
@@ -83,17 +83,17 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 - Why here (terrain that canalises him, fields of fire, his likely formation): open ground 300 m wide he must cross in column
   - check (ok): Step 1: 2 enemy avenues of approach drawn.
   - check (ok): Step 2: EMLCOA route on the map (EN most likely route).
-  - check (ok): Step 3: EA centre 110 m from the EMLCOA route: on the most likely avenue.
-  - check (ok): TL GREY 196 m and TL AMBER 156 m from the EA centre.
-  - check (ok): TRP 21 m from the EA centre.
+  - check (ok): Step 3: EA center 110 m from the EMLCOA route: on the most likely avenue.
+  - check (ok): TL GREY 196 m and TL AMBER 156 m from the EA center.
+  - check (ok): TRP 21 m from the EA center.
 
 ## T: Type and method
 - Type and method: O/O 2d Plt conducts an area defense using a Plt BP IVO TH 8720 7774
-- BP centre: 87207774
+- BP center: 87207774
 - Platoon BP frontage (m): 350
 - Platoon BP depth (m): 150
-  - check (ok): BP centre inside the AO.
-  - check (ok): EA centre 244 m from the BP at 227 grid; far edge 453 m.
+  - check (ok): BP center inside the AO.
+  - check (ok): EA center 244 m from the BP at 227 grid; far edge 453 m.
   - check (ok): Whole EA inside 700 m (M27 area).
   - check (ok): Platoon BP drawn 350 m across, oriented on the EA (300 to 400 m for a platoon).
 
@@ -108,43 +108,43 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 - Attachments and detachments: MMG team attached to 2d Sqd
   - check (ok): Frontage (widest squad to squad spacing) 141 m against roughly 300 to 400 m for a platoon.
   - check (ok): One main effort named.
-  - check (ok): Step 4: 3 of 3 squad sectors cover the EA centre: interlocking on the EA.
-  - check (ok): CP placed 104 m from the BP centre.
+  - check (ok): Step 4: 3 of 3 squad sectors cover the EA center: interlocking on the EA.
+  - check (ok): CP placed 104 m from the BP center.
   - check (ok): MG 1 FPL 317, MG 2 FPL 137 across the front.
   - check (ok): 0 alternate and 1 supplementary positions placed.
 
 ## O: Orientation
 - Orientation, grid azimuth (deg): 227
 - Orientation statement: SW, blocking the W avenue into the crossroads
-  - check (ok): EA centre bears 227 from the BP; orientation 227 (0 deg apart).
+  - check (ok): EA center bears 227 from the BP; orientation 227 (0 deg apart).
 
 ## O: Occupation
 - ORP grid: 87477764
 - SRP (MACO) grid: 87217778
 - Occupation method: crows foot
-- Occupation statement: from the SRP squads split via crows foot; 1st left, 2nd centre, 3rd right
+- Occupation statement: from the SRP squads split via crows foot; 1st left, 2nd center, 3rd right
   - check (ok): Leg 1: 295 m at 309 mag (298 grid), 9 min at 2 km/h, gain 0 m.
   - check (ok): Leg 2: 41 m at 205 mag (194 grid), 1 min at 2 km/h, gain 0 m.
-  - check (ok): SRP to BP centre 41 m .
+  - check (ok): SRP to BP center 41 m .
 
 ## T: Tactical control measures
 - LZ (insert, CCP): 87427748
-  - check (ok): LZ 341 m from the BP centre.
-  - check (ok): TL GREY nearest point 300 m from the BP centre; M27 max effective 550 m point, 700 m area.
-  - check (ok): TL AMBER nearest point 200 m from the BP centre; M27 550 m point.
+  - check (ok): LZ 341 m from the BP center.
+  - check (ok): TL GREY nearest point 300 m from the BP center; M27 max effective 550 m point, 700 m area.
+  - check (ok): TL AMBER nearest point 200 m from the BP center; M27 550 m point.
 
 ## S: Security plan
 - LP/OP grid: 87247756
 - Security statement: stand to 30 min on occupation, 25 percent after, 100 percent at EENT and BMNT
-  - check (ok): LP/OP 184 m from the BP centre; within small arms range for mutual support if possible (M27 550 m point).
-  - check (ok): Line of sight LP/OP to EA centre (120 m): clear (bare earth, observer 1.7 m, target 1 m).
+  - check (ok): LP/OP 184 m from the BP center; within small arms range for mutual support if possible (M27 550 m point).
+  - check (ok): Line of sight LP/OP to EA center (120 m): clear (bare earth, observer 1.7 m, target 1 m).
   - check (ok): Line of sight LP/OP to TL GREY (120 m): clear (bare earth, observer 1.7 m, target 1 m).
 
 ## Obstacles
 - Wire 1 (2 or more points): 87007745; 87007770
 - Who emplaces, with what, by when: Eng team, 400 m of C wire, NLT 1400
   - check (ok): WIRE: covered by fire from 1st Sqd (SE1) (260 m), 2nd Sqd (ME) (204 m), 3rd Sqd (SE2) (189 m), MG 1 (293 m), MG 2 (177 m).
-  - check (ok): WIRE 127 m from the EA centre.
+  - check (ok): WIRE 127 m from the EA center.
   - check (note): Register the FPF before emplacing the obstacles (step 6 before step 5 on the ground).
 
 ## Parts
@@ -171,7 +171,7 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 - Purpose (IOT): to allow the platoon to destroy him forward of the BP
 - Machine gun position: place it (optional): 87297766
 - 1st Sqd: occupy the left position and block west
-- 2nd Sqd: occupy the centre position, ME, block west
+- 2nd Sqd: occupy the center position, ME, block west
 - 3rd Sqd: occupy the right position and block west
   - check (ok): MG tasking statement: Machinegun Squad, attached to 2d Sqd, upon enemy crossing TL AMBER, suppress enemy in the EA IOT to allow the platoon to destroy him forward of the BP.
   - check (note): 1st Sqd (SE1): task set, no IOT purpose.
@@ -181,15 +181,15 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 ## Fire support plan
 - EFST from higher and yours: task, purpose, method, effects: EFST 1 disrupt the enemy at TL GREY IOT break his formation
 - Target 1: num AB1001, grid 86907757, wpn 81mm, trigger enemy crosses TL GREY, obs LP/OP, task disrupt
-- FPF centre grid: 87047759
+- FPF center grid: 87047759
 - FPF attitude (mils): 2400
 - FPF length (m): 90
 - FPF delivery: 60mm
 - FPF trigger: enemy crosses TL AMBER
-  - check (ok): AB1001 (81mm) is 345 m from the BP centre at 240 grid.
+  - check (ok): AB1001 (81mm) is 345 m from the BP center at 240 grid.
   - check (ok): AB1001 (81mm) 20 m from EN most likely route (tied to it).
   - check (note): Step 6: the FPF is registered before the obstacles go in.
-  - check (ok): FPF centre 219 m in front of the ME squad .
+  - check (ok): FPF center 219 m in front of the ME squad .
   - check (ok): FPF ends TH 8707 7756 and TH 8701 7762, length 90 m.
   - check (warn): FPF length sits at the planning limit for the tubes given; shorten it or add a tube.
 
@@ -221,18 +221,18 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 - 81mm (friendly, mortar_81): TH 8750 7700
 - Adjacent (friendly, inf_platoon): TH 8690 7800; adjacent unit
 - Adjacent (friendly, inf_platoon): TH 8750 7740; adjacent unit
-- EN EMLCOA (enemy, inf_squad): TH 8670 7740; task seize the crossroads IOT open the road east; reconnoitring the approaches; deploy on line and assault the nearest position
+- EN EMLCOA (enemy, inf_squad): TH 8670 7740; task seize the crossroads IOT open the road east; reconnoitering the approaches; deploy on line and assault the nearest position
 - EN OBJ (enemy, point): TH 8715 7765
 - EA (friendly, ea): TH 8690 7775 to TH 8714 7775 to TH 8714 7740 to TH 8690 7740; open ground 300 m wide he must cross in column
 - TL GREY (friendly, pl): TH 8690 7742 to TH 8690 7773; engagement criteria: fire 1 in 5 at TL GREY
 - TL AMBER (friendly, pl): TH 8700 7742 to TH 8700 7773; engagement criteria: fire 1 in 2 at TL AMBER, FPF called
 - TRP 1 (neutral, trp): TH 8700 7758
-- BP centre (neutral, point): TH 8720 7774; O/O 2d Plt conducts an area defense using a Plt BP IVO TH 8720 7774
+- BP center (neutral, point): TH 8720 7774; O/O 2d Plt conducts an area defense using a Plt BP IVO TH 8720 7774
 - PLT BP (friendly, bp): TH 8708 7787 to TH 8707 7785 to TH 8707 7781 to TH 8709 7777 to TH 8711 7773 to TH 8715 7769 to TH 8718 7765 to TH 8723 7762 to TH 8726 7761 to TH 8730 7760 to TH 8732 7761 to TH 8733 7763 to TH 8733 7767 to TH 8731 7771 to TH 8729 7775 to TH 8725 7779 to TH 8722 7783 to TH 8717 7786 to TH 8714 7787 to TH 8710 7788
 - 1st Sqd (SE1) (friendly, inf_squad): TH 8726 7770; task occupy the left position and block west; supporting effort; faces 227
 - 1st Sqd BP (friendly, bp): TH 8723 7775 to TH 8722 7774 to TH 8722 7772 to TH 8723 7770 to TH 8724 7767 to TH 8726 7766 to TH 8727 7765 to TH 8729 7765 to TH 8730 7766 to TH 8730 7768 to TH 8729 7770 to TH 8728 7773 to TH 8726 7774 to TH 8725 7775
 - 1st Sqd SUPP (friendly, inf_squad): TH 8730 7772; supplementary position, faces 101
-- 2nd Sqd (ME) (friendly, inf_squad): TH 8720 7774; task occupy the centre position, ME, block west; main effort; faces 227
+- 2nd Sqd (ME) (friendly, inf_squad): TH 8720 7774; task occupy the center position, ME, block west; main effort; faces 227
 - 2nd Sqd BP (friendly, bp): TH 8716 7778 to TH 8715 7777 to TH 8716 7775 to TH 8717 7773 to TH 8719 7771 to TH 8721 7770 to TH 8723 7769 to TH 8724 7770 to TH 8725 7771 to TH 8724 7773 to TH 8723 7775 to TH 8721 7777 to TH 8719 7778 to TH 8717 7779
 - 3rd Sqd (SE2) (friendly, inf_squad): TH 8716 7780; task occupy the right position and block west; supporting effort; faces 227
 - 3rd Sqd BP (friendly, bp): TH 8711 7783 to TH 8711 7782 to TH 8712 7780 to TH 8713 7778 to TH 8716 7777 to TH 8718 7776 to TH 8720 7776 to TH 8721 7777 to TH 8721 7778 to TH 8720 7780 to TH 8719 7782 to TH 8716 7783 to TH 8714 7784 to TH 8712 7784
@@ -248,9 +248,9 @@ Operation: platoon defense. Built on the TA16 sand table. Grids are TH square, 8
 - WIRE (friendly, wire): TH 8700 7745 to TH 8700 7770; Eng team, 400 m of C wire, NLT 1400
 - MG sqd (friendly, mg_medium): TH 8729 7766; task upon enemy crossing TL AMBER suppress enemy in the EA; IOT to allow the platoon to destroy him forward of the BP; attached to 2d Sqd
 - AB1001 (81mm) (neutral, target): TH 8690 7757; task disrupt; trigger enemy crosses TL GREY; obs LP/OP; 81mm HE
-- FPF 60mm (friendly, fpf): TH 8707 7756 to TH 8701 7762; centre 87047759, attitude 2400 mils, length 90 m; trigger enemy crosses TL AMBER
+- FPF 60mm (friendly, fpf): TH 8707 7756 to TH 8701 7762; center 87047759, attitude 2400 mils, length 90 m; trigger enemy crosses TL AMBER
 - Route EN most likely route: TH 8670 7740 to TH 8690 7755 to TH 8710 7765; leg 1 250 m at 064 mag, 8 min; leg 2 224 m at 074 mag, 7 min; seize the crossroads IOT open the road east
-- Route ORP to SRP to BP: TH 8747 7764 to TH 8721 7778 to TH 8720 7774; leg 1 295 m at 309 mag, 9 min; leg 2 41 m at 205 mag, 1 min; from the SRP squads split via crows foot; 1st left, 2nd centre, 3rd right
+- Route ORP to SRP to BP: TH 8747 7764 to TH 8721 7778 to TH 8720 7774; leg 1 295 m at 309 mag, 9 min; leg 2 41 m at 205 mag, 1 min; from the SRP squads split via crows foot; 1st left, 2nd center, 3rd right
 - Route CASEVAC route: TH 8720 7774 to TH 8730 7760 to TH 8742 7748; leg 1 172 m at 155 mag, 5 min; leg 2 170 m at 146 mag, 5 min; buddy aid to the CCP at the LZ
 
 ## Parts and events

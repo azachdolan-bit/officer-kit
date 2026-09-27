@@ -243,7 +243,7 @@
    "props": {
     "task": "seize the crossroads IOT open the road east",
     "purpose": "",
-    "remarks": "reconnoitring the approaches; deploy on line and assault the nearest position"
+    "remarks": "reconnoitering the approaches; deploy on line and assault the nearest position"
    },
    "layer": "enemy",
    "locked": false,
@@ -385,7 +385,7 @@
    "kind": "point",
    "side": "neutral",
    "symbol": "point",
-   "label": "BP centre",
+   "label": "BP center",
    "utm": [
     [
      287205,
@@ -645,7 +645,7 @@
     ]
    ],
    "props": {
-    "task": "occupy the centre position, ME, block west",
+    "task": "occupy the center position, ME, block west",
     "purpose": "",
     "remarks": "main effort; faces 227",
     "sector": {
@@ -1161,7 +1161,7 @@
    "props": {
     "task": "",
     "purpose": "",
-    "remarks": "centre 87047759, attitude 2400 mils, length 90 m; trigger enemy crosses TL AMBER"
+    "remarks": "center 87047759, attitude 2400 mils, length 90 m; trigger enemy crosses TL AMBER"
    },
    "layer": "fires",
    "locked": false,
@@ -1208,7 +1208,7 @@
     ]
    ],
    "pace_kmh": 2,
-   "notes": "from the SRP squads split via crows foot; 1st left, 2nd centre, 3rd right",
+   "notes": "from the SRP squads split via crows foot; 1st left, 2nd center, 3rd right",
    "id": "g_r_occ"
   },
   {
@@ -1468,7 +1468,7 @@
     "useaa": "avenue 1",
     "size": "platoon",
     "enmission": "seize the crossroads IOT open the road east",
-    "current": "reconnoitring the approaches",
+    "current": "reconnoitering the approaches",
     "contact": "deploy on line and assault the nearest position",
     "enobj": "87157765"
    },
@@ -1520,7 +1520,7 @@
     "orp": "87477764",
     "srp": "87217778",
     "method": "crows foot",
-    "occ": "from the SRP squads split via crows foot; 1st left, 2nd centre, 3rd right"
+    "occ": "from the SRP squads split via crows foot; 1st left, 2nd center, 3rd right"
    },
    "tcm": {
     "lz": "87427748"
@@ -1547,7 +1547,7 @@
    },
    "tasks": {
     "t1": "occupy the left position and block west",
-    "t2": "occupy the centre position, ME, block west",
+    "t2": "occupy the center position, ME, block west",
     "t3": "occupy the right position and block west",
     "mgrel": "attached to",
     "mgunit": "2d Sqd",

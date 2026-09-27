@@ -10,7 +10,7 @@ the notes, the area of operations and the sheet. The brief (optional) is the pla
 it adds the checks the sand table ran and the magnetic azimuths of every route leg, which need the sheet's declination.
 
 What comes out: facts.json (for order_check.py) and facts.md (to read). Every grid is derived from UTM in code: the 8 digit
-grid is the 10 metre easting and northing inside the 100 km square. Distances and grid azimuths are computed here; magnetic
+grid is the 10 meter easting and northing inside the 100 km square. Distances and grid azimuths are computed here; magnetic
 azimuths are taken from the brief when it is given and marked absent otherwise, never guessed.
 """
 import json
@@ -24,8 +24,8 @@ GUIDE_TITLES = {
     "name": "Name and operation", "ao": "Area of operations", "mission": "Mission", "enemy": "Enemy", "terrain": "Terrain and weather",
     "troops": "Troops and fire support", "time": "Time, space, logistics, civil", "emlcoa": "EMLCOA", "cgcv": "CG, CV and exploitation",
     "ea": "Engagement area (EA step 3)", "type": "Type and method", "dist": "Distribution of forces", "orient": "Orientation",
-    "occ": "Occupation", "tcm": "Control measures", "sec": "Security", "obst": "Obstacles", "oform": "Type of attack and form of manoeuvre",
-    "oto": "Task organisation", "otcm": "Control measures and routes", "oseq": "Sequence and signals", "parts": "Parts", "tasks": "Tasks",
+    "occ": "Occupation", "tcm": "Control measures", "sec": "Security", "obst": "Obstacles", "oform": "Type of attack and form of maneuver",
+    "oto": "Task organization", "otcm": "Control measures and routes", "oseq": "Sequence and signals", "parts": "Parts", "tasks": "Tasks",
     "fsp": "Fire support plan", "coord": "Coordinating instructions", "admin": "Admin, logistics, command and signal",
 }
 ORDER = list(GUIDE_TITLES.keys())
@@ -123,7 +123,7 @@ def read_plan(path):
         if o.get("kind") == "area" and len(pts) >= 3:
             cx = sum(p[0] for p in pts) / len(pts)
             cy = sum(p[1] for p in pts) / len(pts)
-            item["centre"] = grid8([cx, cy], square)
+            item["center"] = grid8([cx, cy], square)
             grids.add(grid_digits([cx, cy]))
         facts["objects"].append(item)
     for r in plan.get("routes", []):
@@ -169,8 +169,8 @@ def to_md(facts, brief):
     L.append("## Everything on the map")
     for o in facts["objects"]:
         line = "- %s (%s, %s): %s" % (o["label"], o["side"], o["symbol"], " to ".join(o["grids"]))
-        if o.get("centre"):
-            line += "; centre " + o["centre"]
+        if o.get("center"):
+            line += "; center " + o["center"]
         if o.get("sector"):
             s = o["sector"]
             line += "; sector %s left %s right %s range %s m" % (s.get("kind", ""), s.get("left"), s.get("right"), s.get("range"))
