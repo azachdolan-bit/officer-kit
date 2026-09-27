@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.21.0 (2026-09-27) Intake puts higher's positions on the map
+
+- **sand-table-intake (0.2.0):** everything higher places with a grid that the guide has no field for now goes in the plan file as a labeled object (adjacent companies and platoons, a known enemy position, the company AA, CCP and CP, checkpoints, phase lines and boundaries), each carrying its paragraph in the remarks. The page draws them the moment the file opens, enemy on the enemy layer, lines and areas on the control measure layer. A described location the sheet can fix (a distance from a named hill) is placed and labeled derived. `plan_writer.py` builds the objects from grids (6 digit grids land at the center of their 100 m square) and refuses a bad symbol, a short line, or an object with no source; `plan_check.py --intake` fails an object without a source or one that takes a guide id. Harness now 63 items.
+- From Zach's check of the MG STEX intake on the page: "it didn't auto-populate all of the TCMs onto the map".
+
 ## 0.20.0 (2026-09-27) Lessons applied: American spelling, guided hand offs, spotlight per action, calm hero images
 
 - **Standard 9 now carries American spelling** and `standards_check.py` scans every skill, reference, agent and eval fixture for British forms (block quotes and quoted titles excepted); the release drill fails on a hit. Thirteen files corrected (centre, labelled, organised, behaviour, defence and the like), including the naval letter builder's own names.

@@ -36,6 +36,10 @@ The exercise decides the sheet. A file on another sheet still imports: the page 
 | coord / timeline, other | the timeline again; company control measures with grids (assembly area, CCP, company CP), signals available |
 | admin / resupply, epw, c2, casevac | paragraph 4 and 5 facts higher fixes (company CCP, radios, rounds); the platoon's own CASEVAC plan stays out |
 
+## Higher's positions and control measures: put them on the map as objects
+
+Anything the order places with a grid that the guide has no field for goes in facts.json under `objects`, one per item, with the order's own label and the paragraph: the adjacent companies and platoons (inf_company, inf_platoon), a known enemy position (inf_squad or inf_platoon on side enemy; a described location such as "3 km south of Hill 300" may be derived from the sheet and labeled "derived, confirm" in remarks), the company assembly area, CCP and CP (point, ccp, cp), checkpoints, LZs and passage points, phase lines and boundaries (pl, boundary, 2 or more grids), a route higher fixes (route). The page draws each one labeled, on the enemy layer for enemy objects and the control measure layer for lines and areas. Key terrain the order names and the sheet locates (a labeled hill) goes in terrain/kt with the sheet as its source, not as an object; the sheet's own named places already show on the map.
+
 ## The planner's half: leave these blank
 
 emlcoa (all), cgcv (all), ea, type, dist, orient, occ, sec, obst, oform, oto, otcm, oseq, parts, tasks, fsp targets tg1 to tg4 and the FPF (fpfc, fpfatt, fpflen, fpftrig), coord engfar and engnear, tcm cps, admin ccp and casroute. `plan_check.py --intake` fails a file that fills any of them. Higher's own EMLCOA, CG and CV belong in mission/higher and enemy/hemlcoa, where the planner reads them while writing their own.

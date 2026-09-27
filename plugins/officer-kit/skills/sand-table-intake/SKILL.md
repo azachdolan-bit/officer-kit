@@ -9,7 +9,7 @@ description: >
   "start the sand table from the company order", "intake this order for the sand table", or attaches a base order and
   names the sand table.
 metadata:
-  version: "0.1.1"
+  version: "0.1.0"
 ---
 
 # Sand table intake
@@ -38,16 +38,17 @@ Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this s
 Sand table intake:
 - [ ] 1. Save the order beside the product (kit standard 1); python3 scripts/order_text.py <order.docx> writes order.txt with the paragraph numbers kept (a PDF or photos: capture-source first)
 - [ ] 2. Read references/field-map.md: which paragraph feeds which guide field, and which fields stay blank because the planner decides them
-- [ ] 3. Write facts.json: one entry per field the order fills, with the value in the order's words (verbatim for mission statements, intent and EMLCOA; condensed only for long orientation prose, keeping every number and name) and src naming the paragraph. Grids exactly as written (4, 6 or 8 digits). The user's own platoon task is the mission; the other platoons' tasks and positions go to adjacent
+- [ ] 3. Write facts.json: one entry per field the order fills, and one object per position or control measure higher gives with a grid that the guide has no field for (adjacent units, a known enemy position, the company AA, CCP and CP, checkpoints, phase lines and boundaries), each with the order's label and its paragraph; with the value in the order's words (verbatim for mission statements, intent and EMLCOA; condensed only for long orientation prose, keeping every number and name) and src naming the paragraph. Grids exactly as written (4, 6 or 8 digits). The user's own platoon task is the mission; the other platoons' tasks and positions go to adjacent
 - [ ] 4. python3 scripts/plan_writer.py facts.json --out <name>.sandtable.json: refuses an unknown field, a bad grid, a select value the page does not offer, or a value with no src; writes <name>.sourced.md (every filled field with its paragraph; every blank by step)
 - [ ] 5. python3 scripts/plan_check.py <name>.sandtable.json --intake exits 0 (the page's shape; no planner decision filled; nothing on the map)
 - [ ] 6. red-team agent, blind, with sourced.md and order.txt: every filled value found in the cited paragraph, nothing filled that the order leaves to the platoon
-- [ ] 7. Save the plan file, sourced.md and facts.json together; name the path; tell the user: import it on the sand table page (Plan, Import file); the page switches to the file's sheet if it is not on it, builds the map from the values, ticks the steps the order filled and opens the Guide on the first step the order left blank (for a defense from a school FRAGO, usually Area of operations, then EMLCOA and the EA), with a line under each filled step naming the order it came from. Say that in the reply: where they land and what they do first
+- [ ] 7. Save the plan file, sourced.md and facts.json together; name the path; tell the user: import it on the sand table page (Plan, Import file); the page switches to the file's sheet if it is not on it, builds the map from the values and opens the Guide at Review
 ```
 
 ## Rules
 
 - **The order is the only source.** Every value in facts.json names its paragraph. A value with no paragraph is refused by the writer.
+- **Everything higher placed is on the map.** A grid in the order is a symbol on the table the moment the file opens, labeled with the order's own name for it and carrying its paragraph in the remarks. A described location with no grid is placed only when the sheet can fix it (a named hill, a distance from a named feature) and is labeled derived.
 - **Higher's half only.** The planner's decisions (EMLCOA, CG/CV, engagement area and trigger lines, battle position, distribution, orientation, occupation, security, obstacles, the offense scheme, parts, squad tasks, targets, FPF, engagement criteria, CCP and CASEVAC route) stay blank even when the order carries higher's version of them; higher's EMLCOA goes to the enemy step's "Higher's EMLCOA" field, higher's intent to the mission step's "Higher" field, and the planner writes their own on the page. The checker fails an intake file that fills them.
 - **Grids as written.** A 6 digit grid stays 6 digits; the page places it at the center of its 100 m square and the planner refines it. Never extend a grid.
 - **Their words.** Mission, intent, tasks and EMLCOA verbatim. Orientation and logistics may be condensed, keeping every number, name and time. No doctrine, no example values.

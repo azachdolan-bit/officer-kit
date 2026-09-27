@@ -10,7 +10,7 @@ Fails when:
   2. sheet is not one the page carries (ta16, stex);
   3. a guide step or field key is unknown to the page (references/guide_fields.json), or a value has the wrong shape;
   4. a grid field carries something that is not a 4, 6 or 8 digit grid;
-  5. with --intake: objects, routes or phases are not empty (the page builds them from the values), or a planner decision
+  5. with --intake: routes or phases are not empty (the page builds them), an object carries no source or a guide id, or a planner decision
      step (EMLCOA, CG/CV, EA, BP, distribution, orientation, occupation, security, obstacles, parts, tasks, targets,
      engagement criteria, or the offense scheme) carries a value, since the base order does not make those decisions;
   6. an em dash or en dash is in a value (kit standard 9; the order's own dashes are copied as hyphens or words).
@@ -101,9 +101,14 @@ def main(argv):
             if intake and not empty and key not in ("optype", "name", "notes") and (step in PLANNER_STEPS or (step, key) in PLANNER_KEYS):
                 fails.append("%s: a planner decision was filled by the intake; the base order does not decide it" % where)
     if intake:
-        for k in ("objects", "routes", "phases"):
+        for k in ("routes", "phases"):
             if p.get(k):
                 fails.append("%s must be empty in an intake file: the page builds them from the values" % k)
+        for o in p.get("objects") or []:
+            if "from the base order" not in (o.get("props") or {}).get("remarks", ""):
+                fails.append("object '%s' carries no source: an intake object names the paragraph or sheet it came from in its remarks" % o.get("label"))
+            if o.get("id", "").startswith("g_"):
+                fails.append("object '%s' uses a guide id (g_...); the page owns those" % o.get("label"))
     print("PLAN CHECK: %s, sheet %s, %d steps, %d fields filled%s" % (p.get("name"), p.get("sheet"), len(V), filled, ", intake rules on" if intake else ""))
     for x in fails:
         print("  FAIL ", x)
