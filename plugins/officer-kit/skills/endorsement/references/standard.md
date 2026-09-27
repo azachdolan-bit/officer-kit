@@ -175,11 +175,11 @@ to hear this case. [...]
 ## What the four figures settle (how a Marine Corps unit fills the form the manual sets)
 1. Heading block: SSIC, code, date at the right, as on a letter (Figure L-10, both NAVMC pages).
 2. The identification line, at the left margin, on the second line below the date: the ordinal in capitals, the word ENDORSEMENT, "on", then the basic correspondence named by originator, "ltr", SSIC, code, and "of" or "dated" plus its date (both NAVMC pages: "FIRST ENDORSEMENT on CO ltr 4400 (Code) dated (Date)"; "FIRST ENDORSEMENT on Supply Officer ltr 4400 (insert code) of (insert date)"). Where the basic correspondence is not a letter, the figure names the document (Figure L-10: "on ADMINISTRATIVE DISCHARGE BOARD REPORT of ____"; Figure 6-5: "ON (SNM'S LETTER/AA FORM) OF (DATE)").
-3. From, To, and Via where there is routing, on the second line below the identification line, in the letter's labelled form (all four figures).
+3. From, To, and Via where there is routing, on the second line below the identification line, in the letter's labeled form (all four figures).
 4. Subj: the subject of the basic correspondence, in capitals (all four).
 5. Ref and Encl blocks only when the endorsement itself adds a reference or an enclosure (Figure 6-5 adds a Ref; Figure L-10 and page 119 add Encl; page 129 adds neither).
 6. Numbered paragraphs that do one of the things the figures do: forward with a recommendation ("I (do) (do not) recommend"), state the endorser's position ("I (agree)(disagree)"), certify ("I certify that I have reviewed"), accept or direct ("I accept these duties", "I direct you to"). First person is the figures' voice.
-7. Signature block as on a letter: the fourth line below the last line of text, from page centre (the kit's correspondence standard; the figures show the signature at the right centre).
+7. Signature block as on a letter: the fourth line below the last line of text, from page center (the kit's correspondence standard; the figures show the signature at the right center).
 
 ## From the kit's correspondence standard (naval-letter/references/standard.md, the school handout B020069XQ over SECNAV M-5216.5)
 Times New Roman 12, 1 inch margins, 13.8 pt line pitch, every named gap a whole number of lines, Subj in capitals as a phrase, Ref lettered (a) (b), Encl numbered (1) (2), every reference cited and every citation resolving, signature on the fourth line, no dashes, continuation page furniture, and the date as day, abbreviated month, two digit year. `build_letter.py` lays all of it out; `qc_letter.py --kind endorsement` and `measure_pdf.py` check it.

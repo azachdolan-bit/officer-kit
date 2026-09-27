@@ -87,7 +87,7 @@ Substance rules while writing the paragraphs: standing in the first sentence; on
 
 **Step 7, judgment gates.** For a letter that reports findings or makes claims against sources, run the blind reviewers before you trust the body: `significance-reviewer` (Gate 0) then `evidence-reviewer` (Gate 1), each given only the draft findings and the source files. Cut everything that does not survive. Rebuild and rerun Gate 2. The `qc-gates` skill runs this sequence if you would rather delegate it.
 
-**Step 8, read the pages.** Render to images and look: page count, nothing orphaned onto a final page, signature block on the fourth line at page centre, continuation Subj on the sixth line. If a letter runs a few lines over, cut body text.
+**Step 8, read the pages.** Render to images and look: page count, nothing orphaned onto a final page, signature block on the fourth line at page center, continuation Subj on the sixth line. If a letter runs a few lines over, cut body text.
 
 **Step 9, deliver.** `.docx` plus `.pdf` into the user's correspondence folder, enclosures as their own files marked "Enclosure (n)" lower right. Draft the cover email: two or three sentences, subject names the object and the action.
 

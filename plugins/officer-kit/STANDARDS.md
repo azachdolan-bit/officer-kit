@@ -1,6 +1,6 @@
 # Kit standards
 
-Kit standards: 0.12.0
+Kit standards: 0.20.0
 
 Every Officer Kit tool reads this file before it produces anything. The nine standards apply to every product. If the user's rules file or an `Overrides/<tool>.md` line says otherwise, say so once, naming the standard by number, then do it the user's way.
 
@@ -12,4 +12,4 @@ Every Officer Kit tool reads this file before it produces anything. The nine sta
 6. **Share the method, never the product.** A product built from course or unit material goes only to the people who helped build it; what gets shared is a builder with zero content. A document meant for other people never describes browser automation.
 7. **Teaching products are complete.** The body carries the whole source lesson, verbatim where the source is verbatim. Every quiz answer appears in the body of the section that tests it. Run the `source-fidelity-reviewer` agent before delivery.
 8. **Never compress to fit.** Never shrink line spacing, margins, heading space, or signature space to make a page count. Cut words instead.
-9. **No em dashes or en dashes** in any product. Rewrite the sentence; do not swap in a colon.
+9. **No em dashes or en dashes, American spelling.** No em or en dash in any product; rewrite the sentence, do not swap in a colon. American spelling in every product and in the kit's own text (maneuver, organization, center, color, labeled, meter, analyze, defense, recognize, catalog, canceled); the release drill fails on a British form.

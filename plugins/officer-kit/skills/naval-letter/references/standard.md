@@ -18,8 +18,8 @@ Every rule below exists because a draft that looked finished was wrong.
 | Ref | Lower case letter in parentheses: (a), (b). Second line below Subj. |
 | Encl | Number in parentheses: (1), (2). Second line below Ref. |
 | Paragraphs | 1. then a. then (1) then (a). Single spaced within, double spaced between. First line indented by level, runover returning to the left margin. |
-| Signature block | Fourth line below the last line of text (three blank lines), starting at the centre of the page. A signature page carries at least two lines of text. |
-| Continuation pages | Subj line repeats starting on the sixth line; page number centred 0.5 inch from the bottom, no punctuation. |
+| Signature block | Fourth line below the last line of text (three blank lines), starting at the center of the page. A signature page carries at least two lines of text. |
+| Continuation pages | Subj line repeats starting on the sixth line; page number centered 0.5 inch from the bottom, no punctuation. |
 | Enclosure marking | On the enclosure itself, "Enclosure (1)" lower right on every page. The letter carries no such marking. |
 | Date | Day, abbreviated month, two digit year: 4 Sep 26. |
 
@@ -69,7 +69,7 @@ Every defect in this class survived multiple read throughs. Assume you cannot ca
 4. **Every reference is cited at least once in the body; every citation resolves to a listed reference.** Both directions.
 5. **Any change to the reference list triggers a full renumber sweep** of every in body citation. Do it mechanically.
 6. **The enclosure title in the Encl line matches the actual document's title verbatim**, with no descriptive parenthetical.
-7. **A locator must belong to the document it is attached to.** A chapter number does not describe a study guide organised by topic. When two sources teach the same material, cite each in its own scheme.
+7. **A locator must belong to the document it is attached to.** A chapter number does not describe a study guide organized by topic. When two sources teach the same material, cite each in its own scheme.
 8. **Any fact that lives in two places gets a mechanical equality check, or one of the places goes.** A letter and its enclosure once shipped "44 and 45" against "45 and 46" because the same finding was typed twice.
 
 ## 5. The gates
@@ -106,7 +106,7 @@ On the first weekly report that used them, Gate 1 cut nineteen findings to ten (
 | Last Ref to Encl | 27.6 |
 | Encl to paragraph 1 | 27.6 |
 | Between paragraphs | 27.6 |
-| Last text line to signature | 55.2, at x = 306 (page centre) |
+| Last text line to signature | 55.2, at x = 306 (page center) |
 | Continuation page, top of page to Subj | 82.8 (the sixth line); body resumes on the second line below |
 
 `scripts/measure_pdf.py` checks every one of these and also that every gap on every page is a whole number of pitches.

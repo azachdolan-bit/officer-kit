@@ -75,7 +75,7 @@ Caption POSITION/DECISION PAPER; "(Code)" and "(Date)" at the right; Subj; then:
 > Prepared by: Grade and Name, Office Code, phone number / Approved by: Grade and Name, Office Code, phone number
 
 ## Appendix C, Format for Talking Paper (page C-1)
-Caption TALKING PAPER; "Code/Office" and "Date" at the right; then the labelled parts:
+Caption TALKING PAPER; "Code/Office" and "Date" at the right; then the labeled parts:
 > (U) FOR USE BY: List the name or title of person for whose use the paper is prepared.
 > (U) SUBJECT: Indicate briefly but in enough detail for filing and reference.
 > (U) BACKGROUND Indicate concisely what has gone before. Does it provide answers to such questions as is this an ongoing thing? Did something suddenly create this requirement?
@@ -92,7 +92,7 @@ Caption INFORMATION PAPER; "(Code)" and "(Date)" at the right; "Subject:"; then:
 
 ## MCO 5216.20B, chapter 13 paragraph 2.b(1)(c) (page 13-51): the Memorandum For, HQMC's form
 > (c) Memorandum For. This form of correspondence (does not have a "From" or "To" line) is the style of memorandum appropriate for signature by the Commandant. Type the signature line on the fourth line following the last line of text beginning from the center of the page (see Figure 13-12). (No complimentary close.)
-(HQMC procedure, quoted because it is the only rule on disk for a memorandum's signature placement: the fourth line from centre, as on a letter.)
+(HQMC procedure, quoted because it is the only rule on disk for a memorandum's signature placement: the fourth line from center, as on a letter.)
 
 ## SECNAV M-5216.5, chapter 10, Memorandums (pages 10-1 and 10-2)
 
@@ -280,7 +280,7 @@ A Marine writing a business letter is writing against the habits of the naval le
 - **The date is civilian format.** 11-2.1.c: "Write the date in month-day-year order. The month is written out in full, followed by the day in Arabic numerals, a comma, and the full year also in Arabic numerals, e.g., May 23, 2014." Not 23 May 14 and not 23 May 2014.
 - **There is no Ref line and no Encl line in the heading.** 11-2.7: "Refer to previous communications and enclosures in the body of the letter only, without calling them references or enclosures." Enclosures are listed after the signature under 11-2.10, and figure 11-2's own text repeats the rule.
 - **The complimentary close is "Sincerely,".** 11-2.8. A naval letter has none, and "Very respectfully" and "Respectfully" belong to a personal letter, not here. The manual gives one close and no alternative.
-- **The signature starts at the centre of the page on the fourth line below "Sincerely," not below the text.** 11-2.9.a. The name is in all capitals and the military grade, if any, is spelled out: "Commander, U.S. Navy" in figures 11-4 and 11-5, not an abbreviation.
+- **The signature starts at the center of the page on the fourth line below "Sincerely," not below the text.** 11-2.9.a. The name is in all capitals and the military grade, if any, is spelled out: "Commander, U.S. Navy" in figures 11-4 and 11-5, not an abbreviation.
 
 Two more that follow from the same list: main paragraphs are indented and are not numbered (11-2.6), and there is no From line at all, which is why 11-2.13 requires a letterhead on every outgoing copy.
 
@@ -306,7 +306,7 @@ Three observations, none of them a conflict:
 **Which governs, if a command ever needs to be told.** SECNAV M-5216.5 governs DON correspondence format; MCTP 3-30A says so itself in the paragraph quoted at the top of this file ("The primary reference publications for correspondence formats are Secretary of the Navy Manual-5216.5 [...] and Marine Corps Order 5216.20B"). MCTP 3-30A is doctrine for staff action and reproduces the manual's MFR. The question does not arise on any rule here, because the two do not disagree. The tool keeps building the MFR with the Appendix D signer block of name, billet, and grade, because the Marine Corps publication prints it that way for Marines and the manual permits it, and the Signer line stays required in the tool while remaining optional in both publications, which is the tool being stricter than either source and not a claim about what either requires.
 
 ## From the kit's correspondence standard
-The MFR is built on the naval letter grid (`naval-letter/references/standard.md`): Times New Roman 12, 1 inch margins, 13.8 pt pitch, the caption on the second line below the date, Subj on the second line below the caption, paragraphs single spaced within and double between, the signature name on the fourth line below the text from page centre with the billet and grade lines under it as Appendix D shows, no dashes.
+The MFR is built on the naval letter grid (`naval-letter/references/standard.md`): Times New Roman 12, 1 inch margins, 13.8 pt pitch, the caption on the second line below the date, Subj on the second line below the caption, paragraphs single spaced within and double between, the signature name on the fourth line below the text from page center with the billet and grade lines under it as Appendix D shows, no dashes.
 
 `build_letter.py` renders the MFR only. The From-To, plain-paper, letterhead, agreement and understanding memorandums and the business letter are written to `memo.md` in the parts chapters 10 and 11 set and are checked by `memo_check.py`; none of them is rendered on the grid or measured on the page, and the chapter quotes above are what a typist builds them from. That is a limit of the build scripts, not of the manual.
 

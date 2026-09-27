@@ -29,7 +29,7 @@ Offer three, and accept the answer without argument:
 
 | Depth | Records | Good for |
 |---|---|---|
-| **Light** | how you want drafts written, what Claude must never do | anyone who wants the behaviour without the biography |
+| **Light** | how you want drafts written, what Claude must never do | anyone who wants the behavior without the biography |
 | **Standard** | Light, plus rank and billet, weekly work, how your boss likes things | most users |
 | **Full** | Standard, plus the correspondence identity block (the exact lines that print on a letter you sign) | anyone who will draft naval letters with the kit |
 

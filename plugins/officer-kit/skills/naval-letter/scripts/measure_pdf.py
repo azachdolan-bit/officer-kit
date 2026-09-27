@@ -7,7 +7,7 @@ The standard counts LINES on a 13.8 pt pitch. This script reads word positions w
   1. every vertical gap between consecutive lines on a page is a whole number of pitches
   2. the named gaps match the standard (date to From 27.6, To to Subj 27.6, Subj to Ref 27.6,
      Ref to Encl 27.6, Encl to paragraph 1 27.6, last text line to signature 55.2)
-  3. the signature line starts at page centre (x about 306 pt)
+  3. the signature line starts at page center (x about 306 pt)
   4. on continuation pages the Subj line sits on the sixth line (about 82.8 pt from the top of
      the page) and the body resumes on the second line below it
 
@@ -22,7 +22,7 @@ import xml.etree.ElementTree as ET
 
 PITCH = 13.8
 TOL = 0.9          # points; LibreOffice and Word disagree by fractions of a point
-PAGE_CENTRE = 306.0
+PAGE_CENTER = 306.0
 
 
 def lines_for_page(page):
@@ -127,7 +127,7 @@ def main():
             else:
                 fails.append(f"p{pno}: continuation page does not begin with the Subj line")
 
-    # signature: last page, all caps with initials, at page centre, 55.2 below the last text line
+    # signature: last page, all caps with initials, at page center, 55.2 below the last text line
     body = [ln for ln in lines_for_page(pages[-1]) if not re.fullmatch(r"\d+", ln["text"].strip())]
     sig = next((ln for ln in reversed(body) if re.fullmatch(r"[A-Z][A-Z.\s]{3,}", ln["text"].strip()) and "." in ln["text"]), None)
     if sig is None:
@@ -137,7 +137,7 @@ def main():
         prev = body[i - 1]
         g = sig["y"] - prev["y"]
         (notes if near(g, 4 * PITCH) else fails).append(f"signature {g:.1f} below the last text line (target 55.2)")
-        (notes if near(sig["x"], PAGE_CENTRE, 4.0) else fails).append(f"signature starts at x={sig['x']:.1f} (target {PAGE_CENTRE:.0f}, page centre)")
+        (notes if near(sig["x"], PAGE_CENTER, 4.0) else fails).append(f"signature starts at x={sig['x']:.1f} (target {PAGE_CENTER:.0f}, page center)")
 
     print(f"MEASURE: {pdf}  pages: {len(pages)}")
     for n in notes:

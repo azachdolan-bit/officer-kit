@@ -116,3 +116,23 @@ Status: approved 0.12.0 (already in precision_check.py: three per kind and a cou
 Evidence: Three of the fixes a reasonable person would build for "think harder" are measurably harmful: self review with no external signal degrades accuracy across rounds, a rigid schema wrapped around the reasoning took one model from 86 to 23 percent on grade school math, and a mandated checklist across 101 hospitals and 200,000 procedures moved mortality not at all.
 Lesson: Never add a step that asks the model to review its own work with nothing external to check against. Verification is against an artifact: the source, the arithmetic, the checker, a blind agent with the standard in hand. Reason in prose, format second. Keep the structure around the thinking, not inside it.
 Status: approved 0.12.0 (already in think)
+
+## 2026-09-27  kit-standards  high  -> plugin
+Evidence: "you misspelled somethings in the menu like maneuver" and "Redo the flyer as well because you misspelled maneuver there as well". The sand table page, its flyer and the kit's own sand-table-order text carried British spellings (manoeuvre, organisation, centre, colour, labelled, metre).
+Lesson: American spelling in every product and in the kit's own text. Add a British spelling scan to standards_check.py (ise, isation, our, re and ll endings against a short list: manoeuvre, organisation, centre, colour, labelled, metre, analyse, defence, recognise, catalogue, cancelled) so a release fails the drill on any hit.
+Status: approved 0.20.0
+
+## 2026-09-27  sand-table-intake  medium  -> plugin
+Evidence: "will it auto fill in the guided section so I can seamlessly pick it up and continue through that guided portion?" The page had opened the Guide at Review with every step ticked; rev32 lands on the first open step. Step 7 of the workflow still says the page opens at Review.
+Lesson: Step 7 says the page switches to the file's sheet, builds the map, and opens the Guide on the first step the order left blank with the filled steps ticked. Every kit tool that hands off to another product names where the user lands and what they do first.
+Status: approved 0.20.0
+
+## 2026-09-27  study-guide  medium  -> plugin
+Evidence: "I got lost multiple places on the route, when it asked me to click done, when it asked me to click on the unit to see line of sight." A tutorial step that needed three actions kept one highlight on the first control.
+Lesson: In any interactive walkthrough or tutorial, a task with several actions spotlights each action in turn and advances on the user's own action; one highlight per action, never one per step. The source fidelity review asks it of every multi step task.
+Status: approved 0.20.0
+
+## 2026-09-27  visual-reviewer  low  -> plugin
+Evidence: "it looks super cluttered and just kind of like chill it out so that it doesn't look so cluttered". The flyer's hero screenshot carried the grid, labels and sectors; a calm view replaced it.
+Lesson: For a hero image on a flyer or slide, the reviewer asks what can be removed before what is missing: no grid, no labels, no overlays unless the image is about them.
+Status: approved 0.20.0
