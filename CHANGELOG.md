@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.19.0 (2026-09-27) Sand table intake
+
+New tool: **sand-table-intake**, the front half of the sand table loop. A base order the user received (docx, pptx or text; a PDF through capture-source) becomes the plan file the virtual sand table imports: `order_text.py` pulls the text with its paragraph numbers, the reader writes facts.json with a paragraph for every value, `plan_writer.py` writes `<name>.sandtable.json` (every step of the operation's track present, higher's fields filled, the planner's blank, nothing on the map) and a sourced list, and `plan_check.py --intake` fails a file that fills a planner decision, carries an unknown field, a bad grid, a select value the page does not offer, or a dash. `references/guide_fields.json` is the page's own step and field list, regenerated from the page's source; `references/field-map.md` says which paragraph feeds which field and which stay blank. The page (rev31) imports a file from another sheet by switching sheets first. Harness `evals/sand_table_intake_check.py`, 55 items, added to the release drill. sand-table-order (0.1.1): American spelling in its text and fixture; a line pointing at the intake tool.
+
+## 0.18.0 (2026-09-27) Sand table order
+
+- **New tool: `sand-table-order`,** for the export of the virtual sand table (a browser page a unit or school shares by link, where a planner builds METT-TC, the EMLCOA, the engagement area or objective, positions with sectors of fire, routes, fires and parts on 3D terrain). Attach the `.sandtable.json` plan file, the `.sandtable-brief.md`, or both, and the order is written to the user's own format from those files alone: every grid derived from the map in code, every position, sector, FPL, obstacle, route leg, target and part carried, text the planner typed and never applied used and marked, every warning the sand table raised quoted at the end, and every paragraph element the plan does not hold listed as NOT IN THE PLAN.
+- **`plan_reader.py`:** the export to facts.json and facts.md: fields by step, typed lines, objects with 8 digit grids from UTM, sectors and FPLs, routes with computed distance and grid azimuth per leg, parts and events, the brief's checks and magnetic legs.
+- **`order_check.py`:** the drafted order against the facts: a grid not in the plan fails (a typo or an invention), a placed object, route, part or field missing from the order fails unless listed as not in the plan, a warn check not carried fails, the five headings, the NOT IN THE PLAN list, no dashes.
+- Tested on a fictional export (`evals/sand-table-order/README.md`, 19 items): the reader lays out 109 fields, 37 objects, 3 routes and 2 parts; a good order passes; a bad one fails on each of five planted defects.
+- `release.sh` runs the new harness.
+
 ## 0.17.0 (2026-09-27) Topic brief
 
 - **New tool: `topic-brief`,** for a scoped talk or backgrounder (a history presentation, a PME brief, a class for the platoon). The topic is stated in one sentence before any research; the brief leads with it, gives general context one paragraph, groups incidents by what they illustrate, and ties every number to the topic with its source and scope; disagreements between sources become lines not to say, with the line that is true under all of them said instead; the script is timed to the format the user's own guide sets; the cue card is key words, with only exact quotations in full.
