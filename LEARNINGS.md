@@ -90,7 +90,7 @@ Status: approved 0.14.0 (quiz-builder built; read back verification of every slo
 ## 2026-09-04  topic-brief  high  -> plugin
 Evidence: First Iwo backgrounder rejected as "almost unreadable... not focused."
 Lesson: Lead with the topic, not the timeline. One orienting paragraph of context, then every section on the named topic, every number tied back in the same sentence.
-Status: pending
+Status: approved 0.17.0 (topic-brief built: brief_check.py enforces topic first, one context paragraph, numbers traced, lines not to say; evidence gate reads scope)
 
 ## 2026-09-04  order-analysis  medium  -> plugin
 Evidence: A false finding (FPFs "registered before the BPs exist") came from misreading parts based columns; a mils value was wrong by 200.

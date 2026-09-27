@@ -29,6 +29,7 @@ Say **"start the officer kit."** It sets up your working folder, then builds you
 | "triage my inbox" | Four buckets, drafted replies, never sends | Connectors |
 | "week ahead" | One screen brief, then make it recurring | Scheduled tasks |
 | "make a Kahoot" | Kahoot decks from your copy of the official template, every answer slot verified, host key for group sessions | Files in, files out |
+| "history presentation on" / "brief me on" | Topic first brief, every number traced and read for scope, lines not to say, a script timed to your format, a keyword cue card | Research and speaking |
 | "make this shareable" | A builder with zero content your peer runs on their own material, leak scanned against every source, instead of the product itself | Sharing the method |
 | "debrief" | End of chat sweep of every correction you made, sorted to where it belongs, written only on your yes, plus every file the chat produced | Lessons loop |
 | "build a skill" | Interview, then a working skill for your repeat task | Skills and plugins |
