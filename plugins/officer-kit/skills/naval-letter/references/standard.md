@@ -19,7 +19,7 @@ Every rule below exists because a draft that looked finished was wrong.
 | Encl | Number in parentheses: (1), (2). Second line below Ref. |
 | Paragraphs | 1. then a. then (1) then (a). Single spaced within, double spaced between. First line indented by level, runover returning to the left margin. |
 | Signature block | Fourth line below the last line of text (three blank lines), starting at the center of the page. A signature page carries at least two lines of text. |
-| Continuation pages | Subj line repeats starting on the sixth line; page number centerd 0.5 inch from the bottom, no punctuation. |
+| Continuation pages | Subj line repeats starting on the sixth line; page number centered 0.5 inch from the bottom, no punctuation. |
 | Enclosure marking | On the enclosure itself, "Enclosure (1)" lower right on every page. The letter carries no such marking. |
 | Date | Day, abbreviated month, two digit year: 4 Sep 26. |
 

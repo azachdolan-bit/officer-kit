@@ -40,7 +40,7 @@ Layout rules encoded here (see references/standard.md):
 - From/To/Via/Subj/Ref/Encl labels at the margin, text at a 0.5 inch tab.
 - Paragraphs 1. / a. / (1) / (a), first line indented by level, runover to the margin.
 - Signature on the fourth line below the last line of text, starting at page center.
-- Continuation pages repeat the Subj line on the sixth line; page number centerd in the foot.
+- Continuation pages repeat the Subj line on the sixth line; page number centered in the foot.
 """
 import json, re, sys
 from datetime import datetime
