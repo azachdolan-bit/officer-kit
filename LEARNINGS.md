@@ -95,7 +95,7 @@ Status: pending
 ## 2026-09-04  order-analysis  medium  -> plugin
 Evidence: A false finding (FPFs "registered before the BPs exist") came from misreading parts based columns; a mils value was wrong by 200.
 Lesson: Decode BW / EW / CE / CS before judging sequencing. Verify every direction and distance in code. Check the "not a defect" list before raising a finding.
-Status: pending
+Status: approved 0.15.0 (order-analysis built: legend before sequence, grid_tool for every number, not-a-defect list)
 
 ## 2026-09-04  share-method  high  -> plugin
 Evidence: The academic integrity policy forbids sharing a study guide with anyone who did not help build it; a method file with zero content is shareable.

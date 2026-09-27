@@ -69,7 +69,7 @@ The task with no training and a clock. Specified by `OFFICER ANALYSIS.md` Path C
 | Tool | Say | Does | Governed by | Status |
 |---|---|---|---|---|
 | `order-critique` | "critique my order", "is my OSMEAC complete" | Completeness and clarity review of a five paragraph order | MCTP 3-10A; the school tactical planning handouts | Available |
-| `order-analysis` | "analyze this order", "METT-TC", "find the contradictions" | Hasty METT-TC worksheet from an order; internal contradiction audit; map and grid checks with a stated error budget; the list of things that look like defects but are not | MCDP 1-0 App C; MCTP 3-10A; the school handouts | Planned |
+| `order-analysis` | "analyze this order", "METT-TC", "find the contradictions", "check the grids" | Resourcing first; METT-T worksheet with every fact quoted; contradictions from both ends; grids, distances, and bearings in code with the error budget; not-a-defect list; RFIs to higher | MCRP 3-10A.3 App J; MCDP 1-0; the user's school format | Available (0.1.0) |
 | `tactical-planning` | "walk me through the planning process", "task statement" | Playbook driven planning from receipt of order to complete plan; task statement builder from the doctrinal task list; TDG session mode | MCDP 1-0; the school tactical planning handouts | Planned |
 | `call-for-fire` | "CFF drill", "check this call for fire" | Drills, scenario generation with geometry that closes, mil relation and bracketing checks | MCRP 3-10F.2; the school handout where issued | Planned |
 

@@ -24,6 +24,7 @@ Say **"start the officer kit."** It sets up your working folder, then builds you
 | "capture this lesson" / "transcribe these photos" | Complete capture saved the same session, completeness check, read back gate for photos | Sources first |
 | "triage this folder" | Inventory, structure, move, rollup | Cowork and linked folders |
 | "make a study guide" / "quiz me" | Lesson packet to guide, quiz, flashcards | Files in, files out |
+| "analyze this order" | Resourcing, METT-T, contradictions quoted from both ends, grids computed with their error budget, RFIs for higher | Planning |
 | "critique my order" | Five paragraph order review | Structured feedback |
 | "triage my inbox" | Four buckets, drafted replies, never sends | Connectors |
 | "week ahead" | One screen brief, then make it recurring | Scheduled tasks |
