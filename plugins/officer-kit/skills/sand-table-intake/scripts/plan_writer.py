@@ -15,11 +15,23 @@ facts.json (Claude writes it after reading the order; every value carries where 
       {"step": "mission", "key": "mission", "value": "NLT 1800 ...", "src": "para 3.c.(1)"},
       {"step": "enemy", "key": "size", "value": "squad", "src": "para 1.a.(1)"},
       ...
+    ],
+    "objects": [                                   everything higher placed that the guide has no slot for: it goes on the map, labeled
+      {"label": "Kilo Co", "symbol": "inf_company", "side": "friendly", "grids": "831123", "remarks": "blocks west", "src": "para 1.b.(2)(a)"},
+      {"label": "Co CCP", "symbol": "ccp", "side": "friendly", "grids": "852133", "src": "para 4"},
+      {"label": "PL RED", "symbol": "pl", "kind": "line", "grids": "84001150 85001150", "src": "para 3.d.(7)"},
+      ...
     ]
   }
 
-What comes out: a plan file the sand table imports (Plan, Import file). It carries guide.values only; the page builds every
-symbol, line and route from the values when it imports the file. Every field of every step on the operation's track is
+Object symbols the page knows. Points: inf_team, inf_squad, inf_section, inf_platoon, inf_company, cp, op, mg_light, mg_medium,
+mg_heavy, mortar_60, mortar_81, mortar_120, checkpoint, passage, linkup, pd, rp, contact, coord, target, trp, orp, ccp, point
+(a labeled point for anything else: a hill, a town, a named place). Lines (2 or more grids): pl, ld, boundary, rfl, cfl, axis,
+doa, line, route. Areas (3 or more grids): obj, aa, asltpsn, bp, lz, ea, area, sbf. side: friendly, enemy or neutral.
+
+What comes out: a plan file the sand table imports (Plan, Import file). It carries guide.values, and an object for each
+control measure or position higher gave that the guide has no field for; the page builds the rest from the values when it
+imports the file. Every field of every step on the operation's track is
 present, "" where the order gave nothing, so the guide shows the planner exactly what is left. sourced.md lists every
 filled field with its source and every blank, for the planner to correct before importing.
 
@@ -27,7 +39,7 @@ Rules the writer enforces:
   - a field key must exist on the page's guide (references/guide_fields.json); an unknown key is an error, not a guess;
   - a grid field (place, points, draw, area, unit) takes 4, 6 or 8 digit grids only; anything else is refused;
   - a select field takes one of its options or "";
-  - objects, routes and phases are always empty: the page builds them;
+  - routes and phases are always empty and objects hold only what facts.objects lists, each with its src; the page builds the rest;
   - no value is invented: the writer copies, it never fills.
 """
 import json
@@ -41,6 +53,50 @@ from datetime import datetime, timezone
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIELDS = json.load(open(os.path.join(HERE, "..", "references", "guide_fields.json"), encoding="utf-8"))
 GRID_TYPES = {"place", "points", "draw", "area", "unit", "target"}
+POINT_SYMBOLS = {"inf_team", "inf_squad", "inf_section", "inf_platoon", "inf_company", "cp", "op", "mg_light", "mg_medium", "mg_heavy", "mortar_60", "mortar_81", "mortar_120", "checkpoint", "passage", "linkup", "pd", "rp", "contact", "coord", "target", "trp", "orp", "ccp", "point"}
+LINE_SYMBOLS = {"pl", "ld", "boundary", "rfl", "cfl", "axis", "doa", "line", "route"}
+AREA_SYMBOLS = {"obj", "aa", "asltpsn", "bp", "lz", "ea", "area", "sbf"}
+SIDES = {"friendly", "enemy", "neutral"}
+
+
+def grid_utm(tok):
+    """A 4, 6 or 8 digit grid inside the sheet's 100 km square to UTM meters, at the center of its square (the page does the same)."""
+    h = len(tok) // 2
+    e, n = int(tok[:h]), int(tok[h:])
+    res = 10 ** (5 - h)   # 1000, 100 or 10 m
+    return [200000 + e * res + res / 2, 4200000 + n * res + res / 2]
+
+
+def build_objects(items, errs):
+    out = []
+    for i, it in enumerate(items or []):
+        where = "objects[%d] %s" % (i, it.get("label", ""))
+        sym = it.get("symbol") or "point"
+        kind = it.get("kind") or ("line" if sym in LINE_SYMBOLS else "area" if sym in AREA_SYMBOLS else "point")
+        side = it.get("side") or ("neutral" if sym == "point" else "friendly")
+        if not it.get("label"):
+            errs.append(where + ": every object needs a label (the order's own name for it)")
+        if not it.get("src"):
+            errs.append(where + ": every object needs its src (the paragraph or the sheet it came from)")
+        if sym not in POINT_SYMBOLS | LINE_SYMBOLS | AREA_SYMBOLS:
+            errs.append(where + ": unknown symbol '%s'" % sym)
+            continue
+        if side not in SIDES:
+            errs.append(where + ": side must be friendly, enemy or neutral")
+        toks = [t for t in re.split(r"[\s,;]+", str(it.get("grids", "")).strip()) if t]
+        if not toks or not all(re.fullmatch(r"\d{4}|\d{6}|\d{8}", t) for t in toks):
+            errs.append(where + ": grids must be 4, 6 or 8 digits each")
+            continue
+        need = 1 if kind == "point" else 2 if kind == "line" else 3
+        if (kind == "point" and len(toks) != 1) or len(toks) < need:
+            errs.append(where + ": a %s needs %s grid%s" % (kind, "exactly one" if kind == "point" else "at least %d" % need, "" if kind == "point" else "s"))
+            continue
+        remarks = (it.get("remarks") or "").strip()
+        remarks = (remarks + ("; " if remarks else "") + "from the base order, " + it["src"]) if it.get("src") else remarks
+        out.append({"id": "src_%02d" % (i + 1), "type": "unit" if kind == "point" else sym, "kind": kind, "side": side, "symbol": sym, "label": it["label"],
+                    "utm": [grid_utm(t) for t in toks], "props": {"task": it.get("task", ""), "purpose": it.get("purpose", ""), "remarks": remarks},
+                    "layer": "enemy" if side == "enemy" else ("cm" if kind != "point" else "friendly"), "locked": False, "hidden": False})
+    return out
 SHEETS = {"ta16": "TH", "stex": "MG"}
 TRACK = {"platoon defense": "defense", "platoon offense": "offense", "squad offense": "offense"}
 
@@ -157,13 +213,14 @@ def main(argv):
             continue
         values[step][key] = val
         filled.append((s, f, val, src))
+    objects = build_objects(facts.get("objects"), errs)
     if errs:
         print("\n".join("FAIL " + e for e in errs))
         return 1
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     pid = "plan_" + "".join(random.choice(string.ascii_lowercase + string.digits) for _ in range(10))
     plan = {"schema": 1, "id": pid, "name": facts.get("name", "") or "Plan from the base order", "owner": None, "created": now, "updated": now,
-            "saveId": None, "sheet": sheet, "aoi": None, "objects": [], "routes": [], "custom": [], "phases": [], "notes": notes,
+            "saveId": None, "sheet": sheet, "aoi": None, "objects": objects, "routes": [], "custom": [], "phases": [], "notes": notes,
             "guide": {"values": values, "source": {"kind": "officer-kit sand-table-intake", "order": facts.get("order", ""), "written": now}}}
     out = out or (re.sub(r"[^\w\- ]+", "", plan["name"]).strip().replace(" ", "_") or "plan") + ".sandtable.json"
     json.dump(plan, open(out, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
@@ -179,6 +236,10 @@ def main(argv):
             L.append("### " + s["title"])
         v = val if isinstance(val, str) else ", ".join("%s %s" % (k, x) for k, x in val.items() if x)
         L.append("- %s (%s): %s  [%s]" % (f["label"] or f["k"], f["k"], v.replace("\n", "; "), src))
+    if objects:
+        L += ["", "## Placed on the map from the order (%d)" % len(objects), ""]
+        for o, it in zip(objects, facts.get("objects") or []):
+            L.append("- %s (%s, %s): %s  [%s]" % (o["label"], o["symbol"], o["side"], it.get("grids"), it.get("src", "")))
     L += ["", "## Left for the planner (blank in the file)", ""]
     for s in steps:
         blanks = [f["label"] or f["k"] for f in s["fields"] if (s["id"], f["k"]) not in {(x[0]["id"], x[1]["k"]) for x in filled} and f["k"] not in ("optype", "name", "notes")]
@@ -188,7 +249,7 @@ def main(argv):
     L.append("Nothing in this file was invented: a value is in it only with the paragraph it came from, and a field the order did not fill is empty.")
     sourced = sourced or re.sub(r"\.sandtable\.json$", "", out) + ".sourced.md"
     open(sourced, "w", encoding="utf-8").write("\n".join(L) + "\n")
-    print("wrote %s: %s, sheet %s, %d fields filled from the order, %d steps on the track" % (out, optype, sheet, len(filled), len(steps)))
+    print("wrote %s: %s, sheet %s, %d fields filled from the order, %d objects placed, %d steps on the track" % (out, optype, sheet, len(filled), len(objects), len(steps)))
     print("wrote", sourced)
     return 0
 

@@ -4,39 +4,255 @@
  "optype": "platoon defense",
  "order": "Fixture base order (fictional)",
  "fields": [
-  {"step": "mission", "key": "mission", "value": "2nd Platoon (ME). NLT 1900, block south IVO Hill 310 IOT deny the enemy freedom of movement into Verlan.", "src": "para 3.c.(1)"},
-  {"step": "mission", "key": "higher", "value": "2/9: NLT 1900, protects Verlan IOT allow relief operations to continue.\nBravo Co: NLT 1900, blocks south of Verlan IOT deny the enemy freedom of movement into the town.\nIntent: deny the enemy the Gap; platoon battle positions with interlocking fires and FPFs; enemy destroyed forward of the positions, the Gap held.", "src": "para 1.b.(1), 2, 3.a"},
-  {"step": "mission", "key": "specified", "value": "Block south IVO Hill 310 NLT 1900 (para 3.c.(1)).\nBack brief 0900; rehearsals 1000; leaders recon 1400; fire plan sketch due 1700 (para 3.d.(1)).\nDevelop engagement criteria (para 3.d.(2)), TCMs (para 3.d.(3)), CASEVAC (para 4) and the signal plan (para 5).", "src": "para 3.c.(1), 3.d, 4, 5"},
-  {"step": "enemy", "key": "size", "value": "squad", "src": "para 1.a.(1)"},
-  {"step": "enemy", "key": "lkl", "value": "848116", "src": "para 1.a.(1)"},
-  {"step": "enemy", "key": "activity", "value": "Staging for an attack to retake Verlan; harbor site seen at 2100", "src": "para 1.a.(1)"},
-  {"step": "enemy", "key": "unit", "value": "Northern Front squad sized elements", "src": "para 1.a.(1)"},
-  {"step": "enemy", "key": "time", "value": "2100", "src": "para 1.a.(1)"},
-  {"step": "enemy", "key": "equipment", "value": "Rifles, one medium machine gun per squad, 82mm mortars on call", "src": "para 1.a.(1)"},
-  {"step": "enemy", "key": "capable", "value": "Squad sized deliberate attack with mortars.\nWithdraw south after 50 percent casualties.", "src": "para 1.a.(2)"},
-  {"step": "enemy", "key": "limited", "value": "No reinforcement inside two hours.\nThe trail is the only route south.", "src": "para 1.a.(2)"},
-  {"step": "enemy", "key": "hemlcoa", "value": "Seizes Hill 310 IOT open the Gap for a company attack on Verlan; patrols tonight to find gaps, then attacks the weakest position under mortar fire.", "src": "para 1.a.(3)"},
-  {"step": "terrain", "key": "obs", "value": "Visibility 400 m from the low ground, 2 km from the hill tops; Hills 310, 295, 270.", "src": "Orientation"},
-  {"step": "terrain", "key": "cover", "value": "Scrub and grass; cover only in the draws and on the slopes.", "src": "Orientation"},
-  {"step": "terrain", "key": "obst", "value": "Fenwick Trail north to south, foot only. Route Blue west to east, wheeled.", "src": "Orientation"},
-  {"step": "troops", "key": "organic", "value": "2nd Platoon, Bravo Company, 2/9 (main effort)", "src": "General Situation, para 3.c.(1)"},
-  {"step": "troops", "key": "attach", "value": "One medium machine gun squad attached", "src": "para 1.c"},
-  {"step": "troops", "key": "m60", "value": "852131", "src": "para 1.b.(3)"},
-  {"step": "troops", "key": "pof", "value": "Company 60s in GS; POF 2nd, 1st, 3rd; three targets per platoon", "src": "para 1.b.(3), 3.b"},
-  {"step": "troops", "key": "adjln", "value": "1st Platoon (SE1)", "src": "para 1.b.(2)"},
-  {"step": "troops", "key": "adjl", "value": "845128", "src": "para 1.b.(2), west of you"},
-  {"step": "troops", "key": "adjrn", "value": "3rd Platoon (SE2)", "src": "para 1.b.(2)"},
-  {"step": "troops", "key": "adjr", "value": "866123", "src": "para 1.b.(2), east of you"},
-  {"step": "time", "key": "now", "value": "0800", "src": "para 3.d.(1)"},
-  {"step": "time", "key": "exec", "value": "1900", "src": "para 2"},
-  {"step": "time", "key": "timeline", "value": "0800 company order\n0900 back briefs\n1000 rehearsals\n1200 depart assembly area\n1400 leaders recon\n1700 fire plan sketches due\nNLT 1900 defend", "src": "para 3.d.(1)"},
-  {"step": "time", "key": "log", "value": "4 green smokes, 2 white star clusters, 5 radios, 800 rounds per machine gun", "src": "para 4"},
-  {"step": "time", "key": "civil", "value": "Relief operations continue in Verlan, 4 km north", "src": "General Situation, para 1.b.(1)"},
-  {"step": "fsp", "key": "efst", "value": "EFST 1: disrupt the enemy attack IOT let the platoons destroy him in their engagement areas; method 60s, three targets per platoon, numbers from the FST; effects, the enemy cannot mass above a squad.", "src": "para 3.b"},
-  {"step": "fsp", "key": "fpfwpn", "value": "60mm", "src": "para 1.b.(3)"},
-  {"step": "coord", "key": "timeline", "value": "0800 company order\n0900 back briefs\n1000 rehearsals\n1200 depart assembly area\n1400 leaders recon\n1700 fire plan sketches due\nNLT 1900 defend", "src": "para 3.d.(1)"},
-  {"step": "coord", "key": "other", "value": "Company assembly area: Verlan 851 135. Company CCP 852 133. Company CP with the 60s at 852 131.", "src": "para 3.d.(3), 4, 5"},
-  {"step": "admin", "key": "resupply", "value": "800 rounds per machine gun; 5 radios", "src": "para 4"},
-  {"step": "admin", "key": "casevac", "value": "Company CCP at 852 133; platoon plan to be developed", "src": "para 4"}
+  {
+   "step": "mission",
+   "key": "mission",
+   "value": "2nd Platoon (ME). NLT 1900, block south IVO Hill 310 IOT deny the enemy freedom of movement into Verlan.",
+   "src": "para 3.c.(1)"
+  },
+  {
+   "step": "mission",
+   "key": "higher",
+   "value": "2/9: NLT 1900, protects Verlan IOT allow relief operations to continue.\nBravo Co: NLT 1900, blocks south of Verlan IOT deny the enemy freedom of movement into the town.\nIntent: deny the enemy the Gap; platoon battle positions with interlocking fires and FPFs; enemy destroyed forward of the positions, the Gap held.",
+   "src": "para 1.b.(1), 2, 3.a"
+  },
+  {
+   "step": "mission",
+   "key": "specified",
+   "value": "Block south IVO Hill 310 NLT 1900 (para 3.c.(1)).\nBack brief 0900; rehearsals 1000; leaders recon 1400; fire plan sketch due 1700 (para 3.d.(1)).\nDevelop engagement criteria (para 3.d.(2)), TCMs (para 3.d.(3)), CASEVAC (para 4) and the signal plan (para 5).",
+   "src": "para 3.c.(1), 3.d, 4, 5"
+  },
+  {
+   "step": "enemy",
+   "key": "size",
+   "value": "squad",
+   "src": "para 1.a.(1)"
+  },
+  {
+   "step": "enemy",
+   "key": "lkl",
+   "value": "848116",
+   "src": "para 1.a.(1)"
+  },
+  {
+   "step": "enemy",
+   "key": "activity",
+   "value": "Staging for an attack to retake Verlan; harbor site seen at 2100",
+   "src": "para 1.a.(1)"
+  },
+  {
+   "step": "enemy",
+   "key": "unit",
+   "value": "Northern Front squad sized elements",
+   "src": "para 1.a.(1)"
+  },
+  {
+   "step": "enemy",
+   "key": "time",
+   "value": "2100",
+   "src": "para 1.a.(1)"
+  },
+  {
+   "step": "enemy",
+   "key": "equipment",
+   "value": "Rifles, one medium machine gun per squad, 82mm mortars on call",
+   "src": "para 1.a.(1)"
+  },
+  {
+   "step": "enemy",
+   "key": "capable",
+   "value": "Squad sized deliberate attack with mortars.\nWithdraw south after 50 percent casualties.",
+   "src": "para 1.a.(2)"
+  },
+  {
+   "step": "enemy",
+   "key": "limited",
+   "value": "No reinforcement inside two hours.\nThe trail is the only route south.",
+   "src": "para 1.a.(2)"
+  },
+  {
+   "step": "enemy",
+   "key": "hemlcoa",
+   "value": "Seizes Hill 310 IOT open the Gap for a company attack on Verlan; patrols tonight to find gaps, then attacks the weakest position under mortar fire.",
+   "src": "para 1.a.(3)"
+  },
+  {
+   "step": "terrain",
+   "key": "obs",
+   "value": "Visibility 400 m from the low ground, 2 km from the hill tops; Hills 310, 295, 270.",
+   "src": "Orientation"
+  },
+  {
+   "step": "terrain",
+   "key": "cover",
+   "value": "Scrub and grass; cover only in the draws and on the slopes.",
+   "src": "Orientation"
+  },
+  {
+   "step": "terrain",
+   "key": "obst",
+   "value": "Fenwick Trail north to south, foot only. Route Blue west to east, wheeled.",
+   "src": "Orientation"
+  },
+  {
+   "step": "troops",
+   "key": "organic",
+   "value": "2nd Platoon, Bravo Company, 2/9 (main effort)",
+   "src": "General Situation, para 3.c.(1)"
+  },
+  {
+   "step": "troops",
+   "key": "attach",
+   "value": "One medium machine gun squad attached",
+   "src": "para 1.c"
+  },
+  {
+   "step": "troops",
+   "key": "m60",
+   "value": "852131",
+   "src": "para 1.b.(3)"
+  },
+  {
+   "step": "troops",
+   "key": "pof",
+   "value": "Company 60s in GS; POF 2nd, 1st, 3rd; three targets per platoon",
+   "src": "para 1.b.(3), 3.b"
+  },
+  {
+   "step": "troops",
+   "key": "adjln",
+   "value": "1st Platoon (SE1)",
+   "src": "para 1.b.(2)"
+  },
+  {
+   "step": "troops",
+   "key": "adjl",
+   "value": "845128",
+   "src": "para 1.b.(2), west of you"
+  },
+  {
+   "step": "troops",
+   "key": "adjrn",
+   "value": "3rd Platoon (SE2)",
+   "src": "para 1.b.(2)"
+  },
+  {
+   "step": "troops",
+   "key": "adjr",
+   "value": "866123",
+   "src": "para 1.b.(2), east of you"
+  },
+  {
+   "step": "time",
+   "key": "now",
+   "value": "0800",
+   "src": "para 3.d.(1)"
+  },
+  {
+   "step": "time",
+   "key": "exec",
+   "value": "1900",
+   "src": "para 2"
+  },
+  {
+   "step": "time",
+   "key": "timeline",
+   "value": "0800 company order\n0900 back briefs\n1000 rehearsals\n1200 depart assembly area\n1400 leaders recon\n1700 fire plan sketches due\nNLT 1900 defend",
+   "src": "para 3.d.(1)"
+  },
+  {
+   "step": "time",
+   "key": "log",
+   "value": "4 green smokes, 2 white star clusters, 5 radios, 800 rounds per machine gun",
+   "src": "para 4"
+  },
+  {
+   "step": "time",
+   "key": "civil",
+   "value": "Relief operations continue in Verlan, 4 km north",
+   "src": "General Situation, para 1.b.(1)"
+  },
+  {
+   "step": "fsp",
+   "key": "efst",
+   "value": "EFST 1: disrupt the enemy attack IOT let the platoons destroy him in their engagement areas; method 60s, three targets per platoon, numbers from the FST; effects, the enemy cannot mass above a squad.",
+   "src": "para 3.b"
+  },
+  {
+   "step": "fsp",
+   "key": "fpfwpn",
+   "value": "60mm",
+   "src": "para 1.b.(3)"
+  },
+  {
+   "step": "coord",
+   "key": "timeline",
+   "value": "0800 company order\n0900 back briefs\n1000 rehearsals\n1200 depart assembly area\n1400 leaders recon\n1700 fire plan sketches due\nNLT 1900 defend",
+   "src": "para 3.d.(1)"
+  },
+  {
+   "step": "coord",
+   "key": "other",
+   "value": "Company assembly area: Verlan 851 135. Company CCP 852 133. Company CP with the 60s at 852 131.",
+   "src": "para 3.d.(3), 4, 5"
+  },
+  {
+   "step": "admin",
+   "key": "resupply",
+   "value": "800 rounds per machine gun; 5 radios",
+   "src": "para 4"
+  },
+  {
+   "step": "admin",
+   "key": "casevac",
+   "value": "Company CCP at 852 133; platoon plan to be developed",
+   "src": "para 4"
+  }
+ ],
+ "objects": [
+  {
+   "label": "1st Platoon (SE1)",
+   "symbol": "inf_platoon",
+   "side": "friendly",
+   "grids": "845128",
+   "task": "block south",
+   "src": "para 1.b.(2)"
+  },
+  {
+   "label": "3rd Platoon (SE2)",
+   "symbol": "inf_platoon",
+   "side": "friendly",
+   "grids": "866123",
+   "task": "block south",
+   "src": "para 1.b.(2)"
+  },
+  {
+   "label": "Co AA (Verlan)",
+   "symbol": "point",
+   "side": "friendly",
+   "grids": "851135",
+   "src": "para 3.d.(3)"
+  },
+  {
+   "label": "Co CCP",
+   "symbol": "ccp",
+   "side": "friendly",
+   "grids": "852133",
+   "src": "para 4"
+  },
+  {
+   "label": "Co CP",
+   "symbol": "cp",
+   "side": "friendly",
+   "grids": "852131",
+   "src": "para 5"
+  },
+  {
+   "label": "EN harbor site (2100)",
+   "symbol": "inf_squad",
+   "side": "enemy",
+   "grids": "848116",
+   "src": "para 1.a.(1)"
+  }
  ]
 }
