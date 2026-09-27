@@ -1,0 +1,92 @@
+{
+ "order_file": "order.txt",
+ "legend": [],
+ "resourcing": {
+  "attachments": {
+   "quote": "Attachments and Detachments. None.",
+   "loc": "1.c"
+  },
+  "logistics": {
+   "quote": "Two canteens and 180 rounds per Marine.",
+   "loc": "4"
+  }
+ },
+ "facts": [
+  {
+   "factor": "Mission",
+   "text": "Seize Obj A NLT 0600 to deny observation of the road",
+   "quote": "NLT 0600, 2d Platoon seizes Obj A (QS 418 595) IOT deny the enemy observation of the valley road.",
+   "loc": "2"
+  },
+  {
+   "factor": "Enemy",
+   "text": "Reinforced squad in two teams near Hill 210",
+   "quote": "Enemy squad (reinforced) in two teams IVO Hill 210, QS 412 588.",
+   "loc": "1.a"
+  },
+  {
+   "factor": "Enemy",
+   "text": "withdraws",
+   "quote": "withdraws northwest",
+   "loc": ""
+  }
+ ],
+ "findings": [
+  {
+   "n": 1,
+   "type": "contradiction",
+   "claim": "Paragraph 1.c attaches nothing, but paragraph 3.c(4) tasks an attached machine gun section.",
+   "a": {
+    "quote": "Attachments and Detachments. None.",
+    "loc": "1.c"
+   },
+   "b": {
+    "quote": "The machine gun section is attached to 2d Platoon.",
+    "loc": "3.c(4)"
+   },
+   "consequence": "The platoon cannot tell whether to plan the SBF with machine guns.",
+   "gate0": "SURVIVES AS WRITTEN",
+   "gate1": "SUBSTANTIVE"
+  },
+  {
+   "n": 2,
+   "type": "geometry",
+   "claim": "Paragraph 3.d puts SBF 1 300 meters from Obj A; the grids put it about 300 m away.",
+   "a": {
+    "quote": "SBF 1 is 300 meters from Obj A.",
+    "loc": "3.d"
+   },
+   "computed": [
+    {
+     "from": "QS 4150 5930",
+     "to": "QS 418 595",
+     "distance_m": 250,
+     "stated_distance_m": 300
+    }
+   ],
+   "consequence": "none if within budget",
+   "gate0": "DEMOTE",
+   "gate1": "THIN"
+  },
+  {
+   "n": 3,
+   "type": "sequence",
+   "claim": "Target AB 2001 is registered before the assault position is occupied.",
+   "a": {
+    "quote": "CE: Target AB 2001 registered.",
+    "loc": "3.b Part 1"
+   },
+   "directions": [
+    {
+     "word": "NW",
+     "mils": 5400
+    }
+   ],
+   "consequence": "fires early",
+   "gate0": "SURVIVES AS WRITTEN"
+  }
+ ],
+ "rfis": [
+  "Is the machine gun section attached to 2d Platoon, and from what time?"
+ ]
+}

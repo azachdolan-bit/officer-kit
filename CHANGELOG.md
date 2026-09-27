@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.15.0 (2026-09-27) Order analysis
+
+- **New tool: `order-analysis`,** for an order the user received (`order-critique` stays for one they wrote). Resourcing first, because paragraph 1.C and paragraph 4 bound the plan; the order's own column terms decoded before any sequence is judged, or held as an RFI; a METT-T worksheet (METT-TC where the user's school uses it) with every fact tied to its paragraph and quoted; candidates in named passes (the same thing said two ways, tasks against end states, contingency plans against the mission, geometry, sequence, omissions); a not-a-defect list from real reviews; Gate 0 and Gate 1 recorded in every finding; RFIs to higher rather than a rewritten order.
+- **`grid_tool.py`:** every grid in the order with its paragraph, a named point given two grids flagged with the distance between them, target numbers that read like grids set aside, distance and bearing with the worst case error budget of the grids' own precision, direction words in mils (a circle of 6400, per MCTP 3-10E).
+- **`map_calibrate.py`:** fits a map scan from control points and flags one whose axes differ by more than 2 percent, because a real exercise map measured 6 percent out.
+- **`analysis_check.py`:** every quote verbatim in the order, every number recomputed, gaps inside the error budget refused as findings, direction words checked, the legend required and not taken from the kit, gate verdicts required.
+- Order format from MCRP 3-10A.3 Appendix J; the factor set from MCDP 1-0. Blind test against a hand reviewed school order: 3 of 4 verified contradictions, all 3 runners up, one contradiction the hand review missed, no false findings (`evals/order-analysis/README.md`).
+
 ## 0.14.0 (2026-09-24) Quiz builder
 
 - **New tool: `quiz-builder`.** Kahoot decks built by filling the user's own copy of Kahoot's official import template (the tool stops if there is none), with a host answer and page key for group sessions. The builder places answers, checks the rules, writes each deck, then reads every file back to prove the marked slot holds the intended answer, every answer cell is filled, and every time is one the template allows. Nothing is written when a rule fails.

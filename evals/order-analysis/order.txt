@@ -1,0 +1,31 @@
+FICTIONAL TRAINING ORDER FOR THE ORDER-ANALYSIS HARNESS. NOT FROM ANY REAL OR SCHOOL ORDER.
+2d Platoon, Company K, Operation EXAMPLE CANYON
+
+1. Situation.
+a. Enemy. Enemy squad (reinforced) in two teams IVO Hill 210, QS 412 588. Most likely course of action: withdraws northwest along the creek on contact.
+b. Friendly. Company K attacks NLT 0600 to seize Obj A, QS 418 595. Adjacent: 1st Platoon east, 3d Platoon west.
+c. Attachments and Detachments. None.
+
+2. Mission. NLT 0600, 2d Platoon seizes Obj A (QS 418 595) IOT deny the enemy observation of the valley road.
+
+3. Execution.
+a. Commander's Intent. Purpose: deny observation of the road. End state: Obj A seized, enemy withdrawn northwest.
+b. Concept of Operations. The platoon attacks in two parts.
+Part 1. BW: Platoon crosses the LD at QS 410 580. EW: Platoon occupies the assault position. CE: Target AB 2001 registered. CS: Platoon set in the assault position.
+Part 2. BW: Assault begins. EW: Obj A seized. CE: Shift fires from AB 2001. CS: Consolidation complete.
+c. Tasks.
+(1) 1st Squad. Seize Obj A, the western half, IOT deny observation of the road.
+(2) 2d Squad. Seize Obj A, the eastern half, IOT deny observation of the road.
+(3) 3d Squad. Support by fire from SBF 1, QS 4150 5930, IOT suppress the enemy on Obj A.
+(4) Weapons attached. The machine gun section supports by fire from SBF 1.
+d. Coordinating Instructions. Assault position approximately QS 416 591. SBF 1 is 300 meters from Obj A. Direction of attack northeast.
+
+4. Administration and Logistics. Two canteens and 180 rounds per Marine.
+
+5. Command and Signal. Platoon commander with 1st Squad.
+
+Control measures table.
+Assault position: QS 4165 5905
+Obj A: QS 418 595
+SBF 1: QS 4150 5930
+Target AB 2001: QS 4180 5950
