@@ -83,7 +83,7 @@ The task with no training and a clock. Specified by `OFFICER ANALYSIS.md` Path C
 | `walkthrough` | "build an interactive walkthrough" | Now a format of `study-guide` (0.13.0) | | Merged |
 | `drill-builder` | "make a drill for this report format" | Procedural drills and shareable zero content builders | none | Planned |
 | `print-card` | "make a 5x8 card", "laminate" | Duplex cards at 3x5, 4x6, 5x8, letter | none | Planned |
-| `topic-brief` | "brief on...", "presentation card" | Topic scoped brief with numbers hygiene and a cue card | none | Planned |
+| `topic-brief` | "history presentation on", "brief me on", "five minute class on", "make me a cue card" | Brief that leads with the topic (context one paragraph, incidents grouped by what they illustrate), every number traced and read for scope, lines not to say, a script timed to the user's format, a keyword cue card | MCTP 3-30A (briefings); the user's program guide; the doctrine the assignment names | Available (0.1.0) |
 
 ## Verify
 
