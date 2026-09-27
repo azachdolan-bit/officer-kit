@@ -1,0 +1,1592 @@
+{
+ "schema": 1,
+ "id": "plan_wh118axah0",
+ "name": "Fixture defense (fictional)",
+ "owner": "u_fixture",
+ "created": "2026-09-27T14:27:18.467Z",
+ "updated": "2026-09-27T14:27:18.467Z",
+ "saveId": null,
+ "sheet": "ta16",
+ "aoi": {
+  "e0": 286000,
+  "n0": 4277000,
+  "e1": 288000,
+  "n1": 4278000
+ },
+ "objects": [
+  {
+   "type": "inf_squad",
+   "kind": "point",
+   "side": "enemy",
+   "symbol": "inf_squad",
+   "label": "EN last known (platoon)",
+   "utm": [
+    [
+     286805,
+     4277505
+    ]
+   ],
+   "props": {
+    "task": "recon patrols toward the crossroads",
+    "purpose": "",
+    "remarks": "motorised rifle platoon; seen 24 h; small arms, one medium MG"
+   },
+   "layer": "enemy",
+   "locked": false,
+   "hidden": false,
+   "id": "g_enlkl"
+  },
+  {
+   "type": "point",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "point",
+   "label": "KT 1",
+   "utm": [
+    [
+     287105,
+     4277655
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_kt0"
+  },
+  {
+   "type": "point",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "point",
+   "label": "KT 2",
+   "utm": [
+    [
+     286905,
+     4277405
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_kt1"
+  },
+  {
+   "type": "doa",
+   "kind": "line",
+   "side": "enemy",
+   "symbol": "doa",
+   "label": "EN AA 1",
+   "utm": [
+    [
+     286705,
+     4277405
+    ],
+    [
+     286905,
+     4277555
+    ],
+    [
+     287105,
+     4277655
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "enemy",
+   "locked": false,
+   "hidden": false,
+   "id": "g_aa1"
+  },
+  {
+   "type": "doa",
+   "kind": "line",
+   "side": "enemy",
+   "symbol": "doa",
+   "label": "EN AA 2",
+   "utm": [
+    [
+     286605,
+     4277705
+    ],
+    [
+     286905,
+     4277685
+    ],
+    [
+     287105,
+     4277665
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "enemy",
+   "locked": false,
+   "hidden": false,
+   "id": "g_aa2"
+  },
+  {
+   "type": "mortar_60",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "mortar_60",
+   "label": "60mm",
+   "utm": [
+    [
+     287405,
+     4277905
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_m60"
+  },
+  {
+   "type": "mortar_81",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "mortar_81",
+   "label": "81mm",
+   "utm": [
+    [
+     287505,
+     4277005
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_m81"
+  },
+  {
+   "type": "inf_platoon",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "inf_platoon",
+   "label": "Adjacent",
+   "utm": [
+    [
+     286905,
+     4278005
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "adjacent unit"
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_adjl"
+  },
+  {
+   "type": "inf_platoon",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "inf_platoon",
+   "label": "Adjacent",
+   "utm": [
+    [
+     287505,
+     4277405
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "adjacent unit"
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_adjr"
+  },
+  {
+   "type": "inf_squad",
+   "kind": "point",
+   "side": "enemy",
+   "symbol": "inf_squad",
+   "label": "EN EMLCOA",
+   "utm": [
+    [
+     286705,
+     4277405
+    ]
+   ],
+   "props": {
+    "task": "seize the crossroads IOT open the road east",
+    "purpose": "",
+    "remarks": "reconnoitring the approaches; deploy on line and assault the nearest position"
+   },
+   "layer": "enemy",
+   "locked": false,
+   "hidden": false,
+   "id": "g_enml"
+  },
+  {
+   "type": "point",
+   "kind": "point",
+   "side": "enemy",
+   "symbol": "point",
+   "label": "EN OBJ",
+   "utm": [
+    [
+     287155,
+     4277655
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "enemy",
+   "locked": false,
+   "hidden": false,
+   "id": "g_enobj"
+  },
+  {
+   "type": "ea",
+   "kind": "area",
+   "side": "friendly",
+   "symbol": "ea",
+   "label": "EA",
+   "utm": [
+    [
+     286905,
+     4277755
+    ],
+    [
+     287145,
+     4277755
+    ],
+    [
+     287145,
+     4277405
+    ],
+    [
+     286905,
+     4277405
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "open ground 300 m wide he must cross in column"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_ea"
+  },
+  {
+   "type": "pl",
+   "kind": "line",
+   "side": "friendly",
+   "symbol": "pl",
+   "label": "TL GREY",
+   "utm": [
+    [
+     286905,
+     4277425
+    ],
+    [
+     286905,
+     4277735
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "engagement criteria: fire 1 in 5 at TL GREY"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_tlfar"
+  },
+  {
+   "type": "pl",
+   "kind": "line",
+   "side": "friendly",
+   "symbol": "pl",
+   "label": "TL AMBER",
+   "utm": [
+    [
+     287005,
+     4277425
+    ],
+    [
+     287005,
+     4277735
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "engagement criteria: fire 1 in 2 at TL AMBER, FPF called"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_tlnear"
+  },
+  {
+   "type": "trp",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "trp",
+   "label": "TRP 1",
+   "utm": [
+    [
+     287005,
+     4277585
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_trp"
+  },
+  {
+   "type": "point",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "point",
+   "label": "BP centre",
+   "utm": [
+    [
+     287205,
+     4277745
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "O/O 2d Plt conducts an area defense using a Plt BP IVO TH 8720 7774"
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_bpc"
+  },
+  {
+   "type": "bp",
+   "kind": "area",
+   "side": "friendly",
+   "symbol": "bp",
+   "label": "PLT BP",
+   "utm": [
+    [
+     287085.65028698905,
+     4277872.986897783
+    ],
+    [
+     287074.54162352055,
+     4277850.916591883
+    ],
+    [
+     287076.2031348988,
+     4277818.478432004
+    ],
+    [
+     287090.47218081367,
+     4277778.847691246
+    ],
+    [
+     287115.9520076327,
+     4277735.903702639
+    ],
+    [
+     287150.14847237855,
+     4277693.850122996
+    ],
+    [
+     287189.714186821,
+     4277656.803449694
+    ],
+    [
+     287230.77618316,
+     4277628.39006924
+    ],
+    [
+     287269.31502709805,
+     4277611.391281276
+    ],
+    [
+     287301.5582680745,
+     4277607.471045608
+    ],
+    [
+     287324.34971301095,
+     4277617.013102217
+    ],
+    [
+     287335.45837647945,
+     4277639.083408117
+    ],
+    [
+     287333.7968651012,
+     4277671.521567996
+    ],
+    [
+     287319.52781918633,
+     4277711.152308754
+    ],
+    [
+     287294.0479923673,
+     4277754.096297361
+    ],
+    [
+     287259.85152762145,
+     4277796.149877004
+    ],
+    [
+     287220.285813179,
+     4277833.196550306
+    ],
+    [
+     287179.22381684,
+     4277861.60993076
+    ],
+    [
+     287140.68497290195,
+     4277878.608718724
+    ],
+    [
+     287108.4417319255,
+     4277882.528954392
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "",
+    "echelon": "\u25cf\u25cf\u25cf"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_bp"
+  },
+  {
+   "type": "inf_squad",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "inf_squad",
+   "label": "1st Sqd (SE1)",
+   "utm": [
+    [
+     287265,
+     4277705
+    ]
+   ],
+   "props": {
+    "task": "occupy the left position and block west",
+    "purpose": "",
+    "remarks": "supporting effort; faces 227",
+    "sector": {
+     "kind": "primary",
+     "left": 197,
+     "right": 298,
+     "range": 470
+    }
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_sq1"
+  },
+  {
+   "type": "bp",
+   "kind": "area",
+   "side": "friendly",
+   "symbol": "bp",
+   "label": "1st Sqd BP",
+   "utm": [
+    [
+     287237.2839348698,
+     4277758.21484505
+    ],
+    [
+     287228.4841602035,
+     4277746.932143714
+    ],
+    [
+     287226.9167954463,
+     4277727.344267052
+    ],
+    [
+     287232.89227641077,
+     4277703.330834266
+    ],
+    [
+     287245.22708580754,
+     4277679.648000224
+    ],
+    [
+     287261.478163359,
+     4277660.986440659
+    ],
+    [
+     287278.4267838496,
+     4277651.042306313
+    ],
+    [
+     287292.7160651302,
+     4277651.78515495
+    ],
+    [
+     287301.5158397965,
+     4277663.067856286
+    ],
+    [
+     287303.0832045537,
+     4277682.655732948
+    ],
+    [
+     287297.10772358923,
+     4277706.669165734
+    ],
+    [
+     287284.77291419246,
+     4277730.351999776
+    ],
+    [
+     287268.521836641,
+     4277749.013559341
+    ],
+    [
+     287251.5732161504,
+     4277758.957693687
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "",
+    "echelon": "\u25cf\u25cf"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_sqbp1"
+  },
+  {
+   "type": "inf_squad",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "inf_squad",
+   "label": "1st Sqd SUPP",
+   "utm": [
+    [
+     287305,
+     4277725
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "supplementary position, faces 101",
+    "sector": {
+     "kind": "supplementary",
+     "left": 71,
+     "right": 131,
+     "range": 300
+    }
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_sqsup1"
+  },
+  {
+   "type": "inf_squad",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "inf_squad",
+   "label": "2nd Sqd (ME)",
+   "utm": [
+    [
+     287205,
+     4277745
+    ]
+   ],
+   "props": {
+    "task": "occupy the centre position, ME, block west",
+    "purpose": "",
+    "remarks": "main effort; faces 227",
+    "sector": {
+     "kind": "primary",
+     "left": 185,
+     "right": 284,
+     "range": 450
+    }
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_sq2"
+  },
+  {
+   "type": "bp",
+   "kind": "area",
+   "side": "friendly",
+   "symbol": "bp",
+   "label": "2nd Sqd BP",
+   "utm": [
+    [
+     287164.45652228897,
+     4277789.229248412
+    ],
+    [
+     287158.8764129462,
+     4277776.053598017
+    ],
+    [
+     287162.4316456881,
+     4277756.727401687
+    ],
+    [
+     287174.41806306806,
+     4277735.078449626
+    ],
+    [
+     287192.46160812024,
+     4277715.394582297
+    ],
+    [
+     287212.98853545747,
+     4277701.57443103
+    ],
+    [
+     287231.93323537445,
+     4277696.355246277
+    ],
+    [
+     287245.54347771103,
+     4277700.770751588
+    ],
+    [
+     287251.1235870538,
+     4277713.946401983
+    ],
+    [
+     287247.5683543119,
+     4277733.272598313
+    ],
+    [
+     287235.58193693194,
+     4277754.921550374
+    ],
+    [
+     287217.53839187976,
+     4277774.605417703
+    ],
+    [
+     287197.01146454253,
+     4277788.42556897
+    ],
+    [
+     287178.06676462555,
+     4277793.644753723
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "",
+    "echelon": "\u25cf\u25cf"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_sqbp2"
+  },
+  {
+   "type": "inf_squad",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "inf_squad",
+   "label": "3rd Sqd (SE2)",
+   "utm": [
+    [
+     287165,
+     4277805
+    ]
+   ],
+   "props": {
+    "task": "occupy the right position and block west",
+    "purpose": "",
+    "remarks": "supporting effort; faces 227",
+    "sector": {
+     "kind": "primary",
+     "left": 178,
+     "right": 264,
+     "range": 480
+    }
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_sq3"
+  },
+  {
+   "type": "bp",
+   "kind": "area",
+   "side": "friendly",
+   "symbol": "bp",
+   "label": "3rd Sqd BP",
+   "utm": [
+    [
+     287114.0566037736,
+     4277836.698113208
+    ],
+    [
+     287112.2249380341,
+     4277822.507257552
+    ],
+    [
+     287120.84602056054,
+     4277804.848874826
+    ],
+    [
+     287138.212340228,
+     4277787.2204242945
+    ],
+    [
+     287160.8842844424,
+     4277773.113436783
+    ],
+    [
+     287184.37139659893,
+     4277765.321974181
+    ],
+    [
+     287204.0217660845,
+     4277765.38923121
+    ],
+    [
+     287215.9433962264,
+     4277773.301886792
+    ],
+    [
+     287217.7750619659,
+     4277787.492742448
+    ],
+    [
+     287209.15397943946,
+     4277805.151125174
+    ],
+    [
+     287191.787659772,
+     4277822.7795757055
+    ],
+    [
+     287169.1157155576,
+     4277836.886563217
+    ],
+    [
+     287145.62860340107,
+     4277844.678025819
+    ],
+    [
+     287125.9782339155,
+     4277844.61076879
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "",
+    "echelon": "\u25cf\u25cf"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_sqbp3"
+  },
+  {
+   "type": "cp",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "cp",
+   "label": "PLT CP",
+   "utm": [
+    [
+     287235,
+     4277845
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_cp"
+  },
+  {
+   "type": "mg_medium",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "mg_medium",
+   "label": "MG 1",
+   "utm": [
+    [
+     287295,
+     4277665
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "left flank gun",
+    "sector": {
+     "kind": "primary",
+     "left": 205,
+     "right": 306,
+     "range": 470,
+     "fpl": {
+      "az": 317,
+      "len": null
+     }
+    }
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_mgL"
+  },
+  {
+   "type": "mg_medium",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "mg_medium",
+   "label": "MG 2",
+   "utm": [
+    [
+     287135,
+     4277825
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "right flank gun",
+    "sector": {
+     "kind": "primary",
+     "left": 167,
+     "right": 258,
+     "range": 480,
+     "fpl": {
+      "az": 137,
+      "len": null
+     }
+    }
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_mgR"
+  },
+  {
+   "type": "line",
+   "kind": "line",
+   "side": "friendly",
+   "symbol": "line",
+   "label": "ORIENT 227",
+   "utm": [
+    [
+     287205,
+     4277745
+    ],
+    [
+     286985.5938895143,
+     4277540.400491981
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "SW, blocking the W avenue into the crossroads"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_orient"
+  },
+  {
+   "type": "orp",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "orp",
+   "label": "ORP",
+   "utm": [
+    [
+     287475,
+     4277645
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_orp"
+  },
+  {
+   "type": "point",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "point",
+   "label": "SRP (MACO)",
+   "utm": [
+    [
+     287215,
+     4277785
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "crows foot"
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_srp"
+  },
+  {
+   "type": "lz",
+   "kind": "area",
+   "side": "friendly",
+   "symbol": "lz",
+   "label": "LZ",
+   "utm": [
+    [
+     287375,
+     4277435
+    ],
+    [
+     287475,
+     4277435
+    ],
+    [
+     287475,
+     4277535
+    ],
+    [
+     287375,
+     4277535
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": ""
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_lz"
+  },
+  {
+   "type": "ccp",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "ccp",
+   "label": "CCP",
+   "utm": [
+    [
+     287425,
+     4277485
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "buddy aid to the CCP at the LZ"
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_ccp"
+  },
+  {
+   "type": "op",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "op",
+   "label": "LP/OP",
+   "utm": [
+    [
+     287245,
+     4277565
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "stand to 30 min on occupation, 25 percent after, 100 percent at EENT and BMNT"
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_lpop"
+  },
+  {
+   "type": "wire",
+   "kind": "line",
+   "side": "friendly",
+   "symbol": "wire",
+   "label": "WIRE",
+   "utm": [
+    [
+     287005,
+     4277455
+    ],
+    [
+     287005,
+     4277705
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "Eng team, 400 m of C wire, NLT 1400"
+   },
+   "layer": "cm",
+   "locked": false,
+   "hidden": false,
+   "id": "g_wire1"
+  },
+  {
+   "type": "mg_medium",
+   "kind": "point",
+   "side": "friendly",
+   "symbol": "mg_medium",
+   "label": "MG sqd",
+   "utm": [
+    [
+     287295,
+     4277665
+    ]
+   ],
+   "props": {
+    "task": "upon enemy crossing TL AMBER suppress enemy in the EA",
+    "purpose": "IOT to allow the platoon to destroy him forward of the BP",
+    "remarks": "attached to 2d Sqd"
+   },
+   "layer": "friendly",
+   "locked": false,
+   "hidden": false,
+   "id": "g_mg"
+  },
+  {
+   "type": "target",
+   "kind": "point",
+   "side": "neutral",
+   "symbol": "target",
+   "label": "AB1001 (81mm)",
+   "utm": [
+    [
+     286905,
+     4277575
+    ]
+   ],
+   "props": {
+    "task": "disrupt",
+    "purpose": "",
+    "remarks": "trigger enemy crosses TL GREY; obs LP/OP; 81mm HE"
+   },
+   "layer": "fires",
+   "locked": false,
+   "hidden": false,
+   "id": "g_tg1"
+  },
+  {
+   "type": "fpf",
+   "kind": "line",
+   "side": "friendly",
+   "symbol": "fpf",
+   "label": "FPF 60mm",
+   "utm": [
+    [
+     287076.8198051534,
+     4277563.180194846
+    ],
+    [
+     287013.1801948466,
+     4277626.819805154
+    ]
+   ],
+   "props": {
+    "task": "",
+    "purpose": "",
+    "remarks": "centre 87047759, attitude 2400 mils, length 90 m; trigger enemy crosses TL AMBER"
+   },
+   "layer": "fires",
+   "locked": false,
+   "hidden": false,
+   "id": "g_fpf"
+  }
+ ],
+ "routes": [
+  {
+   "name": "EN most likely route",
+   "points": [
+    [
+     286705,
+     4277405
+    ],
+    [
+     286905,
+     4277555
+    ],
+    [
+     287105,
+     4277655
+    ]
+   ],
+   "pace_kmh": 2,
+   "notes": "seize the crossroads IOT open the road east",
+   "color": "#c81e1e",
+   "id": "g_r_en"
+  },
+  {
+   "name": "ORP to SRP to BP",
+   "points": [
+    [
+     287475,
+     4277645
+    ],
+    [
+     287215,
+     4277785
+    ],
+    [
+     287205,
+     4277745
+    ]
+   ],
+   "pace_kmh": 2,
+   "notes": "from the SRP squads split via crows foot; 1st left, 2nd centre, 3rd right",
+   "id": "g_r_occ"
+  },
+  {
+   "name": "CASEVAC route",
+   "points": [
+    [
+     287205,
+     4277745
+    ],
+    [
+     287305,
+     4277605
+    ],
+    [
+     287425,
+     4277485
+    ]
+   ],
+   "pace_kmh": 2,
+   "notes": "buddy aid to the CCP at the LZ",
+   "id": "g_r_cas"
+  }
+ ],
+ "custom": [],
+ "phases": [
+  {
+   "id": "g_p1",
+   "name": "Part 1: Occupation",
+   "events": [
+    {
+     "id": "g_p1_bw",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Begins: Plt crosses the LD",
+     "step": "friendly",
+     "trigger": "Plt crosses the LD"
+    },
+    {
+     "id": "g_p1_ce0",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Occupy ORP",
+     "step": "initiate",
+     "trigger": ""
+    },
+    {
+     "id": "g_p1_ce1",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Leaders recon",
+     "step": "initiate",
+     "trigger": ""
+    },
+    {
+     "id": "g_p1_ce2",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Occupy positions",
+     "step": "initiate",
+     "trigger": ""
+    },
+    {
+     "id": "g_p1_ew",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Ends: All squads occupy primary positions",
+     "step": "endstate",
+     "trigger": "All squads occupy primary positions"
+    },
+    {
+     "id": "g_p1_cs",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": false,
+     "name": "Conditions set: Defense established",
+     "step": "endstate",
+     "trigger": ""
+    }
+   ]
+  },
+  {
+   "id": "g_p2",
+   "name": "Part 2: Block West",
+   "events": [
+    {
+     "id": "g_p2_bw",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Begins: Enemy crosses TL GREY",
+     "step": "enemy",
+     "trigger": "Enemy crosses TL GREY"
+    },
+    {
+     "id": "g_p2_ce0",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "LP/OP reports",
+     "step": "initiate",
+     "trigger": ""
+    },
+    {
+     "id": "g_p2_ce1",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Initiate IDF",
+     "step": "initiate",
+     "trigger": ""
+    },
+    {
+     "id": "g_p2_ce2",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "FPF",
+     "step": "initiate",
+     "trigger": ""
+    },
+    {
+     "id": "g_p2_ew",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": true,
+     "name": "Ends: Enemy attack defeated forward of the BP",
+     "step": "endstate",
+     "trigger": "Enemy attack defeated forward of the BP"
+    },
+    {
+     "id": "g_p2_cs",
+     "moves": [],
+     "show": [],
+     "hide": [],
+     "narration": "",
+     "camera": null,
+     "minutes": 10,
+     "main": false,
+     "critical": false,
+     "name": "Conditions set: SAFE and ACE reported",
+     "step": "endstate",
+     "trigger": ""
+    }
+   ]
+  }
+ ],
+ "notes": "Mission: 2d Plt, NLT 1500, blocks west from the Plt BP IVO TH 8720 7774, oriented SW, IOT prevent enemy use of the crossroads at TH 8690 7760\nCG: massed platoon assault\nCV: the platoon must cross 300 m of open ground\nEXP: kill him in the open with massed fires from the BP (combined arms)\nMG tasking: Machinegun Squad, attached to 2d Sqd, upon enemy crossing TL AMBER, suppress enemy in the EA IOT to allow the platoon to destroy him forward of the BP.\nTimeline:\n1030 order\n1200 cross LD\n1500 block west\nCoordinating instructions: LEU brevity BRICK\nAdmin: CASEVAC buddy aid to the CCP at the LZ | EPW 3d Sqd | Log at the LZ 1800 | C2 PC with the ME, PSgt at the CP",
+ "guide": {
+  "values": {
+   "name": {
+    "optype": "platoon defense",
+    "name": "Fixture defense (fictional)",
+    "notes": "harness fixture, every name and grid invented"
+   },
+   "ao": {
+    "ao": "8677 8878"
+   },
+   "mission": {
+    "mission": "2d Plt, NLT 1500, blocks west from the Plt BP IVO TH 8720 7774, oriented SW, IOT prevent enemy use of the crossroads at TH 8690 7760",
+    "higher": "Co A blocks south and west IOT protect the battalion trains",
+    "specified": "block west\nestablish an LP/OP"
+   },
+   "enemy": {
+    "known": "suspected",
+    "size": "platoon",
+    "lkl": "86807750",
+    "activity": "recon patrols toward the crossroads",
+    "unit": "motorised rifle platoon",
+    "time": "24 h",
+    "equipment": "small arms, one medium MG",
+    "capable": "attack with a platoon within 2 hours",
+    "limited": "no indirect fires"
+   },
+   "terrain": {
+    "obs": "150 m on the ridge, 40 m in the draw",
+    "cover": "wood line east of the crossroads",
+    "obst": "stream south of the road",
+    "weather": "clear, EENT 1910",
+    "kt": "87107765\n86907740",
+    "aa1": "86707740\n86907755\n87107765",
+    "aa2": "86607770\n86907768\n87107766"
+   },
+   "troops": {
+    "organic": "3 rifle squads, 1 MMG team attached",
+    "m60": "87407790",
+    "m81": "87507700",
+    "adjl": "86907800",
+    "adjr": "87507740",
+    "fires": "priority to 2d Plt; 60mm DS, 81mm GS"
+   },
+   "time": {
+    "pace": "2",
+    "third": "1030 order to squads",
+    "gate": "yes"
+   },
+   "emlcoa": {
+    "useaa": "avenue 1",
+    "size": "platoon",
+    "enmission": "seize the crossroads IOT open the road east",
+    "current": "reconnoitring the approaches",
+    "contact": "deploy on line and assault the nearest position",
+    "enobj": "87157765"
+   },
+   "cgcv": {
+    "cg": "massed platoon assault",
+    "cv": "the platoon must cross 300 m of open ground",
+    "exp": "kill him in the open with massed fires from the BP",
+    "form": "combined arms"
+   },
+   "ea": {
+    "ea": "86907775\n87147775\n87147740\n86907740",
+    "tlfar": "TL GREY",
+    "tlfarpts": "86907742\n86907773",
+    "tlnear": "TL AMBER",
+    "tlnearpts": "87007742\n87007773",
+    "trp": "87007758",
+    "why": "open ground 300 m wide he must cross in column"
+   },
+   "type": {
+    "type": "O/O 2d Plt conducts an area defense using a Plt BP IVO TH 8720 7774",
+    "bp": "87207774",
+    "bpw": "350",
+    "bpd": "150"
+   },
+   "orient": {
+    "az": "227",
+    "orient": "SW, blocking the W avenue into the crossroads"
+   },
+   "dist": {
+    "sq1": {
+     "role": "SE1",
+     "grid": "87267770"
+    },
+    "sq2": {
+     "role": "ME",
+     "grid": "87207774"
+    },
+    "sq3": {
+     "role": "SE2",
+     "grid": "87167780"
+    },
+    "cp": "87237784",
+    "mg1": "87297766",
+    "mg2": "87137782",
+    "sup1": "87307772",
+    "attach": "MMG team attached to 2d Sqd"
+   },
+   "occ": {
+    "orp": "87477764",
+    "srp": "87217778",
+    "method": "crows foot",
+    "occ": "from the SRP squads split via crows foot; 1st left, 2nd centre, 3rd right"
+   },
+   "tcm": {
+    "lz": "87427748"
+   },
+   "sec": {
+    "lpop": "87247756",
+    "sec": "stand to 30 min on occupation, 25 percent after, 100 percent at EENT and BMNT"
+   },
+   "obst": {
+    "wire1": "87007745\n87007770",
+    "eng": "Eng team, 400 m of C wire, NLT 1400"
+   },
+   "parts": {
+    "p1name": "Part 1: Occupation",
+    "p1bw": "Plt crosses the LD",
+    "p1ce": "Occupy ORP\nLeaders recon\nOccupy positions",
+    "p1ew": "All squads occupy primary positions",
+    "p1cs": "Defense established",
+    "p2name": "Part 2: Block West",
+    "p2bw": "Enemy crosses TL GREY",
+    "p2ce": "LP/OP reports\nInitiate IDF\nFPF",
+    "p2ew": "Enemy attack defeated forward of the BP",
+    "p2cs": "SAFE and ACE reported"
+   },
+   "tasks": {
+    "t1": "occupy the left position and block west",
+    "t2": "occupy the centre position, ME, block west",
+    "t3": "occupy the right position and block west",
+    "mgrel": "attached to",
+    "mgunit": "2d Sqd",
+    "mgcond": "upon enemy crossing TL AMBER",
+    "mgtask": "suppress",
+    "mgtarget": "enemy in the EA",
+    "mgpurpose": "to allow the platoon to destroy him forward of the BP",
+    "mggrid": "87297766"
+   },
+   "fsp": {
+    "efst": "EFST 1 disrupt the enemy at TL GREY IOT break his formation",
+    "tg1": {
+     "num": "AB1001",
+     "grid": "86907757",
+     "wpn": "81mm",
+     "trigger": "enemy crosses TL GREY",
+     "obs": "LP/OP",
+     "task": "disrupt"
+    },
+    "fpfc": "87047759",
+    "fpfatt": "2400",
+    "fpflen": "90",
+    "fpfwpn": "60mm",
+    "fpftrig": "enemy crosses TL AMBER"
+   },
+   "coord": {
+    "timeline": "1030 order\n1200 cross LD\n1500 block west",
+    "engfar": "fire 1 in 5 at TL GREY",
+    "engnear": "fire 1 in 2 at TL AMBER, FPF called",
+    "other": "LEU brevity BRICK"
+   },
+   "admin": {
+    "ccp": "87427748",
+    "casroute": "87207774\n87307760\n87427748",
+    "casevac": "buddy aid to the CCP at the LZ",
+    "epw": "3d Sqd",
+    "resupply": "at the LZ 1800",
+    "c2": "PC with the ME, PSgt at the CP"
+   }
+  }
+ }
+}

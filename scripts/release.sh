@@ -30,6 +30,7 @@ python3 evals/quiz_builder_check.py
 python3 evals/order_analysis_check.py
 python3 evals/share_method_check.py
 python3 evals/topic_brief_check.py
+python3 evals/sand_table_order_check.py
 bash scripts/package.sh
 git checkout -b "release/v$VER"
 git add -A
