@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.20.0 (2026-09-27) Lessons applied: American spelling, guided hand offs, spotlight per action, calm hero images
+
+- **Standard 9 now carries American spelling** and `standards_check.py` scans every skill, reference, agent and eval fixture for British forms (block quotes and quoted titles excepted); the release drill fails on a hit. Thirteen files corrected (centre, labelled, organised, behaviour, defence and the like), including the naval letter builder's own names.
+- **sand-table-intake (0.1.1):** step 7 says where the planner lands: the page ticks the steps the order filled and opens the Guide on the first blank step, with the order named under each filled step.
+- **study-guide (0.2.1) and source-fidelity-reviewer:** a task with several actions spotlights each action in turn and advances on the user's action; the reviewer reports a multi step task that holds one highlight.
+- **visual-reviewer:** a hero image on a flyer or title slide is checked for clutter first: what can be removed before what is missing.
+- From the 27 Sep debrief; the four queue entries are marked approved 0.20.0.
+
 ## 0.19.0 (2026-09-27) Sand table intake
 
 New tool: **sand-table-intake**, the front half of the sand table loop. A base order the user received (docx, pptx or text; a PDF through capture-source) becomes the plan file the virtual sand table imports: `order_text.py` pulls the text with its paragraph numbers, the reader writes facts.json with a paragraph for every value, `plan_writer.py` writes `<name>.sandtable.json` (every step of the operation's track present, higher's fields filled, the planner's blank, nothing on the map) and a sourced list, and `plan_check.py --intake` fails a file that fills a planner decision, carries an unknown field, a bad grid, a select value the page does not offer, or a dash. `references/guide_fields.json` is the page's own step and field list, regenerated from the page's source; `references/field-map.md` says which paragraph feeds which field and which stay blank. The page (rev31) imports a file from another sheet by switching sheets first. Harness `evals/sand_table_intake_check.py`, 55 items, added to the release drill. sand-table-order (0.1.1): American spelling in its text and fixture; a line pointing at the intake tool.

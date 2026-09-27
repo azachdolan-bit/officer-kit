@@ -9,7 +9,7 @@ description: >
   guide", "study guide for", "walkthrough", "quiz me", "flashcards", "condense this handout",
   "whiteboard session", or attaches lesson material to study.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Study guide
@@ -53,6 +53,7 @@ Study product:
 - Inventing a scenario is expected; inventing a fact inside it is not. Verify every number in a scenario in code.
 - Organizing labels you add (table headers, category names, mnemonic labels) are fine; what a cell or a skeleton line claims comes from the source. Never fill an empty cell by inference; write "not stated". A table sits directly under the sentence that introduces it, with a `Table:` caption.
 - Open every guide and walkthrough with the skeleton: the whole lesson as a memorization outline.
+- A task with several actions (open a tab, press a tool, click the map three times) spotlights each action in turn and advances on the user's own action: one highlight per action, never one per task. A user who is told what to do but not where to click gets lost at the second action.
 - A product built from course or unit material stays with the people who built it (kit standard 6). To help a peer, share this tool, not the product.
 - Quiz me mode never pastes the set and never repeats a question.
 

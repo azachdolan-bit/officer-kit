@@ -9,7 +9,7 @@ description: >
   "start the sand table from the company order", "intake this order for the sand table", or attaches a base order and
   names the sand table.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Sand table intake
@@ -42,7 +42,7 @@ Sand table intake:
 - [ ] 4. python3 scripts/plan_writer.py facts.json --out <name>.sandtable.json: refuses an unknown field, a bad grid, a select value the page does not offer, or a value with no src; writes <name>.sourced.md (every filled field with its paragraph; every blank by step)
 - [ ] 5. python3 scripts/plan_check.py <name>.sandtable.json --intake exits 0 (the page's shape; no planner decision filled; nothing on the map)
 - [ ] 6. red-team agent, blind, with sourced.md and order.txt: every filled value found in the cited paragraph, nothing filled that the order leaves to the platoon
-- [ ] 7. Save the plan file, sourced.md and facts.json together; name the path; tell the user: import it on the sand table page (Plan, Import file); the page switches to the file's sheet if it is not on it, builds the map from the values and opens the Guide at Review
+- [ ] 7. Save the plan file, sourced.md and facts.json together; name the path; tell the user: import it on the sand table page (Plan, Import file); the page switches to the file's sheet if it is not on it, builds the map from the values, ticks the steps the order filled and opens the Guide on the first step the order left blank (for a defense from a school FRAGO, usually Area of operations, then EMLCOA and the EA), with a line under each filled step naming the order it came from. Say that in the reply: where they land and what they do first
 ```
 
 ## Rules

@@ -178,7 +178,7 @@ def check_moa(kind, text, fails, warns):
     between = section(text, "Between") or ""
     parties = [l.strip() for l in between.splitlines() if l.strip() and l.strip().upper() != "AND"]
     if len(parties) < 2:
-        fails.append("the Between block names fewer than two activities; 10-2.6.b centres 'BETWEEN' and follows it with 'the names of the agreeing activities (centered)'")
+        fails.append("the Between block names fewer than two activities; 10-2.6.b centers 'BETWEEN' and follows it with 'the names of the agreeing activities (centered)'")
     for names in MOA_PARAS:
         if any_section(text, names) is None:
             warns.append(f"no '## {part_label(names)}' paragraph; 10-2.6.b lists it among the titled paragraphs the basic text 'may contain, but is not limited to', so name it or say why it is not needed")

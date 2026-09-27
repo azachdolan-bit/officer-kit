@@ -39,8 +39,8 @@ Layout rules encoded here (see references/standard.md):
 - SSIC block left aligned on a common tab 2 inches from the right edge of the paper.
 - From/To/Via/Subj/Ref/Encl labels at the margin, text at a 0.5 inch tab.
 - Paragraphs 1. / a. / (1) / (a), first line indented by level, runover to the margin.
-- Signature on the fourth line below the last line of text, starting at page centre.
-- Continuation pages repeat the Subj line on the sixth line; page number centred in the foot.
+- Signature on the fourth line below the last line of text, starting at page center.
+- Continuation pages repeat the Subj line on the sixth line; page number centerd in the foot.
 """
 import json, re, sys
 from datetime import datetime
@@ -118,7 +118,7 @@ def main():
         for _ in range(n):
             para()
 
-    def labelled(label, text):
+    def labeled(label, text):
         p = para(left=TAB, hang=TAB, tabs=[TAB])
         p.add_run(f"{label}\t{text}")
         return p
@@ -154,13 +154,13 @@ def main():
             blank()
             para(f"{(e.get('ordinal') or placeholder('ordinal')).upper()} ENDORSEMENT on {e.get('on') or placeholder('basic letter')}")
         blank()                                        # From: on the second line below
-        labelled("From:", spec.get("from") or placeholder("from line"))
-        labelled("To:", spec.get("to") or placeholder("to line"))
+        labeled("From:", spec.get("from") or placeholder("from line"))
+        labeled("To:", spec.get("to") or placeholder("to line"))
         for v in spec.get("via") or []:
-            labelled("Via:", v)
+            labeled("Via:", v)
     blank()                                            # Subj on the second line below
     subj = (spec.get("subj") or placeholder("subject")).upper()
-    labelled("Subj:", subj)
+    labeled("Subj:", subj)
     refs = spec.get("refs") or []
     encls = spec.get("encls") or []
     if refs:

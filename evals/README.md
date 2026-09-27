@@ -7,7 +7,7 @@ Layout:
 ```
 evals/
   <skill-name>/
-    cases.json          the cases: query, input files, expected behaviour
+    cases.json          the cases: query, input files, expected behavior
     inputs/             golden inputs (method only; no course content, no identity)
     expected/           golden outputs or the checker that grades them
     check.py            optional: deterministic grader (exit 0 pass, 1 fail)
