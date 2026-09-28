@@ -19,6 +19,9 @@ import re
 import sys
 
 SHEETS = {"ta16": ("18S", "TH"), "stex": ("18S", "MG")}   # sheet id -> grid zone designator and 100 km square the sand table uses
+DECL = {"ta16": 11, "stex": 0}   # magnetic = grid + this, per sheet, as the sand table's terrain_meta.json states it (TA16: the user's rule of 11 degrees; the STEX sketch has none)
+MILS = 6400 / 360.0
+TRP_SYMBOLS = ("trp", "target", "point")
 
 GUIDE_TITLES = {
     "name": "Name and operation", "ao": "Area of operations", "mission": "Mission", "enemy": "Enemy", "terrain": "Terrain and weather",
@@ -143,7 +146,52 @@ def read_plan(path):
         for pt in ([a["e0"], a["n0"]], [a["e1"], a["n1"]], [a["e0"], a["n1"]], [a["e1"], a["n0"]]):
             grids.add(grid_digits(pt))
     facts["grids"] = sorted(grids)
+    facts["direct_fire"] = direct_fire(plan, facts, square)
     return facts
+
+
+def direct_fire(plan, facts, square):
+    """Every friendly position with a sector: limits, FPL and PDF in grid and magnetic azimuth with mils, and the TRPs inside the sector
+    within its range, with azimuth and range from that position. Grazing fire, dead space and the orientation diagram live on the
+    range card the page exports (bare earth terrain the file does not carry); this table says so."""
+    decl = DECL.get(plan.get("sheet") or "", 0)
+    mag = lambda az: (az + decl) % 360
+    out = []
+    objs = plan.get("objects", [])
+    marks = [o for o in objs if o.get("kind") == "point" and o.get("symbol") in TRP_SYMBOLS and o.get("utm")]
+    for o in objs:
+        props = o.get("props") or {}
+        sec = props.get("sector")
+        if not sec or o.get("kind") != "point" or o.get("side") != "friendly" or not o.get("utm"):
+            continue
+        c = o["utm"][0]
+        left, right = sec.get("left"), sec.get("right")
+        rng = sec.get("range") or 300
+        row = {"label": o.get("label") or o.get("symbol"), "symbol": o.get("symbol"), "grid": grid8(c, square), "kind": sec.get("kind") or "primary", "range_m": rng}
+        for k, v in (("lll", left), ("rll", right)):
+            if v is not None:
+                row[k + "_grid"] = round(v)
+                row[k + "_mag"] = round(mag(v))
+                row[k + "_mils"] = round(mag(v) * MILS)
+        for k in ("fpl", "pdf"):
+            d = sec.get(k)
+            if d and d.get("az") is not None:
+                row[k] = {"az_grid": round(d["az"]), "az_mag": round(mag(d["az"])), "mils": round(mag(d["az"]) * MILS), "len_m": d.get("len") or (600 if k == "fpl" else 400)}
+        trps = []
+        span = ((right - left) % 360) if (left is not None and right is not None) else 360
+        for m in marks:
+            q = m["utm"][0]
+            d = dist(c, q)
+            az = az_grid(c, q)
+            if d > rng * 2 and d > 1800:
+                continue
+            if left is not None and right is not None and ((az - left) % 360) > span:
+                continue
+            trps.append({"label": m.get("label") or m.get("symbol"), "grid": grid8(q, square), "range_m": round(d), "az_grid": round(az), "az_mag": round(mag(az))})
+        trps.sort(key=lambda t: t["range_m"])
+        row["trps"] = trps
+        out.append(row)
+    return {"declination": decl, "positions": out, "note": "grazing fire, dead space and the orientation diagram are on the range card PNG the page exports for each gun (bare earth terrain, not in this file); the fire plan sketch PNG from the Plan menu is the sketch annex"}
 
 
 def to_md(facts, brief):
@@ -182,6 +230,23 @@ def to_md(facts, brief):
             if o.get(k):
                 line += "; %s %s" % (k, o[k])
         L.append(line)
+    df = facts.get("direct_fire") or {}
+    if df.get("positions"):
+        L.append("")
+        L.append("## Direct fire plan (sectors, FPLs, PDFs and TRPs from the map; magnetic = grid + %d)" % df.get("declination", 0))
+        for r in df["positions"]:
+            line = "- %s (%s, %s position) at %s: " % (r["label"], r["symbol"], r["kind"], r["grid"])
+            if "lll_grid" in r and "rll_grid" in r:
+                line += "LLL %03d grid (%03d mag, %d mils), RLL %03d grid (%03d mag, %d mils), sector length %s m" % (r["lll_grid"], r["lll_mag"], r["lll_mils"], r["rll_grid"], r["rll_mag"], r["rll_mils"], r["range_m"])
+            else:
+                line += "no limits set"
+            for k in ("fpl", "pdf"):
+                if r.get(k):
+                    line += "; %s %03d grid (%03d mag, %d mils), %s m" % (k.upper(), r[k]["az_grid"], r[k]["az_mag"], r[k]["mils"], r[k]["len_m"])
+            L.append(line)
+            for t in r["trps"]:
+                L.append("  - %s at %s: %d m, %03d grid (%03d mag)" % (t["label"], t["grid"], t["range_m"], t["az_grid"], t["az_mag"]))
+        L.append("- " + df["note"])
     L.append("")
     L.append("## Routes (distance and grid azimuth per leg, computed)")
     for r in facts["routes"]:
