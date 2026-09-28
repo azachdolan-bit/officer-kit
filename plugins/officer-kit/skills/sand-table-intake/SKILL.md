@@ -7,9 +7,10 @@ description: >
   turns the export back into their order. Every value carries its paragraph; nothing is invented. Use when the user
   says "load my base order into the sand table", "sand table file from this order", "prefill the sand table",
   "start the sand table from the company order", "intake this order for the sand table", or attaches a base order and
-  names the sand table.
+  names the sand table. Also carries a troop to task matrix (xlsx or csv) into the plan file so the page walks it by
+  the clock: "put my troop to task on the sand table", "rock walk the troop to task", "load the priorities of work".
 metadata:
-  version: "0.1.0"
+  version: "0.3.0"
 ---
 
 # Sand table intake
@@ -43,7 +44,12 @@ Sand table intake:
 - [ ] 5. python3 scripts/plan_check.py <name>.sandtable.json --intake exits 0 (the page's shape; no planner decision filled; nothing on the map)
 - [ ] 6. red-team agent, blind, with sourced.md and order.txt: every filled value found in the cited paragraph, nothing filled that the order leaves to the platoon
 - [ ] 7. Save the plan file, sourced.md and facts.json together; name the path; tell the user: import it on the sand table page (Plan, Import file); the page switches to the file's sheet if it is not on it, builds the map from the values and opens the Guide at Review
+- [ ] 8. A troop to task matrix (xlsx or csv): python3 scripts/t2t_reader.py <matrix.xlsx> --sheet "<sheet name>" --plan <name>.sandtable.json --rehearsal (or --out <name>.sandtable.json with no base order); read the <name>.t2t.md report back to the user: which map unit each row will draw from, and the page's security count beside their own row; a slot where the two differ is a cell the reader did not understand, not a correction to their plan
 ```
+
+## Troop to task (priorities of work on the clock)
+
+B3M0830XQ-DM Annex C: priorities of work are married to a timeline that starts at X (the time stand to ends), and the troop to task matrix carries them by unit. The page walks that matrix: a clock slider steps the slots; each unit row draws from the map unit of the same name (1st Sqd 1st FT, or the squad when the fire team is not placed; Left gun, Right gun; PC or the CP); a party away appears at its target (a buddy pair at the object named MACO or gate, the OP triangle at the LP/OP, fire team frames out along the route named patrol, one dot for a leader at the terrain model or the CP) and the unit's badge counts down. `t2t_reader.py` is the page's own reader in Python (the page's `t2t.js` is the reference): it reads a Unit column, X columns with a Clock row, one row per unit with its strength in parentheses, Milestones and Security rows; in a cell only the planner's shorthand, "2 sec, 2 dig: task", "(2 on MACO)", a row name's "(2 on LP/OP 0030 to 0900)" as a standing pair between those times, DAY, NIGHT or FT PATROL and "Leads ... patrol" as the whole row out, STAND TO, and on a leader's row "terrain model", "brief", "debrief", "planning". A blank cell continues the last entry. Nothing else is inferred: a cell the reader does not understand is carried as text and drawn as nobody away. With `--rehearsal` it also writes one phase per milestone and one event per slot with a change, so Rehearse plays the matrix and the clock follows. The user can paste the same block from Excel straight into the page (Plan, Troop to task) without this tool; the tool is for the file that carries the base order and the matrix together, and for the report.
 
 ## Rules
 
@@ -60,6 +66,7 @@ Sand table intake:
 - `scripts/order_text.py`: a .docx or .pptx order to text with its paragraph numbers.
 - `scripts/plan_writer.py`: facts.json to the plan file and sourced.md, refusing anything the page's guide does not have a field for.
 - `scripts/plan_check.py`: the plan file against the page's shape and the intake rules.
+- `scripts/t2t_reader.py`: a troop to task matrix (xlsx with --sheet, or csv) into plan["t2t"] of a new or existing plan file, with --rehearsal the phases and events, and a .t2t.md report (rows, what the page looks for, the security count per slot beside the planner's own row).
 - `references/guide_fields.json`: every step and field of the page's guided build, extracted from the page's own source; when the page changes, this file is regenerated with it.
 
 ## What it does not do

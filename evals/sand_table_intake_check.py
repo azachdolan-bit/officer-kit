@@ -95,6 +95,30 @@ ok(len(gf) >= 27 and sum(len(s["fields"]) for s in gf) >= 170, "guide_fields.jso
 # the fixture order is fictional and dash free
 fx = open(os.path.join(EV, "fixture-base-order.md"), encoding="utf-8").read()
 ok("fictional" in fx and not re.search("[–—]", fx), "fixture order is marked fictional and carries no dashes")
+# the troop to task reader (0.3.0): the fictional matrix to a plan file the page walks by the clock
+t2 = os.path.join(tmp, "t2t.sandtable.json")
+code, txt = run(os.path.join(SC, "t2t_reader.py"), "fixture-troop-to-task.csv", "--out", t2, "--rehearsal")
+ok(code == 0 and "10 rows, 6 slots from 1300" in txt, "t2t_reader reads the fixture matrix:\n" + txt)
+tp = json.load(open(t2)); T = tp.get("t2t") or {}
+ok(T.get("slots") == 6 and T.get("x") == "1300" and len(T.get("rows", [])) == 10 and T["cols"][2]["clock"] == "1400", "the matrix carries 6 slots from 1300 with the clock per column")
+rows = {(r["group"], r["short"]): r for r in T["rows"]}
+ft2 = rows.get(("1st Sqd", "2nd FT")); ft1 = rows.get(("2nd Sqd", "1st FT"))
+ok(ft2 and ft2["strength"] == 4 and ft2["standing"] == [{"n": 2, "to": "lpop", "from": 840, "until": 930}], "a row name's standing pair on the LP/OP with its clock window is read (%s)" % (ft2 and ft2["standing"]))
+ok(ft1 and ft1["cells"][2]["away"] == [{"n": 2, "to": "gate"}] and ft1["cells"][2]["dig"] == 2 and ft1["cells"][4]["patrol"], "a cell's (2 on MACO), its diggers and DAY PATROL are read")
+sl = rows.get(("1st Sqd", "1st Squad, left")); ok(sl and sl["kind"] == "sl" and sl["cells"][1]["leaderAt"] == "tm" and sl["cells"][3]["leaderAt"] == "cp", "a leader row reads terrain model and brief")
+sys.path.insert(0, SC); import t2t_reader as R
+sec = [R.security(T, i) for i in range(6)]
+ok(all("%d/%d" % (sec[i]["sec"], sec[i]["present"]) == T["security"][i].split(" / ")[0] for i in range(6)), "the security count matches the fixture's own row on every slot (%s)" % ["%d/%d" % (x["sec"], x["present"]) for x in sec])
+st = R.row_state(T, ft2, 3); ok(st["present"] == 2 and st["away"] == [{"n": 2, "to": "lpop", "standing": True}], "a blank cell continues the entry: at 1430 the pair is still on the LP/OP and 2 remain")
+ok(len(tp["phases"]) == 3 and [len(x["events"]) for x in tp["phases"]] == [2, 2, 2] and tp["phases"][0]["name"] == "1300 Stand to" and tp["phases"][1]["events"][0]["t2tSlot"] == 2 and "Security on the line" in tp["phases"][0]["events"][0]["narration"], "--rehearsal builds a phase per milestone and an event per changed slot carrying its slot and the security line")
+rep = open(os.path.join(tmp, "t2t.t2t.md"), encoding="utf-8").read(); ok("## Security on the line by slot" in rep and "1st Sqd 2nd FT, else 1st Sqd" in rep, "the report lists what the page will look for and the security table")
+# merging into an existing plan keeps its objects and non matrix phases
+base = json.load(open(out)); base["phases"] = [{"id": "ph_keep", "name": "Kept", "events": []}]; bp = os.path.join(tmp, "base.sandtable.json"); json.dump(base, open(bp, "w"))
+code, txt = run(os.path.join(SC, "t2t_reader.py"), "fixture-troop-to-task.csv", "--plan", bp, "--rehearsal")
+mp = json.load(open(bp)); ok(code == 0 and len(mp["objects"]) == len(base["objects"]) and mp["phases"][0]["name"] == "Kept" and len(mp["phases"]) == 4 and mp.get("t2t", {}).get("slots") == 6, "--plan merges the matrix into an existing plan file, keeping its objects and its own phases")
+code, txt = run(os.path.join(SC, "plan_check.py"), bp)
+ok(code == 0, "the checker passes the base order's plan file once it carries the matrix and its rehearsal (a planner's file, not an intake file):\n" + txt)
+fx2 = open(os.path.join(EV, "fixture-troop-to-task.csv"), encoding="utf-8").read(); ok("fictional" in fx2 and not re.search("[\u2013\u2014]", fx2), "the fixture matrix is marked fictional and carries no dashes")
 print("sand-table-intake check: %d items, %d failed" % (n, len(fails)))
 for f in fails:
     print("  FAIL", f)
