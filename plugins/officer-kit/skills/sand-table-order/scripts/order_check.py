@@ -11,7 +11,8 @@ Fails when:
   4. a warn check from the sand table's brief is not carried into the order's "Warnings carried" list;
   5. the five paragraph headings are not all present (Situation, Mission, Execution, Administration and Logistics, Command and Signal);
   6. the order has no "NOT IN THE PLAN" list (even an empty one must say so);
-  7. an em dash or en dash appears (kit standard 9).
+  7. an em dash or en dash appears (kit standard 9);
+  8. a sector limit, FPL or PDF azimuth from the direct fire plan (grid, three digits) is not in the order and not under NOT IN THE PLAN.
 """
 import json
 import re
@@ -107,6 +108,18 @@ def main(argv):
     # 7. dashes
     if re.search("[\\u2013\\u2014]", order):
         fails.append("em or en dash in the order (kit standard 9)")
+    # 8. direct fire azimuths (three digit grid) are in the order
+    for r in (facts.get("direct_fire") or {}).get("positions", []):
+        wanted = []
+        if "lll_grid" in r and "rll_grid" in r:
+            wanted += [("LLL", r["lll_grid"]), ("RLL", r["rll_grid"])]
+        for k in ("fpl", "pdf"):
+            if r.get(k):
+                wanted.append((k.upper(), r[k]["az_grid"]))
+        for what, az in wanted:
+            a3 = "%03d" % az
+            if not re.search(r"(?<!\d)" + a3 + r"(?!\d)", order) and a3 not in nip:
+                fails.append("%s: %s azimuth %s grid from the direct fire plan is not in the order" % (r["label"], what, a3))
     print("ORDER CHECK: %d objects, %d routes, %d parts, %d fields, %d warns" % (len(facts.get("objects", [])), len(facts.get("routes", [])), len(facts.get("parts", [])), len(facts.get("fields", [])), len(warns)))
     for x in fails:
         print("  FAIL ", x)

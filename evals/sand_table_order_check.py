@@ -29,6 +29,12 @@ bp = [o for o in facts["objects"] if o["id"] == "g_sq2"][0]
 ok(bp.get("sector") and bp["sector"]["kind"] == "primary" and "left" in bp["sector"], "a squad's sector of fire is read")
 mg = [o for o in facts["objects"] if o["id"] == "g_mgL"][0]
 ok(mg.get("fpl") and "az" in mg["fpl"], "a gun's FPL azimuth is read")
+df = facts.get("direct_fire") or {}
+mg1 = [r for r in df.get("positions", []) if r["label"] == "MG 1"]
+ok(df.get("declination") == 11 and len(df.get("positions", [])) == 6 and mg1 and mg1[0]["fpl"]["az_grid"] == 317 and mg1[0]["fpl"]["az_mag"] == 328 and mg1[0]["fpl"]["mils"] == 5831 and mg1[0]["lll_grid"] == 205 and mg1[0]["rll_mag"] == 317, "the direct fire plan lists every position with a sector: limits and FPL in grid and magnetic with mils (%s)" % (mg1[0] if mg1 else None))
+sq1 = [r for r in df.get("positions", []) if r["label"] == "1st Sqd (SE1)"][0]
+ok(any(t["label"] == "TRP 1" and t["range_m"] == 286 and t["az_grid"] == 245 for t in sq1["trps"]) and all(((t["az_grid"] - 197) % 360) <= 101 for t in sq1["trps"]), "TRPs inside a sector are listed with range and azimuth from that position; none outside it")
+ok("## Direct fire plan" in open(fm).read() and "FPL 317 grid (328 mag, 5831 mils)" in open(fm).read() and "range card PNG" in open(fm).read(), "facts.md carries the direct fire plan and points to the range card for dead space")
 cas = [r for r in facts["routes"] if r["id"] == "g_r_cas"][0]
 ok(len(cas["legs"]) == 2 and cas["legs"][0]["dist_m"] > 0 and 0 <= cas["legs"][0]["az_grid"] < 360, "route legs get a computed distance and grid azimuth")
 ok(any(c["level"] == "warn" for c in facts["checks"]), "the brief's warn checks are read")
@@ -46,7 +52,8 @@ ok(code == 0, "good order should pass:\n" + out)
 code, out = run(os.path.join(SC, "order_check.py"), "bad-order.md", fj)
 ok(code == 1, "bad order should fail")
 for needle, what in (("8680 7705 is not in the plan", "invented grid"), ("'1st Sqd SUPP' from the map is not in the order", "dropped object"),
-                     ("admin/resupply", "dropped field"), ("warn check not carried", "warn not carried"), ("em or en dash", "dash")):
+                     ("admin/resupply", "dropped field"), ("warn check not carried", "warn not carried"), ("em or en dash", "dash"),
+                     ("FPL azimuth 317 grid from the direct fire plan is not in the order", "dropped FPL azimuth")):
     ok(needle in out, "bad order: %s not caught" % what)
 print("SAND TABLE ORDER CHECK: %d items" % n)
 for f in fails: print("  FAIL ", f)
