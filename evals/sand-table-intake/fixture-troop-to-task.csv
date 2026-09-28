@@ -1,0 +1,16 @@
+Fixture troop to task (fictional): a platoon of two squads on the sketch sheet; nothing here is a real unit or plan
+
+Unit,X,X+0:30,X+1:00,X+1:30,X+2:00,X+2:30
+Clock,1300,1330,1400,1430,1500,1530
+"1st Squad (ME), left / Squad leader",Stand to,Prep terrain model,,Brief,,
+  1st FT (4),STAND TO 100%,Range cards,"2 sec, 2 dig: Skirmisher (1st Sqd line)",,,
+  2nd FT (4) (2 on LP/OP 1400 to 1530),STAND TO 100%,Range cards,Skirmisher (1st Sqd line),,,
+"2nd Squad (SE 1), right / Squad leader",Stand to,Collect FT sketches,,,Leads day patrol,
+  1st FT (4),STAND TO 100%,Range cards,2 dig: Skirmisher (2nd Sqd line) (2 on MACO),,DAY PATROL,
+  2nd FT (4),STAND TO 100%,Range cards,Skirmisher (2nd Sqd line),,DAY PATROL,
+"Left gun, 1st Sqd line (2)",Stand to,Range card,"1 on security, 1 digs the gun position",,,
+MACO gate (2),,,1st Sqd (2),,2nd Sqd (2),
+"LP/OP (2), 8 hr reliefs",,,1st Sqd pair out,,,Pair in
+PC,Stand to,Collect sketches,Plt fire plan sketch,,,
+Security on the line / (sec / on the line),18/18 / 100%,0/18 / 0%,5/16 / 31%,5/16 / 31%,5/8 / 63%,5/10 / 50%
+Milestones,Stand to,,Sketches in,,2nd steps NLT 1500,
