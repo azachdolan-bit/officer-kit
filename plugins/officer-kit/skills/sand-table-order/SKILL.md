@@ -9,7 +9,7 @@ description: >
   or .sandtable-brief.md, or says "write my order from the sand table", "build the order from this plan file",
   "sand table export", "order package", "turn my plan into an order".
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Sand table order
@@ -51,7 +51,7 @@ Sand table order:
 - **The plan is the only source.** No unit name, grid, time, frequency, number, task, or phrase comes from anywhere else. Where the plan is silent the paragraph heading stands with "NOT IN THE PLAN: <what is missing>".
 - **Grids from the reader.** Every grid in the order is copied from facts.md, which derives it from the map in code. Distances and azimuths likewise: grid azimuths from the reader, magnetic only when the brief gives them.
 - **Lean, at the user's density.** The order reads like the user's own official orders: what a Marine needs to execute, not everything the planner drew. Every grid in it comes from the plan; full coverage of the plan lives in facts.md, the overlay and the checker's advisory lines. TCMs are the major ones, one per line; squad and gun positions go in the direct fire table. The direct fire plan reads from the reader's table, magnetic where the user's format wants magnetic (the reader converts with the sheet's declination and gives mils).
-- **Higher's words are pasted, not written.** Higher's mission, adjacent units' tasking, and each EFST's task, purpose and effects come verbatim from the base order. The planner writes the EFST method (TTLODAC) and the platoon's own paragraphs.
+- **Higher's words are pasted, not written.** Higher's mission, adjacent units' tasking, and each EFST's task, purpose and effects come verbatim from the base order. Higher's intent is not carried: 1.b is higher's mission, adjacent and supporting only. The planner writes the EFST method (TTLODAC) and the platoon's own paragraphs.
 - **The planner's parts are the parts.** Use the number and names of parts the planner gave; never split or rename them.
 - **The sketch and the cards are annexes, not paragraphs.** The fire plan sketch and each gun's range card come from the page as PNG files (B3M0830XQ-DM Annex D; MCTP 3-01C pp. 4-23 to 4-28) and ride beside the order; the order names them and copies no grazing or dead space figure from anywhere but those cards.
 - **Typed but not applied is still theirs.** Lines the planner typed and never applied are used and marked "(typed, not applied)" so they can confirm them.

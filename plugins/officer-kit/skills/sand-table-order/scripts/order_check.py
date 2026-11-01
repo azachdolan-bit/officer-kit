@@ -18,7 +18,8 @@ Fails when:
   8. a sector limit, FPL or PDF azimuth from the direct fire plan is not in the order, in grid or in magnetic, and not under NOT IN THE PLAN;
   9. the EMLCOA is missing, or its first sentence is not a tasking statement (no IOT purpose);
  10. a task statement under Tasks lacks a condition (Upon, On order, O/O, NLT, When) or a purpose (IOT);
- 11. a planned target or the FPF has no communication element (C: or Communication:) in the fire support plan.
+ 11. a planned target or the FPF has no communication element (C: or Communication:) in the fire support plan;
+ 12. paragraph 1.b (Friendly, up to the Mission paragraph) carries higher's intent: an intent heading, or PURPOSE:, METHOD: or END STATE text.
 """
 import json
 import re
@@ -160,6 +161,12 @@ def main(argv):
     ncom = len(re.findall(r"(?m)(^\s*C\s*[:\-]\s*\S)|(\bCommunication\s*:\s*\S)", order))
     if ntg and ncom < ntg:
         fails.append("%d planned targets (FPF included) but %d communication elements: give each its net (for example 60s COF net)" % (ntg, ncom))
+    # 12. 1.b carries higher's mission, adjacent and supporting only; never higher's intent
+    fm = re.search(r"(?im)^[^\n]*\bFriendly\b[^\n]*$([\s\S]*?)^\s*(#+\s*)?(\d\.\s*)?Mission\b", order)
+    if fm:
+        hit = re.search(r"(?i)\bintent\b|\bpurpose\s*:|\bmethod\s*:|\bend ?state\b", fm.group(1))
+        if hit:
+            fails.append("higher's intent in 1.b (%s): 1.b is higher's mission, adjacent and supporting only" % hit.group(0))
     print("ORDER CHECK: %d objects, %d routes, %d parts, %d fields, %d warns" % (len(facts.get("objects", [])), len(facts.get("routes", [])), len(facts.get("parts", [])), len(facts.get("fields", [])), len(warns)))
     for x in fails:
         print("  FAIL ", x)

@@ -65,7 +65,8 @@ good = open(os.path.join(EV, "good-order.md"), encoding="utf-8").read()
 for change, needle, what in (
         (("The enemy platoon seizes the crossroads along EN AA 1 IOT open the road east.", "The enemy platoon is reconnoitering the approaches."), "EMLCOA is not a tasking statement", "EMLCOA without a tactical task and purpose"),
         (("1st Sqd. SE1. Upon the enemy crossing TL AMBER, block", "1st Sqd. SE1. Block"), "task statement has no condition", "task without a condition"),
-        (("C: 81s COF net.\n", ""), "communication elements", "target without a net")):
+        (("C: 81s COF net.\n", ""), "communication elements", "target without a net"),
+        (("(2) Adjacent. Units at", "(2) Higher's intent. PURPOSE: protect the trains. END STATE: the enemy is blocked.\n(3) Adjacent. Units at"), "higher's intent in 1.b", "higher's intent pasted into 1.b")):
     assert change[0] in good, change[0]
     tp = os.path.join(tmp, "variant.md"); open(tp, "w", encoding="utf-8").write(good.replace(change[0], change[1]))
     code, outv = run(os.path.join(SC, "order_check.py"), tp, fj)

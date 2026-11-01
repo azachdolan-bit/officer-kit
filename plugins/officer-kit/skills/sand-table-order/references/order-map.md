@@ -27,7 +27,7 @@ From the corrections of a planner who briefs these orders (FEX III, Oct 2026). T
 
 - **Orientation.** Box, trace, familiarize in a short paragraph.
 - **1.a Enemy.** (1) Composition, disposition, strength: one sentence on who, where and when seen, one line of equipment, one line on how they operate. (2) Capabilities and limitations: one line per DRAW-D letter, "D: capability. Limited by ...". (3) EMLCOA: one tasking statement with a tactical task, "[enemy unit], [when], [task] [where] IOT [purpose]"; then "CA:" one line of current activity and "AOC:" one or two lines of actions on contact.
-- **1.b Friendly.** Higher's mission pasted verbatim from the base order's mission paragraph. Adjacent: each unit's tasking pasted verbatim from the base order's tasks, with its BP grid. Supporting: the fires with their POF.
+- **1.b Friendly.** Higher's mission pasted verbatim from the base order's mission paragraph. No higher's intent: the company's purpose, method and end state stay in the base order (order_check.py check 12). Adjacent: each unit's tasking pasted verbatim from the base order's tasks, with its BP grid. Supporting: the fires with their POF.
 - **3.b(1) TCMs.** One per line, the TCM, then beneath it the next: LD, ORP, SRP, BP, then the trigger lines, TRP, FPF and CCP. No squad or gun positions; they are in the direct fire table.
 - **Movement.** Wavetops, one line per leg: "LD to ORP: [mag az] mag, [distance] m. FOM [formation]. OOM [order]." A direct azimuth for each leg; a route uses as few checkpoints as possible. No leg tables.
 - **Parts.** The planner's parts by name, each with BW, CE, EW, CS and its movement lines; walk the dog only where the user's format wants it, marked as not part of the written order.
