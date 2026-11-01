@@ -191,3 +191,13 @@ Status: approved 2026-10-02 (pattern filed: Plugin Development\Exemplars\Orders\
 Evidence: "Why did you include highers purpose method end state in my order? That does not make sense and does not follow the skeleton." Higher's intent was pasted into 1.b of the UTC Lane 1 order, a repeat of the 0.24.0 lesson, because the order was written by hand without the tool or its checker.
 Lesson: Enforce 1.b in order_check.py: fail the order when paragraph 1.b carries higher's intent (a Higher's intent heading, or PURPOSE:, METHOD: or ENDSTATE text before paragraph 2). Add to order-map.md 1.b: mission, adjacent, supporting; no higher's intent.
 Status: approved 0.25.0
+
+## 2026-11-01  kit-standards  high  -> plugin
+Evidence: "Also, why is it not safe to the computer?" Terrain model foldables were built and presented while the C:\TBS folder request had been refused; the reply did not lead with NOT SAVED. Repeat of standard 1 (save gate).
+Lesson: Enforce standard 1: when a folder access request is refused or the computer is unreachable, the first line of the reply is "NOT SAVED to your computer: <file>", and no further deliverables are built until the folder is connected or the user says to continue without it.
+Status: pending
+
+## 2026-11-01  grg  medium  -> exemplar
+Evidence: "This is good." on the UTC GRG: an overview page with a zone index, then one enlarged page per zone, each with a photo front and a contour back for double sided printing, 10 m grid labeled as 4 digit eastings and northings.
+Lesson: Keep C:\TBS\print\UTC GRG - All Zones.pdf as the pattern for a gridded reference graphic: overview plus zone pages, photo side and contour side on the same frame, building numbers colored by zone, sources line on every page.
+Status: pending
