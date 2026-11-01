@@ -136,3 +136,58 @@ Status: approved 0.20.0
 Evidence: "it looks super cluttered and just kind of like chill it out so that it doesn't look so cluttered". The flyer's hero screenshot carried the grid, labels and sectors; a calm view replaced it.
 Lesson: For a hero image on a flyer or slide, the reviewer asks what can be removed before what is missing: no grid, no labels, no overlays unless the image is about them.
 Status: approved 0.20.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "way to much info. You know what an order looks like because I have uploaded many official ones... Cut all the fat on the order." The FEX III defense order ran 13 pages because the tool requires every map object, route and field in the order.
+Lesson: Write the order at the density of the user's official orders. Every grid in it comes from the plan, but full coverage lives in facts.md and the checker's coverage report, not the order; coverage is advisory, never a reason to pad a paragraph.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "Again, reference my written order" (said for the enemy paragraph and again for the tasks). The user's own handwritten defense order was on disk and was not used as the shape.
+Lesson: Before drafting, find the user's own written orders in the working folder (any *Order* file and any transcription of a handwritten order) and copy their paragraph shapes and length; a school sample is the fallback. Add this as Before you draft step 1.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "When it says EMLCOA, it's one sentence phrased as a tasking statement" and again "EMLCOA needs to read exactly like a tasking statement with a tactical task."
+Lesson: The EMLCOA headline is one tasking statement with a tactical task (who, when, task, where, IOT purpose), followed by a CA line (current activity) and an AOC line (actions on contact). The checker fails an EMLCOA whose first sentence has no IOT.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "Highers mission is just copied and pasted from the company's mission statement. Same thing with adjacent."
+Lesson: Copy higher's mission and each adjacent unit's tasking verbatim from the base order, with the adjacent BP grid; never summarize or merge them with intent.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "The OMM DOM FOM is wave tops. LD to ORP with a direct azimuth. ORP to SRP, direct azimuth. If it's a route, you use as few checkpoints as possible."
+Lesson: Brief movement as wavetops: one line per leg with the direct magnetic azimuth and distance, FOM and OOM. Use as few checkpoints as possible; no leg tables in the order.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "List the TCMs like this - TCM then beneath it the next TCM. Remove the squad positions and just keep the major ones and the trigger lines and such."
+Lesson: List TCMs one per line in movement order (LD, ORP, SRP, BP), then trigger lines, TRP, FPF and CCP. Squad and gun positions go in the direct fire table, not the TCM list.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "Task Purpose, method, which is the TTLODAC and then effects. The only one you make is the method. You get everything else from the base order. Don't make stuff up... don't forget com net."
+Lesson: Each EFST reads Task, Purpose, Method, Effects. Task, Purpose and Effects are pasted verbatim from the base order; the Method is the planner's TTLODAC for each target, and C (communication) is always filled, for example 60s COF net or 81s COF net. An element the plan lacks is flagged, never invented. The checker fails a target with no communication line.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "For tasking statements have it part 1 and part 2 and then tasks for each element underneath... have to have the T/O, condition, Task, and purpose."
+Lesson: Group tasks under each part, every element listed under each part, and write every statement with T/O, condition, tactical task and purpose. The checker fails a task statement with no condition (Upon) or no purpose (IOT).
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  high  -> plugin
+Evidence: "still messing up the tasking statements for the blocking. Just say block whatever part of their ea IOT 4th platoon's mission purpose. No BPT statement other than for part 1 for the MG squad." Corrected twice.
+Lesson: A defense block task reads: Upon [trigger], block [portion] of the EA IOT [the platoon's mission purpose]. Add BPT statements only where the planner gave them.
+Status: approved 0.24.0
+
+## 2026-10-02  sand-table-order  medium  -> exemplar
+Evidence: "You can model your enemy situation paragraph off of the one I uploaded with pictures from my defensive order. That is a good example of a proper METT-TC."
+Lesson: Keep the user's FEX II handwritten defense order as the pattern for the enemy paragraph (C/D/S lines, DRAW-D with limitations, EMLCOA with CA and AOC) and the tasks by part.
+Status: approved 2026-10-02 (pattern filed: Plugin Development\Exemplars\Orders\2026-10-02 Platoon defense order, own handwritten FEX II (pattern).md)
+
+## 2026-11-01  sand-table-order  high  -> plugin
+Evidence: "Why did you include highers purpose method end state in my order? That does not make sense and does not follow the skeleton." Higher's intent was pasted into 1.b of the UTC Lane 1 order, a repeat of the 0.24.0 lesson, because the order was written by hand without the tool or its checker.
+Lesson: Enforce 1.b in order_check.py: fail the order when paragraph 1.b carries higher's intent (a Higher's intent heading, or PURPOSE:, METHOD: or ENDSTATE text before paragraph 2). Add to order-map.md 1.b: mission, adjacent, supporting; no higher's intent.
+Status: approved 0.25.0
