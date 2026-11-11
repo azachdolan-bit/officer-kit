@@ -10,7 +10,7 @@ description: >
   "I have to give a five minute class on", "topic brief", "PME brief", "backgrounder on", or
   "make me a cue card".
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Topic brief
@@ -40,7 +40,7 @@ Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this s
 Topic brief:
 - [ ] 1. Topic sentence; format rules quoted from the user's guide; doctrine read from the library
 - [ ] 2. Research from sources the user can check; every fact with its source; disputes recorded as they are found
-- [ ] 3. Brief (references/brief-shape.md): topic first, context one paragraph, incidents grouped by what they illustrate, numbers tied to the topic, sources table, lines not to say
+- [ ] 3. Brief (references/brief-shape.md): topic first, context one paragraph, incidents grouped by what they illustrate, numbers tied to the topic, sources table, lines not to say. A period of instruction carries one worked example run top to bottom on the unit's own material (its map, GRG, or order)
 - [ ] 4. python3 scripts/brief_check.py <brief> --kind brief --sources <files> --numbers exits 0; read every number against its sentence for scope
 - [ ] 5. Script (references/script-and-card.md), timed to the format; python3 scripts/brief_check.py <script> --kind script --sources <files> [--doctrine "<pub>"] [--format 1,3,1] --numbers exits 0
 - [ ] 6. evidence-reviewer agent, blind, with the script and the sources: every number, quote, and scope

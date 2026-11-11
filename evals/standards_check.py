@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Kit standards wiring: STANDARDS.md exists with ten numbered standards and a version line,
-every skill reads it, the rules file template carries the same version and ten lines,
+"""Kit standards wiring: STANDARDS.md exists with twelve numbered standards and a version line,
+every skill reads it, the rules file template carries the same version and twelve lines,
 start and week-ahead run the version check, and no file in the chain carries a dash.
 Usage: python3 evals/standards_check.py"""
 import glob, os, re, sys
@@ -15,12 +15,12 @@ std = open(os.path.join(P, "STANDARDS.md"), encoding="utf-8").read()
 m = re.search(r"^Kit standards: (\d+\.\d+\.\d+)$", std, re.M)
 ok(m, "STANDARDS.md: no 'Kit standards: x.y.z' line")
 ver = m.group(1) if m else "?"
-ok(len(re.findall(r"^\d+\. \*\*", std, re.M)) == 10, "STANDARDS.md: expected ten numbered standards")
+ok(len(re.findall(r"^\d+\. \*\*", std, re.M)) == 12, "STANDARDS.md: expected twelve numbered standards")
 for f in sorted(glob.glob(os.path.join(P, "skills", "*", "SKILL.md"))):
     ok("../../STANDARDS.md" in open(f, encoding="utf-8").read(), f"{os.path.relpath(f, P)}: does not read STANDARDS.md")
 tpl = open(os.path.join(P, "skills", "rules-file", "references", "template.md"), encoding="utf-8").read()
 ok(re.search(rf"^- Kit standards: {re.escape(ver)}$", tpl, re.M), f"template.md: Kit standards line does not match STANDARDS.md {ver}")
-ok(len(re.findall(r"^- \d+ ", tpl, re.M)) == 10, "template.md: expected ten kit standard lines")
+ok(len(re.findall(r"^- \d+ ", tpl, re.M)) == 12, "template.md: expected twelve kit standard lines")
 for s in ("start", "week-ahead"):
     ok("## Kit standards check" in open(os.path.join(P, "skills", s, "SKILL.md"), encoding="utf-8").read(), f"{s}: no Kit standards check")
 pj = open(os.path.join(P, ".claude-plugin", "plugin.json"), encoding="utf-8").read()

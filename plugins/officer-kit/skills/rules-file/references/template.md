@@ -11,7 +11,7 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - Draft only. I read everything before it goes anywhere.
 
 ## Kit standards (from the Officer Kit; strike a line to opt out)
-- Kit standards: 0.26.0
+- Kit standards: 0.28.0
 - 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; list every file at the end of a session that built something.
 - 2 Sources only: build from my notes, captured sources, and cited references; name a gap, never fill it from general knowledge.
 - 3 Do not state what is implied.
@@ -22,6 +22,8 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - 8 Never compress spacing or margins to fit a page; cut words.
 - 9 No em dashes or en dashes; American spelling.
 - 10 State it, do not explain it: each line is a fact, task, or requirement, with no clause saying why it matters.
+- 11 Check the folder first: search for an existing version before building; name each set found and its origin and ask which; ask whose an attached draft is before reviewing it.
+- 12 A removal covers the whole set: remove it from every file, then confirm with a text search that returns zero hits.
 
 ## Who I am
 - [Rank], [billet], [unit or school], MOS [assigned or pending]   (or: not recorded)

@@ -210,22 +210,22 @@ Status: approved 0.26.0
 ## 2026-11-11  kit-standards  high  -> plugin
 Evidence: "You already have TCMs built in the TBS folder. You need to check that first" then "No, those ones are for the virtual sand table. There should be some from my r5 billet"
 Lesson: Before building any product, search the working folder for an existing one. When more than one set is found, name each set and its origin and ask which to use.
-Status: pending
+Status: approved 0.28.0
 
 ## 2026-11-11  kit-standards  high  -> plugin
 Evidence: "Take out jamming" then "Again, remove jamming completely from our docs." The removal reached the slides only, not the workup, reference docs, trackers, print card or build scripts.
 Lesson: A content removal applies to every product in the set. Sweep every file, then confirm with a text search that returns zero hits before reporting done.
-Status: pending
+Status: approved 0.28.0
 
 ## 2026-11-11  kit-standards  medium  -> plugin
 Evidence: "So for context, the trackers came from the alpha clic." An attached draft was reviewed as the user's own work.
 Lesson: When a draft is attached, ask whose it is before reviewing it as the user's own work.
-Status: pending
+Status: approved 0.28.0
 
 ## 2026-11-11  study-guide  medium  -> plugin
 Evidence: Sustain. "include that example from earlier... so I can give people a real world example" The top down PIR 1 example (decision to LTIOV on the real GRG) carried the collection brief.
 Lesson: A teaching brief carries one worked example run top to bottom on the unit's own material (map, GRG, order), not a generic one.
-Status: pending
+Status: approved 0.28.0
 
 
 ## 2026-11-11  order-analysis  high  -> plugin
