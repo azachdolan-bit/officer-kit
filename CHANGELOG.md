@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.28.0 (2026-11-11) Standards 11 and 12: check the folder first, a removal covers the set
+
+- **STANDARDS.md (0.28.0):** two new standards from the WARFEX CLIC work. Standard 11, check the folder first: search the working folder for an existing version before building or reviewing; when more than one set turns up, name each set and its origin and ask which; ask whose an attached draft is before reviewing it as the user's own. Standard 12, a removal covers the whole set: remove the content from every file in the set (documents, slides, trackers, cards, references, build scripts) and confirm with a text search that returns zero hits. Every skill now reads "twelve standards"; the rules file template carries lines 11 and 12 and version 0.28.0; `standards_check.py` counts twelve.
+- **study-guide (0.2.2)** and **topic-brief (0.1.1):** a teaching brief or period of instruction carries one worked example run top to bottom on the unit's own material (its map, GRG, or order), not a generic one.
+- The four 11 Nov lessons still pending are marked approved 0.28.0; lesson 3 (whose draft) is folded into standard 11.
+
 ## 0.27.0 (2026-11-11) PIRs, from enemy COA to SOR
 
 - **order-analysis (0.2.0):** a PIR step (workflow step 5) for an intelligence billet or on request, with a new reference, `references/pir-development.md`, built only from doctrine in the user's library: where PIRs come from (MCRP 2-10B.1 figure 2-1 p. 2-2, event template and matrix pp. 6-35 to 6-40; MCWP 5-10 pp. 2-17 and 3-2), the characteristics of a good PIR or IR (MCWP 2-10 p. 2-6, with the older five item list in MCTP 2-10A p. 2-3 named), and the four steps from PIR to indicators, SIRs, and SORs (MCWP 2-10 pp. 3-5 to 3-7). `analysis.json` gains an optional `pirs` list; `analysis_check.py` fails a PIR that asks more than one question, names no decision, or lacks a where or when that appears in the question, an indicator with no NAI, an SIR without its NAI or time, and an SOR that is missing or written as a question. Harness 28 items (was 22), with a fictional PIR on the fictional order and six planted PIR defects. No class slides or class examples are in the kit.
