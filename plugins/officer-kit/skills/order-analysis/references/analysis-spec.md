@@ -9,6 +9,7 @@ One JSON file per order, checked by `scripts/analysis_check.py` against the orde
 | `resourcing` | `{"attachments": {"quote", "loc"}, "logistics": {"quote", "loc"}}`, read first; it bounds everything else |
 | `facts` | `[{"factor": "Mission", "text": "the fact in plain words", "quote": "verbatim", "loc": "3.c.(2)"}]`; factors: Mission, Enemy, Terrain and weather, Troops and support available, Time available, Civil considerations |
 | `findings` | `[{"n": 1, "type": "contradiction", "claim": "...", "a": {"quote", "loc"}, "b": {"quote", "loc"}, "consequence": "what a subordinate would do wrong", "computed": [...], "directions": [...], "gate0": "SURVIVES ...", "gate1": "SUBSTANTIVE ..."}]` |
+| `pirs` | Optional. `[{"n": 1, "question": "Will ...?", "decision": "the commander's decision it supports", "confirms": "the enemy COA or assumption it confirms or denies", "where": "text that appears in the question", "when": "text that appears in the question", "ltiov": "...", "indicators": [{"text": "...", "nai": "NAI 1", "sirs": [{"question": "...?", "nai": "NAI 1", "time": "...", "sor": "Report ...", "asset": "..."}]}]}]`, built by references/pir-development.md |
 | `rfis` | `["the question for higher, one line each"]` |
 
 `type` is contradiction (two passages of the same order that cannot both be followed), geometry (a grid, distance, or bearing that does not work, computed), sequence (an event placed where it cannot happen, read after the legend), or omission (something the format requires that the order leaves out, stated as an RFI rather than a fault).

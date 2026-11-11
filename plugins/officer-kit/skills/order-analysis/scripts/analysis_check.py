@@ -14,6 +14,9 @@ Fails when:
   without one
 - a finding carries no consequence, or no Gate 0 and Gate 1 verdicts (a gate with no record did not run)
 - a METT-T fact carries no locator or quote
+- a PIR asks more or less than one question, names no decision, or its "where" or "when" is missing or
+  not in the question (MCWP 2-10, p. 2-6); an indicator has no NAI; an SIR is not one question or lacks
+  its NAI or time; an SOR is missing or phrased as a question (MCWP 2-10, pp. 3-5 to 3-7)
 Warns when a finding's claim matches the not-a-defect list in references/not-a-defect.md."""
 import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -92,8 +95,34 @@ def main(ap, op):
         for pat, why in NOT_DEFECT:
             if re.search(pat, f.get("claim", ""), re.I):
                 warns.append(tag + ": check the not-a-defect list: " + why)
+    def one_q(t):
+        t = (t or "").strip()
+        compound = re.search(r"\b(and|or)\s+(will|would|is|are|was|were|does|do|did|can|could|has|have)\b", t, re.I)
+        return t.endswith("?") and t.count("?") == 1 and not compound
+    for p in A.get("pirs", []):
+        tag = "PIR %s" % p.get("n", "?")
+        if not one_q(p.get("question")):
+            fails.append(tag + ": must ask exactly one question, ending in a question mark")
+        if not p.get("decision"):
+            fails.append(tag + ": names no decision; a PIR is tied to a commander's decision")
+        for k in ("where", "when"):
+            if not p.get(k):
+                fails.append(tag + ": no %s element" % k)
+            elif norm(p[k]) not in norm(p.get("question")):
+                fails.append(tag + ": the %s element (%s) is not in the question" % (k, p[k]))
+        if not p.get("indicators"):
+            warns.append(tag + ": no indicators yet; collection cannot be tasked from the PIR alone")
+        for j, ind in enumerate(p.get("indicators", []), 1):
+            it = "%s indicator %d" % (tag, j)
+            if not ind.get("nai"): fails.append(it + ": no NAI")
+            for k, sr in enumerate(ind.get("sirs", []), 1):
+                st = "%s SIR %d" % (it, k)
+                if not one_q(sr.get("question")): fails.append(st + ": must be one question")
+                if not sr.get("nai") or not sr.get("time"): fails.append(st + ": needs its NAI and time")
+                if not sr.get("sor"): fails.append(st + ": no SOR")
+                elif sr["sor"].strip().endswith("?"): fails.append(st + ": the SOR is a question; write it as a directive")
     if not A.get("rfis"): warns.append("no RFIs listed; an order with nothing to ask is rare")
-    print("ANALYSIS CHECK: %d facts, %d findings, %d RFIs" % (len(A.get("facts", [])), len(A.get("findings", [])), len(A.get("rfis", []))))
+    print("ANALYSIS CHECK: %d facts, %d findings, %d PIRs, %d RFIs" % (len(A.get("facts", [])), len(A.get("findings", [])), len(A.get("pirs", [])), len(A.get("rfis", []))))
     for x in fails: print("  FAIL ", x)
     for x in warns: print("  warn ", x)
     print("  clean" if not fails else "  NOT CLEAN")

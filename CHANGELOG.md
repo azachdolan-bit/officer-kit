@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.27.0 (2026-11-11) PIRs, from enemy COA to SOR
+
+- **order-analysis (0.2.0):** a PIR step (workflow step 5) for an intelligence billet or on request, with a new reference, `references/pir-development.md`, built only from doctrine in the user's library: where PIRs come from (MCRP 2-10B.1 figure 2-1 p. 2-2, event template and matrix pp. 6-35 to 6-40; MCWP 5-10 pp. 2-17 and 3-2), the characteristics of a good PIR or IR (MCWP 2-10 p. 2-6, with the older five item list in MCTP 2-10A p. 2-3 named), and the four steps from PIR to indicators, SIRs, and SORs (MCWP 2-10 pp. 3-5 to 3-7). `analysis.json` gains an optional `pirs` list; `analysis_check.py` fails a PIR that asks more than one question, names no decision, or lacks a where or when that appears in the question, an indicator with no NAI, an SIR without its NAI or time, and an SOR that is missing or written as a question. Harness 28 items (was 22), with a fictional PIR on the fictional order and six planted PIR defects. No class slides or class examples are in the kit.
+- The 11 Nov PIR lesson is marked approved 0.27.0. The other four 11 Nov lessons stay pending.
+
 ## 0.26.0 (2026-11-11) Standard 10: state it, do not explain it
 
 - **STANDARDS.md (0.26.0):** a tenth standard. Each line in a product is a fact, a task, or a requirement; a clause that tells the reader why the line matters or what follows from it is cut. Worked pair from the WARFEX collection brief: "Late, vague, or incorrect reports degrade decision making," not "Late, vague or off target reports mean he decides blind." A purpose the format requires (IOT in a task statement) stays. Every skill now reads "ten standards"; the rules file template carries line 10 and version 0.26.0; `standards_check.py` counts ten.
