@@ -28,7 +28,7 @@ nothing here asks the model to review its own work, which supplies no signal.
 
 ## Kit standards
 
-Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its nine standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
+Read `STANDARDS.md` at the root of this plugin (`../../STANDARDS.md` from this skill's folder) before producing anything. Its ten standards apply to every product; where the user's rules file or an override says otherwise, say so once and do it the user's way.
 
 ## 1. Assume it already failed, before you draft
 

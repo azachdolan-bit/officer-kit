@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.26.0 (2026-11-11) Standard 10: state it, do not explain it
+
+- **STANDARDS.md (0.26.0):** a tenth standard. Each line in a product is a fact, a task, or a requirement; a clause that tells the reader why the line matters or what follows from it is cut. Worked pair from the WARFEX collection brief: "Late, vague, or incorrect reports degrade decision making," not "Late, vague or off target reports mean he decides blind." A purpose the format requires (IOT in a task statement) stays. Every skill now reads "ten standards"; the rules file template carries line 10 and version 0.26.0; `standards_check.py` counts ten.
+- The 11 Nov lesson is marked approved 0.26.0. The two 1 Nov lessons still pending stay pending.
+
 ## 0.25.0 (2026-11-01) Higher's intent stays out of 1.b, by check
 
 - **sand-table-order (0.3.1):** `order_check.py` check 12 fails an order whose paragraph 1.b (Friendly, up to the Mission paragraph) carries higher's intent: an intent heading, or PURPOSE:, METHOD: or END STATE text. `references/order-map.md` and SKILL.md say it in words: 1.b is higher's mission, adjacent and supporting only. The 0.24.0 lesson said the same thing and was broken again on the UTC Lane 1 order, written by hand without the tool or its checker; this release makes it a failure, not a reminder. Harness 29 items (was 28): a fourth planted defect, higher's intent pasted into 1.b.
