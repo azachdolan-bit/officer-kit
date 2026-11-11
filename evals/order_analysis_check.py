@@ -40,7 +40,10 @@ code, out = run(os.path.join(SC, "analysis_check.py"), "bad-analysis.json", "ord
 ok(code == 1, "bad analysis should fail")
 for needle, why in (("decode it in 'legend'", "undecoded columns"), ("quote not in the order", "invented quote"), ("is 423 m, not 250", "wrong distance"),
                     ("no gate1 verdict", "missing gate record"), ("sequence finding before", "sequence without legend"), ("5600 mils, not 5400", "northwest by hand"),
-                    ("no locator", "fact without paragraph")):
+                    ("no locator", "fact without paragraph"), ("PIR 1: must ask exactly one question", "a PIR with two questions"),
+                    ("PIR 1: names no decision", "a PIR with no decision"), ("PIR 1 indicator 1: no NAI", "an indicator with no NAI"),
+                    ("the SOR is a question", "an SOR phrased as a question"), ("PIR 2: no when element", "a PIR with no time element"),
+                    ("PIR 2 indicator 1 SIR 1: needs its NAI and time", "an SIR with no time")):
     ok(needle in out, "bad analysis should fail on " + why)
 bad2 = json.load(open(os.path.join(EV, "good-analysis.json"))); bad2["legend"][0]["source"] = "references/not-a-defect.md item 2"
 tmp = tempfile.mkdtemp(); bp = os.path.join(tmp, "b2.json"); json.dump(bad2, open(bp, "w"))

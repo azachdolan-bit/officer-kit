@@ -88,5 +88,49 @@
  ],
  "rfis": [
   "Is the machine gun section attached to 2d Platoon, and from what time?"
+ ],
+ "pirs": [
+  {
+   "n": 1,
+   "question": "Will the enemy withdraw and will they use the creek?",
+   "decision": "",
+   "where": "the creek",
+   "when": "before 0600",
+   "indicators": [
+    {
+     "text": "Enemy movement on the creek",
+     "nai": "",
+     "sirs": [
+      {
+       "question": "Is the enemy moving on the creek in NAI 1 before 0600?",
+       "nai": "NAI 1",
+       "time": "before 0600",
+       "sor": "Is the enemy moving on the creek?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "question": "Will the enemy reinforce Hill 210?",
+   "decision": "Commit the reserve",
+   "where": "Hill 210",
+   "when": "",
+   "indicators": [
+    {
+     "text": "Vehicles on the valley road",
+     "nai": "NAI 2",
+     "sirs": [
+      {
+       "question": "Do vehicles move on the valley road?",
+       "nai": "NAI 2",
+       "time": "",
+       "sor": "Report vehicles on the valley road."
+      }
+     ]
+    }
+   ]
+  }
  ]
 }

@@ -1,6 +1,6 @@
 # order-analysis tests
 
-`order.txt` is fictional and exists only for the harness (`evals/order_analysis_check.py`, 22 items): grid arithmetic against hand values, the direction table, a target number that reads like a grid, one point given two grids, a good analysis that passes, and a bad one that fails on each planted defect (undecoded columns, an invented quote, a hand computed distance, a missing gate record, a sequence finding before the legend, northwest as 5400 mils, a fact with no paragraph, a legend decoded from the kit's own reference).
+`order.txt` is fictional and exists only for the harness (`evals/order_analysis_check.py`, 28 items): grid arithmetic against hand values, the direction table, a target number that reads like a grid, one point given two grids, a good analysis that passes, and a bad one that fails on each planted defect (undecoded columns, an invented quote, a hand computed distance, a missing gate record, a sequence finding before the legend, northwest as 5400 mils, a fact with no paragraph, a legend decoded from the kit's own reference, and six PIR defects: two questions in one PIR, a PIR with no decision, an indicator with no NAI, an SOR written as a question, a PIR with no time element, an SIR with no time). The PIR in the good analysis is fictional, written on this order; no class material is in the kit.
 
 ## Blind test against a real review (27 Sep 26)
 

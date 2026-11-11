@@ -75,7 +75,8 @@
     {
      "from": "QS 4150 5930",
      "to": "QS 418 595",
-     "distance_m": 423, "stated_distance_m": 300
+     "distance_m": 423,
+     "stated_distance_m": 300
     }
    ],
    "consequence": "none if within budget",
@@ -85,5 +86,31 @@
  ],
  "rfis": [
   "Is the machine gun section attached to 2d Platoon, and from what time?"
+ ],
+ "pirs": [
+  {
+   "n": 1,
+   "question": "Will the enemy squad withdraw northwest along the creek from Hill 210 between 0500 and 0600?",
+   "decision": "Whether 3d Squad shifts from SBF 1 to block the creek",
+   "confirms": "The enemy most likely COA in paragraph 1.a",
+   "where": "along the creek from Hill 210",
+   "when": "between 0500 and 0600",
+   "ltiov": "0545",
+   "indicators": [
+    {
+     "text": "Enemy movement north along the creek",
+     "nai": "NAI 1",
+     "sirs": [
+      {
+       "question": "Do more than two enemy move north along the creek in NAI 1 between 0500 and 0600?",
+       "nai": "NAI 1",
+       "time": "0500 to 0600",
+       "sor": "Report enemy moving north along the creek in NAI 1 between 0500 and 0600, with number and direction. LTIOV 0545.",
+       "asset": "3d Squad at SBF 1"
+      }
+     ]
+    }
+   ]
+  }
  ]
 }

@@ -206,3 +206,29 @@ Status: pending
 Evidence: "I need you to update the way you word things for the plugin because it still sounds like AI. For example. the second bullet on slide 2 explains the point rather than stating a fact." His rewrite: "Late, vague, or incorrect reports degrades decision making."
 Lesson: Add kit standard 10, state it, do not explain it: each line is a fact, a task, or a requirement, with no clause saying why it matters or what follows from it.
 Status: approved 0.26.0
+
+## 2026-11-11  kit-standards  high  -> plugin
+Evidence: "You already have TCMs built in the TBS folder. You need to check that first" then "No, those ones are for the virtual sand table. There should be some from my r5 billet"
+Lesson: Before building any product, search the working folder for an existing one. When more than one set is found, name each set and its origin and ask which to use.
+Status: pending
+
+## 2026-11-11  kit-standards  high  -> plugin
+Evidence: "Take out jamming" then "Again, remove jamming completely from our docs." The removal reached the slides only, not the workup, reference docs, trackers, print card or build scripts.
+Lesson: A content removal applies to every product in the set. Sweep every file, then confirm with a text search that returns zero hits before reporting done.
+Status: pending
+
+## 2026-11-11  kit-standards  medium  -> plugin
+Evidence: "So for context, the trackers came from the alpha clic." An attached draft was reviewed as the user's own work.
+Lesson: When a draft is attached, ask whose it is before reviewing it as the user's own work.
+Status: pending
+
+## 2026-11-11  study-guide  medium  -> plugin
+Evidence: Sustain. "include that example from earlier... so I can give people a real world example" The top down PIR 1 example (decision to LTIOV on the real GRG) carried the collection brief.
+Lesson: A teaching brief carries one worked example run top to bottom on the unit's own material (map, GRG, order), not a generic one.
+Status: pending
+
+
+## 2026-11-11  order-analysis  high  -> plugin
+Evidence: "Save this into memory so that while I am analyzing the enemy situation and the order my CO wrote, I can provide PIRs using the process so that they are specific and high quality." then "can it also go into the officer plugin?" and "let's update the plugin"
+Lesson: order-analysis builds PIRs by the doctrinal chain: the IPB Step 4 enemy COAs and event matrix give the initial PIRs, the commander's decision points refine them, and each PIR runs down to indicators with NAIs, SIRs, and SORs, checked against the MCWP 2-10 characteristics. Doctrine only; class slides and class examples stay out of the kit.
+Status: approved 0.27.0
