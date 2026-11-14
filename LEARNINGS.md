@@ -195,12 +195,12 @@ Status: approved 0.25.0
 ## 2026-11-01  kit-standards  high  -> plugin
 Evidence: "Also, why is it not safe to the computer?" Terrain model foldables were built and presented while the C:\TBS folder request had been refused; the reply did not lead with NOT SAVED. Repeat of standard 1 (save gate).
 Lesson: Enforce standard 1: when a folder access request is refused or the computer is unreachable, the first line of the reply is "NOT SAVED to your computer: <file>", and no further deliverables are built until the folder is connected or the user says to continue without it.
-Status: pending
+Status: approved 0.29.0
 
 ## 2026-11-01  grg  medium  -> exemplar
 Evidence: "This is good." on the UTC GRG: an overview page with a zone index, then one enlarged page per zone, each with a photo front and a contour back for double sided printing, 10 m grid labeled as 4 digit eastings and northings.
 Lesson: Keep C:\TBS\print\UTC GRG - All Zones.pdf as the pattern for a gridded reference graphic: overview plus zone pages, photo side and contour side on the same frame, building numbers colored by zone, sources line on every page.
-Status: pending
+Status: approved 2026-11-14, filed Exemplars/GRG/2026-11-14 UTC GRG all zones (pattern).md
 
 ## 2026-11-11  kit-standards  high  -> plugin
 Evidence: "I need you to update the way you word things for the plugin because it still sounds like AI. For example. the second bullet on slide 2 explains the point rather than stating a fact." His rewrite: "Late, vague, or incorrect reports degrades decision making."
@@ -232,3 +232,33 @@ Status: approved 0.28.0
 Evidence: "Save this into memory so that while I am analyzing the enemy situation and the order my CO wrote, I can provide PIRs using the process so that they are specific and high quality." then "can it also go into the officer plugin?" and "let's update the plugin"
 Lesson: order-analysis builds PIRs by the doctrinal chain: the IPB Step 4 enemy COAs and event matrix give the initial PIRs, the commander's decision points refine them, and each PIR runs down to indicators with NAIs, SIRs, and SORs, checked against the MCWP 2-10 characteristics. Doctrine only; class slides and class examples stay out of the kit.
 Status: approved 0.27.0
+
+## 2026-11-14  folder-triage  high  -> plugin
+Evidence: "We have a serious problem with version control and organization. I need you to create a new rule following this process that forces us to organize things much better." A 21 Sep README rule (keep only the current version, YYYY-MM-DD_topic_version names) existed; zero of 3,568 files followed it and 178 old versions sat beside current ones.
+Lesson: Enforce the triage rule, do not just write it. folder-triage ends by installing folder_check.py in the folder's _build and adding a rules file line that every session that saved a file runs it on the folders it touched before the final reply and reports 0 violations or names each one. A README rule alone is not enforcement.
+Status: approved 0.29.0
+
+## 2026-11-14  kit-standards  high  -> plugin
+Evidence: "We have a serious problem with version control" The rules file save gate said every revision is saved "as a new rev number or an overwrite of the draft," which left drafts 1 to 9 of one order side by side and 104 rev copies of one app.
+Lesson: Amend standard 1: saving a revision moves the previous version to _archive in the same folder with its version and date appended; the current file keeps its plain name.
+Status: approved 0.29.0
+
+## 2026-11-14  folder-triage  medium  -> plugin
+Evidence: "Execute all" approving a plan that replaced YYYY-MM-DD_topic_version names, which zero files in a 3,568 file folder had adopted, with plain current names.
+Lesson: Replace the naming convention: the current file takes a plain name for what it is; history goes to _archive with version and date; a date goes in a current name only when it is part of what the file is (an event, a version sent to someone), formatted (DD Mon YY). No draft, rev, v, final, copy, or (1) in a current name.
+Status: approved 0.29.0
+
+## 2026-11-14  folder-triage  medium  -> plugin
+Evidence: "Execute all" approving one archive name; the folder had grown six names for old files (_to_delete, _superseded, _old, _old docs, Archive, Backups) across 13 folders, none ever emptied.
+Lesson: Triage renames every dead file folder to _archive and merges duplicates of it. Claude only moves to _archive; the user deletes, once the folder's event or phase closes.
+Status: approved 0.29.0
+
+## 2026-11-14  folder-triage  medium  -> plugin
+Evidence: "Need you to do an indepth clean up of my TBS drive" then "Execute all" on a 6,384 file folder, past the skill's 200 file limit that stops at a proposal.
+Lesson: For a folder over 200 files, still execute once approved: find exact duplicates by hash, write a move manifest CSV, dry run it, then move and keep a move log so every move can be undone. Leave repos, issued sources, and sent records untouched.
+Status: approved 0.29.0
+
+## 2026-11-14  rules-file  medium  -> plugin
+Evidence: "Once you do that I want to do a defrief so that we can start stacking up changes for the officer kit pluggin" after the folder discipline rule and checker were built for this folder.
+Lesson: The rules file template carries a Folder discipline section (one current file, _archive, one home per file, git for code, run folder_check.py), and start installs folder_check.py when it sets up the working folder.
+Status: approved 0.29.0

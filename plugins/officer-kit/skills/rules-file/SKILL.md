@@ -8,7 +8,7 @@ description: >
   CLAUDE.md", "set up my rules", "rules file", "tell you about me", "personalize Claude",
   "make a project rules file", "update my rules", or wants Claude to remember how they work.
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Rules file builder
@@ -68,6 +68,7 @@ Fill the template with their answers. Rules for the output:
 - The security block is mandatory and comes first. Never remove or soften it. It protects other people's data and controlled material; it does not forbid the user's own name on their own correspondence.
 - The Kit standards block comes second, copied from the template with its `Kit standards:` version line, which must match `STANDARDS.md`. The user may strike any numbered line; write a struck line as `- struck: <number>` so a later update never adds it back.
 - Skipped fields are written as `not recorded (ask me at draft time)` so a later session asks instead of guessing.
+- The Folder discipline block comes third, copied from the template at every depth, Light included. The user may strike any line. If `_build/folder_check.py` is not in the folder, copy it from `skills/folder-triage/scripts/folder_check.py`.
 - Include the dated Fleet section, mostly blank, with instructions to fill it on arrival.
 - Save as `CLAUDE.md` in the root of the linked folder when one is connected. Otherwise deliver the file and say where to put it: the top of the folder they will work from.
 - If the folder already has a CLAUDE.md, update the sections the interview touched and leave the rest as it was. Show the diff.

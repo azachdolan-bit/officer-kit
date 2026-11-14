@@ -7,7 +7,7 @@ description: >
   officer kit", "officer kit start", "set up the kit", "where do I begin", "walk me through
   setup", "what can this do", "which tools do I need", or has just installed the plugin.
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 
 # Start
@@ -72,14 +72,15 @@ Propose a folder at a location the user names (Documents is a fine default). Str
   Proposals/           changes to the kit itself that inspect writes up for you to send on
   LEARNINGS.md         your lessons queue, written by aar, applied by inspect
   Print/               cards and laminates
-  _build/              scripts and intermediate files the tools create
+  _build/              scripts and intermediate files the tools create; folder_check.py lives here
+  00 Inbox/            files not yet sorted; emptied every Sunday
 ```
 
 `references/conventions.md` explains the four conventions (the label instead of a name, overrides, exemplars, lessons) in the user's terms; read it once and say the label rule aloud in step 5.
 
-Rules: every module gets its folder only if they picked it, plus Reference, Reference/Exemplars, Overrides, Proposals, LEARNINGS.md, Print, and _build always. Nothing from a .mil system goes in. If they already have a folder they work from, adapt it instead of making a new one; `folder-triage` can inventory and restructure it.
+Rules: every module gets its folder only if they picked it, plus Reference, Reference/Exemplars, Overrides, Proposals, LEARNINGS.md, Print, 00 Inbox, and _build always. Nothing from a .mil system goes in. If they already have a folder they work from, adapt it instead of making a new one; `folder-triage` can inventory and restructure it.
 
-Create the folders if a folder is already connected; otherwise give the structure and ask them to create it.
+Create the folders if a folder is already connected; otherwise give the structure and ask them to create it. Copy `skills/folder-triage/scripts/folder_check.py` into `_build/` and write `_build/folder_check_allow.txt` with `since: <today>` and a `root:` line for each top level folder. The rules file in step 5 carries the Folder discipline block that runs it.
 
 ## Step 4. Connect the folder
 
