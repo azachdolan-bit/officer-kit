@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+"""Deterministic evals for folder-triage: triage_scan, apply_moves (dry, go, undo), folder_check on a
+messy and a clean fixture, and the wiring of the Folder discipline rule into the standards, the rules
+file template, rules-file, and start. Exit 0 = all pass."""
+import os, sys, csv, shutil, subprocess, tempfile
+H = os.path.dirname(os.path.abspath(__file__)); P = os.path.join(H, '..', 'plugins', 'officer-kit'); S = os.path.join(P, 'skills', 'folder-triage', 'scripts')
+def run(*a): return subprocess.run([sys.executable, *a], capture_output=True, text=True)
+res = []
+def ok(name, cond): res.append((name, bool(cond)))
+def w(p, data=b'x'):
+    os.makedirs(os.path.dirname(p), exist_ok=True); open(p, 'wb').write(data)
+T = tempfile.mkdtemp(); F = os.path.join(T, 'Work')
+blob = os.urandom(4000)
+w(f'{F}/Exercises/FEX/Order (draft 1).docx', b'a' * 2000)
+w(f'{F}/Exercises/FEX/Order (draft 2).docx', b'b' * 2000)
+w(f'{F}/Exercises/FEX/_to_delete/old.md')
+w(f'{F}/Exercises/FEX/map.pdf', blob)
+w(f'{F}/print/map.pdf', blob)
+w(f'{F}/print/Event/notes.md')
+w(f'{F}/Exercises/FEX/~$lock.docx')
+w(f'{F}/stray.txt')
+w(f'{F}/Reference/Order.pdf', os.urandom(3000))
+w(f'{F}/Exercises/FEX/To CO 1 Nov/brief.pdf', blob)
+os.makedirs(f'{F}/_build', exist_ok=True); shutil.copy(f'{S}/folder_check.py', f'{F}/_build/folder_check.py')
+open(f'{F}/_build/folder_check_allow.txt', 'w').write('since: 2000-01-01\nroot: Exercises\nroot: print\nroot: Reference\n')
+r = run(f'{F}/_build/folder_check.py'); out = r.stdout
+ok('messy folder fails', r.returncode == 1)
+for tag in ['DEAD FOLDER', 'ROOT STRAY', 'VERSION NAME', 'VERSIONS', 'JUNK', 'PRINT ROOT', 'PRINT SOURCE', 'DUPLICATE']:
+    ok(f'messy folder flags {tag}', tag in out)
+ok('sent record and Reference copies not flagged as duplicates', 'To CO' not in out and 'Reference/' not in out)
+r = run(f'{S}/triage_scan.py', F); man = list(csv.DictReader(open(f'{F}/_build/triage/manifest.csv', encoding='utf-8')))
+acts = {(m['action'], m['from']) for m in man}
+ok('scan archives the older draft', ('ARCHIVE', 'Exercises/FEX/Order (draft 1).docx') in acts)
+ok('scan keeps the newest draft', not any(m['from'] == 'Exercises/FEX/Order (draft 2).docx' for m in man))
+ok('scan renames the dead folder', ('RENAME', 'Exercises/FEX/_to_delete') in acts)
+ok('scan archives junk', ('ARCHIVE', 'Exercises/FEX/~$lock.docx') in acts)
+ok('scan never touches Reference or sent records', not any(m['from'].startswith('Reference/') or 'To CO' in m['from'] for m in man))
+ok('scan keeps the print PDF as the copy', not any(m['from'] == 'print/map.pdf' for m in man))
+r = run(f'{S}/apply_moves.py', F, f'{F}/_build/triage/manifest.csv')
+ok('dry run moves nothing', 'DRY RUN' in r.stdout and os.path.exists(f'{F}/Exercises/FEX/Order (draft 1).docx'))
+r = run(f'{S}/apply_moves.py', F, f'{F}/_build/triage/manifest.csv', '--go')
+ok('go moves the draft to _archive', os.path.exists(f'{F}/Exercises/FEX/_archive/Order (draft 1).docx') and not os.path.exists(f'{F}/Exercises/FEX/Order (draft 1).docx'))
+ok('go merges the dead folder into _archive', os.path.exists(f'{F}/Exercises/FEX/_archive/old.md') and not os.path.exists(f'{F}/Exercises/FEX/_to_delete'))
+ok('go writes a move log', os.path.exists(f'{F}/_build/triage/move_log.csv'))
+ok('DECIDE rows wait', os.path.exists(f'{F}/Exercises/FEX/map.pdf'))
+r = run(f'{S}/apply_moves.py', F, '--undo', f'{F}/_build/triage/move_log.csv')
+ok('undo restores the draft', os.path.exists(f'{F}/Exercises/FEX/Order (draft 1).docx'))
+shutil.rmtree(T)
+# clean fixture passes
+T = tempfile.mkdtemp(); F = os.path.join(T, 'Work')
+w(f'{F}/Exercises/FEX/Order.docx'); w(f'{F}/Exercises/FEX/_archive/Order (draft 1, 1 Oct 26).docx')
+w(f'{F}/print/FEX/Order card.pdf', os.urandom(3000)); w(f'{F}/Exercises/FEX/Weather Brief (16 to 19 Nov 26).pdf')
+w(f'{F}/print/FEX/Cards (rev 1).pdf'); w(f'{F}/print/FEX/Cards (rev 2 additions).pdf')
+os.makedirs(f'{F}/_build', exist_ok=True); shutil.copy(f'{S}/folder_check.py', f'{F}/_build/folder_check.py')
+open(f'{F}/_build/folder_check_allow.txt', 'w').write('root: Exercises\nroot: print\nprint/FEX/Cards (rev 1).pdf\nprint/FEX/Cards (rev 2 additions).pdf\n')
+r = run(f'{F}/_build/folder_check.py')
+ok('clean folder passes', r.returncode == 0 and '0 violations' in r.stdout)
+if r.returncode: print(r.stdout)
+shutil.rmtree(T)
+# wiring
+std = open(f'{P}/STANDARDS.md').read(); tpl = open(f'{P}/skills/rules-file/references/template.md').read()
+ok('standard 1 archives revisions', '_archive' in std.split('2. **Sources only')[0] and 'plain name' in std.split('2. **Sources only')[0])
+ok('standard 1 leads with NOT SAVED and stops', 'NOT SAVED to your computer' in std and 'nothing further is built' in std)
+ok('template carries Folder discipline with the checker', '## Folder discipline' in tpl and 'folder_check.py' in tpl)
+ok('rules-file writes the block at every depth', 'Folder discipline block comes third' in open(f'{P}/skills/rules-file/SKILL.md').read())
+ok('start installs the checker', 'folder_check.py' in open(f'{P}/skills/start/SKILL.md').read())
+ft = open(f'{P}/skills/folder-triage/SKILL.md').read()
+ok('folder-triage drops the old naming pattern', 'YYYY-MM-DD_topic_version' not in ft and '_archive' in ft)
+fails = [n for n, v in res if not v]
+for n, v in res: print(('PASS ' if v else 'FAIL ') + n)
+print(f'\n{len(res) - len(fails)}/{len(res)} passed')
+sys.exit(1 if fails else 0)

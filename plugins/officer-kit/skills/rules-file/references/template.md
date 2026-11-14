@@ -11,8 +11,8 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - Draft only. I read everything before it goes anywhere.
 
 ## Kit standards (from the Officer Kit; strike a line to opt out)
-- Kit standards: 0.28.0
-- 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; list every file at the end of a session that built something.
+- Kit standards: 0.29.0
+- 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; a revision moves the old version to _archive and the current file keeps its plain name; NOT SAVED leads the reply when the folder is not connected; list every file at the end of a session that built something.
 - 2 Sources only: build from my notes, captured sources, and cited references; name a gap, never fill it from general knowledge.
 - 3 Do not state what is implied.
 - 4 Build only the deliverable I asked for this time.
@@ -24,6 +24,15 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - 10 State it, do not explain it: each line is a fact, task, or requirement, with no clause saying why it matters.
 - 11 Check the folder first: search for an existing version before building; name each set found and its origin and ask which; ask whose an attached draft is before reviewing it.
 - 12 A removal covers the whole set: remove it from every file, then confirm with a text search that returns zero hits.
+
+## Folder discipline (start and folder-triage install the checker; strike a line to opt out)
+- One current file per product, plain name: no draft, rev, v, final, copy, or (1). A date goes in a name only when it is part of what the file is, as (DD Mon YY).
+- History goes in _archive in the same folder, with version and date appended. One archive name only.
+- One home per file: no copies between folders. Print holds the print ready file in an event or topic subfolder; the source stays in its topic folder.
+- Code versions in git, not in file names.
+- Scripts and scratch go in an underscore folder (_build, _source); the top of a folder shows only products.
+- Before the final reply, every session that saved a file runs `python _build/folder_check.py <each folder it touched>` and reports 0 violations or names each one.
+- Only I delete. Claude moves to _archive; I empty it when the event closes.
 
 ## Who I am
 - [Rank], [billet], [unit or school], MOS [assigned or pending]   (or: not recorded)

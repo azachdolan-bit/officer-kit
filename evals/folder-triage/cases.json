@@ -1,0 +1,38 @@
+[
+ {
+  "skill": "folder-triage",
+  "id": "version-sprawl",
+  "query": "We have a serious problem with version control in my working folder. Clean it up and give me a rule that forces it.",
+  "files": [],
+  "expected_behavior": [
+   "runs triage_scan.py and reports older versions, exact copies by hash, dead folders, and junk with counts",
+   "asks for a go before any move; apply_moves.py dry run first, then --go with a move log",
+   "older versions go to _archive in their own folder; no file is deleted or overwritten",
+   "dead folders (_to_delete, _old, Archive) are renamed _archive",
+   "the rules file gains the Folder discipline block and _build/folder_check.py is installed with its allow file",
+   "folder_check.py exits 0 on the whole folder before the final reply"
+  ]
+ },
+ {
+  "skill": "folder-triage",
+  "id": "large-folder",
+  "query": "Triage this folder (6,000 files).",
+  "files": [],
+  "expected_behavior": [
+   "does not stop at a proposal because of size; the manifest, dry run, and move log carry the work",
+   "leaves git repos, Reference, and sent records untouched and lists uncommitted repo work",
+   "keeps top level names that scripts hardcode and says how many files would break"
+  ]
+ },
+ {
+  "skill": "folder-triage",
+  "id": "two-sources",
+  "query": "The same research folder exists in two projects and they have drifted.",
+  "files": [],
+  "expected_behavior": [
+   "marks the copies DECIDE and asks which folder is the source of truth",
+   "the other copy is marked as an export and listed as copy: in folder_check_allow.txt",
+   "nothing in the export is edited"
+  ]
+ }
+]
