@@ -3,7 +3,8 @@
 Usage: python apply_moves.py <working folder> <manifest.csv>          dry run: prints what would move
        python apply_moves.py <working folder> <manifest.csv> --go     moves, writes move_log.csv beside the manifest
        python apply_moves.py <working folder> --undo <move_log.csv>   moves every logged file back
-Rows with action ARCHIVE, RENAME, or MOVE are applied. DECIDE rows are skipped until the user changes them."""
+Rows with action ARCHIVE, RENAME, or MOVE are applied. DECIDE rows are skipped until the user changes them.
+After --go, path_audit.py (if it sits in _build) reports every note that still points at an old path."""
 import os, sys, csv
 args = sys.argv[1:]; ROOT = os.path.abspath(args[0])
 def free(dst):
@@ -47,3 +48,8 @@ if go:
     w.writerow(['status', 'from', 'to']); [w.writerow(a) for a in acc]
 print(('MOVED ' if go else 'DRY RUN, would move ') + f'{len(moved)} files; {len(missing)} missing; {skipped} rows left for a decision')
 for a in missing: print('  missing: ' + a[1])
+AUDIT = os.path.join(ROOT, '_build', 'path_audit.py')
+if go and moved and os.path.exists(AUDIT):
+    import subprocess
+    out = subprocess.run([sys.executable, AUDIT, '--root', ROOT], capture_output=True, text=True).stdout.strip().splitlines()
+    if out: print('path audit after the moves: ' + out[-1] + ('  (run path_audit.py --fix)' if 'can be fixed' in out[-1] and not out[-1].startswith('0 ') else ''))

@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Folder discipline check (Officer Kit, folder-triage). Copy to <working folder>/_build/.
-Usage: python folder_check.py [folder ...]   no folder = the whole working folder (the parent of _build)
+Usage: python folder_check.py [--no-index] [folder ...]   no folder = the whole working folder (the parent of _build)
        python folder_check.py --root <working folder> [folder ...]
 Config (optional): _build/folder_check_allow.txt, one directive per line:
   since: YYYY-MM-DD    version words in a current file name fail only for files changed on or after this date
   root: <name>         an allowed entry at the top of the working folder (any root line turns the root check on)
   skip: <rel path>     a folder not checked at all (a repo, issued sources, machinery)
   copy: <rel path>     a folder whose files may duplicate files elsewhere (an export, a sent record)
+  closed: <rel path>   a finished event; still checked, listed under Closed in the catalog
+  noindex: <rel path>  a folder the catalog leaves out (research dumps, data, renders inside a product folder)
+  alias: <path>        the root as notes spell it (C:\\TBS); the catalog and path audit use it
   <rel path>           a file allowed to look like a version of its neighbor (two different products)
+After the check, the catalog (make_index.py beside this script) is rebuilt unless --no-index is given.
 A top level "Claude outputs" folder is where the desktop app drops files sent to chat: copies by design,
 never a duplicate violation, emptied with the inbox (age warning after 7 days).
 Exit 0 = no violations, 1 = violations."""
@@ -17,6 +21,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 if '--root' in args:
     i = args.index('--root'); ROOT = os.path.abspath(args[i + 1]); del args[i:i + 2]
+NOINDEX = '--no-index' in args; args = [a for a in args if a != '--no-index']
 CFG = os.path.join(ROOT, '_build', 'folder_check_allow.txt')
 since, roots, skips, copies, allow = 0.0, set(), [], [], set()
 if os.path.exists(CFG):
@@ -24,6 +29,7 @@ if os.path.exists(CFG):
         l = l.strip().replace('\\', '/')
         if not l or l.startswith('#'): continue
         k, _, v = l.partition(':')
+        if k in ('closed', 'noindex', 'alias'): continue
         if k in ('since', 'root', 'skip', 'copy') and v:
             v = v.strip().strip('/')
             if k == 'since': since = time.mktime(time.strptime(v, '%Y-%m-%d'))
@@ -63,7 +69,7 @@ for t in targets:
         files += [os.path.join(dp, f) for f in fn]
 if ROOT in targets and roots:
     for n in os.listdir(ROOT):
-        if n not in roots and n.lower() != 'claude outputs' and not n.startswith('_') and not n.startswith('.'): fails.append(f'ROOT STRAY   {n}  -> file it in its topic folder or the inbox')
+        if n not in roots and n not in ('INDEX.md',) and n.lower() != 'claude outputs' and not n.startswith('_') and not n.startswith('.'): fails.append(f'ROOT STRAY   {n}  -> file it in its topic folder or the inbox')
 groups = collections.defaultdict(list)
 for p in files:
     r, n = rel(p), os.path.basename(p)
@@ -110,7 +116,20 @@ for dp, dn, fn in os.walk(ROOT):
         dn[:] = []
     else:
         dn[:] = [d for d in dn if not d.startswith('.') and d not in ('node_modules', '_archive')]
+COMMON = {'readme.md', 'claude.md', 'index.md', 'index.html', 'learnings.md', 'notes.md', 'manifest.json', 'package.json'}
+byname = collections.defaultdict(list)
+for p in files:
+    r, n = rel(p), os.path.basename(p)
+    if n.lower() in COMMON or JUNK.search(n) or is_copy_ok(r) or r in allow or n.lower().endswith(('.py', '.js', '.mjs', '.json', '.css')): continue
+    byname[n.lower()].append(r)
+for n, rs in byname.items():
+    dirs = {os.path.dirname(x) for x in rs}
+    if len(dirs) > 1: warns.append('NAME REPEAT  ' + ' == '.join(sorted(rs)) + '  -> one name, one file; rename one or keep one home')
 for l in fails: print('FAIL ' + l)
 for l in warns: print('WARN ' + l)
 print(f'\n{len(fails)} violations, {len(warns)} warnings, {len(files)} files checked')
+IDX = os.path.join(HERE, 'make_index.py')
+if not NOINDEX and os.path.exists(IDX) and os.path.dirname(os.path.abspath(__file__)) == os.path.join(ROOT, '_build'):
+    out = subprocess.run([sys.executable, IDX, '--root', ROOT], capture_output=True, text=True).stdout.strip().splitlines()
+    if out: print(out[-1])
 sys.exit(1 if fails else 0)
