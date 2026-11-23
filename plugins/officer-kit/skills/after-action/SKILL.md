@@ -8,7 +8,7 @@ description: >
   "write up what happened", or "capture what we learned". When the AAR is about a kit product,
   it also feeds the user's LEARNINGS.md through aar.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # After action report
@@ -52,6 +52,7 @@ After action:
 - [ ] 6. Improve items: what to fix, the specific change, who owns it (billet), by when
 - [ ] 7. python3 scripts/after_action_check.py aar.md exits 0
 - [ ] 8. Saved to Training/<event> <date>/AAR.md in the unit's format; routed per the override file
+- [ ] 9. Close out: offer to add `closed: <the event's folder>` (and its print subfolder) to `_build/folder_check_allow.txt`, so the catalog lists the event under Closed; add it on the user's yes
 ```
 
 ## The shape (aar.md)

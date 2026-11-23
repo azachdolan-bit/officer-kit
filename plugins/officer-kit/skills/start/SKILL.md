@@ -7,7 +7,7 @@ description: >
   officer kit", "officer kit start", "set up the kit", "where do I begin", "walk me through
   setup", "what can this do", "which tools do I need", or has just installed the plugin.
 metadata:
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 # Start
@@ -72,7 +72,8 @@ Propose a folder at a location the user names (Documents is a fine default). Str
   Proposals/           changes to the kit itself that inspect writes up for you to send on
   LEARNINGS.md         your lessons queue, written by aar, applied by inspect
   Print/               cards and laminates
-  _build/              scripts and intermediate files the tools create; folder_check.py lives here
+  _build/              scripts and intermediate files the tools create; the folder check, catalog, path audit, and save command live here
+  INDEX.md             the catalog of every product, rebuilt by the scripts; search it before walking the folder
   00 Inbox/            files not yet sorted; emptied every Sunday
 ```
 
@@ -80,7 +81,7 @@ Propose a folder at a location the user names (Documents is a fine default). Str
 
 Rules: every module gets its folder only if they picked it, plus Reference, Reference/Exemplars, Overrides, Proposals, LEARNINGS.md, Print, 00 Inbox, and _build always. Nothing from a .mil system goes in. If they already have a folder they work from, adapt it instead of making a new one; `folder-triage` can inventory and restructure it.
 
-Create the folders if a folder is already connected; otherwise give the structure and ask them to create it. Copy `skills/folder-triage/scripts/folder_check.py` into `_build/` and write `_build/folder_check_allow.txt` with `since: <today>` and a `root:` line for each top level folder. The rules file in step 5 carries the Folder discipline block that runs it.
+Create the folders if a folder is already connected; otherwise give the structure and ask them to create it. Copy `folder_check.py`, `make_index.py`, `path_audit.py`, and `save_product.py` from `skills/folder-triage/scripts/` into `_build/` and write `_build/folder_check_allow.txt` with `since: <today>`, a `root:` line for each top level folder, and an `alias:` line with the folder's path as the user's notes will spell it (`alias: C:\Users\<name>\Documents\<Name> Kit`). Run `python _build/make_index.py` once. The rules file in step 5 carries the Folder discipline block that runs it.
 
 ## Step 4. Connect the folder
 

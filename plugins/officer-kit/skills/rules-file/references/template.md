@@ -11,8 +11,8 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - Draft only. I read everything before it goes anywhere.
 
 ## Kit standards (from the Officer Kit; strike a line to opt out)
-- Kit standards: 0.29.0
-- 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; a revision moves the old version to _archive and the current file keeps its plain name; NOT SAVED leads the reply when the folder is not connected; list every file at the end of a session that built something.
+- Kit standards: 0.30.0
+- 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; a revision moves the old version to _archive and the current file keeps its plain name; save through _build/save_product.py where it exists; NOT SAVED leads the reply when the folder is not connected; list every file at the end of a session that built something.
 - 2 Sources only: build from my notes, captured sources, and cited references; name a gap, never fill it from general knowledge.
 - 3 Do not state what is implied.
 - 4 Build only the deliverable I asked for this time.
@@ -22,7 +22,7 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - 8 Never compress spacing or margins to fit a page; cut words.
 - 9 No em dashes or en dashes; American spelling.
 - 10 State it, do not explain it: each line is a fact, task, or requirement, with no clause saying why it matters.
-- 11 Check the folder first: search for an existing version before building; name each set found and its origin and ask which; ask whose an attached draft is before reviewing it.
+- 11 Check the folder first: search the catalog (INDEX.md) for an existing version before building, the whole folder only on no hit; notes record names, not full paths; name each set found and its origin and ask which; ask whose an attached draft is before reviewing it.
 - 12 A removal covers the whole set: remove it from every file, then confirm with a text search that returns zero hits.
 
 ## Folder discipline (start and folder-triage install the checker; strike a line to opt out)
@@ -31,6 +31,10 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - One home per file: no copies between folders. Print holds the print ready file in an event or topic subfolder; the source stays in its topic folder.
 - Code versions in git, not in file names.
 - Scripts and scratch go in an underscore folder (_build, _source); the top of a folder shows only products.
+- Catalog first: to find a file, search INDEX.md or run `python _build/make_index.py --find <words>`; walk the folder only on no hit.
+- One save command: `python _build/save_product.py <file> <topic folder> [--version "draft 3"]` archives the old version, refuses version words and the root and print root, rebuilds the catalog, and runs the check.
+- Names, not paths: notes and memory record a file's name and topic folder. After any move, run `python _build/path_audit.py --fix`.
+- When an event ends, add `closed: <folder>` to `_build/folder_check_allow.txt`; the catalog lists it under Closed.
 - Before the final reply, every session that saved a file runs `python _build/folder_check.py <each folder it touched>` and reports 0 violations or names each one.
 - Only I delete. Claude moves to _archive; I empty it when the event closes.
 
