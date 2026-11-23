@@ -130,6 +130,7 @@ for d in docs:
         else:
             unresolved += 1; print(f'{"AMBIG " if why.startswith("AMBIG") else "LOST  "} {rel(d)}: {old}  ({why})')
     if FIX and out:
-        out.append(text[last:]); open(d, 'w', encoding='utf-8').write(''.join(out))
+        st = os.stat(d); out.append(text[last:]); open(d, 'w', encoding='utf-8').write(''.join(out))
+        os.utime(d, (st.st_atime, st.st_mtime))   # a path repair is not a revision; the file keeps its date
 print(f'\n{stale} stale paths in {len(docs)} notes; ' + (f'{fixed} rewritten; ' if FIX else f'{stale - unresolved} can be fixed with --fix; ') + f'{unresolved} need a person')
 sys.exit(0 if stale - fixed == 0 else 1)
