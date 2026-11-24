@@ -8,7 +8,7 @@ description: >
   "write up what happened", or "capture what we learned". When the AAR is about a kit product,
   it also feeds the user's LEARNINGS.md through aar.
 metadata:
-  version: "0.1.1"
+  version: "0.2.0"
 ---
 
 # After action report
@@ -44,18 +44,20 @@ Say what you had to assume. Never write that the rest is covered.
 
 ```
 After action:
-- [ ] 1. Frame: the event, dates, unit, who reads this AAR and what they will do with it
-- [ ] 2. What was planned: the mission or purpose, the timeline, the numbers (personnel, rounds, vehicles, hours)
-- [ ] 3. What happened, by phase, as dated facts with numbers; the difference from the plan stated as a fact
-- [ ] 4. For each difference: why (the cause the unit can act on, not the weather), and whether the result was better or worse
-- [ ] 5. Sustain items: what worked, why, and what would keep it working next time
-- [ ] 6. Improve items: what to fix, the specific change, who owns it (billet), by when
-- [ ] 7. python3 scripts/after_action_check.py aar.md exits 0
-- [ ] 8. Saved to Training/<event> <date>/AAR.md in the unit's format; routed per the override file
-- [ ] 9. Close out: offer to add `closed: <the event's folder>` (and its print subfolder) to `_build/folder_check_allow.txt`, so the catalog lists the event under Closed; add it on the user's yes
+- [ ] 1. Ask where this AAR goes and whether it rolls into a larger AAR. Read an approved exemplar on disk (Reference/Exemplars/after-action/, or the larger product when it rolls up) and take its format. The shape below is a fallback only
+- [ ] 2. Frame: the event, dates, unit, who reads this AAR and what they will do with it
+- [ ] 3. Build one sample topic in that format and show it. Build the rest only after the user accepts it
+- [ ] 4. What was planned: the mission or purpose, the timeline, the numbers (personnel, rounds, vehicles, hours)
+- [ ] 5. What happened, by phase, as dated facts with numbers; the difference from the plan stated as a fact
+- [ ] 6. For each difference: why (the cause the unit can act on, not the weather), and whether the result was better or worse
+- [ ] 7. Sustain items: what worked, why, and what would keep it working next time
+- [ ] 8. Improve items: what to fix, the specific change, who owns it (billet), by when
+- [ ] 9. python3 scripts/after_action_check.py aar.md exits 0. On an exemplar's format, pass its headings: --sections "<planned>,<what happened>,<sustain>,<improve>"
+- [ ] 10. Saved in the unit's format where step 1 said it goes (fallback: Training/<event> <date>/AAR.md); routed per the override file
+- [ ] 11. Close out: offer to add `closed: <the event's folder>` (and its print subfolder) to `_build/folder_check_allow.txt`, so the catalog lists the event under Closed; add it on the user's yes
 ```
 
-## The shape (aar.md)
+## The shape (aar.md, the fallback when no exemplar exists)
 
 ```
 # After action report: <event>
@@ -87,7 +89,8 @@ Unit: <unit>   Dates: <dates>   Location: <location>   Prepared by: <billet>   D
 - Every fix traces to an observation in What happened. The checker warns on a fix with no matching observation.
 - Nothing about a named Marine's performance; that is a counseling or a fitrep. Billets only.
 - Weather, terrain, and higher headquarters are causes the unit cannot act on; the AAR names the thing the unit can change.
+- A finding about a higher echelon states the gap, its effect, and the fix in neutral terms ("did not fully address," "it was unclear whether"), never blame, and credits what worked before what did not.
 
 ## Utility script
 
-- `scripts/after_action_check.py aar.md`: the four sections present; observations dated with a number; improve rows complete (fix, owner, date); sustain rows complete; blocked content and names (fail). Exit 1 on a missing section or blocked content.
+- `scripts/after_action_check.py aar.md`: the four sections present; observations dated with a number; improve rows complete (fix, owner, date); sustain rows complete; blocked content and names (fail). With `--sections "<planned>,<what happened>,<sustain>,<improve>"` it maps an exemplar's own headings, at any heading level, and runs every test on them; bullet lines are the observations, or paragraphs when the section has no bullets. Exit 1 on a missing section or blocked content.

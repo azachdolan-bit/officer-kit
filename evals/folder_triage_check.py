@@ -27,6 +27,16 @@ r = run(f'{F}/_build/folder_check.py'); out = r.stdout
 ok('messy folder fails', r.returncode == 1)
 for tag in ['DEAD FOLDER', 'ROOT STRAY', 'VERSION NAME', 'VERSIONS', 'JUNK', 'PRINT ROOT', 'PRINT SOURCE', 'DUPLICATE']:
     ok(f'messy folder flags {tag}', tag in out)
+# 24 Nov 26: a comma after the version number ("(draft 8, 24 Nov 26)") is still a version name and must fail
+import re as _re
+for _s in ('folder_check.py', 'save_product.py', 'triage_scan.py'):
+    _ns = {'re': _re}; exec(next(l for l in open(f'{S}/{_s}', encoding='utf-8') if l.startswith('VER = ')), _ns)
+    ok(f'{_s} reads "(draft 8, 24 Nov 26)" as a version', _ns['VER'].search('Name (draft 8, 24 Nov 26)'))
+G = os.path.join(T, 'Comma'); w(f'{G}/Exercises/AAR/Name (draft 8, 24 Nov 26).docx')
+os.makedirs(f'{G}/_build', exist_ok=True); shutil.copy(f'{S}/folder_check.py', f'{G}/_build/folder_check.py')
+open(f'{G}/_build/folder_check_allow.txt', 'w').write('since: 2000-01-01\nroot: Exercises\n')
+r = run(f'{G}/_build/folder_check.py')
+ok('comma version name fails folder_check', r.returncode == 1 and 'VERSION NAME' in r.stdout and 'draft 8, 24 Nov 26' in r.stdout)
 ok('sent record and Reference copies not flagged as duplicates', 'To CO' not in out and 'Reference/' not in out)
 r = run(f'{S}/triage_scan.py', F); man = list(csv.DictReader(open(f'{F}/_build/triage/manifest.csv', encoding='utf-8')))
 acts = {(m['action'], m['from']) for m in man}
@@ -105,6 +115,8 @@ ok('save writes the new file under the plain name', 'new' in open(f'{F}/Exercise
 ok('save rebuilds the catalog', 'Defense Order, new' in open(f'{F}/_build/index.tsv', encoding='utf-8').read())
 v2 = os.path.join(T, 'Order v2.md'); open(v2, 'w').write('x')
 ok('save refuses a version word', run(f'{F}/_build/save_product.py', v2, 'Exercises/FEX 2').returncode == 1)
+v8 = os.path.join(T, 'Name (draft 8, 24 Nov 26).md'); open(v8, 'w').write('x')
+ok('save refuses a version word followed by a comma', run(f'{F}/_build/save_product.py', v8, 'Exercises/FEX 2').returncode == 1)
 ok('save refuses the print root', run(f'{F}/_build/save_product.py', src, 'print').returncode == 1)
 ok('save refuses the root and underscore folders', run(f'{F}/_build/save_product.py', src, '').returncode == 1 and run(f'{F}/_build/save_product.py', src, 'Exercises/FEX 2/_work').returncode == 1)
 ok('save leaves an identical file alone', 'UNCHANGED' in run(f'{F}/_build/save_product.py', src, 'Exercises/FEX 2').stdout)
