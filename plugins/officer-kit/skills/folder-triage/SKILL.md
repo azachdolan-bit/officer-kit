@@ -5,7 +5,7 @@ description: >
   "clean up this folder", "what's in here", "inventory this", "propose a structure",
   "sort these files", "we have a version control problem", or has just linked a folder in Cowork and wants it organized.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Folder Triage

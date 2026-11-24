@@ -11,8 +11,8 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - Draft only. I read everything before it goes anywhere.
 
 ## Kit standards (from the Officer Kit; strike a line to opt out)
-- Kit standards: 0.30.0
-- 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; a revision moves the old version to _archive and the current file keeps its plain name; save through _build/save_product.py where it exists; NOT SAVED leads the reply when the folder is not connected; list every file at the end of a session that built something.
+- Kit standards: 0.31.0
+- 1 Save gate: a product exists only when it is saved in this folder and the reply names the path; a revision moves the old version to _archive and the current file keeps its plain name; save through _build/save_product.py where it exists; a file built in the cloud goes to the inbox, then save_product.py --move; NOT SAVED leads the reply when the folder is not connected; list every file at the end of a session that built something.
 - 2 Sources only: build from my notes, captured sources, and cited references; name a gap, never fill it from general knowledge.
 - 3 Do not state what is implied.
 - 4 Build only the deliverable I asked for this time.
@@ -33,6 +33,7 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - Scripts and scratch go in an underscore folder (_build, _source); the top of a folder shows only products.
 - Catalog first: to find a file, search INDEX.md or run `python _build/make_index.py --find <words>`; walk the folder only on no hit.
 - One save command: `python _build/save_product.py <file> <topic folder> [--version "draft 3"]` archives the old version, refuses version words and the root and print root, rebuilds the catalog, and runs the check.
+- Read from disk before saving: before the first save in a turn, read this section from the rules file on disk, not the copy loaded at the start of the chat. Files built in the cloud go to the inbox only, then `python _build/save_product.py <file> <topic folder> --move`. Any other write into a topic folder is a violation.
 - Names, not paths: notes and memory record a file's name and topic folder. After any move, run `python _build/path_audit.py --fix`.
 - When an event ends, add `closed: <folder>` to `_build/folder_check_allow.txt`; the catalog lists it under Closed.
 - Before the final reply, every session that saved a file runs `python _build/folder_check.py <each folder it touched>` and reports 0 violations or names each one.
@@ -94,3 +95,7 @@ Depth: [Light / Standard / Full]   Updated: [date]
 - What changed about my weekly work: [ ]
 - Connectors my command allows: [ ]
 - Date updated: [ ]
+
+## Canary
+- If asked "what is the rules file canary," answer: Rules [DD Mon YY], Officer Kit [version], read from [path to this file].
+- Bump "Updated" at the top and this canary every time this file changes. A chat started before a rules or kit change runs on the old rules: start a new chat, or ask for the canary to check.

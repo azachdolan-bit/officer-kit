@@ -9,7 +9,7 @@ description: >
   command in writing. Identity comes from the user's rules file; anything withheld becomes a
   placeholder the QC gate refuses to pass.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Naval letter
@@ -81,7 +81,7 @@ Letter progress:
 }
 ```
 
-Substance rules while writing the paragraphs: standing in the first sentence; one claim per paragraph; ask, prove the negative, prove the positive, remedies, POC; remedy ladder with parallel "or"; no hedging clauses; no dashes; findings only documents carry no severity and no fixes; every claim names both ends and its consequence in the same breath; plain numbering.
+Substance rules while writing the paragraphs: standing in the first sentence; one claim per paragraph; ask, prove the negative, prove the positive, remedies, POC; remedy ladder with parallel "or"; no hedging clauses; no dashes; findings only documents carry no severity and no fixes; every claim names both ends and its consequence in the same breath; plain numbering. One idea per sentence. A sentence carrying three clauses splits. A discussion runs fact, effect, cause, in that order, with no restating. A finding about a higher echelon states the gap, its effect, and the fix in neutral terms ("did not fully address," "it was unclear whether"), never blame, and credits what worked before what did not.
 
 **Steps 4 to 6, build and mechanical QC.** The build script pins the 13.8 pt pitch and lays out every gap. `qc_letter.py` must exit 0 (warnings are allowed but read them). Convert to PDF (`soffice --headless --convert-to pdf`) and run `measure_pdf.py`; it must exit 0. If it fails, fix the spec and rebuild; never hand edit spacing.
 
@@ -89,7 +89,7 @@ Substance rules while writing the paragraphs: standing in the first sentence; on
 
 **Step 8, read the pages.** Render to images and look: page count, nothing orphaned onto a final page, signature block on the fourth line at page center, continuation Subj on the sixth line. If a letter runs a few lines over, cut body text.
 
-**Step 9, deliver.** `.docx` plus `.pdf` into the user's correspondence folder, enclosures as their own files marked "Enclosure (n)" lower right. Draft the cover email: two or three sentences, subject names the object and the action.
+**Step 9, deliver.** `.docx` plus `.pdf` into the user's correspondence folder, enclosures as their own files marked "Enclosure (n)" lower right. Draft the cover email: two or three sentences, subject names the object and the action. If any part is below 12 point (an enclosure table, a figure), the delivery line names the part, the size, and why.
 
 ## Rules
 
@@ -97,6 +97,7 @@ Substance rules while writing the paragraphs: standing in the first sentence; on
 - Never reconstruct the identity block from memory or from an earlier letter in the conversation; read the rules file.
 - Never ship a placeholder. Never guess a value to remove one.
 - Any change to the reference list triggers a renumber sweep of every citation.
+- When the body argues from a document, the enclosure is that whole document as issued, every row and column, never an extract or summary table.
 - Do not swap a dash for a colon; rewrite the sentence.
 - Personal data stays in the user's folder. Nothing in this skill's files carries a real name, number, or address.
 

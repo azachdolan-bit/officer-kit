@@ -262,3 +262,43 @@ Status: approved 0.29.0
 Evidence: "Once you do that I want to do a defrief so that we can start stacking up changes for the officer kit pluggin" after the folder discipline rule and checker were built for this folder.
 Lesson: The rules file template carries a Folder discipline section (one current file, _archive, one home per file, git for code, run folder_check.py), and start installs folder_check.py when it sets up the working folder.
 Status: approved 0.29.0
+
+## 2026-11-24  folder-triage  high  -> plugin
+Evidence: "All the versions are in the same folder without distinciton" after folder_check reported 0 violations on a folder holding 27 dated drafts named like "(draft 8, 24 Nov 26)".
+Lesson: Fix the version pattern in folder_check.py, save_product.py, and triage_scan.py: the lookahead after the version number must accept a comma, (?=$|[ _\-.,)(]). Add an eval case "Name (draft 8, 24 Nov 26).docx" that must fail.
+Status: approved 0.31.0
+
+## 2026-11-24  kit-standards  high  -> plugin
+Evidence: "I thought we updated the rules and proccesses in the plugin, what went wrong" after a session wrote every AAR draft straight into the topic folder under a versioned name, bypassing save_product.py.
+Lesson: Amend standard 1: a file built in the cloud is written only to the inbox, then saved with save_product.py --move; any other write into a topic folder is a violation. Before the first save in a turn, read the folder discipline section of the rules file from disk, not from the copy loaded at the start of the chat.
+Status: approved 0.31.0
+
+## 2026-11-24  rules-file  medium  -> plugin
+Evidence: "why is this chat running the old copy? Why does that happen?" A long chat carried the rules file as loaded at its start, without the Folder discipline section added later, and the live file's Updated date, kit standards line, and canary were unchanged, so the stale copy could not be detected.
+Lesson: The rules file template bumps its Updated date and its canary (rules date and kit version) on every edit, and states that a chat started before a rules or kit change runs on the old rules: start a new chat, or ask for the canary to check.
+Status: approved 0.31.0
+
+## 2026-11-24  after-action  high  -> plugin
+Evidence: "Please see the end of course critique for phase IV to see how I want it formated" after an AAR was built first as bullets and then in the MCO 3504.1A template; the format changed three times and the AAR took eleven drafts.
+Lesson: Before drafting, ask where the AAR goes and read an approved exemplar on disk; when it rolls into a larger AAR, use that product's format. The skill's table shape is a fallback only. Build one sample topic and show it before the rest.
+Status: approved 0.31.0
+
+## 2026-11-24  kit-standards  high  -> plugin
+Evidence: "I need you write this more professionally and less bluntly. It needs to have tact since part of this will be critiquing a higher schelon"
+Lesson: A finding about a higher echelon states the gap, its effect, and the fix in neutral terms ("did not fully address", "it was unclear whether"), never blame, and credits what worked before what did not. Applies to after-action and naval-letter.
+Status: approved 0.31.0
+
+## 2026-11-24  naval-letter  medium  -> plugin
+Evidence: "Sometimes you have run on sentences and it does not read at the collegic level" and "more condensed and a tighter stream on information"
+Lesson: One idea per sentence; a sentence carrying three clauses splits. A discussion runs fact, effect, cause in order, with no restating.
+Status: approved 0.31.0
+
+## 2026-11-24  naval-letter  medium  -> plugin
+Evidence: "Can you include the full Company PIR list with all SIRs and collections assets, etc." after the enclosure carried a PIR summary table.
+Lesson: When the body argues from a document, the enclosure carries the whole document (every row and column as issued), not an extract.
+Status: approved 0.31.0
+
+## 2026-11-24  naval-letter  medium  -> plugin
+Evidence: "Is this in Times new roman 12 pt font" after enclosure tables were set at 9 and 8 point without saying so.
+Lesson: When any part of a product is below 12 point, the delivery line names the part, the size, and why.
+Status: approved 0.31.0

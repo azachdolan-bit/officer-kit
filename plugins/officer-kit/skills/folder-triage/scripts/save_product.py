@@ -26,7 +26,7 @@ ROOT = os.path.abspath(opt('--root', ROOT)); name = opt('--name'); version = opt
 move, new = flag('--move'), flag('--new')
 if len(args) != 2: print(__doc__); sys.exit(1)
 src, folder = os.path.abspath(args[0]), args[1].replace('\\', '/').strip('/')
-VER = re.compile(r'(?i)(?:^|[ _\-(])+(draft|rev|v|iter)[ _]?\d+(?:\.\d+)?\)?(?=$|[ _\-.)(])|\bfinal\b|\bcopy\b|\(\d\)$|\)-\d$')
+VER = re.compile(r'(?i)(?:^|[ _\-(])+(draft|rev|v|iter)[ _]?\d+(?:\.\d+)?\)?(?=$|[ _\-.,)(])|\bfinal\b|\bcopy\b|\(\d\)$|\)-\d$')
 alias = None
 cfg = os.path.join(ROOT, '_build', 'folder_check_allow.txt')
 if os.path.exists(cfg):

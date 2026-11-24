@@ -39,7 +39,7 @@ if os.path.exists(CFG):
         else: allow.add(l)
 DEAD = re.compile(r'(?i)^(_?to[ _]?delete.*|_?superseded|_?old( docs)?|archive|old|backups?|.*backups|old versions?|previous versions?)$')
 JUNK = re.compile(r'(^\.~lock|^~\$|\.tmp$|\.bak\d*$|^Thumbs\.db$|^desktop\.ini$|^\.DS_Store$)')
-VER = re.compile(r'(?i)(?:^|[ _\-(])+(draft|rev|v|iter)[ _]?\d+(?:\.\d+)?\)?(?=$|[ _\-.)(])|\bfinal\b|\bcopy\b|\(\d\)$|\)-\d$')
+VER = re.compile(r'(?i)(?:^|[ _\-(])+(draft|rev|v|iter)[ _]?\d+(?:\.\d+)?\)?(?=$|[ _\-.,)(])|\bfinal\b|\bcopy\b|\(\d\)$|\)-\d$')
 DATE = re.compile(r'(?i)\s*\(?\b\d{1,2} (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]* ?\d{0,2}\)?')
 SENT = re.compile(r'(?i)(^|/)(to|sent to) [^/]+(/|$)')
 PRINT_OK = {'.pdf', '.docx', '.png', '.jpg', '.jpeg'}
